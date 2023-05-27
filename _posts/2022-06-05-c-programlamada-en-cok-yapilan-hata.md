@@ -5,6 +5,8 @@ published: true
 locale: tr_TR
 tags:
   - tr
+axseq: 3
+image: /assets/img/22/3.png
 ---
 
 Gömülü sistemlerle uğraşan biri olarak C dili ile ilgileniyorum. Bu yazıda
@@ -127,7 +129,7 @@ Bu tarz hataları derleme sırasında yakalamak oldukça kolay. Öncelikle kod
 yazdığınız editör yüksek ihtimalle bunu fark edecektir. Mesela, yukarıdaki kodu
 Visual Studio 2022 içerisine koyduğum zaman aşağıdaki gibi bir görüntü çıkıyor.
 
-![Visual Studio 2022 uyarılar](/assets/images/blog/22/3-vs.png)
+![Visual Studio 2022 uyarılar](/assets/img/22/3-vs.png)
 
 Burada fark ederseniz problemli olan kısımların altlarında işaretler var.
 Mesela bize `C60001: Using uninitialized memory` uyarısını veriyor. Detaylı
@@ -256,7 +258,7 @@ hata almazsanız çalışma sırasında "Bak bir şey olmuyor" demeyin.
   "Derleniyor ya!" demeyin. C derleyicileri bir Vivado değil, hunharca uyarı
   basmazlar, varsa da bir bakıverin.
 
-![Vivado Meme](/assets/images/blog/22/3-meme.jpg)
+![Vivado Meme](/assets/img/22/3-meme.jpg)
 
 [Vivado Meme](https://www.reddit.com/r/FPGA/comments/mdi4te/its_just_a_warning_right/)
 

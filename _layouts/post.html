@@ -4,7 +4,7 @@ layout: default
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{% if page.tags contains 'tr' %} {{ page.title | escape }} 🇹🇷 {% else %} {{ page.title | escape }} {% endif %}</h1>
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta">
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
@@ -15,10 +15,11 @@ layout: default
       {%- endif -%}</p>
   </header>
   {%- if page.tags contains 'tr' -%}
-  <p>🔤 <small><mark>This post is in Turkish.</mark></small></p>
+  <p>🔤 <small><mark>This post is in Turkish.</mark></small> 🇹🇷</p>
   {%- endif -%}
 
   <div class="post-content e-content" itemprop="articleBody">
+    {%- if page.image -%}<center><p><img alt="Teaser" src="{{ page.image | absolute_url }}"></p></center>{%- endif -%}
     {{ content }}
   </div>
 
