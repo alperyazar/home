@@ -10,24 +10,3 @@ body {
 pre {
     font-family: 'JetBrains Mono', monospace !important;
 }
-
-/* Warning notice */
-.notice--warning { margin: 2em 0 !important; /* override*/ padding: 1em; color: #3d4144; text-indent: initial; /* override*/ background-color: #f7e5cd; border-radius: 4px; box-shadow: 0 1px 1px rgba(214, 127, 5, 0.25); }
-
-.notice--warning h4 { margin-top: 0 !important; /* override*/ margin-bottom: 0.75em; line-height: inherit; }
-
-.page__content .notice--warning h4 { /* using at-root to override .page-content h4 font size*/ margin-bottom: 0; font-size: 1em; }
-
-.notice--warning p:last-child { margin-bottom: 0 !important; /* override*/ }
-
-.notice--warning h4 + p { /* remove space above paragraphs that appear directly after notice headline*/ margin-top: 0; padding-top: 0; }
-
-.notice--warning a { color: #c17205; }
-
-.notice--warning a:hover { color: #6b4003; }
-
-.notice--warning code { background-color: #fbf2e6; }
-
-.notice--warning pre code { background-color: inherit; }
-
-.notice--warning ul:last-child { margin-bottom: 0; /* override*/ }
