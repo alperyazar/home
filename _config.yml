@@ -21,7 +21,6 @@
 title: ayazar
 description: >- # this means to ignore newlines until "baseurl:"
   electronics engineer interested in digital design, FPGAs, embedded systems and other things.
-  CC BY-SA 4.0
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 linkedin_username: alperyazar
