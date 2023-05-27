@@ -1,6 +1,7 @@
 ---
 title: "About"
 excerpt: "About Alper Yazar"
+layout: page
 published: true
 ---
 

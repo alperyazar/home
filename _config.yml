@@ -102,3 +102,14 @@ exclude:
 header_pages:
   - about.md
   - follow.md
+
+# jekyll-seo-tag
+# Ref: https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+social:
+  name: Alper Yazar
+  links:
+    - https://www.linkedin.com/in/alperyazar
+    - https://twitter.com/alper_yazar
+
+disqus:
+  shortname: ayazardev

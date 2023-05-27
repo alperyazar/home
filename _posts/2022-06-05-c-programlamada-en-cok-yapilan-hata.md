@@ -2,6 +2,7 @@
 title: "C programlamada gördüğüm en sık yapılan hata"
 excerpt: "Gözden kaçabilen, masum görünen fakat canınızı sıkabilecek bir C hatası"
 published: true
+locale: tr_TR
 tags:
   - tr
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Follow"
 excerpt: "Follow Alper Yazar"
+layout: page
 published: true
 ---
 
