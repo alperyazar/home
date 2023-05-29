@@ -106,7 +106,7 @@ Durumu bir değerlendirelim:
   Çünkü Python dilinde kodlar tipik olarak satır satır çalıştırılır ve hata
   ilgili satır çalıştırıldığı zaman ortaya çıkmıştır.
 
-# C, Statik Tür Kavramına Örnek
+## C, Statik Tür Kavramına Örnek
 
 Benzer bir örneği C ile yapalım. C dilinde, Python'daki gibi dahili (built-in)
 bir `type()` fonksiyonu yoktur. Fakat dile C11 ile gelen *generic selection
