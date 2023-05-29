@@ -100,7 +100,7 @@ exclude:
 
 
 header_pages:
-  - about.md
+  - blog.md
   - follow.md
 
 # jekyll-seo-tag
