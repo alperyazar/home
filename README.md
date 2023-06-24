@@ -1,6 +1,6 @@
-# Home (ayazar.dev)
+# Home (www.alperyazar.com)
 
 This repo holds source code of my home page. Please visit the site for better
 experience:
 
-<https://ayazar.dev>
+<https://www.alperyazar.com>
