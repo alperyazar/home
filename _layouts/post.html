@@ -14,8 +14,8 @@ layout: default
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
       {%- endif -%}</p>
   </header>
-  {%- if page.tags contains 'tr' -%}
-  <p>🔤 <small><mark>This post is in Turkish.</mark></small> 🇹🇷</p>
+   {%- if page.tags contains 'tr' -%}
+  <p><span data-nosnippet>🔤 <small><mark>This post is in Turkish.</mark></small></span></p>
   {%- endif -%}
 
   <div class="post-content e-content" itemprop="articleBody">

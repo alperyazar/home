@@ -1,5 +1,5 @@
 ---
-title: "Alper Yazar"
+title: "Me"
 excerpt: "Alper Yazar"
 layout: page
 published: true
@@ -10,8 +10,9 @@ published: true
 
 ![Alper Yazar](/assets/img/me.png)
 
-An electronics engineer interested in digital design, FPGAs, embedded systems
-and other things.
+**Alper Yazar** (**ayazar**)
+
+An electronics engineer interested in various things.
 
 I got my BSc and MSc degrees from the same department,
 [METU](https://www.metu.edu.tr/) EEE, in 2012 and 2015, respectively. My

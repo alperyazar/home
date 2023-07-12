@@ -1,6 +1,8 @@
 ---
 title: "Create search link between SumatraPDF and TeXstudio with SyncTeX"
 excerpt: "SyncTeX enables us to create a bidirectional search relation between these two software."
+tags:
+    - en
 axseq: 6
 published: true
 image: /assets/img/21/6.png

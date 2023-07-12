@@ -5,4 +5,4 @@ list_title: " "
 ---
 
 <!-- markdownlint-disable-next-line -->
-<mark>Posts with 🇹🇷 flag are in Turkish, others are in English.</mark>
+<mark>All posts are in Turkish unless tagged with</mark> `[EN]`

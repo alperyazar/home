@@ -1,6 +1,8 @@
 ---
 title: "Running PetaLinux on an offline machine"
 excerpt: "PetaLinux can be run an offline machine with proper configuration"
+tags:
+    - en
 axseq: 2
 published: true
 image: /assets/img/22/2.png
