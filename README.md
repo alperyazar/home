@@ -1,5 +1,13 @@
 # Home
 
+[![GitHub last commit (branch)](https://img.shields.io/github/last-commit/alperyazar/home/master)](https://github.com/alperyazar/home/commits/master)
+[![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/m/alperyazar/home/master)](https://github.com/alperyazar/home/commits/master)
+[![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/alperyazar/home/master)](https://github.com/alperyazar/home/commits/master)
+[![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/alperyazar/home/pages%2Fpages-build-deployment?label=deployment)](https://github.com/alperyazar/home/actions/workflows/pages/pages-build-deployment)
+[![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/alperyazar/home/md-lint.yml?label=markdown%20lint)](https://github.com/alperyazar/home/actions/workflows/md-lint.yml)
+[![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/alperyazar/home/md-link-check.yml?label=broken-link%20control)](https://github.com/alperyazar/home/actions/workflows/md-link-check.yml)
+[![GitHub issues by-label](https://img.shields.io/github/issues/alperyazar/home/broken-link)](https://github.com/alperyazar/home/issues?q=is%3Aissue+is%3Aopen+label%3Abroken-link)
+
 This repo holds source code of my personal webpage. Please visit the site for better
 experience:
 
