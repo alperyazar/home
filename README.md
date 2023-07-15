@@ -30,7 +30,7 @@ bundle exec jekyll build
 ## Checking Broken Links
 
 ```shell
-docker run --init --rm -it -v ${PWD}:/input lycheeverse/lychee -c /input/lychee.toml /input
+docker run --init --rm -it -v ${PWD}:/input lycheeverse/lychee -c /input/lychee.toml /input/**/*.md
 ```
 
 ## Linting Markdown Files
