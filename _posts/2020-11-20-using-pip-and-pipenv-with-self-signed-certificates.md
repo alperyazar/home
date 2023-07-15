@@ -5,6 +5,7 @@ axseq: 2
 tags:
     - en
 published: true
+modified_date: 2023-07-15
 ---
 
 If you work in a cooperate environment, you may be working behind proxies and
@@ -17,12 +18,11 @@ example command [^1f].
 $ pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org <package_name>
 ```
 
-This approach is suitable if you **know** that you are behind a proxy or
-a similar equipment that signs the traffic with self-signed certificates.
-Since `--trusted-host` flag disables SSL checking, this will cause a
-potential security risk if you are not in such network, like working at
-home.
-{: .notice--warning}
+> ⚠️ This approach is suitable if you **know** that you are behind a proxy or
+> a similar equipment that signs the traffic with self-signed certificates.
+> Since `--trusted-host` flag disables SSL checking, this will cause a
+> potential security risk if you are not in such network, like working at
+> home.
 
 I found that `--trusted-host` flag doesn't work as expected while working with
 `pipenv`. There are some records about this issue [^2f], [^3f]. Even with the
