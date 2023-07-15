@@ -8,11 +8,13 @@ published: true
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable MD005 MD007 -->
 
-![Alper Yazar](/assets/img/me.png)
+![Alper Yazar](/assets/img/me.png){:.centered}
 
+{:.text-align-center}
 **Alper Yazar** (**ayazar**)
 
-An electronics engineer interested in various things.
+{:.text-align-center}
+*electronics engineer interested in various things*
 
 I got my BSc and MSc degrees from the same department,
 [METU](https://www.metu.edu.tr/) EEE, in 2012 and 2015, respectively. My
