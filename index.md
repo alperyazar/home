@@ -307,4 +307,10 @@ Trying playing various musical instruments
 
 See [➡️ Follow](follow.md)
 
+## Site Info
+
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/alperyazar/home/master)
+![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/m/alperyazar/home/master)
+![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/alperyazar/home/master)
+
 <!-- markdownlint-restore -->

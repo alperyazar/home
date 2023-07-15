@@ -95,7 +95,9 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - .github
   - README.md
+  - lychee.toml
 
 
 
