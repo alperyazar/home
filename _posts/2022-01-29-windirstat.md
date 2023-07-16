@@ -3,6 +3,7 @@ title: "WinDirStat"
 excerpt: "'Diskimde en çok hangi klasörler yer kaplıyor?' sorusuna cevap bulun!"
 tags:
     - tr
+locale: tr_TR
 axseq: 1
 published: true
 image: /assets/img/22/1.png

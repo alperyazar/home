@@ -1,6 +1,7 @@
 ---
 title: "Yeni Enstrüman: Elektro Gitar + Amfi"
 excerpt: "Elektro gitar ve amfi aldım!"
+locale: tr_TR
 tags: tr
 published: true
 axseq: 1

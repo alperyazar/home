@@ -1,6 +1,7 @@
 ---
 title: "Sumatra PDF"
 excerpt: "Sumatra PDF, Windows için tasarlanmış, hafif, hızlı bir PDF okuyucusu."
+locale: tr_TR
 tags:
     - tr
 axseq: 5

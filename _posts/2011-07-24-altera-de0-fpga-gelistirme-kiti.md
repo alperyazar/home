@@ -1,6 +1,7 @@
 ---
 title: "Altera DE0 FPGA Geliştirme Kiti"
 excerpt: "Yeni aldığım Altera DE0 FPGA kartının kutu açılışını yapıyorum."
+locale: tr_TR
 tags: tr
 published: true
 axseq: 4

@@ -1,6 +1,7 @@
 ---
 title: "LaTeX'te Otomatik Hecelemeyi Kapatma"
 excerpt: "LaTeX'in sunduğu otomatik hecelemeyi her zaman istemeyebiliriz."
+locale: tr_TR
 tags: tr
 published: true
 axseq: 2

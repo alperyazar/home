@@ -1,6 +1,7 @@
 ---
 title: "Atari Kolu (NES Controller) Arayüzü"
 excerpt: "Atari kolunu kendi projelerimizde nasıl kullanır, tuşları nasıl okuruz?"
+locale: tr_TR
 tags: tr
 published: true
 axseq: 5

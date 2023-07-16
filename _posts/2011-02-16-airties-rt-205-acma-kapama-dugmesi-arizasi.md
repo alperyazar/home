@@ -1,6 +1,7 @@
 ---
 title: "AirTies RT-205 Açma - Kapama Düğmesi Arızası"
 excerpt: "AirTies modemimde oluşan güç düğmesi arızasını çözüyorum."
+locale: tr_TR
 tags: tr
 published: true
 axseq: 1

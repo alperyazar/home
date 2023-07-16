@@ -1,6 +1,7 @@
 ---
 title: "Ubuntu Üzerinde Disket Sürücüsünü Kullanma"
 excerpt: "udisks komutu ile bağlanmayan disketlere çözüm"
+locale: tr_TR
 tags: tr
 published: true
 axseq: 3

@@ -1,6 +1,7 @@
 ---
 title: "Raspberry Pi SD kart taşıma ve büyütme"
 excerpt: "Kullandığınız SD kartı aynı boy ya da daha büyük bir karta nasıl taşıyabileceğinizi anlatıyorum."
+locale: tr_TR
 tags:
     - tr
 axseq: 3

@@ -1,6 +1,7 @@
 ---
 title: "Windows'un Sunduğu 'Hazırda Beklet' ve 'Uyku' Seçeneklerini Sürekli Ters Algılamam"
 excerpt: "Uyku dediğin derin olur!"
+locale: tr_TR
 tags: tr
 published: true
 axseq: 1
