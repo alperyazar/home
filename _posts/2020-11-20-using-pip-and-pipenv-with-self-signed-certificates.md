@@ -1,7 +1,7 @@
 ---
 title: "Use pip and pipenv with self signed SSL certificates"
 excerpt: "Use pip and pipenv with self signed SSL certificates"
-axseq: 2
+axseq: 7
 tags:
     - en
 published: true

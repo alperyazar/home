@@ -3,9 +3,9 @@ title: "Running PetaLinux on an offline machine"
 excerpt: "PetaLinux can be run an offline machine with proper configuration"
 tags:
     - en
-axseq: 2
+axseq: 3
 published: true
-image: /assets/img/22/2.png
+image: /assets/img/22/3.png
 ---
 
 If you are a Xilinx customer and want to compile an embedded Linux with PetaLinux
@@ -89,7 +89,7 @@ edit the configuration file.
 
 Run `petalinux-config` to bring up settings menu then open `Yocto Settings`.
 
-![petalinux-config](/assets/img/22/2-config_1.png)
+![petalinux-config](/assets/img/22/3-config_1.png){:.centered}
 
 In this menu, make sure that `Enable Network sstate feeds` is **checked** and
 `Enable BB NO NETWORK` is **NOT checked**. I remember that some Xilinx forum
@@ -97,7 +97,7 @@ posts say to check this option but if you do this PetaLinux will assume that
 you don't have *any* network connection, even a local connection to the local
 server.
 
-![petalinux-config](/assets/img/22/2-config_2.png)
+![petalinux-config](/assets/img/22/3-config_2.png){:.centered}
 
 Then open `Network sstate feeds URL` setting. This should point `sstate-cache`
 URL. In our example, this would be

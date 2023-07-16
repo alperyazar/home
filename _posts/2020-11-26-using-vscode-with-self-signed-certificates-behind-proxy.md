@@ -3,7 +3,7 @@ title: "Using VS Code with self signed SSL certificates behind proxy"
 excerpt: "How to work with VS Code behind proxy with self signed SSL certificates"
 tags:
     - en
-axseq: 3
+axseq: 8
 published: true
 ---
 

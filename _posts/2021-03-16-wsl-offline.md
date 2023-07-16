@@ -3,7 +3,7 @@ title: "Using WSL on an offline Windows machine"
 excerpt: "How to install WSL on a Windows machine not connected to the Internet"
 tags:
     - en
-axseq: 2
+axseq: 1
 image: /assets/img/21/2.jpg
 published: true
 ---
@@ -114,8 +114,8 @@ wslconfig /u Ubuntu-20.04
 After that, `wsl` command should run, then you can install the Ubuntu to a
 new location.
 
-> ℹ️ If you know how to move installed distro without reinstalling again, please
-> comment. Maybe [this](https://stackoverflow.com/a/51767786)?
+> ℹ️ If you know how to move installed distro without reinstalling again, **please
+> comment.** Maybe [this](https://stackoverflow.com/a/51767786)?
 
 ## Error: "WslRegisterDistribution failed with error: 0x80070005"
 
