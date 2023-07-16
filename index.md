@@ -1,6 +1,6 @@
 ---
 title: "Me"
-excerpt: "Alper Yazar"
+excerpt: "About Alper Yazar, ASELSAN, electronics engineer interested in various things"
 layout: page
 published: true
 ---
