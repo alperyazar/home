@@ -4,8 +4,8 @@ excerpt: 'C has a member of procedural programming languages. "Divide and conque
 published: true
 tags:
   - en
-axseq: 1
-image: /assets/img/23/1.png
+axseq: 2
+image: /assets/img/23/2.png
 ---
 
 **Procedural programming** (**prosedürel programlama** in Turkish) paradigm is a
@@ -100,7 +100,7 @@ paradigm. For example, C is not an object-oriented programming language. But one
 can write C programs with an object-oriented approach. There is even a book for
 that!
 
-![Object-Oriented Programming With ANSI-C by Axel Schreiner](/assets/img/23/1-a.jpeg){:.centered}
+![Object-Oriented Programming With ANSI-C by Axel Schreiner](/assets/img/23/2-a.jpeg){:.centered}
 
 {:.text-align-center}
 Object-Oriented Programming With ANSI-C by Axel Schreiner

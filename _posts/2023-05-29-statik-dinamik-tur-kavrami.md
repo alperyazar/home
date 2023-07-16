@@ -5,8 +5,8 @@ published: true
 locale: tr_TR
 tags:
   - tr
-axseq: 3
-image: /assets/img/23/3.jpg
+axseq: 4
+image: /assets/img/23/4.jpg
 ---
 
 Programlama dillerinin (neredeyse ?) tamamında bir tür kavramından

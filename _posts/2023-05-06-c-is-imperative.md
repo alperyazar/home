@@ -4,8 +4,8 @@ excerpt: 'Programming in C is similar to giving "orders" to a computer'
 published: true
 tags:
   - en
-axseq: 2
-image: /assets/img/23/2.png
+axseq: 3
+image: /assets/img/23/3.png
 canonical_url: 'https://www.linkedin.com/pulse/c-imperative-language-alper-yazar/'
 ---
 

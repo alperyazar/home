@@ -4,8 +4,8 @@ excerpt: "May the Force be with you"
 published: true
 tags:
   - en
-axseq: 4
-image: /assets/img/23/4.png
+axseq: 5
+image: /assets/img/23/5.png
 canonical_url: 'https://www.linkedin.com/pulse/yoda-notation-may-force-you-alper-yazar/'
 ---
 
