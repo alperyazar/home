@@ -5,4 +5,4 @@ list_title: " "
 ---
 
 <!-- markdownlint-disable-next-line -->
-<mark>All posts are in Turkish unless tagged with</mark> `[EN]`
+ℹ️ Posts tagged with 🇹🇷, 🇬🇧 are in Turkish and English, respectively.

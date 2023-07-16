@@ -5,8 +5,8 @@ published: true
 locale: tr_TR
 tags:
   - tr
-axseq: 3
-image: /assets/img/22/3.png
+axseq: 8
+image: /assets/img/22/8.png
 ---
 
 Gömülü sistemlerle uğraşan biri olarak C dili ile ilgileniyorum. Bu yazıda
