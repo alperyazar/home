@@ -1,6 +1,7 @@
 ---
 title: "Merhaba (go)Hugo!"
 excerpt: "Blog yazmaya Hugo ile devam ediyorum."
+tags: tr
 locale: tr_TR
 axseq: 2
 published: true

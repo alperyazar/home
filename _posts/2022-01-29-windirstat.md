@@ -31,11 +31,10 @@ klasörlerin ne kadar yer kapladığını görüyoruz. Bu noktadan sonra dilerse
 `Clean Up` menüsünden ya da doğrudan Windows'un dosya yöneticisinden dosyaları
 silebilirsiniz.
 
-Programın içinden ya da Windows dosya yöneticisinden `Del` tuşu ile silme
-yapılırsa dosyalar çöp kutusuna gideceği için yer açmaya çalıştığınız diskte
-muhtemelen durmaya devam edecekleri için aslında yer açmamış olacaksınız. Silme
-işlemlerinin `Shift + Del` tuşu ile yapılması bunu engelleyecektir.
-{: .notice--warning}
+> ⚠️ Programın içinden ya da Windows dosya yöneticisinden `Del` tuşu ile silme
+> yapılırsa dosyalar çöp kutusuna gideceği için yer açmaya çalıştığınız diskte
+> muhtemelen durmaya devam edecekleri için aslında yer açmamış olacaksınız. Silme
+> işlemlerinin `Shift + Del` tuşu ile yapılması bunu engelleyecektir.
 
 ## Linux
 
