@@ -5,4 +5,4 @@ list_title: " "
 ---
 
 <!-- markdownlint-disable-next-line -->
-ℹ️ Posts tagged with 🇹🇷, 🇬🇧 are in Turkish and English, respectively.
+ℹ️ Posts tagged with 🇹🇷 or 🇬🇧 are in Turkish or English, respectively.
