@@ -18,9 +18,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Alper Yazar .com
+title: Alper Yazar
 description: >- # this means to ignore newlines until "baseurl:"
-  electronics engineer interested in various things.
+  "Full Stack" Electronics Engineer
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.alperyazar.com" # the base hostname & protocol for your site, e.g. http://example.com
 linkedin_username: alperyazar

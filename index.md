@@ -1,6 +1,6 @@
 ---
-title: "Me"
-excerpt: "About Alper Yazar, ASELSAN, electronics engineer interested in various things"
+title: "About Me"
+excerpt: 'About Alper Yazar, ayazar, "Full Stack" Electronics Engineer, ASELSAN'
 layout: page
 published: true
 ---
@@ -14,7 +14,7 @@ published: true
 **Alper Yazar** (**ayazar**)
 
 {:.text-align-center}
-*electronics engineer interested in various things*
+*"Full Stack" Electronics Engineer*
 
 I got my BSc and MSc degrees from the same department,
 [METU](https://www.metu.edu.tr/) EEE, in 2012 and 2015, respectively. My
