@@ -26,6 +26,9 @@ url: "https://www.alperyazar.com" # the base hostname & protocol for your site, 
 linkedin_username: alperyazar
 github_username:  alperyazar
 youtube_username: "@ayazar"
+mastodon:
+  - username: ayazar
+    instance: mastodon.social
 rss: RSS
 author: Alper Yazar
 

@@ -33,10 +33,12 @@ musical instruments 🎵.
 
 If you want to reach privately to me please send an e-mail:
 
-`a ! ! ! ! y ! ! ! ! [@} gmail /.$ com`
+`ayazar[@} a ! p ! ! y ! ! ar  /.$ com`
 
-(Don't forget to replace inconvenient characters)
-or send a message on [LinkedIn](https://www.linkedin.com/in/alperyazar).
+(Don't forget to replace or remove the inconvenient characters)(Hint 💡: What is
+the URL right now?) or send a message on
+[LinkedIn](https://www.linkedin.com/in/alperyazar) or on
+[mastodon](https://mastodon.social/@ayazar).
 
 ## Education
 
