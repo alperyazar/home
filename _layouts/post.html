@@ -19,10 +19,20 @@ layout: default
       {%- endif -%}
       {%- if page.author -%}
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
+      {%- endif -%}
+      {%- if page.tags contains 'tr' -%}
+        • 🇹🇷
+      {%- endif -%}
+      {%- if page.tags contains 'en' -%}
+        • 🇬🇧
+      {%- endif -%}
+      </p>
   </header>
-   {%- if page.tags contains 'tr' -%}
-  <p><span data-nosnippet>🔤 <small><mark>This post is in Turkish.</mark></small></span></p>
+  {%- if page.tags contains 'tr' -%}
+  <div style="background: #eeeeff; border-radius: 2px; margin: 2px;"><center><p><span data-nosnippet>🔤 <small>This post is in <mark>Turkish</mark>. <a rel=”nofollow” href="https://www-alperyazar-com.translate.goog{{ page.url | relative_url }}?_x_tr_sl=auto&_x_tr_tl=en">Try Google Translate</a> to view this page in English.</small> 🔤</span></p></center></div>
+  {%- endif -%}
+  {%- if page.tags contains 'en' -%}
+  <div style="background: #eeeeff; border-radius: 2px; margin: 2px;"><center><p><span data-nosnippet>🔤 <small>Bu yazı <mark>İngilizce</mark>'dir. Türkçe'ye çevirmek için <a rel=”nofollow” href="https://www-alperyazar-com.translate.goog{{ page.url | relative_url }}?_x_tr_sl=auto&_x_tr_tl=tr">Google Translate'i deneyebilirsiniz.</a></small>  🔤</span></p></center></div>
   {%- endif -%}
 
   <div class="post-content e-content" itemprop="articleBody">
