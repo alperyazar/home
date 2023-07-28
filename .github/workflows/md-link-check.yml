@@ -20,7 +20,7 @@ jobs:
       - name: Link Checker
         uses: lycheeverse/lychee-action@v1.8.0
         with:
-          args: --verbose './**/*.md'
+          args: --verbose --exclude-path ./vendor './**/*.md'
 
       - name: Create Issue From File
         if: env.lychee_exit_code != 0
