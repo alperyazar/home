@@ -6,13 +6,14 @@ published: true
 ---
 
 I recommend following me on [LinkedIn](https://www.linkedin.com/in/alperyazar)
-or [Twitter](https://twitter.com/alper_yazar). I usually share my posts on these
+or [mastodon](https://mastodon.social/@ayazar). I usually share my posts on these
 platforms.
 
 Here the list of my profiles on some platforms:
 
 - [LinkedIn](https://www.linkedin.com/in/alperyazar)
-- [Twitter](https://twitter.com/alper_yazar)
+- [mastodon](https://mastodon.social/@ayazar)
+- [Twitter](https://twitter.com/alper_yazar), moving to [mastodon](https://mastodon.social/@ayazar)
 - [GitHub](https://github.com/alperyazar)
 - [YouTube](https://www.youtube.com/@ayazar)
 - [Reddit](https://www.reddit.com/user/ayazar/)
