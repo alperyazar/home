@@ -23,7 +23,8 @@ yapısında devam ettim.
 
 Şimdi ise yine bir statik site üreten yazılım olan
 [Sphinx](https://www.sphinx-doc.org/)'e geçiş yapmış bulunuyorum. Sphinx'i ilk
-olarak [comp.arch Notes](https://github.com/alperyazar/comp.arch-notes)
+olarak comp.arch Notes(link: `https://github.com/alperyazar/comp.arch-notes`,
+`🔗 404`)
 çalışmamda denedim. Jekyll ile temel farklar şu şekilde:
 
 - Jekyll Markdown'u destekliyor. Sphinx de Markdown'u desteklese de temel

@@ -17,7 +17,8 @@ modemi sürekli açık tutmuyorum. Evdeki 1 Mbit 4 GB kotalı internet ile zaten
 öyle adam gibi dosya indirmek mümkün olmuyor. Bu internete 30 TL'ye yakın ücret
 ödüyoruz ya, o da ayrı bir konu.** Neyse, modemi sürekli açık tutmamak için
 arkasındaki açma kapama düğmesinden kapatıp açıyorum (günde 2 veya 3 defa). Daha
-doğrusu kapatıp açıyordum. Yaklaşık 150 TL saydığımız [AirTies RT-205](http://www.airties.com.tr/datasheets/RT205TR_DS.pdf)
+doğrusu kapatıp açıyordum. Yaklaşık 150 TL saydığımız
+(Link: `http://www.airties.com.tr/datasheets/RT205TR_DS.pdf`, `🔗 404`)
 modem yaklaşık 1 - 2 hafta sonra su koyvermeye başladı.
 Arkadaki açma - kapama düğmesi arıza sinyalleri vermeye başladı.
 
@@ -120,7 +121,8 @@ Modeminizin çalıştığına emin olduktan sonra kutuyu açtığınız gibi kap
 Bu işlemi yaklaşık 10 gün önce yaptım ve benzer bir problem yaşayanlara yardımcı
 olması için bu yazıyı yazmaya karar verdim. Yazıyı hazırlarken dikkatimi çeken
 bir nokta da benzer şikayetlerin,
-[burada](http://www.sikayetvar.com/sikayet/no/772246/g/AIRTIES+Arizali+Cihazini+Onarmiyor!)
+(link: `http://www.sikayetvar.com/sikayet/no/772246/g/AIRTIES+Arizali+Cihazini+Onarmiyor!`,
+`🔗 404`)
 olduğu gibi, internette var olması. Yüzlerce lira verdiğiniz bir ürünün böyle
 uyduruk bir kısımdan arıza yapması AirTies için kötü bir durum. Firmanın bu tarz
 bir arıza ile kullanıcın canını sıkması hoş değil.

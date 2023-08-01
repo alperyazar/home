@@ -53,6 +53,6 @@ I tested on CentOS 7.8 but this may work on all RedHat derived distros.
 $ export REQUESTS_CA_BUNDLE=/etc/pki/ca-trust/extracted/openssl/ca-bundle.trust.crt
 ```
 
-[^1f]: [https://stackoverflow.com/a/29751768](https://stackoverflow.com/a/29751768)
-[^2f]: [https://github.com/pypa/pipenv/issues/3841](https://github.com/pypa/pipenv/issues/3841)
-[^3f]: [https://github.com/pypa/pipenv/issues/2979](https://github.com/pypa/pipenv/issues/2979)
+[^1f]: <https://stackoverflow.com/a/29751768>
+[^2f]: <https://github.com/pypa/pipenv/issues/3841>
+[^3f]: <https://github.com/pypa/pipenv/issues/2979>
