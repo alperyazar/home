@@ -17,7 +17,8 @@ image: /assets/img/22/12.jpg
 - Oluşturacağımız dosya: `.vscode/extensions.json`. [Örnek](https://github.com/alperyazar/blog/blob/master/.vscode/extensions.json)
 - Kodu açan kişide eksik eklentiler varsa çıkan öneri penceresi:
 
-![Recommended Extensions Warning](/posts/img/22/2022-09-03-install-rec.png)
+{:.text-align-center}
+![Recommended Extensions Warning](/assets/img/22/12-a.png)
 
 - Github tarafından önerilen `.gitignore` dosyası: [Link](https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore)
 - [jsonc](https://code.visualstudio.com/docs/languages/json#_json-with-comments)
