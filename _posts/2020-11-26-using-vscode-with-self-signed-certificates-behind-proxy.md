@@ -5,7 +5,7 @@ tags:
     - en
 axseq: 8
 published: true
-canonical_url: 'https://asynx.dev/blog/20/11/using-vscode-with-self-signed-certificates-behind-proxy.html'
+canonical_url: 'https://asynx.dev/blog/using-vscode-with-self-signed-certificates-behind-proxy/'
 ---
 
 Similar to the case I mentioned in [my previous post]({% post_url
