@@ -7,7 +7,6 @@ locale: tr_TR
 axseq: 1
 published: true
 image: /assets/img/22/1.png
-canonical_url: 'https://asynx.dev/blog/windirstat/'
 ---
 
 - <https://windirstat.net/>

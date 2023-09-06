@@ -6,7 +6,6 @@ tags:
 axseq: 1
 image: /assets/img/21/2.jpg
 published: true
-canonical_url: 'https://asynx.dev/blog/wsl-offline/'
 ---
 
 In this post, we will install Ubuntu 20.04 WSL package on an **offline**
