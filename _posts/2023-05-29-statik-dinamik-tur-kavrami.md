@@ -7,7 +7,6 @@ tags:
   - tr
 axseq: 4
 image: /assets/img/23/4.jpg
-canonical_url: 'https://asynx.dev/blog/statik-dinamik-tur-kavrami/'
 ---
 
 Programlama dillerinin (neredeyse ?) tamamında bir tür kavramından

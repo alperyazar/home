@@ -6,7 +6,6 @@ tags:
   - en
 axseq: 5
 image: /assets/img/23/5.png
-canonical_url: 'https://save.alperyazar.com/yoda-notation'
 ---
 
 Consider the following C code. Which style do you prefer?
