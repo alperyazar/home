@@ -1,0 +1,82 @@
+{% assign axrecc = nil %}
+
+{% if include.reccmode == 'single' %}
+    {% assign reccyear = include.reccyear %}
+    {% assign reccaxseq = include.reccaxseq %}
+
+    {% for axreccitem in site.posts %}
+        {% assign axshortyear = axreccitem.date | date: "%y" %}
+        {% assign axaxseq = axreccitem.axseq | append: "" %}
+
+        {% if reccyear == axshortyear %}
+            {% if reccaxseq == axaxseq %}
+                {% assign axrecc = axreccitem %}
+                {% break %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+
+{% comment %}<!-- https://stackoverflow.com/a/31491037 -->{% endcomment %}
+
+{% if include.reccmode == 'random' %}
+    {% assign axpagedate = page.date | date: "%Y" %}
+    {% assign axrandom = 0 | plus: 0 %}
+    {% for counter in (0..9) %}
+<!--{{ counter }}-->
+        {% assign axrandom = site.time | date: "%N" | plus: page.axseq | plus: counter | modulo: axpagedate | plus: counter | times: page.axseq | modulo: site.posts.size  %}
+        {% if page.id != site.posts[axrandom].id%}
+            {% if page.tags contains 'en' %}
+                {%if site.posts[axrandom].tags contains 'en' %}
+                    {% assign axrecc = site.posts[axrandom] %}
+                    {% break %}
+                {% endif %}
+            {% else %}
+                {% assign axrecc = site.posts[axrandom] %}
+                {% break %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+
+{% if axrecc.id %}
+{% assign title = axrecc.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+{% assign title = axrecc.title %}
+{% endif %}
+
+{% if include.reccmode == 'random' %}
+  {% if page.tags contains 'en' %}
+    {% assign prompt ="🤓 One more post?" %}
+  {% else %}
+    {% assign prompt ="🤓 Bir yazı daha?" %}
+  {% endif %}
+{% else %}
+  {% if page.tags contains 'en' %}
+    {% assign prompt ="🔗 A similar post" %}
+  {% else %}
+    {% assign prompt ="🔗 İlgili bir yazı" %}
+  {% endif %}
+{% endif %}
+
+{% if axrecc.id %}
+<ul class="post-list">
+<li style="background: #DDEEEE; padding: 10px; border-radius: 10px;">
+<h4>{{ prompt }}</h4>
+{%- if axrecc.image -%}
+<center>
+<p>
+<a class="post-link" href="{{ axrecc.url | relative_url }}"><img alt="Teaser" src="{{ axrecc.image | absolute_url }}" style="border-radius: 10px;">
+</a></p></center>
+{%- endif -%}
+<h3>
+<a class="post-link" href="{{ axrecc.url | relative_url }}">
+{{ title | escape }}
+</a>
+</h3>
+{%- if site.show_excerpts -%}
+<h4>{{ axrecc.excerpt }}</h4>
+{%- endif -%}
+</li>
+</ul>
+{% endif %}

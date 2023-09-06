@@ -126,6 +126,8 @@ way of programming considering computer architecture. However, as I said
 previously, this doesn't mean that one is a better way of programming than the
 other. It solely depends on your needs.
 
+{% include ax_single.html reccmode="single" reccyear="23" reccaxseq="3"%}
+
 **In summary, C is a programming language that supports the procedural
 programming paradigm.**
 

@@ -100,6 +100,8 @@ to C with 3rd party libraries. However, extending a language with 3rd party
 libraries doesn't change its paradigm or category. The key point is that the
 features should be native to that language.
 
+{% include ax_single.html reccmode="single" reccyear="23" reccaxseq="2"%}
+
 ## resources
 
 - <https://en.wikipedia.org/wiki/C_(programming_language)>
