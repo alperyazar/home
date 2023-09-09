@@ -41,7 +41,7 @@ Hem front end hem de back end yapan (en azından yapması beklenen) kişiler ise
 ![Full Stack Developers meme](/assets/img/23/8-a.jpg){:.centered}
 
 {:.text-align-center}
-hehe [and the another](https://www.youtube.com/watch?v=IzyTGeoYPLk) hehe
+hehe [and then another](https://www.youtube.com/watch?v=IzyTGeoYPLk) hehe
 
 ## Stack nedir?
 
