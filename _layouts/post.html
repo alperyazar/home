@@ -38,6 +38,7 @@ layout: default
   <div class="post-content e-content" itemprop="articleBody">
     {%- if page.image -%}<center><p><img alt="Teaser" src="{{ page.image | absolute_url }}" style="border-radius: 10px;"></p></center>{%- endif -%}
     {{ content }}
+    {% include ax_single.html reccmode="random"%}
   </div>
 
   {%- if site.disqus.shortname -%}

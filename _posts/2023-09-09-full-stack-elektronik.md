@@ -7,6 +7,7 @@ tags:
   - tr
 axseq: 8
 image: /assets/img/23/8-d.png
+modified_date: 2023-09-10
 ---
 
 Belki dikkatinizi çekmiştir. Bir süredir kendimi, sitemdeki [profil sayfamda](/)
@@ -223,15 +224,21 @@ Eğer hedef ürün karmaşık değil ise bir kişi tüm katmanları halledebilir
 hedef büyüdükçe alan uzmanlarına ihtiyaç artacaktır.
 
 Peki **"Full Stack" Elektronik Mühendisi mi olmaya çalışmalıyız?** İşte en zor
-soru, çünkü bilmiyorum. Benim cevabını en çok merak ettiğim soru da
-**Yurt dışı firmalar nasıl profiller arıyorlar?** Elbette tek bir konuyu çok
-derin bilen kişi de arayan firmalar olacaktır, hepsinden "az az" bileni de. Ben
-geneli merak ediyorum. Full stack gitmekteki en büyük tehlike
-**[Jack of all trades, master of none](https://en.wikipedia.org/wiki/Jack_of_all_trades,_master_of_none)**
+soru, çünkü bilmiyorum. Benim cevabını en çok merak ettiğim soru da **Yurt dışı
+firmalar nasıl profiller arıyorlar?** Benim gözlemlediğim, Full Stack'ten ziyade
+bir alanda uzmanlaşmış kişiler arandığı.
+
+> 🗯️ Bu yazının LinkedIn paylaşımında bu kısım ile ilgili yorumlar
+> [var.](https://www.linkedin.com/posts/alperyazar_full-stack-elektronik-m%C3%BChendisi-activity-7106390221604163584-u2yG)
+
+Elbette tek bir konuyu çok derin bilen kişi de arayan firmalar olacaktır,
+hepsinden "az az" bileni de. Ben geneli merak ediyorum. Full stack gitmekteki en
+büyük tehlike **[Jack of all trades, master of
+none](https://en.wikipedia.org/wiki/Jack_of_all_trades,_master_of_none)**
 konumuna düşmek yani her şeyden az az anlayıp bir konunun uzmanı olmamak. Böyle
-bir durum da kariyer açısından dezavantaj yaratabilir. Yine de en önemlisi bunlara
-çok takılmadan en motive çalışacağınız konu veya konularda çalışmaya çalışmak
-bence.
+bir durum da kariyer açısından dezavantaj yaratabilir. Yine de en önemlisi
+bunlara çok takılmadan en motive çalışacağınız konu veya konularda çalışmaya
+çalışmak bence.
 
 Diyelim ki öğrenebileceğiniz bilgilerin toplamı 4 birim, yani kapasitemiz gibi
 de düşünebiliriz. Siz 4 katmana *uniform* ayrılırsanız her katmanda 1 birimlik
@@ -270,4 +277,9 @@ aktarabilirim.
 **Varsa sizlerin de bu konudaki görüşlerini duymak isterim, yorum olarak iletebilirsiniz.**
 **Kendinizi "full stack" mi hissediyorsunuz? Memnun musunuz?**
 
-{% include ax_single.html reccmode="random"%}
+> 🔥 Bu yazıyı LinkedIn'de
+> [paylaşmıştım.](https://www.linkedin.com/posts/alperyazar_full-stack-elektronik-m%C3%BChendisi-activity-7106390221604163584-u2yG)
+> Paylaşımın altında da çok değerli yorumlar bulunuyor. Eğer LinkedIn üzerinden
+> gelmiyorsanız,
+> [oraya](https://www.linkedin.com/posts/alperyazar_full-stack-elektronik-m%C3%BChendisi-activity-7106390221604163584-u2yG)
+> da bakmanızı öneririm.
