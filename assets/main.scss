@@ -32,3 +32,17 @@ img.centered {
 .text-align-center {
   text-align: center;
 }
+
+.youtube-video {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+
+td, th{
+  white-space: normal;
+}
+
+table{
+  max-width: 100%;
+  overflow: visible;
+}
