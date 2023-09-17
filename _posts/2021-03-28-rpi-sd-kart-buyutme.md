@@ -7,7 +7,6 @@ tags:
 axseq: 3
 published: true
 image: /assets/img/21/3.jpg
-canonical_url: 'https://asynx.dev/blog/rpi-sd-kart-buyutme/'
 ---
 
 Raspberry Pi 400'de kullandığım SD kartın boyutu biraz küçük kalmaya başlayınca

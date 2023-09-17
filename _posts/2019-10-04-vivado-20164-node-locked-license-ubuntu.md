@@ -4,7 +4,6 @@ excerpt: "Vivado 2016.4 is obsessed with NIC naming"
 tags: en
 published: true
 axseq: 6
-canonical_url: 'https://asynx.dev/blog/vivado-20164-node-locked-license-ubuntu/'
 ---
 
 ## Symptoms
