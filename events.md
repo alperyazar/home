@@ -11,7 +11,7 @@ electronic design, embedded software, FPGA, etc.
 
 This page is updated periodically (I hope). Therefore, I recommend visiting
 the page regularly. Alternatively, you can
-[follow me on LinkedIn](https://www.linkedin.com/in/alperyazar)
+**[follow me on LinkedIn](https://www.linkedin.com/in/alperyazar)**
 to get notified about updates and new events.
 
 ## Week of September 18
