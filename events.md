@@ -3,7 +3,7 @@ title: "🗓️ Events"
 excerpt: "Upcoming free events on embedded software, electronic design, FPGA, etc."
 layout: page
 published: true
-modified_date: 2023-09-19
+modified_date: 2023-09-20
 ---
 
 In this page, I list upcoming **free** events related to hardware design,
@@ -35,6 +35,7 @@ to get notified about updates and new events.
 | 2023-09-27 | Hardware | [How Can I Reduce Noise on Signals Measured With an Oscilloscope?](https://go.teledynelecroy.com/l/48392/2023-09-04/8nxmpc) | Webinar | [Teledyne LeCroy](https://www.teledynelecroy.com/) |
 | 2023-09-27 | FPGA, Embedded | [Starting AI Engine Development with the Vitis Software Platform](https://webinar.amd.com/2023-Vitis-Developer-Series/en/registration) | Webinar | [AMD](https://www.amd.com) |
 | 2023-09-27 | Management | [Outsourcing Design Solutions for Defense Primes](https://us02web.zoom.us/webinar/register/8016945257563/WN_X1g09p2bTYO7bVWj8G0aIQ) | Webinar | [BLT](https://bltinc.com) |
+| 2023-09-28 29 | FPGA | [Maximizing the Potential of Versal AI Engines ONLINE WORKSHOP](https://www.doulos.com/training/fpga-and-hardware-design/xilinx/maximizing-the-potential-of-versal-ai-engines-online-workshop/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) ⭐ | Online Workshop, 8 hours | [Doulos](https://www.doulos.com?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
 | 2023-09-28 | Hardware | [How Do I Make a Differential Measurement on an Oscilloscope Using Passive Probes?](https://go.teledynelecroy.com/l/48392/2023-06-26/8ns28q) | Webinar | [Teledyne LeCroy](https://www.teledynelecroy.com/) |
 | 2023-09-28 | FPGA, Embedded | [Multimedia Accelerators for Kria SOM with HLS & Vitis Libraries](https://plc2.com/training/multimedia-accelerators-for-kria-som-with-hls-vitis-libraries_we/) | Webinar | [PLC2](https://plc2.com) |
 | 2023-09-28 | FPGA | [Eliminating Memory Bottlenecks with Versal™ HBM Series - From Architecture to Implementation](https://pages.xilinx.com/EN-WB-2023-09-27-VersalHBM_LP-Registration.html) | Webinar | [AMD](https://www.amd.com) |
