@@ -40,6 +40,7 @@ to get notified about updates and new events.
 | 2023-09-28 | FPGA, Embedded | [Multimedia Accelerators for Kria SOM with HLS & Vitis Libraries](https://plc2.com/training/multimedia-accelerators-for-kria-som-with-hls-vitis-libraries_we/) | Webinar | [PLC2](https://plc2.com) |
 | 2023-09-28 | FPGA | [Eliminating Memory Bottlenecks with Versal™ HBM Series - From Architecture to Implementation](https://pages.xilinx.com/EN-WB-2023-09-27-VersalHBM_LP-Registration.html) | Webinar | [AMD](https://www.amd.com) |
 | 2023-10-04 | FPGA, Embedded| [Signal Processing on AI Engine Using Vitis DSP Libraries and Vitis Model Composer](https://webinar.amd.com/2023-Vitis-Developer-Series/en/registration) | Webinar | [AMD](https://www.amd.com) |
+| 2023-10-04 | FPGA, Embedded | [AMD Day](https://empa.com/amd-day/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) ⭐ | Ankara, Türkiye 📍 | [Empa](https://empa.com/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
 | 2023-10-11 | FPGA, Embedded | [AI Engine Test Harness and Versal System Integration](https://webinar.amd.com/2023-Vitis-Developer-Series/en/registration) | Webinar | [AMD](https://www.amd.com) |
 | 2023-10-13 | HDL | [Getting Started with SystemVerilog Randomization](https://www.doulos.com/webinars/getting-started-with-systemverilog-randomization/) | Webinar | [Doulos](https://www.doulos.com) |
 | 2023-10-18 | FPGA | [Deep Learning with FPGAs](https://www.doulos.com/webinars/deep-learning-with-fpgas/) | Webinar | [Doulos](https://www.doulos.com) |
