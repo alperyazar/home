@@ -3,7 +3,7 @@ title: "🗓️ Events"
 excerpt: "Upcoming free events on embedded software, electronic design, FPGA, etc."
 layout: page
 published: true
-modified_date: 2023-09-20
+modified_date: 2023-09-22
 ---
 
 In this page, I list upcoming **free** events related to hardware design,
