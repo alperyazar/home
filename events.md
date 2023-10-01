@@ -26,6 +26,9 @@ to get notified about updates and new events.
 | 2023-10-05 | Hardware | [Jitter Basics - Part 1](https://go.teledynelecroy.com/l/48392/2023-08-29/8nx6yv?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Teledyne LeCroy](https://www.teledynelecroy.com/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
 | 2023-10-05 | Hardware | [Fundamentals of Power Integrity Tutorial: Measuring Power Sources](https://go.teledynelecroy.com/l/48392/2023-08-22/8nwrv2?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Teledyne LeCroy](https://www.teledynelecroy.com/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
 
+<!-- markdownlint-disable-next-line -->
+<p><center><a href="https://www.buymeacoffee.com/ayazar" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a></center></p>
+
 ## Upcoming Events
 
 | Date  | Field | Event | Type | Organizer |
