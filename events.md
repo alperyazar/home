@@ -3,7 +3,7 @@ title: "🗓️ Events"
 excerpt: "Upcoming free events on embedded software, electronic design, FPGA, etc."
 layout: page
 published: true
-modified_date: 2023-09-30
+modified_date: 2023-10-08
 ---
 
 In this page, I list upcoming **free** events related to hardware design,
@@ -14,29 +14,15 @@ the page regularly. Alternatively, you can
 **[follow me on LinkedIn](https://www.linkedin.com/in/alperyazar)**
 to get notified about updates and new events.
 
-## Week of October 2
+## Week of October 9
 
-| Date | Field | Event | Type | Organizer |
-| ----- | ----- | ----- | ---- | --------- |
-| 2023-10-03 | Linux, Embedded | [Demystifying the Linux Kernel Security Process](https://www.linuxfoundation.org/webinars/demystifying-the-linux-kernel-security-process?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [The Linux Foundation](https://www.linuxfoundation.org/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
-| 2023-10-04 | FPGA, Embedded| [Signal Processing on AI Engine Using Vitis DSP Libraries and Vitis Model Composer](https://webinar.amd.com/2023-Vitis-Developer-Series/en/registration?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [AMD](https://www.amd.com?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
-| 2023-10-04 | FPGA, Embedded | [AMD Day](https://empa.com/amd-day/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) ⭐ | Ankara, Türkiye 📍 | [Empa](https://empa.com/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
-| 2023-10-04 | Hardware | [Oscilloscopes Best Practice - Part 2 How to Improve the Use of your Oscilloscope](https://go.teledynelecroy.com/l/48392/2023-08-31/8nxgsv?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Teledyne LeCroy](https://www.teledynelecroy.com/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
-| 2023-10-04 | Hardware | [How to Debug PCIe® Link Equalization (LEQ) Training and Other Dynamic Link Behaviors](https://go.teledynelecroy.com/l/48392/2023-08-08/8nvxy6?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Teledyne LeCroy](https://www.teledynelecroy.com/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
-| 2023-10-05 | Hardware | [Jitter Basics - Part 1](https://go.teledynelecroy.com/l/48392/2023-08-29/8nx6yv?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Teledyne LeCroy](https://www.teledynelecroy.com/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
-| 2023-10-05 | Hardware | [Fundamentals of Power Integrity Tutorial: Measuring Power Sources](https://go.teledynelecroy.com/l/48392/2023-08-22/8nwrv2?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Teledyne LeCroy](https://www.teledynelecroy.com/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
-
-<!-- markdownlint-disable-next-line -->
-<p><center><a href="https://www.buymeacoffee.com/ayazar" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a></center></p>
+Please visit [Is ALTERA coming back? | Highlights 23-01](https://notes.alperyazar.com/highlights/23/01.html)
+for the upcoming events.
 
 ## Upcoming Events
 
 | Date  | Field | Event | Type | Organizer |
 | ----- | ----- | ----- | ---- | --------- |
-| 2023-10-18 | FPGA | [Deep Learning with FPGAs](https://www.doulos.com/webinars/deep-learning-with-fpgas/) | Webinar | [Doulos](https://www.doulos.com) |
-| 2023-10-19 | Hardware | [Jitter Basics - Part 3](https://go.teledynelecroy.com/l/48392/2023-08-29/8nx6z2?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Teledyne LeCroy](https://www.teledynelecroy.com/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
-| 2023-10-19 20 | Embedded, FPGA | [Migrating to the Vitis Embedded Software Development IDE](https://www.doulos.com/special-events/migrating-to-vitis-online-workshop/) ⭐ | Online Workshop, 8 hours | [Doulos](https://www.doulos.com?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
-| 2023-10-20 | Embedded, AI | [Connecting AI to IoT Applications](https://www.doulos.com/webinars/connecting-ai-to-iot-applications) | Webinar | [Doulos](https://www.doulos.com) |
 | 2023-10-25 | Embedded | [Modernizing Embedded Software Development Practices](https://www.beningo.com/webinars/webinar-registration/?webinarKey=3695052195634483800&utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Beningo Embedded Group](https://www.beningo.com/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
 | 2023-10-27 | Embedded | [Modern C++ for Safe and Efficient Embedded Systems](https://www.doulos.com/webinars/modern-cplusplus-for-safe-and-efficient-embedded-systems/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Doulos](https://www.doulos.com?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
 
@@ -74,3 +60,10 @@ if you can't see the form. Thank you!
 | 2023-09-28 | Hardware | [How Do I Make a Differential Measurement on an Oscilloscope Using Passive Probes?](https://go.teledynelecroy.com/l/48392/2023-06-26/8ns28q?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Teledyne LeCroy](https://www.teledynelecroy.com/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
 | 2023-09-28 | FPGA, Embedded | [Multimedia Accelerators for Kria SOM with HLS & Vitis Libraries](https://plc2.com/training/multimedia-accelerators-for-kria-som-with-hls-vitis-libraries_we/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [PLC2](https://plc2.com?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
 | 2023-09-28 | FPGA | [Eliminating Memory Bottlenecks with Versal™ HBM Series - From Architecture to Implementation](https://pages.xilinx.com/EN-WB-2023-09-27-VersalHBM_LP-Registration.html?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [AMD](https://www.amd.com?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
+| 2023-10-03 | Linux, Embedded | [Demystifying the Linux Kernel Security Process](https://www.linuxfoundation.org/webinars/demystifying-the-linux-kernel-security-process?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [The Linux Foundation](https://www.linuxfoundation.org/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
+| 2023-10-04 | FPGA, Embedded| [Signal Processing on AI Engine Using Vitis DSP Libraries and Vitis Model Composer](https://webinar.amd.com/2023-Vitis-Developer-Series/en/registration?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [AMD](https://www.amd.com?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
+| 2023-10-04 | FPGA, Embedded | [AMD Day](https://empa.com/amd-day/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) ⭐ | Ankara, Türkiye 📍 | [Empa](https://empa.com/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
+| 2023-10-04 | Hardware | [Oscilloscopes Best Practice - Part 2 How to Improve the Use of your Oscilloscope](https://go.teledynelecroy.com/l/48392/2023-08-31/8nxgsv?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Teledyne LeCroy](https://www.teledynelecroy.com/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
+| 2023-10-04 | Hardware | [How to Debug PCIe® Link Equalization (LEQ) Training and Other Dynamic Link Behaviors](https://go.teledynelecroy.com/l/48392/2023-08-08/8nvxy6?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Teledyne LeCroy](https://www.teledynelecroy.com/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
+| 2023-10-05 | Hardware | [Jitter Basics - Part 1](https://go.teledynelecroy.com/l/48392/2023-08-29/8nx6yv?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Teledyne LeCroy](https://www.teledynelecroy.com/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
+| 2023-10-05 | Hardware | [Fundamentals of Power Integrity Tutorial: Measuring Power Sources](https://go.teledynelecroy.com/l/48392/2023-08-22/8nwrv2?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Teledyne LeCroy](https://www.teledynelecroy.com/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
