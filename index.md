@@ -256,6 +256,9 @@ the URL right now?) or send a message on
 
 ### Embedded/Software
 
+- C Programming Language (in Turkish). 2023. [C and System Programmers
+  Association](https://csystem.org/), [Necati
+  Ergin](https://github.com/necatiergin/). 220 hours.†
 - Embedded Linux using Yocto. 2023. Udemy. 4.5 hours.
   [Certificate](/dow/UC-ef18181d-5d2d-44c5-b7e0-45ec67c2adc3-small.png)
 - The C Programming Language (in Turkish). 2022. [C and System Programmers

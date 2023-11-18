@@ -3,44 +3,14 @@ title: "🗓️ Events"
 excerpt: "Upcoming free events on embedded software, electronic design, FPGA, etc."
 layout: page
 published: true
-modified_date: 2023-10-08
+modified_date: 2023-10-21
 ---
 
-In this page, I list upcoming **free** events related to hardware design,
-electronic design, embedded software, FPGA, etc.
+In this page, I was listing upcoming **free** events related to hardware design,
+electronic design, embedded software, FPGA, etc. Now, this page is kept for
+**historical purposes.** I left compiling events due to lack of interest.
 
-This page is updated periodically (I hope). Therefore, I recommend visiting
-the page regularly. Alternatively, you can
-**[follow me on LinkedIn](https://www.linkedin.com/in/alperyazar)**
-to get notified about updates and new events.
-
-## Week of October 9
-
-Please visit [Is ALTERA coming back? | Highlights 23-01](https://notes.alperyazar.com/highlights/23/01.html)
-for the upcoming events.
-
-## Upcoming Events
-
-| Date  | Field | Event | Type | Organizer |
-| ----- | ----- | ----- | ---- | --------- |
-| 2023-10-25 | Embedded | [Modernizing Embedded Software Development Practices](https://www.beningo.com/webinars/webinar-registration/?webinarKey=3695052195634483800&utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Beningo Embedded Group](https://www.beningo.com/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
-| 2023-10-27 | Embedded | [Modern C++ for Safe and Efficient Embedded Systems](https://www.doulos.com/webinars/modern-cplusplus-for-safe-and-efficient-embedded-systems/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Doulos](https://www.doulos.com?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
-
-## Send a Missing Event
-
-If you think that I am missing an event, please send it to me via the form below.
-Click
-[here](https://docs.google.com/forms/d/e/1FAIpQLSfoPvOyQRQSPA_2tz9Jrv6fFEdV5k03qHiA0NuNCx1yE26CpQ/viewform?usp=sf_link)
-if you can't see the form. Thank you!
-
-<!-- markdownlint-capture -->
-<!-- markdownlint-disable -->
-<center>
-<iframe style="width: 100%;" src="https://docs.google.com/forms/d/e/1FAIpQLSfoPvOyQRQSPA_2tz9Jrv6fFEdV5k03qHiA0NuNCx1yE26CpQ/viewform?embedded=true" height="1600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-</center>
-<!-- markdownlint-restore -->
-
-## Past Events
+## Some Past Events
 
 | Date | Field | Event | Type | Organizer |
 | ----- | ----- | ----- | ---- | --------- |
@@ -67,3 +37,5 @@ if you can't see the form. Thank you!
 | 2023-10-04 | Hardware | [How to Debug PCIe® Link Equalization (LEQ) Training and Other Dynamic Link Behaviors](https://go.teledynelecroy.com/l/48392/2023-08-08/8nvxy6?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Teledyne LeCroy](https://www.teledynelecroy.com/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
 | 2023-10-05 | Hardware | [Jitter Basics - Part 1](https://go.teledynelecroy.com/l/48392/2023-08-29/8nx6yv?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Teledyne LeCroy](https://www.teledynelecroy.com/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
 | 2023-10-05 | Hardware | [Fundamentals of Power Integrity Tutorial: Measuring Power Sources](https://go.teledynelecroy.com/l/48392/2023-08-22/8nwrv2?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Teledyne LeCroy](https://www.teledynelecroy.com/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
+| 2023-10-25 | Embedded | [Modernizing Embedded Software Development Practices](https://www.beningo.com/webinars/webinar-registration/?webinarKey=3695052195634483800&utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Beningo Embedded Group](https://www.beningo.com/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
+| 2023-10-27 | Embedded | [Modern C++ for Safe and Efficient Embedded Systems](https://www.doulos.com/webinars/modern-cplusplus-for-safe-and-efficient-embedded-systems/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Doulos](https://www.doulos.com?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
