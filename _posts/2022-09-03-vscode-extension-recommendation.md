@@ -22,7 +22,7 @@ If you open a project in VS Code and the root of the project has a directory
 named `.vscode` then the editor searches some specific files in that directory.
 One of them is `extensions.json`. This file enables us to recommend extensions
 with our code. As an example, let's look at source code of my blog. Source code
-of my blog is open and [hosted on Github](https://github.com/alperyazar/blog).
+of my blog is open and [hosted on Github](https://github.com/alperyazar/home).
 
 ![My blog as an example](/assets/img/22/11-1.png){:.centered}
 
@@ -30,7 +30,7 @@ of my blog is open and [hosted on Github](https://github.com/alperyazar/blog).
 *Source of my blog as an example*
 
 If you clone or download source of [my
-blog](https://github.com/alperyazar/blog), you will see
+blog](https://github.com/alperyazar/home), you will see
 `.vscode/extensions.json`. Notice that lines started with `//` are shown in red
 by Github, I will come to this issue later. For now, 8 extensions are
 recommended in this file. If you open the project (via `File` → `Open Folder`)
@@ -94,7 +94,7 @@ Don't forget to add these line to your `.gitignore` file. You can put these line
 to anywhere (most probably) in `.gitignore` but don't change their order.
 Personally, I don't like tracking `settings.json` with project but you can leave
 like this, it won't affect extension recommendation system. [.gitignore of my
-blog](https://github.com/alperyazar/blog/blob/master/.gitignore) can be taken as
+blog](https://github.com/alperyazar/home/blob/master/.gitignore) can be taken as
 an example.
 
 ## extensions.json

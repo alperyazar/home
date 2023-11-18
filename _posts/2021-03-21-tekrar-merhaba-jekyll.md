@@ -46,11 +46,11 @@ Bir önceki altyapı MkDocs'tu ve o da bir statik site üreteci aslında. Fakat
 yazılım, bir blog, kişisel siteden ziyade biraz daha dokümantasyon amacı ile
 tasarlanmış. Böyle olunca da onu bir blog platformu olarak kullanmak daha zor
 oluyor. MkDocs'u [asynx.dev](https://asynx.dev/) üzerinde de kullanıyorduk ve bu
-özellikleri eklemek için başlamaya niyetlendiğim bir [eklenti
-projesi](https://github.com/asynx-dev/mkdocs-asynx-plugin) vardı. Orada da
-Jekyll'ye [geçtik](https://asynx.dev/blog/2021/02/jekyll.html) benzer
-sebeplerden. İlgilendiğim iki altyapıyı da ortaklamak adına kişisel sitemi de
-Jekyll'ye taşıdım.
+özellikleri eklemek için başlamaya niyetlendiğim bir eklenti projesi (Link:
+`https://github.com/asynx-dev/mkdocs-asynx-plugin` `🔗 404`) vardı. Orada da
+Jekyll'ye geçtik (link: `https://asynx.dev/blog/2021/02/jekyll.html` `🔗 404`)
+benzer sebeplerden. İlgilendiğim iki altyapıyı da ortaklamak adına kişisel
+sitemi de Jekyll'ye taşıdım.
 
 ## Değerlendirme
 

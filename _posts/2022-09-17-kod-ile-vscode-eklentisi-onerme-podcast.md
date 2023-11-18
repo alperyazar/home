@@ -14,7 +14,7 @@ image: /assets/img/22/12.jpg
 {% include youtubePlayer.html id="pWFg0wpOgqA" %}
 
 - Bahsettiğim Markdown linter eklentisi: [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
-- Oluşturacağımız dosya: `.vscode/extensions.json`. [Örnek](https://github.com/alperyazar/blog/blob/master/.vscode/extensions.json)
+- Oluşturacağımız dosya: `.vscode/extensions.json`. [Örnek](https://github.com/alperyazar/home/blob/master/.vscode/extensions.json)
 - Kodu açan kişide eksik eklentiler varsa çıkan öneri penceresi:
 
 {:.text-align-center}
