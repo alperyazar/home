@@ -6,6 +6,7 @@ tags: tr
 published: true
 axseq: 1
 image: /assets/img/23/1.jpg
+canonical_url: 'https://asynx.dev/ubuntu-2004-uzerine-petalinux-20222-kurulumu'
 ---
 
 > Kapak fotoğrafı:
