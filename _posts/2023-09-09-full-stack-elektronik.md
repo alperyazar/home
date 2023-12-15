@@ -8,6 +8,7 @@ tags:
 axseq: 8
 image: /assets/img/23/8-d.png
 modified_date: 2023-09-10
+canonical_url: 'https://asynx.dev/full-stack-elektronik-muhendisi'
 ---
 
 Belki dikkatinizi çekmiştir. Bir süredir kendimi, sitemdeki [profil sayfamda](/)

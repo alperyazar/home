@@ -6,6 +6,7 @@ axseq: 10
 published: true
 tags:
   - en
+canonical_url: 'https://asynx.dev/c-struct-padding-packed'
 ---
 
 Structures (the `struct` keyword) in C are widely used, especially in the

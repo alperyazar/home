@@ -7,6 +7,7 @@ axseq: 9
 published: true
 tags:
   - tr
+canonical_url: 'https://asynx.dev/muhendislik-yapabilirim'
 ---
 
 Bu yazıda, **mühendisler** (özellikle **kariyerinin başında olanlar**) ve
