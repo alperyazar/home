@@ -1,16 +1,33 @@
 ---
 layout: default
+title: Blog
 ---
 
 <div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
-
-  {{ content }}
-
   {%- if site.posts.size > 0 -%}
     <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+      <!-- Pagination links -->
+      <div class="pagination">
+        <span class="page_number ">
+          <strong>{{ paginator.page }}</strong> of {{ paginator.total_pages }} - {{ paginator.total_posts }} posts in total
+        </span><br>
+        {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path }}" class="previous">⬅️</a>
+        {% else %}
+          <span style="filter: grayscale(100%);">⬅️</span>
+        {% endif %}
+        {% if paginator.previous_page %}
+          <a href="/blog">⬆️</a>
+        {% else %}
+          <span style="filter: grayscale(100%);">⬆️</span>
+        {% endif %}
+        {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path }}" class="next">➡️</a>
+        {% else %}
+          <span style="filter: grayscale(100%);">➡️</span>
+        {% endif %}
+      </div>
+      <hr>
     <ul class="post-list">
       {% for post in paginator.posts %}
       {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
@@ -42,7 +59,32 @@ layout: default
       {%- endfor -%}
     </ul>
 
+    <!-- Pagination links -->
+    <div class="pagination">
+      {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}" class="previous">⬅️</a>
+      {% else %}
+        <span style="filter: grayscale(100%);">⬅️</span>
+      {% endif %}
+      {% if paginator.previous_page %}
+        <a href="/blog">⬆️</a>
+      {% else %}
+        <span style="filter: grayscale(100%);">⬆️</span>
+      {% endif %}
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}" class="next">➡️</a>
+      {% else %}
+        <span style="filter: grayscale(100%);">➡️</span>
+      {% endif %}
+      <br>
+      <span class="page_number ">
+        <strong>{{ paginator.page }}</strong> of {{ paginator.total_pages }} - {{ paginator.total_posts }} posts in total
+      </span>
+    </div>
+    <hr>
+
     <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+    <p class=""><a href="{{ "/sitemap.xml" | relative_url }}">sitemap.xml</a></p>
   {%- endif -%}
 
 </div>
