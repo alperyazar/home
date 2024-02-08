@@ -6,7 +6,7 @@ tags:
   - en
 axseq: 2
 image: /assets/img/23/2.png
-canonical_url: 'https://asynx.dev/c-is-a-procedural-language'
+#canonical_url: 'https://asynx.dev/c-is-a-procedural-language'
 ---
 
 **Procedural programming** (**prosedürel programlama** in Turkish) paradigm is a

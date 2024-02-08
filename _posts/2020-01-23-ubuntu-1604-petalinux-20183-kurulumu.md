@@ -5,7 +5,7 @@ locale: tr_TR
 tags: tr
 published: true
 axseq: 2
-canonical_url: 'https://asynx.dev/ubuntu-1604-petalinux-20183-kurulumu'
+#canonical_url: 'https://asynx.dev/ubuntu-1604-petalinux-20183-kurulumu'
 ---
 
 Yeni kurulmuş (sanal makina, VirtualBox üzerinde) petalinux 2018.3 kurarken
