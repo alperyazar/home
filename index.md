@@ -11,7 +11,7 @@ published: true
 ![Alper Yazar](/assets/img/me.png){:.centered}
 
 {:.text-align-center}
-**Alper Yazar** (**ayazar**)
+**Alper Yazar**
 
 {:.text-align-center}
 *"Full Stack" Electronics Engineer*

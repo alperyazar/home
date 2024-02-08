@@ -36,7 +36,7 @@ layout: default
   {%- endif -%}
 
   <div class="post-content e-content" itemprop="articleBody">
-    {%- if page.image -%}<center><p><img alt="Teaser" src="{{ page.image | absolute_url }}" style="border-radius: 10px;"></p></center>{%- endif -%}
+    {%- if page.image -%}<center><p><img alt="Teaser" src="{{ page.image | relative_url }}" srcset="/assets/lazyload.png" data-srcset="{{ page.image | relative_url }}" style="border-radius: 10px;" class="lazyload"></p></center>{%- endif -%}
     {{ content }}
     <hr>
     {%- if page.tags contains 'tr' -%}

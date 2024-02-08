@@ -40,7 +40,7 @@ olarak adlandırılıyor ve burada çalışan kişilere de **back end developer*
 Hem front end hem de back end yapan (en azından yapması beklenen) kişiler ise
 **full stack developer** oluyorlar.
 
-![Full Stack Developers meme](/assets/img/23/8-a.jpg){:.centered}
+![Full Stack Developers meme](/assets/img/23/8-a.jpg){:.centered .lazyload}
 
 {:.text-align-center}
 hehe [and then another](https://www.youtube.com/watch?v=IzyTGeoYPLk) hehe
@@ -61,7 +61,7 @@ olursak belki bir web sitesinin en alt kısmında bir bulut bilişim (cloud)
 bu bir katman. Front end'e gittikçe ve web sitesi bittikçe günün sonunda
 üst üste konmuş birden fazla çözüm ile ortaya çıkmış bir ürün ortaya çıkıyor.
 
-![Örnek bir web development stack](/assets/img/23/8-b.jpg){:.centered}
+![Örnek bir web development stack](/assets/img/23/8-b.jpg){:.centered .lazyload}
 
 {:.text-align-center}
 Web için örnek bir *solution stack*
