@@ -1,23 +1,56 @@
 ---
 ---
 
+$background-color: #fbfbfb;
+$text-color: #343743;
+//$brand-color: #F35A72;
+
 @import "minima";
 
 body {
-    font-family: 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif;
+  text-rendering: geometricPrecision !important;
 }
 
 pre {
-    font-family: 'JetBrains Mono', monospace !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: smaller !important;
 }
 
-strong {
+p b, p strong {
+  background-color: #fabfc8; /* Color of the marker */
+  font-weight: bold; /* Ensure the text is bold */
+  padding: 0.2em 0.4em; /* Adds padding around the text */
+  border-radius: 0.5em; /* Rounds the corners */
+  box-decoration-break: clone; /* Ensures the background and border-radius are applied to each line in multi-line text */
+  font-size: 1.10rem !important;
+}
+
+p a {
+  font-weight: bold;   /* Makes the text bold */
+}
+
+em {
+  font-size: 1.10rem !important;
+}
+
+p {
+  line-height: 1.8 !important;
   font-size: 1.1rem !important;
 }
 
-// em {
-//   font-size: 1.1rem !important;
-// }
+.post-content {
+  line-height: 1.8 !important;
+  font-size: 1.1rem !important;
+}
+
+.post-content img {
+  margin: 6px;
+  border: 2px dashed #404040; /* Solid black border, 2px thick */
+  border-radius: 10px;       /* Rounded corners */
+  padding: 4px;              /* Spacing between the image and the border */
+  display: inline-block;     /* Allows the padding and border to take effect properly */
+}
 
 hr {
   margin: 5px;
@@ -45,4 +78,30 @@ td, th{
 table{
   max-width: 100%;
   overflow: visible;
+}
+
+.blur-up {
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  transition: filter 400ms, -webkit-filter 400ms;
+}
+
+.blur-up.lazyloaded {
+  -webkit-filter: blur(0);
+  filter: blur(0);
+}
+
+.lazyload {
+	opacity: 0;
+}
+
+.lazyloading {
+	opacity: 1;
+	transition: opacity 300ms;
+	background: #fbfbfb url(loading.gif) no-repeat center;
+}
+
+.lazyloaded {
+	opacity: 1;
+	transition: opacity 300ms;
 }

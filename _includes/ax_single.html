@@ -66,7 +66,7 @@
 {%- if axrecc.image -%}
 <center>
 <p>
-<a class="post-link" href="{{ axrecc.url | relative_url }}"><img alt="Teaser" src="{{ axrecc.image | absolute_url }}" style="border-radius: 10px;">
+<a class="post-link" href="{{ axrecc.url | relative_url }}"><img alt="Teaser" src="{{ axrecc.image | relative_url }}" data-srcset="{{ axrecc.image | relative_url }}"  srcset="/assets/lazyload.png" style="border-radius: 10px;" class="lazyload">
 </a></p></center>
 {%- endif -%}
 <h3>
