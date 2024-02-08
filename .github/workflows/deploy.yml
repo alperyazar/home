@@ -1,0 +1,53 @@
+name: Deploy
+
+on:
+  workflow_dispatch:
+  repository_dispatch:
+  push:
+    branches:
+      - master
+
+jobs:
+# Ref: https://github.com/igorshubovych/markdownlint-cli
+  build-and-deploy:
+    permissions:
+      contents: write
+    runs-on: ubuntu-22.04
+    env:
+      JEKYLL_ENV: production
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Update and set up
+      run: |
+        sudo apt-get -y update
+      #  sudo apt install -y git
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.7
+        bundler-cache: true
+
+    - name: Build
+      run: |
+        bundle exec jekyll --version
+        bundle exec jekyll build --config _config.yml --lsi || bundle exec jekyll build --config _config.yml
+        date -u +%Y-%m-%d-%T-%Z > _site/build.info.txt
+        cat Gemfile >> _site/build.info.txt
+        cat Gemfile.lock >> _site/build.info.txt
+        touch _site/.nojekyll
+
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@v4.5.0
+      with:
+        dry-run: false
+        token: ${{ secrets.GITHUB_TOKEN }}
+        branch: gh-pages # The branch the action should deploy to.
+        folder: _site # The folder the action should deploy.
+        clean: true # Automatically remove deleted files from the deploy branch
+        single-commit: true # Like push force, keep only the last commit
+        git-config-name: #use username that pushes to master
+        git-config-email: <>
