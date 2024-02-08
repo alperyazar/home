@@ -44,6 +44,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-paginate
 timezone: Europe/Istanbul
 search: true
 future: false
@@ -54,6 +55,9 @@ feed:
 
 atom_feed:
   path: "/feed.xml"
+
+paginate: 5
+paginate_path: "/blog/:num/"
 
 defaults:
   # _posts
@@ -106,7 +110,7 @@ exclude:
 
 
 header_pages:
-  - blog.md
+  - blog/index.html
   - events.md
   - follow.md
 
