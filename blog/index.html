@@ -27,6 +27,7 @@ title: Blog
           <span style="filter: grayscale(100%);">➡️</span>
         {% endif %}
       </div>
+      <p>ℹ️ Posts tagged with 🇹🇷 or 🇬🇧 are in Turkish or in English, respectively.</p>
       <hr>
     <ul class="post-list">
       {% for post in paginator.posts %}
@@ -81,6 +82,7 @@ title: Blog
         <strong>{{ paginator.page }}</strong> of {{ paginator.total_pages }} - {{ paginator.total_posts }} posts in total
       </span>
     </div>
+    <p>ℹ️ Posts tagged with 🇹🇷 or 🇬🇧 are in Turkish or in English, respectively.</p>
     <hr>
 
     <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
