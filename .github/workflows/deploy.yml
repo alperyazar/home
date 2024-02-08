@@ -20,10 +20,10 @@ jobs:
       with:
         fetch-depth: 0
 
-    - name: Update and set up
-      run: |
-        sudo apt-get -y update
-      #  sudo apt install -y git
+    #- name: Update and set up
+    #  run: |
+    #    sudo apt-get -y update
+    #    sudo apt install -y git
 
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
