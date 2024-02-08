@@ -6,7 +6,7 @@ tags:
 axseq: 6
 published: true
 image: /assets/img/21/6.png
-canonical_url: 'https://asynx.dev/sumatrapdf-texstudio-synctex-search-link'
+#canonical_url: 'https://asynx.dev/sumatrapdf-texstudio-synctex-search-link'
 ---
 
 I use [TeXstudio](https://www.texstudio.org/) for my LaTeX works.

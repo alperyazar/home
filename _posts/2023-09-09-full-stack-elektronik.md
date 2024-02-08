@@ -8,7 +8,7 @@ tags:
 axseq: 8
 image: /assets/img/23/8-d.png
 modified_date: 2023-09-10
-canonical_url: 'https://fselektronik.org/full-stack-elektronik-nedir/'
+#canonical_url: 'https://fselektronik.org/full-stack-elektronik-nedir/'
 ---
 
 Belki dikkatinizi çekmiştir. Bir süredir kendimi, sitemdeki [profil sayfamda](/)

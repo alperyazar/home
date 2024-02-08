@@ -6,7 +6,7 @@ tags:
 axseq: 3
 published: true
 image: /assets/img/22/3.png
-canonical_url: 'https://asynx.dev/petalinux-offline'
+#canonical_url: 'https://asynx.dev/petalinux-offline'
 ---
 
 If you are a Xilinx customer and want to compile an embedded Linux with PetaLinux

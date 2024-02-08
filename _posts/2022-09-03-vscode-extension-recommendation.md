@@ -5,7 +5,7 @@ tags: en
 axseq: 11
 published: true
 image: /assets/img/22/11.jpg
-canonical_url: 'https://asynx.dev/vscode-extension-recommendation'
+#canonical_url: 'https://asynx.dev/vscode-extension-recommendation'
 ---
 
 [Visual Studio Code](https://code.visualstudio.com/), VS Code in short, is a

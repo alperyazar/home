@@ -6,7 +6,7 @@ tags:
   - en
 axseq: 3
 image: /assets/img/23/3.png
-canonical_url: 'https://asynx.dev/c-is-an-imperative-language'
+#canonical_url: 'https://asynx.dev/c-is-an-imperative-language'
 ---
 
 The C language (or any programming language) can be characterized from many

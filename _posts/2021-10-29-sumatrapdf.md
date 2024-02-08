@@ -7,7 +7,7 @@ tags:
 axseq: 5
 published: true
 image: /assets/img/21/5.png
-canonical_url: 'https://asynx.dev/sumatrapdf'
+#canonical_url: 'https://asynx.dev/sumatrapdf'
 ---
 
 ## Giriş

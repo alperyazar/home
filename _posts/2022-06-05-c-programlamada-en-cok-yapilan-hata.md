@@ -7,7 +7,7 @@ tags:
   - tr
 axseq: 8
 image: /assets/img/22/8.png
-canonical_url: 'https://asynx.dev/c-programlamada-en-cok-yapilan-hata'
+#canonical_url: 'https://asynx.dev/c-programlamada-en-cok-yapilan-hata'
 ---
 
 Gömülü sistemlerle uğraşan biri olarak C dili ile ilgileniyorum. Bu yazıda
