@@ -36,7 +36,19 @@ layout: default
   {%- endif -%}
 
   <div class="post-content e-content" itemprop="articleBody">
-    {%- if page.image -%}<center><p><img alt="Teaser" src="{{ page.image | relative_url }}" srcset="/assets/lazyload.png" data-srcset="{{ page.image | relative_url }}" style="border-radius: 10px;" class="lazyload"></p></center>{%- endif -%}
+    {%- if page.image or page.imageyt -%}
+    <center>
+    <p>
+    <a class="post-link" href="{{ page.url | relative_url }}">
+      {%- if page.imageyt -%}
+      <img alt="Teaser" data-sizes="auto" src="https://i.ytimg.com/vi/{{ page.imageyt }}/hq720.jpg" data-srcset="https://i.ytimg.com/vi/{{ page.imageyt }}/hq720.jpg 1280w" srcset="/assets/lazyload.png" style="border-radius: 10px; max-height: 405px;" class="lazyload" width="720">
+      {%- else -%}
+      <img alt="Teaser" src="{{ page.image | relative_url }}" data-srcset="{{ page.image | relative_url }}"  srcset="/assets/lazyload.png" style="border-radius: 10px;" class="lazyload">
+      {%- endif -%}
+    </a>
+    </p>
+    </center>
+    {%- endif -%}
     {{ content }}
     <hr>
     {%- if page.tags contains 'tr' -%}

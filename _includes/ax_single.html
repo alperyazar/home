@@ -47,15 +47,15 @@
 
 {% if include.reccmode == 'random' %}
   {% if page.tags contains 'en' %}
-    {% assign prompt ="🤓 One more post?" %}
+    {% assign prompt ="🤓 One more?" %}
   {% else %}
-    {% assign prompt ="🤓 Bir yazı daha?" %}
+    {% assign prompt ="🤓 Bir içerik daha?" %}
   {% endif %}
 {% else %}
   {% if page.tags contains 'en' %}
-    {% assign prompt ="🔗 A similar post" %}
+    {% assign prompt ="🔗 A similar content" %}
   {% else %}
-    {% assign prompt ="🔗 İlgili bir yazı" %}
+    {% assign prompt ="🔗 İlgili bir içerik" %}
   {% endif %}
 {% endif %}
 
@@ -63,11 +63,18 @@
 <ul class="post-list">
 <li style="background: #DDEEEE; padding: 10px; border-radius: 10px;">
 <h4>{{ prompt }}</h4>
-{%- if axrecc.image -%}
+{% if axrecc.image or axrecc.imageyt %}
 <center>
 <p>
-<a class="post-link" href="{{ axrecc.url | relative_url }}"><img alt="Teaser" src="{{ axrecc.image | relative_url }}" data-srcset="{{ axrecc.image | relative_url }}"  srcset="/assets/lazyload.png" style="border-radius: 10px;" class="lazyload">
-</a></p></center>
+<a class="post-link" href="{{ axrecc.url | relative_url }}">
+{%- if axrecc.imageyt -%}
+<img alt="Teaser" data-sizes="auto" src="https://i.ytimg.com/vi/{{ axrecc.imageyt }}/hq720.jpg" data-srcset="https://i.ytimg.com/vi/{{ axrecc.imageyt }}/hq720.jpg 1280w" srcset="/assets/lazyload.png" style="border-radius: 10px; max-height: 405px; max-width: 700px;" class="lazyload" width="720">
+{%- else -%}
+<img alt="Teaser" src="{{ axrecc.image | relative_url }}" data-srcset="{{ axrecc.image | relative_url }}"  srcset="/assets/lazyload.png" style="border-radius: 10px;" class="lazyload">
+{%- endif -%}
+</a>
+</p>
+</center>
 {%- endif -%}
 <h3>
 <a class="post-link" href="{{ axrecc.url | relative_url }}">
