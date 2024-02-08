@@ -41,3 +41,7 @@ nereden indirilir? gibi soruların cevabını arıyoruz.
 
 - Şener Şen sahneleri [Neşeli Günler](https://www.youtube.com/watch?v=ulncsMqlDQY)
   filminden alınmıştır.
+
+## Sonraki Bölüm
+
+{% include ax_single.html reccmode="single" reccyear="24" reccaxseq="5" %}
