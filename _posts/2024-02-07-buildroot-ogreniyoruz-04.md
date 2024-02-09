@@ -2,7 +2,8 @@
 # License: CC-BY-SA-4.0.
 title: "Buildroot ile ilk derleme! Buildroot Öğreniyoruz - 4"
 excerpt: "Buildroot ile ilk derlememizi yapıyoruz. Elbette tahmin ettiğim gibi ilk seferde olmuyor, uğraşıyoruz.."
-image: /assets/img/24/5.png
+#image: /assets/img/24/5.png
+imageyt: sO_Sdf09DiY
 toc: true
 axseq: 5
 published: true
@@ -10,8 +11,12 @@ tags:
   - tr
 ---
 
-> Serideki önceki bölümlerin aksine bu bölümü yazı olarak hazırlamaya karar verdim.
-> Biraz hasta olduğum için video çekmek beni zorlayacaktı. 🤧
+> İçerik, bu sayfadaki yazıların üzerine anlatım yapılarak video olarak
+> sunulmuştur. Her ne kadar yazı ile video içerik benzese de vaktiniz var ise
+> videoyu izlemenizi tavsiye ederim, çünkü bazı noktalarda yazıda olmayan
+> yorumlar yapıyorum.
+
+{% include youtubePlayer.html id="sO_Sdf09DiY" %}
 
 Buildroot yolculuğumuza, *Buildroot Öğreniyoruz* serisinin 4. bölümü ile devam
 ediyoruz. Bu bölümde, Buildroot ile ilk derlememizi yapacağız. Bir [önceki
@@ -411,6 +416,9 @@ otomatik olarak `_defconfig` ekliyor ve `omap2plus_defconfig_defconfig` oluyor,
 bu da hataya sebep oluyor. O yüzden tekrar ayarlara girip, bu sefer
 değişiklik olsun diye `menu nconfig` kullandım, `omap2plus_defconfig` yerine
 `omap2plus` yazdım ve devam edebildim.
+
+> Yukarıdaki paragraftaki hatamı videoyu çekerken fark ettim. Bootlin dokümanları
+> aslında doğruymuş, ben yanlış yazmışım en başta.
 
 Gözlemler:
 
