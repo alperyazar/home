@@ -57,7 +57,7 @@ atom_feed:
   path: "/feed.xml"
 
 paginate: 5
-paginate_path: "/blog/:num/"
+paginate_path: "/:num/"
 
 defaults:
   # _posts
@@ -110,7 +110,7 @@ exclude:
 
 
 header_pages:
-  - blog/index.html
+  - about.md
   - events.md
   - follow.md
 

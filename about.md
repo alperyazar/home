@@ -1,5 +1,5 @@
 ---
-title: "About Me"
+title: "About"
 excerpt: 'About Alper Yazar, ayazar, "Full Stack" Electronics Engineer, ASELSAN'
 layout: page
 published: true
@@ -33,12 +33,18 @@ musical instruments 🎵.
 
 If you want to reach privately to me please send an e-mail:
 
+> ⚠️ I am committed to responding to all emails with thoroughness and attention to
+> detail. If you are unable to devote at least a minute to send a considered
+> reply, such as a simple ‘thank you’, I kindly request that you refrain from
+> emailing me. This helps ensure that I can dedicate my time and effort to those
+> who are engaged in meaningful correspondence. Thank you for understanding and
+> respecting this approach.
+
 `ayazar[@} a ! p ! ! y ! ! ar  /.$ com`
 
 (Don't forget to replace or remove the inconvenient characters)(Hint 💡: What is
 the URL right now?) or send a message on
-[LinkedIn](https://www.linkedin.com/in/alperyazar) or on
-[mastodon](https://mastodon.social/@ayazar).
+[LinkedIn](https://www.linkedin.com/in/alperyazar).
 
 ## Education
 
@@ -312,7 +318,7 @@ Trying playing various musical instruments
 
 ## Follow
 
-See [➡️ Follow](follow.md)
+See [➡️ Follow]({% link follow.md %})
 
 ## Site Info
 
