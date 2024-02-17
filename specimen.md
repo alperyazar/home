@@ -43,6 +43,16 @@ The same footnote [^1f] can be used multiple times.
 
 {% include youtubePlayer.html id="T6v8A8Ji3Bc" %}
 
+### asciicast (asciinema)
+
+Include from `asciinema.org`, using the `asciicast` tag:
+
+{% asciicast 633779 %}
+
+Self hosted, using the `asciicastself` tag:
+
+{% asciicastself 633779 %}
+
 # H1
 
 Level H1 (don't use, start with `H2`)
