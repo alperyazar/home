@@ -26,6 +26,7 @@ layout: default
       {%- if page.tags contains 'en' -%}
         • 🇬🇧
       {%- endif -%}
+      <span> • {{ page.date | date: "%y" }}-{{ page.axseq }}</span>
       </p>
   </header>
   {%- if page.tags contains 'tr' -%}
