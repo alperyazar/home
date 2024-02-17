@@ -3,6 +3,7 @@ title: "Follow"
 excerpt: "Follow Alper Yazar"
 layout: page
 published: true
+adsdisabled: true
 ---
 
 I recommend following me on [LinkedIn](https://www.linkedin.com/in/alperyazar)
