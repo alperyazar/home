@@ -111,8 +111,8 @@ exclude:
 
 header_pages:
   - about.md
-  - events.md
   - follow.md
+  - search.md
 
 # jekyll-seo-tag
 # Ref: https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
