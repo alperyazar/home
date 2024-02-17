@@ -3,6 +3,7 @@ title: "About"
 excerpt: 'About Alper Yazar, ayazar, "Full Stack" Electronics Engineer, ASELSAN'
 layout: page
 published: true
+adsdisabled: true
 ---
 
 <!-- markdownlint-capture -->
