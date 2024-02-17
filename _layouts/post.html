@@ -50,6 +50,10 @@ layout: default
     </p>
     </center>
     {%- endif -%}
+    {%- if page.excerpt -%}
+    <p><i>{{ page.excerpt }}</i></p>
+    <hr>
+    {%- endif -%}
     {{ content }}
     <hr>
     {%- if page.tags contains 'tr' -%}

@@ -10,9 +10,6 @@ tags:
 #canonical_url: 'https://asynx.dev/c-struct-padding-packed'
 ---
 
-*Programlama dillerini öğrenirken ve onları kıyaslarken bu endeks karşımıza
-çıkmaktadır. Peki nedir? Güvenilir midir?*
-
 TIOBE Index, programlama dillerinin popüleritesini gösteren bir endekstir. Aylık
 olarak güncellenen bu endeks bize bir programlama dilinin dünyada ne kadar
 popüler olduğunu göstermektedir.

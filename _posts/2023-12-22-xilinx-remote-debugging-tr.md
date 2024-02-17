@@ -11,9 +11,6 @@ tags:
 #modified_date: 2024-02-17
 ---
 
-*Karta yapılan JTAG bağlantısına ağ üzerinden başka bilgisayardan erişip, kod
-atma, hata ayıklama gibi tüm işleri karta bağlıymış gibi yapabilirsiniz.*
-
 Xilinx ürünleri (FPGA ve SoC) ile çalışırken tipik olarak karta fiziksel bir
 JTAG bağlantımız oluyor. [Platform
 Cable](https://www.xilinx.com/products/boards-and-kits/hw-usb-ii-g.html)
