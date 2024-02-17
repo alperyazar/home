@@ -7,9 +7,12 @@ image: /assets/img/23/12.jpg
 published: true
 tags:
   - en
+  - talkingc
 #canonical_url: 'https://asynx.dev/c-struct-padding-packed'
 modified_date: 2024-02-17
 ---
+
+> ℹ️ This post is part of the [Talking C]({% post_url 2024-02-17-talking-c %}) series.
 
 C, is a pretty old language. It was developed during the UNIX project. The
 development of UNIX led to the creation of C, and in turn, C played a
@@ -326,6 +329,10 @@ development of key technologies.
 
 - 2023-11-25. Corrections and additions to *UNIX and C*.
 - 2024-02-17. Rewritten and reorganized form scratch
+
+**The next post in the [Talking C]({% post_url 2024-02-17-talking-c %}):**
+
+{% include ax_single.html reccmode="single" reccyear="23" reccaxseq="13" %}
 
 [^1f]: <https://www.youtube.com/watch?v=de2Hsvxaf8M>
 [^2f]: <https://qr.ae/pvc7Ln>

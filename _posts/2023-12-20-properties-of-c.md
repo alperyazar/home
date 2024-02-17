@@ -1,15 +1,25 @@
 ---
 # License: CC-BY-SA-4.0.
-title: "15 Properties of The C Programming Language"
+title: "15 Features of The C Programming Language"
 excerpt: "What kind of language is C? What are the properties? Which paradigms does it belong to? How can we categorize it?"
 axseq: 13
 image: /assets/img/23/13.jpg
 published: true
 tags:
   - en
+  - talkingc
 #canonical_url: 'https://asynx.dev/c-struct-padding-packed'
 #modified_date: 2024-02-17
 ---
+
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
+> ℹ️ This post is part of the [Talking C]({% post_url 2024-02-17-talking-c %})
+> series. I recommend also checking out the
+> [previous post]({% post_url 2023-12-16-a-brief-history-of-c-programming-language %})
+> in the series for
+> additional insights.
+<!-- markdownlint-restore -->
 
 **What kind of language is C?** Programming languages can be categorized from
 various perspectives, often referred to as **paradigms**. The characteristics of
