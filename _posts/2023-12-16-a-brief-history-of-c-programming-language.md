@@ -93,11 +93,12 @@ release of the CD-ROM [^10f], to the year 1983.
 Back in **1983**, the [American National Standards Institute
 (ANSI)](https://www.ansi.org/) set up the first committee to create a standard
 for the C programming language. By **1989**, they released the first official C
-standard, also known as **C89**. The following year, in **1990**, the
-[International Organization for Standardization (ISO)](https://www.iso.org)
-adopted this standard. They made some minor changes and released their version
-also known as **C90**. Interestingly, four of them refer to the same standard,
-and nowadays, people use these terms interchangeably.
+standard, also known as **C89** or as **ANSI C**. The following year, in
+**1990**, the [International Organization for Standardization
+(ISO)](https://www.iso.org) adopted this standard. They made some minor changes
+and released their version also known as **C90** or as **ISO C**. Interestingly,
+four of them refer to the same standard, and nowadays, people use these terms
+interchangeably.
 
 **ANSI C ≡ C89 ≡ ISO C ≡ C90**
 
@@ -219,7 +220,7 @@ intended as a contrast to the 'Multi' in 'Multics,' where 'Multi' stood for
 'Multiplexed.' While Multics was a complex project aimed at creating a
 multi-user, multi-tasking operating system, Unix was originally developed as a
 simpler, less complex alternative. The 'Uni' in Unix humorously suggests a more
-'uniplexed' or singular approach, even though Unix was also designed for
+'uniplexed' or singular approach, even though Unix was also capable of running
 multi-user environments [^6f]. Thus, the naming reflects a play on words while
 highlighting the difference in design philosophy between Unix and Multics.
 
