@@ -7,18 +7,17 @@ image: /assets/img/23/13.jpg
 published: true
 tags:
   - en
-  - talkingc
+  - cgunlukleri
 #canonical_url: 'https://asynx.dev/c-struct-padding-packed'
 #modified_date: 2024-02-17
 ---
 
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable -->
-> ℹ️ This post is part of the [Talking C]({% post_url 2024-02-17-talking-c %})
-> series. I recommend also checking out the
-> [previous post]({% post_url 2023-12-16-a-brief-history-of-c-programming-language %})
-> in the series for
-> additional insights.
+> ℹ️ 🇹🇷 Bu yazı, [C Günlükleri]({% post_url 2024-02-17-c-gunlukleri %}) serisinde
+> yer almaktadır. Eğer okumadıysanız öncelikle
+> [önceki yazıyı]({% post_url 2023-12-16-a-brief-history-of-c-programming-language %})
+> okumanızı tavsiye ederim.
 <!-- markdownlint-restore -->
 
 **What kind of language is C?** Programming languages can be categorized from
