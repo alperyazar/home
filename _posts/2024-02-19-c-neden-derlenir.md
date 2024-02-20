@@ -213,3 +213,130 @@ kodlamak? Hataya çok açık durmuyor mu? Evet ama insanlar bunu zamanında yapt
 
 ### Altair 8800
 
+![Altair 8800](/assets/img/24/9-altair.jpg){:.centered .lazyload}
+
+{:.text-align-center}
+[Altair 8800](https://commons.wikimedia.org/wiki/File:Altair_8800_Computer.jpg)
+
+Yukarıda bilgisayar tarihinde önemli bir yere sahip olan **Altair 8800** isimli
+"bilgisayar"ı görüyorsunuz. Altair 8800, MITS firması tarafından 1974 yılında
+tasarlanan Intel 8080 temelli bir kişisel bilgisayardır. [^1f] Birçok kaynak
+tarafından **ilk kişisel bilgisayar** olarak kabul edilir. Micrsoft ve Apple
+firmalarının tarihininde önemli bir yere sahiptir, konumuz bu olmadığı için
+atlıyorum.
+
+Peki bu "bilgisayar"da bir şey dikkatinizi çekti mi? Bu bilgisayarın ne ekranı
+ne de bir klavyesi var. Ön panelinde sadece anahtarlar ve lambalar yer alıyor.
+Peki bu bilgisayarı nasıl programlıyorsunuz? İşte tam da yukarıda örneğini
+yaptığımız gibi: **ISA'ya yani komut setine bakarak, `OPCODE` değerlerine
+dokümanlara bakarak ulaşarak sırayla tüm komutları anahtarları 0/1 konumuna
+getirerek bilgisayara giriyorsunuz.** Daha sonra bilgisayar bu komutları
+çalıştırıyor siz de lambaların sönük/yanık yani 0/1 olmasına göre sonuçları
+alıyorsunuz. Bu durumda derleyici de sizsiniz, debugger da sizsiniz, işlemci
+ile sizin aranızda hiçbir şey yok.
+
+İlginizi çektiyse şuradan devam edin:
+
+{% include youtubePlayer.html id="cwEmnfy2BhI" %}
+
+### Assembly (Sembolik Makine Dili)
+
+İşlemcinin desteklediği 0/1'lerden oluşan komutları elle, işlemci dokümanına
+bakarak oluşturmanın bir üst seviyesi **Assembly** yani Türkçe karşılığı ile
+**Sembolik Makine Dili** kullanmaktadır. **Assembler** adını verdiğimiz
+programlar, o işlemci için sembolik makine dilinde yazılmış programları makine
+diline yani 0/1'lerden oluşan komutlara dönüştürür. Assembly dilinde yer alan
+komutlar genelde **mnemonic** olarak adlandırılır, yani `OPCODE` lara verdiğimiz
+takma isimler gibi düşünebilirsiniz.
+
+> 🤔 Trivia: İlk assembler programın 1940'lı yıllarda tasarlanan EDSAC isimli
+> İngiliz yapımı bir bilgisayar için oluşturulduğu belirtilmektedir. [^2f]
+
+Assembler yazılımların işi görece basittir. Aslında temelde bizim için ilgili
+işlemcinin dokümanlarına bakıp, 0/1'lerden oluşan komutları kendisi bizim
+yerimize çevirir. Bunun yanında, `JUMP`, `BRANCH` gibi komutlar için verdiğimiz
+*etiketler* çerçevesinde offset hesaplama, basit isim değişiklikleri gibi işler
+de yaparlar yani bizler için kod yazmayı biraz daha kolaylaştırabilirler ama
+özünde datasheet'ten komutların binary karşılıklarını oluşturma işini hallederler.
+
+PIC16F84 ile verdiğim örnekte `ANDLW 0x12` nin karşılığının `11100100010010`
+olduğunu belirtmiştim. Assembly dilinde kod yazdığımızda kodda bulunan `ANDLW
+0x12`, assembler tarafından `11100100010010` şeklinde işlemciye verilmeye hazır
+bir binary formata çevrilir.
+
+Size örnek olması açısından bu sefer de yine Microchip firmasına ait PIC16F628A
+için hazırlanmış bir assembly programdan bir kısım göstereyim
+
+```asm
+SAYAC1 EQU H'20'
+SAYAC2 EQU H'21'
+  CLRF    PORTB ; PORTB'yi sıfırlar
+  BANKSEL TRISB
+  CLRF    TRISB
+  BANKSEL PORTB
+TEKRAR
+  MOVLW h'00'
+  MOVWF PORTB
+  CALL  GECIKME
+  MOVLW h'FF'
+  MOVWF PORTB
+  CALL  GECIKME
+  GOTO  TEKRAR
+GECIKME
+  MOVLW h'FF'
+  MOVWF SAYAC1
+DONGU1
+  MOVLW h'FF'
+  MOVWF SAYAC2
+DONGU2
+  DECFSZ SAYAC2, F
+  GOTO   DONGU2
+  DECFSZ SAYAC1, F
+  GOTO   DONGU1
+  RETURN
+  END
+```
+
+> Yukarıdaki örneği bana doğrudan lise yıllarımı çağrıştıran, Orhan Altınbaşak
+> tarafından yazılmış [Mikrodenetleyiciler ve PIC
+> Programlama](https://www.kitapyurdu.com/kitap/mikrodenetleyiciler-ve-pic-programlama-pic16f628a/74980.html)
+> kitabından aldım. Lise yıllarımda PIC programlamaya merak salmıştım ve bu
+> kitapla tanışmıştım. Bu kitap Assembly dilinde kod yazmayı öğretiyor. Çok
+> güzel hazırlanmış olduğunu düşünüyorum, bana katkısı büyüktür.
+
+Assembly kodlarında gördüğünüz her bir satır genelde bir makine komutuna denk
+gelir. Ama Assembly dilleri kod yazımını kolaylaştırmak için çeşitli özellikleri
+destekleyebilir. Örneğin yukarıdaki örnekte en baştaki iki satırda yer alan
+`EQU` ile oluşturulan deyimler, C dilindeki `#define` önişlemci komutuna
+benzemektedir. Assembler, kodu derlerken `SAYAC1` ve `SAYAC2` kelimelerini
+`0x20` ve `0x21` sayıları ile değiştirir. Benzer şekilde `GOTO DONGU2` yerine,
+`DONGU2` etiketi ile belirtilen komutun adresi ne ise ona uygun bir adres
+yazılır, atıyorum `GOTO -2` yani 2 komut geriye git gibi. Fakat satırların çoğu
+işlemcinin desteklediği gerçek komutlardan oluşur, `MOVLW`, `MOVWF`, `DECFSZ`,
+`GOTO` gibi... Bu kelimeler **mnemonic** olarak geçmektedir.
+
+Assembly dilinde bu şekilde kod yazımını kolaylaştıran özellikler vardır. En
+nihayetinde bir metin dosyasına bir şeyler yazıp buradan bir bilgisayar programı
+yani assembler aracılığı ile otomatik bir şekilde 0/1'leri üretmek, anahtar ve
+lambalar ile bilgisayar işlemcisi ile konuşmaktan çok daha iyi.
+
+**Fakat hala işlemciden yeteri kadar soyutlanamadık.** Neden? Çünkü yukarıdaki
+kodu sadece Microchip'in PIC16F628A mikrokontrolcüsü için ürettiği assembler
+yazılımı anlayacaktır. Örneğin bu programı x86 mimarisindeki bir işlemciye
+taşımamız (buna genelde, **port**, **porting**, **port etme** denir) gerekirse
+x86'nın komut setine ve x86 için tasarlanmış assembler'a uygun şekilde (örneğin
+o assembler'da `EQU` gibi bir destek olmayabilir ya da başka bir isimde
+olabilir) taşımamız gerekirdi. Yani hala bir program yazarken onun hangi
+işlemcide çalışacağını düşünmemiz gerekiyor. Ayrıca bir işlemci için yazılmış
+bir assembly programını başka bir işlemciye taşıyamıyoruz, baştan yazmamız
+gerekiyor.
+
+### Programlama Dilleri ve Soyutlama
+
+## Kaynaklar
+
+- [The Computer That Changed Everything (Altair 8800) -
+  Computerphile](https://www.youtube.com/watch?v=cwEmnfy2BhI)
+
+[^1f]: [Altair 8080 - Wikipedia](https://en.wikipedia.org/wiki/Altair_8800)
+[^2f]: <https://en.wikipedia.org/wiki/EDSAC>
