@@ -1,70 +1,257 @@
 ---
 # License: CC-BY-SA-4.0.
-title: "C derleyicileri neden var? Neden kodları derliyoruz?"
-excerpt: "'C Günlükleri'nin bu üçüncü yazısında 'Neden C derleyicileri var? Niye böyle bir işlem yapıyoruz?' gibi soruları cevaplamaya çalışıyorum."
+title: "Why do we have programming languages in the first place?"
+excerpt: "There are thousands of computer programming languages. But why? Why do we keep inventing them? Why do we compile C programs?"
 image: /assets/img/24/9.jpg
 #imageyt: sO_Sdf09DiY
 toc: true
 axseq: 9
 published: true
 tags:
-  - tr
+  - en
 ---
 
-'C Günlükleri' isimli blog serimin üçüncü yazısından merhaba! C'nin teknik
-kısımlarına girmeden önce (Fonksiyon nedir? Pointer nedir? gibi...) derleyici
-konusuna bir değinmek istiyorum. C ile yeni tanıştıysanız bir derleme işleminden
-ve derleyicilerden bahsedildiğini duymuşsunuzdur. Peki her şeyden önce **"Bu işlem
-neden var? Niye bir kodu derlememiz gerekiyor? Bir kodu çalıştırmanın tek yolu
-derlemek midir?"** gibi sorulara değinmek istiyorum. **"Neden?" her zaman
-"Nasıl?"dan önce gelmelidir.** diye düşündüğümden "Kod nasıl derlenir?"
-sorusundan önce "Kod neden derlenir?" sorusuna bir bakalım.
+In this post, I will discuss the presence of programming languages in general.
+Initially, I had considered writing an article on the steps of C compilation.
+However, before going into that specific topic, I decided to provide an overview
+of computers and programming languages as a whole.
 
-Gelin konuyu biraz daha geniş alalım. **Bilgisayarlar neden var?** Niçin bir sürü
-para harcayıp, bilgisayar sistemleri (buna gömülü sistemleri de dahil
-edebilirsiniz) kuruyoruz veya alıyoruz? Günün sonunda bilgisayara yaptırmak
-istediğimiz bir iş var, bizim bir sorunumuzu çözüyor. Bunu ise çeşitli
-hesaplamalar yaparak (örneğin yapay zeka uygulamalarında matris işlemleri gibi)
-bize sağlıyor. Bilgisayarın matematiksel ya da çeşitli mantıksal
-(bu şundan büyükse şunu yap gibi) işlemleri yapan birimine ise **işlemci** diyoruz.
-Yani özünde bilgisayarımızın içerisinde bulunan işlemciye bir iş yaptırmak
-istiyoruz.
+## Why do we have computers?
 
-Günümüzde birçok işlemci modeli ve işlemci üreten/tasarlayan firma var:
-Intel, AMD, Apple, Qualcomm, ARM, RISC-V gibi. Diyelim ki gittik bir işlemci
-aldık ve o işlemciyi çalıştıracak bilgisayarımızı kurduk. **Peki bu işlemci ile
-nasıl konuşacağız?** Diyelim ki hesaplattırmak istediğimiz bir denklem var. "Ey
-işlemci! Şunu hesapla!" yı nasıl diyeceğiz? İşlemci ile bir şekilde anlaşmamız,
-konuşmamız gerekiyor ki işimiz görülsün. İşte burada işlemcinin bize sunduğu
-**komut seti** devreye giriyor.
+Computers are expensive and require extensive engineering effort to develop. As
+individuals, we invest hundreds of dollars each year in our personal computers,
+including laptops, gaming consoles, mobile phones, desktops, and more. But why?
+They must serve a purpose, correct? Indeed. Actually, each of these computers
+addresses a specific problem we encounter. Computers can perform complex
+mathematical computations, facilitate aircraft landings, entertain us, enable
+over-the-air communication, and even contribute to the discovery of planets in
+space! But how do they accomplish these tasks? **What is the magic behind their
+functionality?**
 
-İşlemcilerin iç yapıları, hızları, üretildikleri teknoloji (transistörlerin
-boyutu gibi, nanometre konuları) yıllar içerisinde değişti. Yıldan yıla
-işlemciler hızlanıyor, daha az güç tüketiyor ya da bazı hesaplamaları daha
-verimli yapabiliyorlar. Ama belki onlarca yıldır değişmeyen şeylerden biri de
-işlemcilerin kullanıcı açısından nasıl çalıştığıdır. Günümüzde gündelik
-yaşantımızda kullandığımız hangi işlemciyi alırsanız alın sizden bir iş yapmak
-için bir komut bekleyecektir. İşlemciler ne yazık ki zihnimizi okuyamıyor ve ne
-yapmak istediğimizi anlayamıyorlar, onlara sıra ile komutlar vererek bizlerin iş
-yaptırması gerekiyor. Yine sonuçları da bu komutlar sayesinde alıyoruz. İç
-yapısı ne olursa olsun yazılımcı ya da kullanıcı açısından işlemci, sıra ile ona
-verilen komutları yerine getiren bir makineden farklı bir şey değildir.
+---
 
-Bir işlemci,
+![ENIAC](/assets/img/24/9-eniac.jpg){:.centered .lazyload}
+
+{:.text-align-center}
+[ENIAC](https://en.wikipedia.org/wiki/ENIAC), designed in 1945 to solve
+military-related problems, stands as one of the earliest computers (The whole
+thing in the room is a single computer. Power consumption was higher than 150
+kW). With a cost exceeding 6 million US Dollars (adjusted for inflation), it was
+capable of performing only 5000 operations per second—a figure that may seem
+modest compared to today's standards but still exceeded human capacity at the
+time.
+[Photo](https://commons.wikimedia.org/wiki/File:Classic_shot_of_the_ENIAC.jpg)
+
+---
+
+The magic lies in the ability to **leverage information** to accomplish these
+tasks. Computers possess **memory** to **store** information and fast
+**communication** links to facilitate the exchange of data. Ultimately, the crux
+of computer functionality revolves around the generation and processing of
+information.
+
+> Computers are incredible inventions created by smart people, but there's no
+> actual magic involved. They work because they've been carefully designed and
+> engineered. If you want to experience something truly magical, consider
+> exploring the wonders of nature through the study of natural sciences. 🪄
+
+Nearly all problems solved by computers boil down to mathematical problems.
+Computers excel with numbers, capable of executing algorithms on data orders of
+magnitude faster than a human could. **But how do they achieve this?**
+
+## Processors
+
+Processors serve as the heart of computers. A processor is an electronic
+hardware component capable of manipulating numbers at an incredibly high speed.
+While processors themselves can't store data, they "process" (hence their name)
+the stored data, such as in RAM, and generate new data. They can achieve this at
+rates of billions of operations per second. Examples of processors include the
+**CPU** (Central **Process**ing Unit), **GPU** (Graphics **Process**ing Unit),
+and **TPU** (Tensor **Process**ing Unit).
+
+**CPU**s, or **Central Processing Units**, are general-purpose processors found in
+nearly all computers and many electronic devices. They are designed to handle a
+wide range of tasks, such as text editing, web surfing, and number crunching,
+typical of personal computers. Unlike specialized processors optimized for
+specific tasks, CPUs are not tailored to excel in any single function but rather
+are engineered to efficiently handle a variety of tasks.
+
+![6502](/assets/img/24/9-6502.jpg){:.centered .lazyload}
+
+{:.text-align-center}
+The [MOS Technology 6502](https://en.wikipedia.org/wiki/MOS_Technology_6502) is
+a highly renowned microprocessor introduced in 1975, widely utilized in numerous
+microcomputers and video game consoles during the 1980s era. Capable of
+executing 1-2 million operations per second, it represented a significant leap
+in computing power compared to the 5000 operations per second capability of the
+ENIAC, which was designed in 1945. Despite its enhanced performance, the price
+of the 6502 remains relatively affordable, around $150 today when adjusted for
+inflation (originally $25 in 1975).
+[Photo](https://en.wikipedia.org/wiki/File:MOS_6502AD_4585_top.jpg)
+
+---
+
+**GPU**s, or **Graphics Processing Units**, differ from CPUs. While they are also
+processors, their internal architecture is specifically optimized to efficiently
+handle calculations required for graphical tasks. GPUs excel in processing
+graphical data by leveraging parallel computing, utilizing thousands of multiple
+processors designed to execute tasks simultaneously. Because neural network
+problems share a similar parallel nature to graphics tasks, GPUs are
+increasingly being utilized not only for graphical applications but also for
+solving AI problems. Nonetheless, they remain processors at their core.
+
+![RTX 4090](/assets/img/24/9-rtx-4090.jpg){:.centered .lazyload}
+
+{:.text-align-center}
+The modern GPU card, Nvidia's RTX 4090, released in 2022 for approximately
+$1600, boasts impressive capabilities. With its [GeForce 40 series
+GPU](https://en.wikipedia.org/wiki/GeForce_40_series), it can perform 73,000
+billion single-precision floating-point operations per second while operating
+under 450W. [Photo](https://en.wikipedia.org/wiki/File:NVIDIA_RTX_4090.jpg)
+
+---
+
+**TPU**s, or **Tensor Processing Units**, are custom processors specifically
+designed for neural network applications. Developed by Google,
+[TPU](https://en.wikipedia.org/wiki/Tensor_Processing_Unit)s are engineered to
+perform the mathematical operations necessary for neural network tasks more
+efficiently than GPUs. Unlike GPUs, TPUs are tailored solely for optimizing the
+performance of neural network computations.
+
+![TPU](/assets/img/24/9-TPUv3.jpg){:.centered .lazyload}
+
+{:.text-align-center}
+Photo of TPUv3 processors. We can't see them directly because they are under
+heatsinks. TPUv4 announced in 2021 is capable of doing 275,000 billion
+operations per second while operating under 170W.
+[Photo](https://en.wikipedia.org/wiki/File:Tensor_Processing_Unit_3.0.jpg)
+
+---
+
+**Microcontroller**s, MCUs, present in nearly all electronic devices, also
+contain processors within them. In general, these processors are specifically
+designed to handle tasks that are not computationally intensive. However,
+certain microcontrollers are engineered to execute tasks with minimal power
+consumption, enabling devices to operate for years a single battery.
+
+![PIC](/assets/img/24/9-PIC18F8720.jpg){:.centered .lazyload}
+
+{:.text-align-center}
+A [PIC](https://en.wikipedia.org/wiki/PIC_microcontrollers) microcontroller from
+[Microchip Technology](https://en.wikipedia.org/wiki/Microchip_Technology).
+[Photo](https://commons.wikimedia.org/wiki/File:PIC18F8720.jpg)
+
+---
+
+As evident, there exist numerous types of processors, beyond the examples
+provided, each tailored for specific purposes. Various companies are involved in
+the design and manufacturing of these processors. For instance, Intel and AMD
+are renowned for their CPUs, while Nvidia specializes in GPUs.
+
+**However, regardless of the type or manufacturer, all these processors
+fundamentally operate in a similar manner. The process of utilizing or
+programming them has remained essentially the same for decades, spanning across
+a wide range of processors.**
+
+## Talking with Processors
+
+Now that we've grasped the importance of the processor in a computer system,
+whether it's a CPU, GPU, TPU, or any other variant, let's delve into its primary
+functions. Broadly speaking, a processor performs two types of tasks:
+**arithmetic operations**, which involve mathematical computations like
+addition, multiplication, and division, and **logical operations**, which entail
+making decisions based on conditions—for instance, determining if number `A` is
+greater than `B` and taking appropriate actions accordingly. But how exactly do
+we communicate with a processor to get our tasks done?
+
+Let's imagine that I've purchased an [AMD Ryzen 7
+8700G](https://www.amd.com/en/products/apu/amd-ryzen-7-8700g) CPU from a
+computer store. This CPU, designed by AMD and released in early 2024, is capable
+of performing billions of operations per second, which is quite impressive. Now,
+let's say I simply want to add two numbers together and obtain the result. How
+can I communicate this task to the CPU? How do I tell the CPU, "Hey, here are
+two numbers. Please add them together and return the result to me?"
+
+![AMD Ryzen 7 8700G](/assets/img/24/9-amd-ryzen-7-8700g.jpg){:.centered .lazyload}
+
+{:.text-align-center}
+AMD Ryzen 7 8700G. Photo by [Tom's
+Hardware.](https://www.tomshardware.com/pc-components/cpus/amd-ryzen-7-8700g-cpu-review)
+
+---
+
+As we've observed, there is a wide array of processors available today, each
+tailored to different applications with various optimizations such as power
+consumption and speed. Over the past 80 years, these processors have undergone
+dramatic changes in size, performance, and price. Comparing the computational
+power of a modern basic cell phone to that of the [Apollo Guidance
+Computer](https://en.wikipedia.org/wiki/Apollo_Guidance_Computer), for example,
+would be practically meaningless. However, with all these historical
+advancements and variations, one fundamental aspect remains nearly unchanged:
+**the basic operational principle of a processor.**
+
+Processors are essentially devices designed to execute tasks, functioning as an
+*execution engine* of sorts. Regardless of their processing power, a processor
+simply carries out the instructions it is given—no more, no less. We provide a
+list of commands, or **instruction**s, to a processor, and it executes them one
+by one. Each instruction tells the processor precisely what action to take. A
+computer program essentially consists of an ordered set of instructions for the
+processor to follow. These instructions are stored in memory, typically RAM, and
+can be accessed by the processor. The processor then begins executing these
+instructions sequentially, from start to finish. Below is an illustration of how
+a program appears in memory:
 
 ```text
+Instruction 001: Do this
+Instruction 002: Do that
+Instruction 003: If A < N, do this otherwise do that
 ...
-komut123
-komut124
-komut125
-...
+Instruction 875: Do this
+Instruction 876: End
 ```
 
-gibi arda arda verilen komutları yerine getirir. Bilgisayar programı dediğimiz
-şey ise sıralanmış komutlardan farklı bir şey değildir. Elbette anlamlı bir iş
-çıkabilmesi için komutların da belirli bir mantıksal sıra ile verilmesi gerekir.
-Program yazmak demek de özünde bu komutları mantıksal bir sırada oluşturmak
-demektir.
+As you may have noticed, for a processor to be capable of performing useful
+tasks, it needs to support more than just one instruction. A processor that can
+only add two numbers together without any additional functionality wouldn't be
+very practical, would it? Therefore, processors are designed to support a wide
+range of instructions, and the set of instructions supported by a processor is
+called its **Instruction Set**.
+
+If you're interested in this topic, you may have come across two terms: **RISC**
+and **CISC**. In these terms, `IS` in the middle stands for **I**nstruction
+**S**et. RISC stands for **R**educed **I**nstruction **S**et **C**omputer, while
+CISC stands for **C**omplex **I**nstruction **S**et **C**omputer. Anyway, let's
+proceed with our exploration: talking with processors.
+
+---
+
+Let's delve into instructions in more detail. As mentioned earlier, instructions
+are stored in memory and are accessible by the processor. Computers operate
+using numbers, [binary numbers](https://en.wikipedia.org/wiki/Binary_number)
+most of the time, which consist of 0s and 1s. This applies to both memory and
+processors. Each instruction communicates to the processor what action to take.
+To efficiently store these commands in memory, each command is encoded with a
+number. For instance, for a specific processor, reading a "1" from memory might
+indicate an addition operation, "2" for subtraction, "3" for comparison, and so
+on. In a moment, I'll provide a real-life example from a processor to illustrate
+this further. Stay tuned!
+
+### Example: PIC16F84
+
+Let's examine a real-life example. To maintain simplicity and focus on the topic
+without getting distracted by advanced features implemented by a processor, I've
+chosen an old microcontroller from Microchip Technology: the
+[PIC16F84](https://www.microchip.com/en-us/product/pic16f84). This
+microcontroller holds a special significance for me because it was the first
+microcontroller I programmed when I began experimenting with hobby electronics
+in high school.
+
+![PIC 16C84](/assets/img/24/9-PIC16C84.jpg){:.centered .lazyload}
+
+{:.text-align-center}
+[PIC16C84](https://en.wikipedia.org/wiki/PIC16x84) is an older version of
+PIC16F84. It was introduced in 1993.
+[Photo](https://commons.wikimedia.org/wiki/File:Two_Microchip_PIC16C84_chips.jpg)
 
 İşlemciler bizlere anlayacakları çeşitli komutlar sunarlar. Bu komutlar,
 İngilizce'de **Instruction** olarak geçmektedir. Türkçe'de ise **komut** ya da
