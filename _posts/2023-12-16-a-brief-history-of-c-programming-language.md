@@ -12,9 +12,6 @@ tags:
 modified_date: 2024-02-17
 ---
 
-> ℹ️ 🇹🇷 Bu yazı, [C Günlükleri]({% post_url 2024-02-17-c-gunlukleri %}) serisinde
-> yer almaktadır.
-
 C, is a pretty old language. It was developed during the UNIX project. The
 development of UNIX led to the creation of C, and in turn, C played a
 significant role in the success of UNIX.
@@ -331,11 +328,6 @@ development of key technologies.
 
 - 2023-11-25. Corrections and additions to *UNIX and C*.
 - 2024-02-17. Rewritten and reorganized form scratch
-
-**🇹🇷 [C Günlükleri]({% post_url 2024-02-17-c-gunlukleri %}) serisindeki bir
-sonraki yazı:**
-
-{% include ax_single.html reccmode="single" reccyear="23" reccaxseq="13" %}
 
 [^1f]: <https://www.youtube.com/watch?v=de2Hsvxaf8M>
 [^2f]: <https://qr.ae/pvc7Ln>

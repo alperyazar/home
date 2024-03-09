@@ -12,14 +12,6 @@ tags:
 #modified_date: 2024-02-17
 ---
 
-<!-- markdownlint-capture -->
-<!-- markdownlint-disable -->
-> ℹ️ 🇹🇷 Bu yazı, [C Günlükleri]({% post_url 2024-02-17-c-gunlukleri %}) serisinde
-> yer almaktadır. Eğer okumadıysanız öncelikle
-> [önceki yazıyı]({% post_url 2023-12-16-a-brief-history-of-c-programming-language %})
-> okumanızı tavsiye ederim.
-<!-- markdownlint-restore -->
-
 **What kind of language is C?** Programming languages can be categorized from
 various perspectives, often referred to as **paradigms**. The characteristics of
 the C programming language and the paradigms it belongs to are listed below.
