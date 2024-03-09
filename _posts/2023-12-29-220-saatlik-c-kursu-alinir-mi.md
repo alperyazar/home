@@ -364,7 +364,7 @@ umarım, biraz psikolojik bir sınır bence.
 
 ## Kurs pahalı 💰 ve uzun mu ⏱️? Diğer kurumsal kurslar? Udemy?
 
-[Kişisel siteme](https://ayazar.dev/) veya
+[Kişisel siteme](https://www.alperyazar.com) veya
 [Linkedin](https://www.linkedin.com/in/alperyazar/) profilime bakarsanız bu
 kurstan önce [PLC2](https://plc2.com/) ve [Doulos](https://www.doulos.com/) gibi
 kurumsal eğitim firmalarından çeşitli konularda kurslar aldığımı görebilirsiniz.

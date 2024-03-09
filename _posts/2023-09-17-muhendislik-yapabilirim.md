@@ -329,6 +329,6 @@ içerikler bulunuyor. Bir video şuraya bırakayım, siz oradan devam edersiniz.
 **Varsa görüş ve yorumlarınızı okumaktan büyük mutluluk duyarım...**
 
 [^1f]: <https://en.wikipedia.org/wiki/Ramanujan_summation>
-[^2f]: [Wikipedia](https://en.wikipedia.org/wiki/Rome_wasn't_built_in_a_day)
+[^2f]: <https://en.wikipedia.org/wiki/Rome_wasn't_built_in_a_day>
 [^3f]: <https://eee.metu.edu.tr/tr/all-courses>
 [^4f]: [Ramanujan Kimdir? Evrim Ağacı](https://evrimagaci.org/srinivasa-ramanujan-kimdir-muthis-deha-matematige-neler-katti-11310)
