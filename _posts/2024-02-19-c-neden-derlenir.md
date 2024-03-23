@@ -253,178 +253,261 @@ in high school.
 PIC16F84. It was introduced in 1993.
 [Photo](https://commons.wikimedia.org/wiki/File:Two_Microchip_PIC16C84_chips.jpg)
 
-İşlemciler bizlere anlayacakları çeşitli komutlar sunarlar. Bu komutlar,
-İngilizce'de **Instruction** olarak geçmektedir. Türkçe'de ise **komut** ya da
-**buyruk** olarak adlandırılırlar. Tahmin edebileceğiniz üzere bir işlemci
-birden fazla komutu anlayabilir, o komutlara göre farklı işler yapabilir. İşte
-bir işlemcinin tüm komutlarının oluşturduğu kümeye o işlemcinin **buyruk
-kümesi**, **komut seti** ya da İngilizce **Instruction Set (IS)** adı verilir.
-Burada *Instruction Set* öbeğine dikkat çekmek istiyorum. Bu konu ile ilgili iseniz,
-**RISC** (evet, RISC-V'teki RISC) veya **CISC** kısaltmalarını duymuş olabilirsiniz.
-Bu kısaltmaları gelin açalım:
+The datasheet of the PIC16F84 microcontroller is available on the
+[manufacturer's
+website.](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/30430D.pdf)
+Let's navigate to the "Instruction Set Summary" section, located on page 55, to
+gain insight into the instructions supported by this microcontroller.
 
-- RISC: **R**educed **Instruction Set** **C**omputer
-- CISC: **C**omplex **Instruction Set** **C**omptuer
+This microcontroller consists of a CPU and an internal memory to store
+instructions that will be executed sequentially by the CPU. However, the memory
+structure is somewhat unusual because each row has a width of 14 bits.
+Typically, we are familiar with memories with widths that are multiples of 8
+bits, such as 8, 16, or 32 bits. Nevertheless, there's nothing inherently wrong
+with having a memory width of 14 bits. We can visualize the memory as follows:
 
-demektir. Bu terimlerin ne anlama geldiği şimdilik çok önemli değil ama kısaca
-anlatayım. Bir işlemci için *RISC işlemci* deniyor ise o işlemcinin bize sunduğu
-komut setindeki komutlar işlemciye daha kısa süren, daha basit ve temel işler
-yaptırıyor demektir. *CISC işlemcilerin* sunduğu komut setindeki komutlar ise
-işlemciye verildiği zaman bir komut, RISC işlemcilere kıyasla işlemciye daha
-uzun süren, daha karmaşık işler yaptırıyor demektir. ARM, RISC-V gibi işlemciler
-birer RISC işlemcidir. Öte yandan Intel/AMD tarafından üretilen x86 mimarili
-işlemciler (çoğumuzun bilgisayarında olan) ise CISC işlemcidir. Ama günün sonunda
-ne olursa olsun, bir komut o işlemcide ne kadar karmaşık ya da basit bir işlem
-yaptırıyor olsun bizler işlemcilerle o komutlar üzerinden konuşuruz.
-
-Diyelim ki işlemcimizin iki sayıyı toplayan `topla` isminde bir komutu var.
-Bizim bu komut ile beraber hangi iki sayının toplanacağı ve sonucun nereye
-yazılacağını iletmemiz gerekecektir. `topla` komutu ile beraber 3 farklı
-parametre (**operand** olarak da adlandırılır) iletmemiz de gerekecektir,
-toplanacak 2 sayı ve sonucun nereye (hangi register, yani yazmaç olacağı veya
-hafızaya yazılacaksa hafıza adresi gibi) yazılacağı. Bu durumda `topla r4 r5 r6`
-gibi bir komut veriyor olabiliriz. Burada örneğin `r5` ve `r6` yazmacındaki
-değerleri topla ve `r4` e yaz diyoruz. Bunu ben tamamen uydurdum ama birazdan
-gerçek işlemcilerin de komutlarının benzer olduğunu göreceğiz. İşte bu örnekte
-olduğu gibi bir komutun parametrelerinin ne olacağı, işlemcinin hangi bellek
-erişim yöntemlerini desteklediği, komutlarla desteklenen veri tipleri, yazmaçlar
-(register) gibi işlemcinin bize sunduğu arayüzün tüm detaylarını barındıran
-kavram ise **Instruction Set Architecture (ISA)** olarak geçmektedir.
-**İşlemciyi tasarlayan ekip ile o işlemciyi kullanacak yazılımcıların arasındaki
-kontrat ISA, olmaktadır.** Bir programcı olarak bir işlemci ile konuşacak onun
-**ISA** dokümanlarını çalışmalıyız.
-
-## Evrensel ISA?
-
-"Ben bir işlemciye bir şeyler yaptıracaksam, o işlemcinin ISA'ında tanımlı
-komutları kullanmalıyım değil mi?" Kesinlikle evet! Fakat burada kötü bir
-haberim var. Birçok işlemci üreticisi ve modeli olduğundan bahsetmiştim. Ne
-yazık ki tüm işlemcilerle konuşabileceğimiz evrensel bir ISA yok. 😢 Ama iyi
-bir haberim de var, her işlemcinin anladığı komutlar yani desteklediği ISA
-her bir işlemci için farklı değil. Burada işlemcileri gruplayabiliyoruz neyse ki.
-İşlemcilerde **mimari** yani **architecture** kavramından bahsedebiliriz. Örneğin,
-x86 mimarisinde bir işlemci, ARMv7-M mimarisi, ARMv8-A mimarisi gibi. İşte bunlar
-kabaca bize o işlemcinin hangi ISA'yı desteklediğini söylüyor. Örneğin Intel olsun,
-AMD olsun ya da başka bir marka işlemci olsun, x86 bir işlemci aldığınız zaman
-o işlemci [burada](https://en.wikipedia.org/wiki/X86_instruction_listings) belirtilen
-komutları destekleyecektir.
-
-Ne yazık ki tüm işlemcilerin anlayacağı bir ISA elimizde yok fakat piyasadaki
-her işlemci için bir ISA da yok, ortak gruplar mevcut.
-
-## Bir Örnek, PIC16F84
-
-Şimdi bu öğrendiklerimizi gerçek bir işlemci örneği ile pekiştirelim. Burada,
-benim için özel bir mikrokontrolcü olan, Microchip firmasına ait PIC16F84 üzerinden
-bir örnek vermek istiyorum. Bu mikrokontrolcü benim için özel çünkü ortaokul,
-lise yıllarındayken amatör olarak elektronik ile uğraştığım zamanlarda öğrendiğim
-ve çalıştığım ilk mikrodenetleyici buydu. Ek olarak kendisinin görece basit
-bir işlemciye sahip olmasından dolayı konumuz için daha anlaşılır olacağını
-düşündüm.
-
-İlk olarak
-[buradaki bağlantıdan](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/30430D.pdf)
-entegrenin datasheet'ine ulaşalım. Sayfa 55'te, `Instruction Set Summary` ismiyle
-bir kısım başlıyor. Burada işlemcinin desteklediği ISA ile ilgili bilgiler verilmeye
-başlanıyor. Hangi komutlar var? Komutların parametreleri (operand) nelerdir?
-gibi sorularımızın cevabı bu bölümün altında yer alıyor.
-
-Yazının başından beri bir işlemcinin desteklediği komutlar sanki yazıymış gibi
-davrandık, `topla` diye bir örnek verdim mesela. Fakat işlemci komutları
-yazılardan değil, 1 ve 0'lardan oluşuyor. Örnek verdiğim işlemcinin bir komutu
-14-bit uzunluğunda 1 ve 0'lardan oluşuyor. Bu, datasheet'ten `FIGURE 9-1` olarak
-gösterilmiş.
-
-![PIC16F84 Komut Yapısı](/assets/img/24/9-figure-9-1.png){:.centered .lazyload}
+![PIC 16F84 Memory](/assets/img/24/9-PIC-memory.png){:.centered .lazyload}
 
 {:.text-align-center}
-PIC16F84'ün İşlemcisinin Komut Yapısı
+Note that each row is filled with random 14-bit data just for illustrative purposes.
 
-Her bir komut 14 bit demiştim. Komut tipine göre her bitin anlamı değişişyor.
-Örneğin `General` kategorisindeki komutların üst 6 biti `OPCODE`, düşük 8 biti
-ise `literal` için ayrılmış.
+The internal program memory of the PIC16F84 is capable of holding 1024
+instructions, each with a width of 14 bits.
 
-Her bir komutun karşılık geldiği bir sayı oluyor, işte buna `OPCODE` deniyor.
-Kalan bitlerin ne anlama geleceği ise komutun türüne bağlı. Yine aynı dokümanda,
-tüm komutları ve 14-bitlik alana nasıl kodlandıklarını görmek mümkün.
+On the same page, page 55, the instruction format is illustrated as follows:
 
-![PIC16F84 Tüm Komutlar](/assets/img/24/9-table-9-2.png){:.centered .lazyload}
+![PIC16F84 Instruction Format](/assets/img/24/9-figure-9-1.png){:.centered .lazyload}
 
 {:.text-align-center}
-PIC16F84'ün İşlemcisinin Desteklediği Tüm Komutlar
+PIC16F84 Instruction Format
 
-Örneğin, `ANDLW` komutunu ele alalım:
+The first notable aspect is that this particular processor can interpret four
+different instruction formats. Depending on the instruction category, each bit
+in the 14-bit word carries a distinct significance. Every instruction includes a
+common field known as **OPCODE**. All instructions supported by the processor are
+assigned a unique number, referred to as the OPCODE. The remaining bits may be
+interpreted differently by the processor based on the instruction, i.e., the
+OPCODE.
+
+On the next page in the datasheet, Table 9-2 lists all instructions, i.e., the
+**Instruction Set**, along with their corresponding OPCODEs.
+
+![PIC16F84 All Supported Instructions](/assets/img/24/9-table-9-2.png){:.centered .lazyload}
+
+{:.text-align-center}
+All instructions supported by PIC16F84
+
+The PIC16F84 supports 35 distinct instructions. For humans, it is not practical
+to memorize the bit patterns for all instructions. Therefore, each instruction
+is assigned a *nickname* called a **mnemonic.** In this context, a mnemonic is
+the term for the instruction name.
+
+Some instructions, like `SLEEP`, don't require any additional information from
+the programmer. However, many instructions do need additional information to
+operate. For instance, `CLRF` is used to fill a memory location with all 0s.
+However, we have to provide the address of the location, otherwise `CLRF` won't
+know which memory location to clear. These additional parameters given with
+instruction names are called **operands** in this context.
+
+To delve deeper into the subject, let's analyze an instruction thoroughly. Let's
+consider the `ANDLW` instruction. The detailed explanation is provided on page 57
+of the datasheet as follows:
 
 ![ANDLW](/assets/img/24/9-andlw.png){:.centered .lazyload}
 
-{:.text-align-center}
-ANDLW
+The first 6-bit value, `111001`, represents the OPCODE of this instruction. The
+remaining 8 bits constitute the single operand required for the instruction.
+Essentially, the `ANDLW` instruction performs a logical AND operation between
+the content of the `W` register and the constant value encoded in the 8-bit
+operand field. The result is then stored back into the `W` register.
 
-PIC16F84 içerisinde tek bir genel amaçlı yazmaç (register) bulunuyor, ismi `W`
-ve 8-bit genişliğinde. `ANDLW` komutu, `W` nin içerisindeki değeri sabit bir
-8-bit genişliğinde değerle AND işlemine sokup, sonucu tekrar `W` ye yazmaya
-yarıyor. Diyelim ki `0x12` sayısı ile AND'lemek isityoruz. Bu durumda işlemciye
-vermek isteyeceğimiz komut `ANDLW 0x12` olacaktır. Peki bunu işlemciye bu şekilde
-mi vereceğiz? Hayır. Dokümanda belirtildiği gibi `ANDLW` komutunun `OPCODE`
-numarası `111001` ve arkasına AND'lemek istediğimiz sayıyı yani bizim durumda
-`0x12` sayısını yazmak gerekiyor. `0x12` sayısını ikilik sistemde `00010010` olarak
-yazabiliriz. Bu durumda `111001` ile `00010010` sayılarını yan yana koyarsak,
-`11100100010010` ı elde ederiz. Dikkat ederseniz bu 14-bit genişliğinde bir sayı.
+> Note that the `W` register is a special storage area found in the processor of
+> this microcontroller. This name is specific to this processor, and other
+> processors may have a different number of registers with different names.
+> Therefore, don't worry too much about this naming convention—it's unique to this
+> particular microcontroller.
 
-İşlemcinin aslında temelde sıra ile kod çalıştırdığını söylemiştik. PIC16F84 özelinde
-her bir komut 14-bit genişliğinde. Bu komutlar işlemcinin erişebildiği bir kod
-hafızasında yer alıyor. Bu hafızadan sırayla 14-bitlik komutları çekip, çalıştırıyor
-gibi düşünebiliriz. İşte çalışma sırasında `11100100010010` ile karşılaşırsa
-bunun karşılığı olarak istediğimiz AND işlemi yapılacaktır. Yani:
+The processor in the microcontroller essentially reads 14-bit wide instructions
+from the program memory, line by line. Let's say the processor reads the value
+`11100100010010`. When we split this value, we have `111001` concatenated with
+`00010010`. This represents the `ANDLW` instruction with an operand value of
+0x12 (18 in decimal). When the processor reads this particular 14-bit value, it
+performs a logical AND operation between the value stored in the `W` register
+and 0x12, and then writes the result back to the `W` register.
+
+The program memory could be like this:
 
 ```text
-<14-bit genişliğinde bir komut>
-<14-bit genişliğinde bir komut>
+<14-bit wide instruction>
+<14-bit wide instruction>
 ...
 11100100010010 -> ANDLW 0x12
 ...
-<14-bit genişliğinde bir komut>
+<14-bit wide instruction>
 ```
 
-Yani günün sonunda her şey 1 ve 0'lardan oluşuyor. İşlemci ne kod bilir, ne C
-bilir ne de Python!
+If you continue reading the remaining part of the datasheet, you'll notice that
+each instruction is explained in detail. Similarly, all processors have similar
+documents that explain each instruction and its effects on the state of the
+processor (such as registers). The set of instructions + the architecture that
+behaves according to those instructions is referred to as the **Instruction Set
+Architecture (ISA)**.
 
-## İşlemcileri Programlama
+---
 
-Eğer istersek, çalışacağımız işlemcinin dokümanlarına bakarak yaptırmak
-istediğimiz işleri elle 1 ve 0'lar cinsinden kodlayıp, bunu işlemcinin kod
-hafızasına yükleyebiliriz. Böylece yaptırmak istediğimiz işleri yaptırabiliriz.
+In summary, processors only understand instructions, often accompanied by
+operands. To achieve meaningful outcomes, programmers must provide instructions
+in a logical order. Processors lack awareness of the tasks they are performing
+(such as calculating the Fibonacci Sequence); it is the programmer's
+responsibility to ensure that the set of instructions executed by the processor
+yields a meaningful result. This result may be stored in main memory, such as
+RAM. Importantly, **processors do not understand programming languages like
+JavaScript, Python, or C.** They can only execute instructions stored in memory,
+supported by their own ISA, one by one, without deviation.
 
-Ama bu pek mantıklı durmuyor sanki? Çok saçma değil mi elle 1 ve 0'ları
-kodlamak? Hataya çok açık durmuyor mu? Evet ama insanlar bunu zamanında yaptı!
+## ISA: The Contract
+
+Commonly, ISA is defined as the contract between software and hardware.
+Considering ISA as an agreement between hardware and software people is a very
+apt representation. Let's explore why.
+
+In the previous example, we explored the ISA implemented by Microchip company in
+the PIC16F84 microcontroller. However, we didn’t delve into the internals of the
+processor. We don’t know how Microchip uses flip-flops and transistors to build
+the processor. We don’t know how the logical AND operation is implemented at the
+transistor level, and **we don’t need to!** The only thing we need to utilize a
+processor designed by a company is the details explained in the ISA.
+
+The concept of **ISA is similar to API (Application Programming Interface)** in the
+software world. As programmers who are willing to utilize existing processors,
+rather than design them, we only need to know how to use them, not their
+internal structure. As long as processor manufacturers adhere to the rules
+defined in the corresponding ISA, they are free to design whatever circuit they
+like, and programmers won't notice any difference.
+
+Processor design companies, also known as hardware companies, have the
+flexibility to design processors with vastly different internal architectures
+while still supporting exactly the same ISA. These differences in internal
+structures can result in the design of processors that are more power-efficient,
+faster, or cheaper.
+
+The contrast between two processors supporting the same ISA can be significant.
+One processor may be widely adopted and used in numerous systems, while the
+other may not be used at all, potentially leading to financial crises within a
+company.
+
+In summary, the metrics of two processors can be dramatically opposite, even if
+they implement the same ISA.
+
+## ISA: Bad and Good News
+
+Okay, we understand that in order to utilize a processor and write programs that
+perform valuable tasks, we have to study the ISA of the processor and program it
+accordingly. **But how many ISAs are currently in use?** Can we talk about a
+**universal ISA** that all processors support, so we as programmers can learn
+one ISA to work with all processors?
+
+The bad news is that there is not just one ISA, I'm afraid. Since the inception
+of the first electronic processors, companies began developing their own ISAs.
+Therefore, we can't talk about a universal ISA. However, the good news is that
+processors are grouped together in such a way that a group of processors
+implements the same ISA. So, the number of ISAs is less than the number of
+designed processors.
+
+For example, as programmers, we don't need to learn a different ISA for each CPU
+designed by Intel; fortunately, they share a common ISA base.
+
+The term **architecture** commonly refers to the ISA implemented by a processor.
+From a CPU standpoint, common architectures (ISAs) include **ARM (v7, v8, v9...),
+x86, x86-64, MIPS, RISC-V,** etc. For example, there are multiple processor design
+companies designing ARM CPUs. From a programmer's viewpoint, instructions
+suitable for the ARMv7 ISA, for instance, can be executed on CPUs from both
+companies.
+
+Today, many architectures (ISAs) have "plugin" capabilities. While maintaining
+the base instructions as a minimum requirement, a vendor may implement
+additional instructions. These additional instructions are often referred to as
+**extensions.**
+
+For example, ARM has SVE (Scalable Vector Extension) to implement fast
+vector-based operations. If a program uses these kinds of extensions, these
+instructions won't work on a similar processor lacking that extension.
+
+## Putting Instructions into The Memory
+
+Until now, we've assumed that instructions executed by the processor are
+available in the memory somehow.
+**But how do we actually put those instructions into memory?**
+
+In today's computers, when we double-click an application, the instructions for
+the application are loaded into memory by the operating system (OS). We don't
+even think about the process of reading instructions from disk and putting them
+into memory (RAM) and letting the CPU run the instructions. However, this
+process wasn't as trivial in the old days as it is today.
+
+Many old computers lacked an operating system to read instructions from storage
+and load them into memory. Some had operating systems available, but the cost of
+operating systems or computers capable of running them was prohibitively high,
+so people often didn't choose those systems. Additionally, storing programs on
+paper (punch cards) could be cheaper than storing them on hard disks. Since this
+subject is beyond the scope of this post, I won't go into details, but if you're
+interested, I recommend watching the following video:
+
+{% include youtubePlayer.html id="nwDq4adJwzM" %}
+
+[The video](https://www.youtube.com/watch?v=nwDq4adJwzM)
+
+and
+
+{% include youtubePlayer.html id="KG2M4ttzBnY" %}
+
+[The video](https://www.youtube.com/watch?v=KG2M4ttzBnY)
 
 ### Altair 8800
+
+As an example, I would like to talk about the Altair 8800. According to many
+resources, it is considered the first personal (micro)computer. [^1f] It
+features an Intel 8080 processor and was designed by MITS in 1974. The Altair
+8800 played a significant role in the history of Microsoft and Apple.
 
 ![Altair 8800](/assets/img/24/9-altair.jpg){:.centered .lazyload}
 
 {:.text-align-center}
 [Altair 8800](https://commons.wikimedia.org/wiki/File:Altair_8800_Computer.jpg)
 
-Yukarıda bilgisayar tarihinde önemli bir yere sahip olan **Altair 8800** isimli
-"bilgisayar"ı görüyorsunuz. Altair 8800, MITS firması tarafından 1974 yılında
-tasarlanan Intel 8080 temelli bir kişisel bilgisayardır. [^1f] Birçok kaynak
-tarafından **ilk kişisel bilgisayar** olarak kabul edilir. Micrsoft ve Apple
-firmalarının tarihininde önemli bir yere sahiptir, konumuz bu olmadığı için
-atlıyorum.
+Did you notice something? This computer doesn't have a keyboard, mouse, or
+screen! How are you supposed to program it? Well, you would use the front panel,
+which consists of a bunch of switches and LEDs, and perform something called
+**Front Panel Programming.**
 
-Peki bu "bilgisayar"da bir şey dikkatinizi çekti mi? Bu bilgisayarın ne ekranı
-ne de bir klavyesi var. Ön panelinde sadece anahtarlar ve lambalar yer alıyor.
-Peki bu bilgisayarı nasıl programlıyorsunuz? İşte tam da yukarıda örneğini
-yaptığımız gibi: **ISA'ya yani komut setine bakarak, `OPCODE` değerlerine
-dokümanlara bakarak ulaşarak sırayla tüm komutları anahtarları 0/1 konumuna
-getirerek bilgisayara giriyorsunuz.** Daha sonra bilgisayar bu komutları
-çalıştırıyor siz de lambaların sönük/yanık yani 0/1 olmasına göre sonuçları
-alıyorsunuz. Bu durumda derleyici de sizsiniz, debugger da sizsiniz, işlemci
-ile sizin aranızda hiçbir şey yok.
+![Altair 8800 Front Panel](/assets/img/24/9-altair-panel.jpg){:.centered .lazyload}
 
-İlginizi çektiyse şuradan devam edin:
+{:.text-align-center}
+[Altair 8800 Front Panel](https://commons.wikimedia.org/wiki/File:MITS_Altair_8800_Front_Panel.jpg)
+
+By toggling switches, a programmer inputs 0s and 1s into the memory, which are
+then read by the processor. After inputting all instructions one by one and
+hitting the `RUN` button, the processor executes the instructions stored in the
+memory. After running all instructions, the results can be read back by toggling
+switches and observing LEDs.
+
+**This is how a "real programmer" operates a computer!**
 
 {% include youtubePlayer.html id="cwEmnfy2BhI" %}
+
+[The video](https://www.youtube.com/watch?v=cwEmnfy2BhI)
+
+and
+
+{% include youtubePlayer.html id="7nDcTRqZu8E" %}
+
+[The video](https://www.youtube.com/watch?v=7nDcTRqZu8E)
+
+---
+
+## Assembly: The First Step Towards to Programming Languages
+
+
 
 ### Assembly (Sembolik Makine Dili)
 
