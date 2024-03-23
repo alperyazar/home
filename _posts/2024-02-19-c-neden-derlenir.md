@@ -16,7 +16,7 @@ Initially, I had considered writing an article on the steps of C compilation.
 However, before going into that specific topic, I decided to provide an overview
 of computers and programming languages as a whole.
 
-## Why do we have computers?
+## Why do we have computers? 💻
 
 Computers are expensive and require extensive engineering effort to develop. As
 individuals, we invest hundreds of dollars each year in our personal computers,
@@ -61,13 +61,14 @@ magnitude faster than a human could. **But how do they achieve this?**
 
 ## Processors
 
-Processors serve as the heart of computers. A processor is an electronic
-hardware component capable of manipulating numbers at an incredibly high speed.
-While processors themselves can't store data, they "process" (hence their name)
-the stored data, such as in RAM, and generate new data. They can achieve this at
-rates of billions of operations per second. Examples of processors include the
-**CPU** (Central **Process**ing Unit), **GPU** (Graphics **Process**ing Unit),
-and **TPU** (Tensor **Process**ing Unit).
+Processors serve as the heart ❤️ of computers (or brains 🧠, whatever organ you
+choose). A processor is an electronic hardware component capable of manipulating
+numbers at an incredibly high speed. While processors themselves can't store
+data, they "process" (hence their name) the stored data, such as in RAM, and
+generate new data. They can achieve this at rates of billions of operations per
+second. Examples of processors include the **CPU** (Central **Process**ing
+Unit), **GPU** (Graphics **Process**ing Unit), and **TPU** (Tensor
+**Process**ing Unit).
 
 **CPU**s, or **Central Processing Units**, are general-purpose processors found in
 nearly all computers and many electronic devices. They are designed to handle a
@@ -503,110 +504,392 @@ and
 
 [The video](https://www.youtube.com/watch?v=7nDcTRqZu8E)
 
----
+## Machine Language
+
+As you can see, we communicate with computers via instructions given in the
+corresponding ISA. The instruction set resembles a dictionary for a language
+that a processor can understand. This language, which a processor can understand
+or "speak," is called **machine language.** Communicating with a processor, or with
+a more technical term, programming it with raw instructions using 0s and 1s, is
+called **machine language programming.** Programming a computer with 0s and 1s
+directly is the lowest level of programming possible. Machine language is also
+known as **machine code.**
+
+In programming terminology, we have **low-level** and **high-level** languages.
+Low-level languages are closer to the machine than to a human. On the other
+hand, high-level languages are more suitable for humans; they resemble natural
+human language more than machine language.
+
+Clearly, programs written with 0s and 1s are very close to machines but not to
+humans. However, this is what computers or processors understand: 0s and 1s.
 
 ## Assembly: The First Step Towards to Programming Languages
 
+Although programming a computer with machine language is a natural way of
+programming from the perspective of a processor or computer, understanding a
+bunch of 0s and 1s put together isn't an easy task for a human. A programmer
+needs to communicate with colleagues, review code, and so on. However, trying to
+understand 0s and 1s and writing programs with them is error-prone and a very
+time-consuming task.
 
+So instead of writing programs in 0s and 1s, why can't we write them in a more
+human-readable way and then convert them to 0s and 1s that a processor can
+understand? This is exactly how **assembly languages** work!
 
-### Assembly (Sembolik Makine Dili)
+> 🤔 Trivia: It is believed that the first assembler program was developed for a
+> British computer known as EDSAC in 1949. [^2f]
 
-İşlemcinin desteklediği 0/1'lerden oluşan komutları elle, işlemci dokümanına
-bakarak oluşturmanın bir üst seviyesi **Assembly** yani Türkçe karşılığı ile
-**Sembolik Makine Dili** kullanmaktadır. **Assembler** adını verdiğimiz
-programlar, o işlemci için sembolik makine dilinde yazılmış programları makine
-diline yani 0/1'lerden oluşan komutlara dönüştürür. Assembly dilinde yer alan
-komutlar genelde **mnemonic** olarak adlandırılır, yani `OPCODE` lara verdiğimiz
-takma isimler gibi düşünebilirsiniz.
+If you remember, we defined two terms with the PIC16F84 example: *mnemonic* and
+*operand.* Instead of writing raw 0s and 1s, we can write instructions using
+"nicknames" of instructions like `ADD`, `SUB`, `GOTO`, `CLRF`, etc. Then, a
+computer program called an **assembler** converts those words into 0s and 1s
+that a particular CPU can understand. Programmers can interpret words like `ADD`
+more easily than `000100101`, right?
 
-> 🤔 Trivia: İlk assembler programın 1940'lı yıllarda tasarlanan EDSAC isimli
-> İngiliz yapımı bir bilgisayar için oluşturulduğu belirtilmektedir. [^2f]
-
-Assembler yazılımların işi görece basittir. Aslında temelde bizim için ilgili
-işlemcinin dokümanlarına bakıp, 0/1'lerden oluşan komutları kendisi bizim
-yerimize çevirir. Bunun yanında, `JUMP`, `BRANCH` gibi komutlar için verdiğimiz
-*etiketler* çerçevesinde offset hesaplama, basit isim değişiklikleri gibi işler
-de yaparlar yani bizler için kod yazmayı biraz daha kolaylaştırabilirler ama
-özünde datasheet'ten komutların binary karşılıklarını oluşturma işini hallederler.
-
-PIC16F84 ile verdiğim örnekte `ANDLW 0x12` nin karşılığının `11100100010010`
-olduğunu belirtmiştim. Assembly dilinde kod yazdığımızda kodda bulunan `ANDLW
-0x12`, assembler tarafından `11100100010010` şeklinde işlemciye verilmeye hazır
-bir binary formata çevrilir.
-
-Size örnek olması açısından bu sefer de yine Microchip firmasına ait PIC16F628A
-için hazırlanmış bir assembly programdan bir kısım göstereyim
+An assembler serves a broader purpose beyond simply translating words into 0s
+and 1s. I'll delve deeper into this concept with an explanation using a specific
+assembly program designed for the
+[PIC16F628](https://www.microchip.com/en-us/product/pic16f628), a well-known
+microcontroller from Microchip.
 
 ```asm
-SAYAC1 EQU H'20'
-SAYAC2 EQU H'21'
-  CLRF    PORTB ; PORTB'yi sıfırlar
+CNTR1 EQU H'20'
+CNTR2 EQU H'21'
+
+  CLRF    PORTB ; Clear PORTB
   BANKSEL TRISB
   CLRF    TRISB
   BANKSEL PORTB
-TEKRAR
+LOOP
   MOVLW h'00'
   MOVWF PORTB
-  CALL  GECIKME
+  CALL  DELAY
   MOVLW h'FF'
   MOVWF PORTB
-  CALL  GECIKME
-  GOTO  TEKRAR
-GECIKME
+  CALL  DELAY
+  GOTO  LOOP
+DELAY
   MOVLW h'FF'
-  MOVWF SAYAC1
-DONGU1
+  MOVWF CNTR1
+LOOP1
   MOVLW h'FF'
-  MOVWF SAYAC2
-DONGU2
-  DECFSZ SAYAC2, F
-  GOTO   DONGU2
-  DECFSZ SAYAC1, F
-  GOTO   DONGU1
+  MOVWF CNTR2
+LOOP2
+  DECFSZ CNTR2, F
+  GOTO   LOOP2
+  DECFSZ CNTR1, F
+  GOTO   LOOP1
   RETURN
   END
 ```
 
-> Yukarıdaki örneği bana doğrudan lise yıllarımı çağrıştıran, Orhan Altınbaşak
-> tarafından yazılmış [Mikrodenetleyiciler ve PIC
-> Programlama](https://www.kitapyurdu.com/kitap/mikrodenetleyiciler-ve-pic-programlama-pic16f628a/74980.html)
-> kitabından aldım. Lise yıllarımda PIC programlamaya merak salmıştım ve bu
-> kitapla tanışmıştım. Bu kitap Assembly dilinde kod yazmayı öğretiyor. Çok
-> güzel hazırlanmış olduğunu düşünüyorum, bana katkısı büyüktür.
+This code doesn't accomplish anything particularly useful; it simply sets some
+registers and then loops through two nested loops. However, the intention here
+is to illustrate the structure of an assembly language program.
 
-Assembly kodlarında gördüğünüz her bir satır genelde bir makine komutuna denk
-gelir. Ama Assembly dilleri kod yazımını kolaylaştırmak için çeşitli özellikleri
-destekleyebilir. Örneğin yukarıdaki örnekte en baştaki iki satırda yer alan
-`EQU` ile oluşturulan deyimler, C dilindeki `#define` önişlemci komutuna
-benzemektedir. Assembler, kodu derlerken `SAYAC1` ve `SAYAC2` kelimelerini
-`0x20` ve `0x21` sayıları ile değiştirir. Benzer şekilde `GOTO DONGU2` yerine,
-`DONGU2` etiketi ile belirtilen komutun adresi ne ise ona uygun bir adres
-yazılır, atıyorum `GOTO -2` yani 2 komut geriye git gibi. Fakat satırların çoğu
-işlemcinin desteklediği gerçek komutlardan oluşur, `MOVLW`, `MOVWF`, `DECFSZ`,
-`GOTO` gibi... Bu kelimeler **mnemonic** olarak geçmektedir.
+Most of the lines in the program correspond to a single instruction for the
+processor, such as `MOVLW`, `MOVWF`, and `CALL`. Some of them are included for
+the sake of simplicity in creating assembly programs.
 
-Assembly dilinde bu şekilde kod yazımını kolaylaştıran özellikler vardır. En
-nihayetinde bir metin dosyasına bir şeyler yazıp buradan bir bilgisayar programı
-yani assembler aracılığı ile otomatik bir şekilde 0/1'leri üretmek, anahtar ve
-lambalar ile bilgisayar işlemcisi ile konuşmaktan çok daha iyi.
+For example, `CNTR1 EQU H'20'` creates a substitution word `CNTR1`, which will
+be replaced by `0x20` when the assembler converts the program into 0s and 1s
+that the processor can understand. This functionality is very similar to the
+`#define CNTR1 0x20` preprocessor directive in C. The same concept applies to
+`CNTR2`, `PORTB`, and `TRISB`. This feature of the assembler simplifies
+modifications to the program. Instead of writing `0x20` everywhere and then
+performing a search-and-replace, one can easily change `CNTR1 EQU H'20'` to
+another value if needed. The definitions for `PORTB` and `TRISB` are provided by
+the vendor so that the user doesn't need to memorize the actual register
+addresses.
 
-**Fakat hala işlemciden yeteri kadar soyutlanamadık.** Neden? Çünkü yukarıdaki
-kodu sadece Microchip'in PIC16F628A mikrokontrolcüsü için ürettiği assembler
-yazılımı anlayacaktır. Örneğin bu programı x86 mimarisindeki bir işlemciye
-taşımamız (buna genelde, **port**, **porting**, **port etme** denir) gerekirse
-x86'nın komut setine ve x86 için tasarlanmış assembler'a uygun şekilde (örneğin
-o assembler'da `EQU` gibi bir destek olmayabilir ya da başka bir isimde
-olabilir) taşımamız gerekirdi. Yani hala bir program yazarken onun hangi
-işlemcide çalışacağını düşünmemiz gerekiyor. Ayrıca bir işlemci için yazılmış
-bir assembly programını başka bir işlemciye taşıyamıyoruz, baştan yazmamız
-gerekiyor.
+Another feature commonly supported by assemblers is the use of labels. `DELAY`,
+`LOOP`, `LOOP1`, and `LOOP2` are labels. When a label is used with an
+instruction like `GOTO`, the assembler automatically calculates the address of
+the instruction labeled by the label and generates the correct instruction that
+directs the processor to start executing that instruction. This simplifies the
+programmer's life, as otherwise, the programmer would need to manually calculate
+offsets between instructions.
 
-### Programlama Dilleri ve Soyutlama
+Many assemblers offer features to fill a memory region with text, typically
+represented in ASCII, along with other handy functionalities. However, an
+assembly language for a processor strictly adheres to its ISA and machine
+language specifications. These additional features simply make a programmer's
+life a bit easier. Since assembly language closely mirrors machine language with
+some helpful additions, it is also referred to as **symbolic machine language**
+or **symbolic machine code.** While we write programs in a manner similar to
+machine language but we use symbols to create them. Ultimately, the assembler
+converts the program into machine language, consisting solely of 0s and 1s.
 
-## Kaynaklar
+### Example
 
-- [The Computer That Changed Everything (Altair 8800) -
-  Computerphile](https://www.youtube.com/watch?v=cwEmnfy2BhI)
+Since assembly languages strictly adhere to the instructions defined in a
+particular ISA, **we have different assembly languages for each architecture.**
+Let's write a very simple function for different architectures. The function takes
+two inputs and calculates the sum of their squares: `x^2 + y^2`.
 
-[^1f]: [Altair 8080 - Wikipedia](https://en.wikipedia.org/wiki/Altair_8800)
+For **x86-64** architecture:
+
+```asm
+mov     eax, DWORD PTR [rbp-20]
+imul    eax, eax
+mov     edx, eax
+mov     eax, DWORD PTR [rbp-24]
+imul    eax, eax
+add     eax, edx
+mov     DWORD PTR [rbp-4], eax
+```
+
+For **RISC-V 64-bits** architecture:
+
+```asm
+lw      a5,-36(s0)
+mulw    a5,a5,a5
+sext.w  a4,a5
+lw      a5,-40(s0)
+mulw    a5,a5,a5
+sext.w  a5,a5
+addw    a5,a4,a5
+sw      a5,-20(s0)
+```
+
+and for **MIPS**:
+
+```asm
+lw      $2,24($fp)
+nop
+mult    $2,$2
+mflo    $3
+lw      $2,28($fp)
+nop
+mult    $2,$2
+mflo    $2
+addu    $2,$3,$2
+sw      $2,8($fp)
+```
+
+As you may easily notice, the same functionality is achieved with different
+assembly programs for different architectures. Since their ISAs are different,
+the corresponding assembly programs also differ. Although all of them share a
+similar pattern and some instructions appear similar, one has to learn each
+assembly language for the processors they work on.
+
+A similar issue persists even when working with very similar processors. Let's
+consider another example. In this case, assume we have three variables, x, y,
+and z, and we aim to implement z = x + y, where all of them are integers with a
+width of 64 bits.
+
+For ARMv7:
+
+```asm
+ldr     r1, [sp, #16]
+ldr     r0, [sp, #20]
+ldr     r3, [sp, #8]
+ldr     r2, [sp, #12]
+adds    r1, r1, r3
+adc     r0, r0, r2
+str     r1, [sp]
+str     r0, [sp, #4]
+```
+
+For ARMv8:
+
+```asm
+ldr     x8, [sp, #24]
+ldr     x9, [sp, #16]
+add     x8, x8, x9
+str     x8, [sp, #8]
+```
+
+The assembly programs for both architectures are very similar; they both contain
+almost the same instructions. However, the program for ARMv8 has almost half the
+number of instructions compared to the program for ARMv7. This is because ARMv8
+is a 64-bit processor architecture, and since the "natural" word length of this
+architecture is 64 bits, a single `add` instruction is sufficient to sum up two
+64-bit variables. On the other hand, ARMv7 is a 32-bit processor architecture
+and cannot handle 64-bit variables as easily as ARMv8. Therefore, one has to
+split a 64-bit variable into two 32-bit variables and perform multiple
+additions.
+
+As you can see, programming in assembly language is easier than programming in
+machine language. However, one must learn the ISA for each architecture and
+consider other factors such as variable sizes and architectural details. Let's
+imagine that you've written a fairly large assembly program for the ARMv7
+architecture, and one day you need to run the same program on an x86-64
+architecture. In that case, you would have to rewrite your program in x86-64
+assembly language. Rewriting the same program for a different architecture or
+system is known as **porting.** At the assembly language level, porting is not
+an easy task because you have to rewrite the entire program again. If you are
+supposed to port the same program to five different architectures, good luck!
+You will have to rewrite and debug the same program five times using different
+assembly languages.
+
+As we conclude this section, it's important to recognize that even within the
+same architecture, there can be multiple assembly language variants. Take x86
+assembly, for instance, where two prominent styles exist: AT&T and Intel. [^3f]
+While these styles may appear similar, they differ in the order of instruction
+parameters. Nevertheless, despite these variations, they ultimately produce the
+same machine code.
+
+## "I am not interested in computers."
+
+Until now, we've observed that to effectively utilize a computer, one must
+familiarize themselves with its corresponding machine language or, preferably,
+assembly language. However, computers are merely tools. What if someone isn't
+keen on delving into the internals of a computer but simply wishes to utilize
+its capabilities? What if they're an engineer or scientist focused solely on
+conducting numerical simulations without delving into the specific instructions
+of a particular computer? Ladies and gentlemen, let me introduce a highly
+renowned programming language from the 1950s: **FORTRAN (Formula Translation).**
+
+![Fortran](/assets/img/24/9-fortran.jpg){:.centered .lazyload}
+
+[Fortran](https://en.wikipedia.org/wiki/Fortran) was developed by [John
+Backus](https://en.wikipedia.org/wiki/John_Backus), the person who also invented
+the [Backus-Naur Form
+(BNF)](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form), at IBM in 1957.
+It stands as the first commercially available language [^4f] and is widely
+regarded as the first extensively used high-level programming language. [^5f]
+Moreover, it holds the distinction of being the first programming language to
+have a standardization.[^6f]
+
+From IBM's page:
+
+> In the early 1950s, computer programming was the exclusive domain of a small
+> group of specialists who wrote code in machine language, a complex and
+> cumbersome set of instructions. Programming was for experts only — outsiders
+> need not apply. Then came Fortran.
+
+continues as follows
+
+> Fortran democratized computer programming by providing scientists,
+> mathematicians and engineers the ability to input their problems directly into
+> the computer without relying on a programmer to translate their needs into
+> machine code.
+
+They also stated that:
+
+**Fortran instigated the process of abstracting software from the hardware on
+which it ran. Previous machine language programs had to be written for a
+specific computer, while a Fortran program could run on any system with a
+Fortran compiler.**
+
+and
+
+> Fortran was born of necessity in the early 1950s, when computer programs were
+> hand-coded. Programmers would laboriously write out rows of zeros and ones in
+> precise order. John Backus, Fortran’s primary author, described the process as
+> "hand-to-hand combat with the machine," with the machine often winning. The
+> cost of programmers was usually at least as great as the cost of the
+> computers, and programmers spent up to half their time debugging.
+
+**The main idea is this:** Instead of teaching everyone multiple assembly
+languages, we teach them a programming language that works on any computer.
+Then, we create **compilers** for each architectures, which compile the
+universal language into the computer's language. This makes things more
+efficient because there might be thousands of scientists or engineers who want
+to use a computer. Instead of teaching them all different assembly languages, we
+could hire, let's say, a hundred people to make compilers for different
+computers.
+
+This idea of translation or compilation has a potential downside:
+**efficiency.** It's likely that the translation process won't create machine
+code as efficient as what a skilled programmer could do manually (in terms of
+speed or number of instructions or memory usage). Well, this is a valid concern.
+However, Fortran compilers are **optimizing compilers** and can produce very
+efficient code.
+
+If you like the idea behind Fortran, you may want to watch this:
+
+{% include youtubePlayer.html id="NMWzgy8FsKs" %}
+
+[The video](https://www.youtube.com/watch?v=NMWzgy8FsKs)
+
+## "I not interested in paying programmers"
+
+COBOL
+
+## Simula
+
+## The Mission: Porting UNIX
+
+history of C
+
+## Let's keep it "BASIC"
+
+Interpreted
+
+## Languages Primarily for Documentation ???
+
+VHDL, HDL
+
+## Mathematicians. Again!
+
+MATLAB, R
+
+## C with Classes
+
+> Someone who claims to have a perfect programming language is either a salesman
+> or a fool, or both
+
+{:.text-align-center}
+by Bjarne Stroustrup [^7f], the creator of C with classes (I mean C++)
+
+## Python
+
+## Java: The Universal ISA
+
+WebAssembly
+
+## PHP
+
+https://www.reddit.com/r/ProgrammerHumor/comments/6k40cb/working_at_pornhub/
+
+## GUI
+
+## JavaScript
+
+Nodejs
+
+Typescript, ehnace type safety.
+
+## Rust
+
+## Go for Google
+
+## SQL
+
+## Program vs Programmer Efficiency?
+
+- Evolves
+- esinlenir
+
+## The Ultimate Question: Why so many languages?
+
+VHDL iletişim aracı CPU'lar için bile değil
+
+right tool for the right jobs (everything hammer vs)
+
+---
+
+- lisp machine
+- bir çoğunu anlatmadım
+
+
+## Related Resources
+
+C paradigms
+
+Here I list some resources on the Internet on similar topics:
+
+- [YouTube: The Brief History of Programming
+  Languages](https://www.youtube.com/watch?v=mhpslN-OD_o)
+- [YouTube: Every Programming Language Ever Explained in 15
+  Minutes](https://www.youtube.com/watch?v=ajIcjx0PeYU)
+
+[^1f]: <https://en.wikipedia.org/wiki/Altair_8800>
 [^2f]: <https://en.wikipedia.org/wiki/EDSAC>
+[^3f]: <https://en.wikipedia.org/wiki/X86_assembly_language#Syntax>
+[^4f]: <https://en.wikipedia.org/wiki/History_of_programming_languages>
+[^5f]: <https://qr.ae/psKb4T>
+[^6f]: <https://www.ibm.com/history/fortran>
+[^7f]: <https://www.stroustrup.com/quotes.html>
