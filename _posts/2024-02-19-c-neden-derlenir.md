@@ -730,7 +730,7 @@ While these styles may appear similar, they differ in the order of instruction
 parameters. Nevertheless, despite these variations, they ultimately produce the
 same machine code.
 
-## "I am not interested in computers."
+## "I am not interested in computers at all"
 
 Until now, we've observed that to effectively utilize a computer, one must
 familiarize themselves with its corresponding machine language or, preferably,
@@ -806,11 +806,74 @@ If you like the idea behind Fortran, you may want to watch this:
 
 ## "I not interested in paying programmers"
 
-COBOL
+From Wikipedia [^8f]:
 
-## Simula
+> In the late 1950s, computer users and manufacturers were becoming concerned
+> about the rising cost of programming. A 1959 survey had found that in any data
+> processing installation, the programming cost US$800,000 on average and that
+> translating programs to run on new hardware would cost $600,000.
+
+and
+
+> The DoD operated 225 computers, had 175 more on order and had spent over $200
+> million on implementing programs to run on them. Portable programs would save
+> time, reduce costs and ease modernization.
+
+In the late 1950s, the US Department of Defense (DoD) wasn't pleased with the
+costs incurred by programmers to develop programs for the new computers they
+purchased using assembly language. They found that they were paying nearly the
+same amount to develop a program again when it needed to be rewritten for new
+hardware. They sought portable programs that could potentially run on any
+hardware with much lower effort. This is how **COBOL** was born...
+
+COBOL is similar to Fortran in the sense that it is machine-independent, meaning
+it is not tied to a specific Instruction Set Architecture (ISA) like assembly
+programs, and is generally a compiled language. [^9f] Similar to Fortran, COBOL
+programs are compiled to the target machine language. However, the target
+audience was different.
+
+Fortran was developed for scientists and engineers who wanted to easily harness
+the processing power of computers to the fullest extent. However, computers were
+not only used for heavy computations. Like today, in the 1960s they were used
+for business purposes such as finance, administrative systems for companies,
+computer and telecommunication systems, ATMs, and so on. Companies had to hire
+programmers to implement these kinds of programs into computers, but writing
+programs in assembly language was too costly.
+
+COBOL stands for "**CO**mmon **B**usiness-**O**riented **L**anguage" and was
+specifically designed and optimized to make writing business-related programs
+easier. Although the fundamental approach is similar to Fortran, the syntax of
+these two languages is different since they target very different groups and
+types of problems.
+
+If you like COBOL, you may like these videos too:
+
+{% include youtubePlayer.html id="7d7-etf-wNI" %}
+
+[The video](https://www.youtube.com/watch?v=7d7-etf-wNI)
+
+{% include youtubePlayer.html id="ZoVrilcJvjg" %}
+
+[The video](https://www.youtube.com/watch?v=ZoVrilcJvjg)
+
+## "Simula"tion
+
+Computers have always been adept at running simulation models for various
+purposes such as weather forecasting, protein folding, physics, and more. In
+1962, **Simula** (specifically Simula I) was developed as a special-purpose
+programming language for simulating discrete event systems. [^10f]
+
+Simula holds a significant place in history as it is regarded as the **first
+object-oriented programming language**, influencing many subsequent languages such
+as C++ and Java. [^10f] Therefore, it's essential not to overlook its
+importance.
 
 ## The Mission: Porting UNIX
+
+C.. all the power of assembly language combined with the readability of assembly language
+https://stackoverflow.com/q/15393441/1766391
+
+
 
 history of C
 
@@ -893,3 +956,6 @@ Here I list some resources on the Internet on similar topics:
 [^5f]: <https://qr.ae/psKb4T>
 [^6f]: <https://www.ibm.com/history/fortran>
 [^7f]: <https://www.stroustrup.com/quotes.html>
+[^8f]: <https://en.wikipedia.org/wiki/COBOL>
+[^9f]: <https://qr.ae/psKgQW>
+[^10f]: <https://en.wikipedia.org/wiki/Simula>
