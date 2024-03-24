@@ -868,6 +868,30 @@ object-oriented programming language**, influencing many subsequent languages su
 as C++ and Java. [^10f] Therefore, it's essential not to overlook its
 importance.
 
+## Let's keep it "BASIC"
+
+In the 1960s, developers noticed that writing programs for computers was
+challenging, and programming was primarily restricted to scientists and
+mathematicians. To make computers accessible to students in non-scientific
+fields, they created **BASIC** (**B**eginners' **A**ll-purpose **S**ymbolic
+**I**nstruction **C**ode). The aim of this new programming language was to
+empower students outside of scientific disciplines to utilize computers. [^11f]
+
+BASIC is a significant language in computer history, especially during the 1980s
+when the microcomputer revolution occurred. Microcomputers became affordable,
+allowing individuals to purchase personal computers for their homes. BASIC
+emerged as the de-facto programming language for microcomputers. There were
+various implementations of BASIC, each with some differences, such as Applesoft
+BASIC, Altair BASIC, Commodore BASIC, Microsoft BASIC, and BBC BASIC (yes, from
+the British Broadcasting Corporation). Altair BASIC was one of Microsoft's
+earliest programs and contributed to the company's growth.
+
+In the 1960s, BASIC was used in large time-sharing systems, where it was
+compiled into machine code. However, when microcomputers emerged, their memory
+was too limited to support a full BASIC compiler. As a result, BASIC
+interpreters were developed for microcomputers, transforming the language from a
+compiled language to an interpreted one in practice.
+
 ## The Mission: Porting UNIX
 
 C.. all the power of assembly language combined with the readability of assembly language
@@ -877,9 +901,7 @@ https://stackoverflow.com/q/15393441/1766391
 
 history of C
 
-## Let's keep it "BASIC"
 
-Interpreted
 
 ## Languages Primarily for Documentation ???
 
@@ -959,3 +981,4 @@ Here I list some resources on the Internet on similar topics:
 [^8f]: <https://en.wikipedia.org/wiki/COBOL>
 [^9f]: <https://qr.ae/psKgQW>
 [^10f]: <https://en.wikipedia.org/wiki/Simula>
+[^11f]: <https://en.wikipedia.org/wiki/BASIC>
