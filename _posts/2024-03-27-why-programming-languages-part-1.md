@@ -1,7 +1,7 @@
 ---
 # License: CC-BY-SA-4.0.
-title: "Why do we have programming languages in the first place?"
-excerpt: "There are thousands of computer programming languages. But why? Why do we keep inventing them? Why do we compile C programs?"
+title: "Why do we have programming languages in the first place? Part 1"
+excerpt: "There are hundreds of computer programming languages. But why? Why do we keep inventing them?"
 image: /assets/img/24/9.jpg
 #imageyt: sO_Sdf09DiY
 toc: true
@@ -11,16 +11,22 @@ tags:
   - en
 ---
 
-In this post, I will discuss the presence of programming languages in general.
-Initially, I had considered writing an article on the steps of C compilation.
-However, before going into that specific topic, I decided to provide an overview
-of computers and programming languages as a whole.
+In this two-part mini-series, I will share my understanding and thoughts on
+programming languages and computers in general. This first part will cover:
 
-## Why do we have computers? 💻
+- Types of processors
+- The language bridging us and processors
+- Key terms such as **instruction set, instruction set architecture (ISA), machine
+  code, assembly language**
+
+We have at least 500 programming languages in existence today. [^4f] But why do
+we continue to invent them? Let's talk! But first:
+
+## Why do computers exist in the first place? 💻
 
 Computers are expensive and require extensive engineering effort to develop. As
-individuals, we invest hundreds of dollars each year in our personal computers,
-including laptops, gaming consoles, mobile phones, desktops, and more. But why?
+individuals, we invest hundreds of dollars 💲 each year in our personal computers,
+including laptops, gaming consoles, mobile phones, desktops, and more. **But why?**
 They must serve a purpose, correct? Indeed. Actually, each of these computers
 addresses a specific problem we encounter. Computers can perform complex
 mathematical computations, facilitate aircraft landings, entertain us, enable
@@ -33,13 +39,13 @@ functionality?**
 ![ENIAC](/assets/img/24/9-eniac.jpg){:.centered .lazyload}
 
 {:.text-align-center}
-[ENIAC](https://en.wikipedia.org/wiki/ENIAC), designed in 1945 to solve
+[ENIAC](https://en.wikipedia.org/wiki/ENIAC), **designed in 1945** to solve
 military-related problems, stands as one of the earliest computers (The whole
-thing in the room is a single computer. Power consumption was higher than 150
-kW). With a cost exceeding 6 million US Dollars (adjusted for inflation), it was
-capable of performing only 5000 operations per second—a figure that may seem
-modest compared to today's standards but still exceeded human capacity at the
-time.
+thing in the room is a single computer. Power consumption was **higher than 150
+kW**). With a cost exceeding **6 million US Dollars** (adjusted for inflation),
+it was capable of performing only **5000 operations per second**—a figure that
+may seem modest compared to today's standards but still exceeded human capacity
+at the time.
 [Photo](https://commons.wikimedia.org/wiki/File:Classic_shot_of_the_ENIAC.jpg)
 
 ---
@@ -170,8 +176,8 @@ Let's imagine that I've purchased an [AMD Ryzen 7
 computer store. This CPU, designed by AMD and released in early 2024, is capable
 of performing billions of operations per second, which is quite impressive. Now,
 let's say I simply want to add two numbers together and obtain the result. How
-can I communicate this task to the CPU? How do I tell the CPU, "Hey, here are
-two numbers. Please add them together and return the result to me?"
+can I communicate this task to the CPU? How do I tell the CPU, **"Hey, here are
+two numbers. Please add them together and return the result to me?"**
 
 ![AMD Ryzen 7 8700G](/assets/img/24/9-amd-ryzen-7-8700g.jpg){:.centered .lazyload}
 
@@ -232,8 +238,8 @@ using numbers, [binary numbers](https://en.wikipedia.org/wiki/Binary_number)
 most of the time, which consist of 0s and 1s. This applies to both memory and
 processors. Each instruction communicates to the processor what action to take.
 To efficiently store these commands in memory, each command is encoded with a
-number. For instance, for a specific processor, reading a "1" from memory might
-indicate an addition operation, "2" for subtraction, "3" for comparison, and so
+number. For instance, for a specific processor, reading a "01" from memory might
+indicate an addition operation, "10" for subtraction, "11" for comparison, and so
 on. In a moment, I'll provide a real-life example from a processor to illustrate
 this further. Stay tuned!
 
@@ -262,7 +268,7 @@ gain insight into the instructions supported by this microcontroller.
 
 This microcontroller consists of a CPU and an internal memory to store
 instructions that will be executed sequentially by the CPU. However, the memory
-structure is somewhat unusual because each row has a width of 14 bits.
+structure is somewhat unusual because each row has a width of **14 bits.**
 Typically, we are familiar with memories with widths that are multiples of 8
 bits, such as 8, 16, or 32 bits. Nevertheless, there's nothing inherently wrong
 with having a memory width of 14 bits. We can visualize the memory as follows:
@@ -293,7 +299,7 @@ OPCODE.
 On the next page in the datasheet, Table 9-2 lists all instructions, i.e., the
 **Instruction Set**, along with their corresponding OPCODEs.
 
-![PIC16F84 All Supported Instructions](/assets/img/24/9-table-9-2.png){:.centered .lazyload}
+![PIC16F84 All Instructions](/assets/img/24/9-table-9-2.png){:.centered .lazyload}
 
 {:.text-align-center}
 All instructions supported by PIC16F84
@@ -329,12 +335,12 @@ operand field. The result is then stored back into the `W` register.
 > particular microcontroller.
 
 The processor in the microcontroller essentially reads 14-bit wide instructions
-from the program memory, line by line. Let's say the processor reads the value
+from the program memory, row by row. Let's say the processor reads the value
 `11100100010010`. When we split this value, we have `111001` concatenated with
 `00010010`. This represents the `ANDLW` instruction with an operand value of
-0x12 (18 in decimal). When the processor reads this particular 14-bit value, it
-performs a logical AND operation between the value stored in the `W` register
-and 0x12, and then writes the result back to the `W` register.
+0x12 (in hexadecimal, 18 in decimal). When the processor reads this particular
+14-bit value, it performs a logical AND operation between the value stored in
+the `W` register and 0x12, and then writes the result back to the `W` register.
 
 The program memory could be like this:
 
@@ -350,9 +356,10 @@ The program memory could be like this:
 If you continue reading the remaining part of the datasheet, you'll notice that
 each instruction is explained in detail. Similarly, all processors have similar
 documents that explain each instruction and its effects on the state of the
-processor (such as registers). The set of instructions + the architecture that
-behaves according to those instructions is referred to as the **Instruction Set
-Architecture (ISA)**.
+processor (such as registers).
+
+The set of instructions + the architecture that behaves according to those
+instructions is referred to as the **Instruction Set Architecture (ISA)**.
 
 ---
 
@@ -385,6 +392,12 @@ rather than design them, we only need to know how to use them, not their
 internal structure. As long as processor manufacturers adhere to the rules
 defined in the corresponding ISA, they are free to design whatever circuit they
 like, and programmers won't notice any difference.
+
+![ISA](/assets/img/24/9-isa.png){:.centered .lazyload}
+
+{:.text-align-center}
+ISA is the contract between software and hardware. Taken from [Onur
+Mutlu](https://people.inf.ethz.ch/omutlu/)'s lecture slides.
 
 Processor design companies, also known as hardware companies, have the
 flexibility to design processors with vastly different internal architectures
@@ -710,6 +723,8 @@ and cannot handle 64-bit variables as easily as ARMv8. Therefore, one has to
 split a 64-bit variable into two 32-bit variables and perform multiple
 additions.
 
+---
+
 As you can see, programming in assembly language is easier than programming in
 machine language. However, one must learn the ISA for each architecture and
 consider other factors such as variable sizes and architectural details. Let's
@@ -725,260 +740,16 @@ assembly languages.
 
 As we conclude this section, it's important to recognize that even within the
 same architecture, there can be multiple assembly language variants. Take x86
-assembly, for instance, where two prominent styles exist: AT&T and Intel. [^3f]
-While these styles may appear similar, they differ in the order of instruction
-parameters. Nevertheless, despite these variations, they ultimately produce the
-same machine code.
-
-## "I am not interested in computers at all"
-
-Until now, we've observed that to effectively utilize a computer, one must
-familiarize themselves with its corresponding machine language or, preferably,
-assembly language. However, computers are merely tools. What if someone isn't
-keen on delving into the internals of a computer but simply wishes to utilize
-its capabilities? What if they're an engineer or scientist focused solely on
-conducting numerical simulations without delving into the specific instructions
-of a particular computer? Ladies and gentlemen, let me introduce a highly
-renowned programming language from the 1950s: **FORTRAN (Formula Translation).**
-
-![Fortran](/assets/img/24/9-fortran.jpg){:.centered .lazyload}
-
-[Fortran](https://en.wikipedia.org/wiki/Fortran) was developed by [John
-Backus](https://en.wikipedia.org/wiki/John_Backus), the person who also invented
-the [Backus-Naur Form
-(BNF)](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form), at IBM in 1957.
-It stands as the first commercially available language [^4f] and is widely
-regarded as the first extensively used high-level programming language. [^5f]
-Moreover, it holds the distinction of being the first programming language to
-have a standardization.[^6f]
-
-From IBM's page:
-
-> In the early 1950s, computer programming was the exclusive domain of a small
-> group of specialists who wrote code in machine language, a complex and
-> cumbersome set of instructions. Programming was for experts only — outsiders
-> need not apply. Then came Fortran.
-
-continues as follows
-
-> Fortran democratized computer programming by providing scientists,
-> mathematicians and engineers the ability to input their problems directly into
-> the computer without relying on a programmer to translate their needs into
-> machine code.
-
-They also stated that:
-
-**Fortran instigated the process of abstracting software from the hardware on
-which it ran. Previous machine language programs had to be written for a
-specific computer, while a Fortran program could run on any system with a
-Fortran compiler.**
-
-and
-
-> Fortran was born of necessity in the early 1950s, when computer programs were
-> hand-coded. Programmers would laboriously write out rows of zeros and ones in
-> precise order. John Backus, Fortran’s primary author, described the process as
-> "hand-to-hand combat with the machine," with the machine often winning. The
-> cost of programmers was usually at least as great as the cost of the
-> computers, and programmers spent up to half their time debugging.
-
-**The main idea is this:** Instead of teaching everyone multiple assembly
-languages, we teach them a programming language that works on any computer.
-Then, we create **compilers** for each architectures, which compile the
-universal language into the computer's language. This makes things more
-efficient because there might be thousands of scientists or engineers who want
-to use a computer. Instead of teaching them all different assembly languages, we
-could hire, let's say, a hundred people to make compilers for different
-computers.
-
-This idea of translation or compilation has a potential downside:
-**efficiency.** It's likely that the translation process won't create machine
-code as efficient as what a skilled programmer could do manually (in terms of
-speed or number of instructions or memory usage). Well, this is a valid concern.
-However, Fortran compilers are **optimizing compilers** and can produce very
-efficient code.
-
-If you like the idea behind Fortran, you may want to watch this:
-
-{% include youtubePlayer.html id="NMWzgy8FsKs" %}
-
-[The video](https://www.youtube.com/watch?v=NMWzgy8FsKs)
-
-## "I not interested in paying programmers"
-
-From Wikipedia [^8f]:
-
-> In the late 1950s, computer users and manufacturers were becoming concerned
-> about the rising cost of programming. A 1959 survey had found that in any data
-> processing installation, the programming cost US$800,000 on average and that
-> translating programs to run on new hardware would cost $600,000.
-
-and
-
-> The DoD operated 225 computers, had 175 more on order and had spent over $200
-> million on implementing programs to run on them. Portable programs would save
-> time, reduce costs and ease modernization.
-
-In the late 1950s, the US Department of Defense (DoD) wasn't pleased with the
-costs incurred by programmers to develop programs for the new computers they
-purchased using assembly language. They found that they were paying nearly the
-same amount to develop a program again when it needed to be rewritten for new
-hardware. They sought portable programs that could potentially run on any
-hardware with much lower effort. This is how **COBOL** was born...
-
-COBOL is similar to Fortran in the sense that it is machine-independent, meaning
-it is not tied to a specific Instruction Set Architecture (ISA) like assembly
-programs, and is generally a compiled language. [^9f] Similar to Fortran, COBOL
-programs are compiled to the target machine language. However, the target
-audience was different.
-
-Fortran was developed for scientists and engineers who wanted to easily harness
-the processing power of computers to the fullest extent. However, computers were
-not only used for heavy computations. Like today, in the 1960s they were used
-for business purposes such as finance, administrative systems for companies,
-computer and telecommunication systems, ATMs, and so on. Companies had to hire
-programmers to implement these kinds of programs into computers, but writing
-programs in assembly language was too costly.
-
-COBOL stands for "**CO**mmon **B**usiness-**O**riented **L**anguage" and was
-specifically designed and optimized to make writing business-related programs
-easier. Although the fundamental approach is similar to Fortran, the syntax of
-these two languages is different since they target very different groups and
-types of problems.
-
-If you like COBOL, you may like these videos too:
-
-{% include youtubePlayer.html id="7d7-etf-wNI" %}
-
-[The video](https://www.youtube.com/watch?v=7d7-etf-wNI)
-
-{% include youtubePlayer.html id="ZoVrilcJvjg" %}
-
-[The video](https://www.youtube.com/watch?v=ZoVrilcJvjg)
-
-## "Simula"tion
-
-Computers have always been adept at running simulation models for various
-purposes such as weather forecasting, protein folding, physics, and more. In
-1962, **Simula** (specifically Simula I) was developed as a special-purpose
-programming language for simulating discrete event systems. [^10f]
-
-Simula holds a significant place in history as it is regarded as the **first
-object-oriented programming language**, influencing many subsequent languages such
-as C++ and Java. [^10f] Therefore, it's essential not to overlook its
-importance.
-
-## Let's keep it "BASIC"
-
-In the 1960s, developers noticed that writing programs for computers was
-challenging, and programming was primarily restricted to scientists and
-mathematicians. To make computers accessible to students in non-scientific
-fields, they created **BASIC** (**B**eginners' **A**ll-purpose **S**ymbolic
-**I**nstruction **C**ode). The aim of this new programming language was to
-empower students outside of scientific disciplines to utilize computers. [^11f]
-
-BASIC is a significant language in computer history, especially during the 1980s
-when the microcomputer revolution occurred. Microcomputers became affordable,
-allowing individuals to purchase personal computers for their homes. BASIC
-emerged as the de-facto programming language for microcomputers. There were
-various implementations of BASIC, each with some differences, such as Applesoft
-BASIC, Altair BASIC, Commodore BASIC, Microsoft BASIC, and BBC BASIC (yes, from
-the British Broadcasting Corporation). Altair BASIC was one of Microsoft's
-earliest programs and contributed to the company's growth.
-
-In the 1960s, BASIC was used in large time-sharing systems, where it was
-compiled into machine code. However, when microcomputers emerged, their memory
-was too limited to support a full BASIC compiler. As a result, BASIC
-interpreters were developed for microcomputers, transforming the language from a
-compiled language to an interpreted one in practice.
-
-## The Mission: Porting UNIX
-
-C.. all the power of assembly language combined with the readability of assembly language
-https://stackoverflow.com/q/15393441/1766391
-
-
-
-history of C
-
-
-
-## Languages Primarily for Documentation ???
-
-VHDL, HDL
-
-## Mathematicians. Again!
-
-MATLAB, R
-
-## C with Classes
-
-> Someone who claims to have a perfect programming language is either a salesman
-> or a fool, or both
-
-{:.text-align-center}
-by Bjarne Stroustrup [^7f], the creator of C with classes (I mean C++)
-
-## Python
-
-## Java: The Universal ISA
-
-WebAssembly
-
-## PHP
-
-https://www.reddit.com/r/ProgrammerHumor/comments/6k40cb/working_at_pornhub/
-
-## GUI
-
-## JavaScript
-
-Nodejs
-
-Typescript, ehnace type safety.
-
-## Rust
-
-## Go for Google
-
-## SQL
-
-## Program vs Programmer Efficiency?
-
-- Evolves
-- esinlenir
-
-## The Ultimate Question: Why so many languages?
-
-VHDL iletişim aracı CPU'lar için bile değil
-
-right tool for the right jobs (everything hammer vs)
-
----
-
-- lisp machine
-- bir çoğunu anlatmadım
-
-
-## Related Resources
-
-C paradigms
-
-Here I list some resources on the Internet on similar topics:
-
-- [YouTube: The Brief History of Programming
-  Languages](https://www.youtube.com/watch?v=mhpslN-OD_o)
-- [YouTube: Every Programming Language Ever Explained in 15
-  Minutes](https://www.youtube.com/watch?v=ajIcjx0PeYU)
+assembly, for instance, where two prominent styles exist: **AT&T and Intel.**
+[^3f] While these styles may appear similar, they differ in the order of
+instruction parameters. Nevertheless, despite these variations, they ultimately
+produce the same machine code.
+
+This concludes part 1. In part 2, we'll explore what can be built on top of
+assembly language, and I'll share my personal insights on the existence of
+various programming languages. Stay tuned for more!
 
 [^1f]: <https://en.wikipedia.org/wiki/Altair_8800>
 [^2f]: <https://en.wikipedia.org/wiki/EDSAC>
 [^3f]: <https://en.wikipedia.org/wiki/X86_assembly_language#Syntax>
-[^4f]: <https://en.wikipedia.org/wiki/History_of_programming_languages>
-[^5f]: <https://qr.ae/psKb4T>
-[^6f]: <https://www.ibm.com/history/fortran>
-[^7f]: <https://www.stroustrup.com/quotes.html>
-[^8f]: <https://en.wikipedia.org/wiki/COBOL>
-[^9f]: <https://qr.ae/psKgQW>
-[^10f]: <https://en.wikipedia.org/wiki/Simula>
-[^11f]: <https://en.wikipedia.org/wiki/BASIC>
+[^4f]: <https://en.wikipedia.org/wiki/List_of_programming_languages>
