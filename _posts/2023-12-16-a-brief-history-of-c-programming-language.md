@@ -312,6 +312,8 @@ For those interested in the history of computing, I highly recommend visiting
 on the Bell Labs website. It's a valuable resource for insights into the
 development of key technologies.
 
+{% include ax_single.html reccmode="single" reccyear="23" reccaxseq="13" %}
+
 ## Resources
 
 - <https://en.wikipedia.org/wiki/The_C_Programming_Language>
@@ -326,8 +328,8 @@ development of key technologies.
 
 ## Changelog
 
-- 2023-11-25. Corrections and additions to *UNIX and C*.
 - 2024-02-17. Rewritten and reorganized form scratch
+- 2023-11-25. Corrections and additions to *UNIX and C*.
 
 [^1f]: <https://www.youtube.com/watch?v=de2Hsvxaf8M>
 [^2f]: <https://qr.ae/pvc7Ln>
