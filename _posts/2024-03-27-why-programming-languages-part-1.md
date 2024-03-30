@@ -19,8 +19,8 @@ programming languages and computers in general. This first part will cover:
 - Key terms such as **instruction set, instruction set architecture (ISA), machine
   code, assembly language**
 
-We have at least 500 programming languages in existence today. [^4f] But why do
-we continue to invent them? Let's talk! But first:
+We have at least **500 programming languages in existence today.** [^4f] But why
+do we continue to invent them? Let's talk! But first:
 
 ## Why do computers exist in the first place? 💻
 
@@ -39,7 +39,8 @@ functionality?**
 ![ENIAC](/assets/img/24/9-eniac.jpg){:.centered .lazyload}
 
 {:.text-align-center}
-[ENIAC](https://en.wikipedia.org/wiki/ENIAC), **designed in 1945** to solve
+[ENIAC](https://en.wikipedia.org/wiki/ENIAC), **E**lectronic **N**umerical
+**I**ntegrator **a**nd **C**omputer, **designed in 1945** to solve
 military-related problems, stands as one of the earliest computers (The whole
 thing in the room is a single computer. Power consumption was **higher than 150
 kW**). With a cost exceeding **6 million US Dollars** (adjusted for inflation),
@@ -328,11 +329,11 @@ Essentially, the `ANDLW` instruction performs a logical AND operation between
 the content of the `W` register and the constant value encoded in the 8-bit
 operand field. The result is then stored back into the `W` register.
 
-> Note that the `W` register is a special storage area found in the processor of
-> this microcontroller. This name is specific to this processor, and other
-> processors may have a different number of registers with different names.
-> Therefore, don't worry too much about this naming convention—it's unique to this
-> particular microcontroller.
+ℹ Note that the `W` register is a special storage area found in the processor of
+this microcontroller. This name is specific to this processor, and other
+processors may have a different number of registers with different names.
+Therefore, don't worry too much about this naming convention—it's unique to this
+particular microcontroller.
 
 The processor in the microcontroller essentially reads 14-bit wide instructions
 from the program memory, row by row. Let's say the processor reads the value
@@ -469,13 +470,9 @@ interested, I recommend watching the following video:
 
 {% include youtubePlayer.html id="nwDq4adJwzM" %}
 
-[The video](https://www.youtube.com/watch?v=nwDq4adJwzM)
-
 and
 
 {% include youtubePlayer.html id="KG2M4ttzBnY" %}
-
-[The video](https://www.youtube.com/watch?v=KG2M4ttzBnY)
 
 ### Altair 8800
 
@@ -509,13 +506,9 @@ switches and observing LEDs.
 
 {% include youtubePlayer.html id="cwEmnfy2BhI" %}
 
-[The video](https://www.youtube.com/watch?v=cwEmnfy2BhI)
-
 and
 
 {% include youtubePlayer.html id="7nDcTRqZu8E" %}
-
-[The video](https://www.youtube.com/watch?v=7nDcTRqZu8E)
 
 ## Machine Language
 
