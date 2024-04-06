@@ -6,7 +6,7 @@ image: /assets/img/24/10.jpg
 #imageyt: sO_Sdf09DiY
 toc: true
 axseq: 10
-published: true
+published: false
 tags:
   - tr
 ---
