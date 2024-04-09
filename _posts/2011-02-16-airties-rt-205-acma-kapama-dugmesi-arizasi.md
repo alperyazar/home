@@ -4,7 +4,7 @@ excerpt: "AirTies modemimde oluşan güç düğmesi arızasını çözüyorum."
 locale: tr_TR
 tags: tr
 published: true
-axseq: 991
+axseq: 1
 ---
 
 <!-- markdownlint-capture -->
