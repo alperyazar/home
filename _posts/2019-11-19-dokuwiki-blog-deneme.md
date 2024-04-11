@@ -7,4 +7,11 @@ published: true
 axseq: 7
 ---
 
-Burada blog tarzı bir şey tutulabilir mi?
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
+<script type="text/javascript">
+    window.location.href = "https://ayazar.dev/blog/19/dokuwiki-blog-deneme.html";
+</script>
+<!-- markdownlint-restore -->
+
+Yazı [taşınmıştır.](https://ayazar.dev/blog/19/dokuwiki-blog-deneme.html)
