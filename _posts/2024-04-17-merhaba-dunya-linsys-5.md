@@ -6,7 +6,7 @@ image: /assets/img/24/17.jpg
 #imageyt: sO_Sdf09DiY
 toc: true
 axseq: 17
-published: true
+published: false
 tags:
   - tr
   - linsys
