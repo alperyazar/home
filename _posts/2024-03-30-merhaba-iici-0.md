@@ -1,12 +1,12 @@
 ---
 # License: CC-BY-SA-4.0.
-title: "0 - Merhaba - İşlemcinin İçinde Çevrilen İşler"
+title: "Merhaba - İşlemcinin İçinde Çevrilen İşler - 0"
 excerpt: "cpu.land sitesindeki içeriğe göz attığım mini yazı serisinin tanıtımı"
 image: /assets/img/24/11.jpg
 #imageyt: sO_Sdf09DiY
 toc: true
 axseq: 11
-published: false
+published: true
 tags:
   - tr
 ---
@@ -30,7 +30,7 @@ Ben de meraktan seriyi bir okumaya karar verdim. Okurken de blogumda ihtiyaç
 olursa notlar alacağım. Bu mini serinin ismini ben de biraz kelime oyunu yaparak
 **İşlemcinin İçinde Çevrilen "İşler"** koydum. İngilizce'deki *You-CPU* kelime
 şakasını olduğu gibi çevirmek mümkün değil, ben de başka şaka uydurdum. Bu
-yazının kapağına dikkat ederseniz renkleri de çaldığımı görebilirsiniz ;).
+yazının kapağına dikkat ederseniz renkleri de çaldığımı görebilirsiniz 😜.
 
 Bu yazı dizisi ile kaynağı Türkçe'ye çevirmeyi **hedeflemiyorum.** Olursa
 notlarımı ve yorumlarımı paylaşacağım, henüz okumaya başlamadım. Lafı fazla
