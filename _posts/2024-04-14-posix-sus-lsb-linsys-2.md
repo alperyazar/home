@@ -94,6 +94,10 @@ standarta erişebilirsiniz. Ben ise genelde POSIX veya SUS dokümanları yerine
 - Linux sistemlerin büyük bir çoğunluğu POSIX, SUS ya da LSB uyumlu değildir.
   Pratikte çok büyük ölçüde uyumludur.
 
+## Sıradaki Yazı
+
+{% include ax_single.html reccmode="single" reccyear="24" reccaxseq="15"%}
+
 ## Kaynaklar
 
 - [Kaynaklar]({% post_url 2024-04-12-linux-sistem-programlama-nedir-linsys-0 %})
