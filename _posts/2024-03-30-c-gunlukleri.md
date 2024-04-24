@@ -1,12 +1,12 @@
 ---
 # License: CC-BY-SA-4.0.
-title: "Tanıtım - C Günlükleri - 0"
+title: "Tanıtım - C Günlükleri 0"
 excerpt: "C programlama dili hakkındaki yazı dizimin tanıtımı"
 image: /assets/img/24/10.jpg
 #imageyt: sO_Sdf09DiY
 toc: true
 axseq: 10
-published: true
+published: false
 tags:
   - tr
 ---
