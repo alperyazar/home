@@ -5,7 +5,7 @@ tags:
     - tr
 locale: tr_TR
 axseq: 1
-published: true
+published: false
 image: /assets/img/22/1.png
 #canonical_url: 'https://asynx.dev/windirstat'
 ---
