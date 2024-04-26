@@ -6,16 +6,15 @@ excerpt: "Bu kısa videoda ChatGPT'te yaptığımız bir konuşmanın tamamını
 imageyt: P_yvekEihfg
 toc: true
 axseq: 3
-published: true
+published: false
 tags:
   - tr
 ---
 
-<!-- markdownlint-capture -->
-<!-- markdownlint-disable -->
-<script type="text/javascript">
-    window.location.href = "https://ayazar.dev/blog/24/chatgpt-exporter.html";
-</script>
-<!-- markdownlint-restore -->
+> İçerik, video olarak sunulmuştur. Bu yazıda (varsa) düzeltmeler ve videoda
+> geçen bağlantılar veya videoya ek notlar sunulmuştur.
 
-Yazı [taşınmıştır.](https://ayazar.dev/blog/24/chatgpt-exporter.html)
+{% include youtubePlayer.html id="P_yvekEihfg" %}
+
+Bahsedilen eklenti:
+[chatgpt-exporter](https://github.com/pionxzh/chatgpt-exporter)
