@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://www.alperyazar.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.alperyazar.com/" rel="alternate" type="text/html" /><updated>2024-06-12T20:40:00+03:00</updated><id>https://www.alperyazar.com/feed.xml</id><title type="html">Alper Yazar</title><subtitle>&quot;Full Stack Electronics&quot; Engineer</subtitle><author><name>Alper Yazar</name></author><entry><title type="html">Ekip Veriminizi Arttıracak, OFFLINE Çalışabilen 5 Araç - 2</title><link href="https://www.alperyazar.com/self-hosted-5-2.html" rel="alternate" type="text/html" title="Ekip Veriminizi Arttıracak, OFFLINE Çalışabilen 5 Araç - 2" /><published>2024-05-31T00:00:00+03:00</published><updated>2024-05-31T00:00:00+03:00</updated><id>https://www.alperyazar.com/self-hosted-5-2</id><content type="html" xml:base="https://www.alperyazar.com/self-hosted-5-2.html"><![CDATA[<p>Bir önceki yazımda, internet bağlantısı olmadan kullanabileceğiniz yani
+<strong>self-hosted</strong> çalışan 5 adet araçtan ve temel bir altyapı önerisinden
+bahsetmiştim. Bu yazımda da yine faydalı olabileceğini düşündüğüm 5 adet araç
+tanıtacağım. Eğer okumadıysanız bir önceki yazıyı okuyarak başlamanızı öneririm:</p>
+
+<ul class="post-list">
+<li style="background: #DDEEEE; padding: 10px; border-radius: 10px;">
+<h4>🔗 İlgili bir içerik</h4>
+
+<center>
+<p>
+<a class="post-link" href="/self-hosted-5.html"><img alt="Teaser" src="/assets/img/24/12.jpg" data-srcset="/assets/img/24/12.jpg" srcset="/assets/lazyload.png" style="border-radius: 10px; height: auto; width: 95%; max-width: 700px;" class="lazyload" /></a>
+</p>
+</center><h3>
+<a class="post-link" href="/self-hosted-5.html">
+Ekip Veriminizi Arttıracak, OFFLINE Çalışabilen 5 Araç
+
+</a>
+</h3><h4>Bu yazıda offline da çalışabilen ve çalışma veriminizi arttıracağını düşündüğüm 5 araçtan bahsediyorum.</h4></li>
+</ul>
+
+<p>Bu araçlarda bir öncekiler gibi <strong>web tabanlı</strong> ve <strong>Docker container</strong> olarak
+paketlenmiş sürümleri bulunan araçlar olacak.</p>
+
+<h2 id="asciinema">Asciinema</h2>
+
+<p><img src="/assets/img/24/13-asciinema.png" alt="Asciinema" class="centered lazyload" /></p>
+
+<p>Asciinema, sloganı <strong>terminal session recorder</strong> olarak geçen bir araç. Linux
+üzerinde terminalde bir şeyler yapan ve bunları paylaşmak isteyen kişilere hitap
+ediyor. OBS gibi ekranı video olarak kaydeden bir yazılımla arasındaki temel
+fark kaydı bir metin dosyası olarak alıyor olması. Oynatıcısında da bir video
+gibi izlesek de aslında arkada metin oynatılıyor. <strong>İzlerken durdurup, faremizle
+o metni kopyalayıp yapıştırabiliyoruz.</strong> Diyelim ki bir tutorial hazırladınız,
+bunu takip eden kişiler sizin yazdığınız komutları doğrudan kopyalayıp
+kendilerine yapıştırabiliyorlar. Kayıtlar da metin tabanlı tutulduğu için bir
+video kaydına göre çok az yer kaplıyor.</p>
+
+<p>Bu servisi dilerseniz <a href="https://asciinema.org/">asciinema.org</a> adresinde de
+kullanabilir ya deneyebilirsiniz. Burada gördüğünüz servisin aynısını kendi
+makinelerinizde de çalıştırabiliyorsunuz. SMTP entegrasyonu yapmanız biraz şart
+gibi çünkü login sistemi mail üzerinden gönderilen tek kullanımlık linkler ile
+çalışıyor.</p>
+
+<p>Eğer ZSH gibi terminallerde, Unicode karakterler ile çalışıyorsanız kaydettiğiniz
+terminal kayıtları web üzerinden oynatılırken düzgün gözükmeyebilir. Burada bir
+deneme yapmanızı veya kayıt sırasında daha basit bir terminal düzenine geçmenizi
+öneririm.</p>
+
+<p>Kayıt sırasında <strong>otomatik jump cut</strong> yaptırabiliyorsunuz. Belirlediğiniz süre
+boyunca terminalde bir işlem yapmazsanız o boşluklar kaydedilmiyor. Böylece
+daha kısa süren kayıtlar elde edebiliyorsunuz. İzleyen kişiler de “Vay be
+hiç düşünmeden takır tukur yazıyor” diyorlar. 😉</p>
+
+<p>Aşağıdaki yazımda kaydettiğim birkaç örneği de görebilirsiniz:</p>
+
+<ul class="post-list">
+<li style="background: #DDEEEE; padding: 10px; border-radius: 10px;">
+<h4>🔗 İlgili bir içerik</h4>
+
+<center>
+<p>
+<a class="post-link" href="/buildroot-ogreniyoruz-04.html"><img alt="Teaser" data-sizes="auto" src="https://i.ytimg.com/vi/sO_Sdf09DiY/hq720.jpg" data-srcset="https://i.ytimg.com/vi/sO_Sdf09DiY/hq720.jpg 1280w" srcset="/assets/lazyload.png" style="border-radius: 10px; height: auto; width: 95%; max-width: 700px;" class="lazyload" /></a>
+</p>
+</center><h3>
+<a class="post-link" href="/buildroot-ogreniyoruz-04.html">
+Buildroot ile ilk derleme! Buildroot Öğreniyoruz - 4
+
+</a>
+</h3><h4>Buildroot ile ilk derlememizi yapıyoruz. Elbette tahmin ettiğim gibi ilk seferde olmuyor, uğraşıyoruz..</h4></li>
+</ul>
+
+<p>👉 <a href="https://docs.asciinema.org/manual/cli/installation/#container-image">Docker</a></p>
+
+<h2 id="hedgedoc">HedgeDoc</h2>
+
+<p><img src="/assets/img/24/13-hedgedoc.png" alt="HedgeDoc" class="centered lazyload" /></p>
+
+<p>Bu aracın sloganı: <strong>Ideas grow better together</strong> İsminden de anlayabileceğiniz
+gibi beraber bir şeyler yapmayı sağlıyor. Peki ne? Bu araç sayesinde bir
+Markdown dosyası üzerinde ekip arkadaşlarınızla çalışabiliyorsunuz, aynı anda.
+Aynı satırları değiştirmeye çalışmadığınız sürece dokümanın farklı yerlerini
+aynı anda değiştirebiliyorsunuz. <strong>Overleaf</strong> i biliyorsanız, onun Markdown
+versiyonu gibi düşünebilirsiniz.</p>
+
+<p>Bununla beraber bir dokümanın değişiklikleri de otomatik olarak kaydediliyor ve
+eski bir sürüme dönebiliyorsunuz.</p>
+
+<p>Çok kapsamlı olmasa da Markdown dokümanınızdan sunum da hazırlayabiliyorsunuz
+fakat temel amacınız bu ise <a href="https://marp.app/">Marp</a> gibi araçlar daha uygun
+olacaktır.</p>
+
+<p>Yazdığınız dokümanları PDF olarak da export edebiliyorsunuz.</p>
+
+<p><a href="https://hedgedoc.org/demo/">Demo instance</a></p>
+
+<p>Yukarıdaki linkten test edebilirsiniz.</p>
+
+<p>Gitlab, Github, LDAP, OAuth, SAML gibi birçok authentication mekanizmasını
+<a href="https://docs.hedgedoc.org/guides/auth/ldap-ad/">destekliyor</a>, bu çeşitlilik
+beni şaşırttı genelde bu kadar fazla sayıda entegrasyon olmuyor.</p>
+
+<p>Merak edenler için HedgeDoc ile CodiMD vs HackMD arasındaki ilişki
+<a href="https://hedgedoc.org/history/">burada</a> gösteriliyor, güzel bir gösterim.</p>
+
+<p>👉 <a href="https://docs.hedgedoc.org/setup/docker/">Docker</a></p>
+
+<h2 id="json-editor-online">JSON Editor Online</h2>
+
+<p><img src="/assets/img/24/13-json.png" alt="JSON Editor Online" class="centered lazyload" /></p>
+
+<p>JSON dosyaları ile uğraşıyorsanız bu aracı bir <em>linter</em> veya <em>editor</em> olarak
+kullanabilirsiniz.</p>
+
+<p><a href="https://jsoneditoronline.org/">jsoneditoronline.org</a></p>
+
+<p>adresinden kullanabilir veya test edebilirsiniz.</p>
+
+<p>👉 <a href="https://hub.docker.com/r/djmattyg007/jsoneditor">Docker</a></p>
+
+<h2 id="word-to-markdown-converter">Word to Markdown Converter</h2>
+
+<p><code class="language-plaintext highlighter-rouge">word2md</code> olarak da geçen aracın yaptığı iş adında, Word dosyalarınızı Markdown
+dosyalarına çeviriyor. Çok kullanmadığım için başarısı konusunda pek bir
+yorumum yok.</p>
+
+<p><a href="https://word2md.com/">word2md.com</a></p>
+
+<p>adresinden kullanabilir ya da test edebilirsiniz. Self-hosted olarak çalışırken
+beklediğimden fazla bellek tüketiyor diye aklımda kalmış ama tam da emin değilim.</p>
+
+<p>Eğer bu çevrimin tersini yani Markdown’dan Word’e bir çevrim arıyorsanız, ya da
+herhangi bir dokümanı herhangi bir formata dönüştürmek istiyorsanız muhakkak
+<a href="https://pandoc.org/">pandoc</a> a bakmalısınız. <strong>Pandoc</strong> yapamıyorsa, o iş
+olmuyordur muhtemelen…</p>
+
+<p>👉 <a href="https://github.com/benbalter/word-to-markdown-server/pkgs/container/word-to-markdown-server">Docker</a></p>
+
+<h2 id="uptime-kuma">Uptime Kuma</h2>
+
+<p><img src="/assets/img/24/13-uptime.png" alt="Uptime Kuma" class="centered lazyload" /></p>
+
+<p>Bu araç doğrudan işinize yarayacak bir araç değil. Fakat bunu saymazsak ilk yazıdan
+itibaren 9 adet araç tanıdık ve diyelim ki bunları veya başka araçları altyapımıza
+kurduk. Peki bunlar güzel güzel çalışıyor mu? Erişilebiliyor mu?</p>
+
+<p>İşte bu soruların cevabı için bir monitör aracı kullanabiliriz. Uptime Kuma da
+bir monitör aracı. Servislerimizin çalışıp çalışmadığını kontrol edebiliriz.</p>
+
+<p><a href="https://uptime.kuma.pet/">Sitesi ve Demo</a></p>
+
+<p>Elbette <a href="https://www.zabbix.com/">Zabbix</a> gibi çok daha kapsamlı araçlar mevcut.
+Uptime Kuma daha basit bir araç. SMTP entegrasyonu yaparsanız size bir şeyler ters
+gidince mail atabiliyor ya da bir önceki yazıda belirttiğim Mattermost’a mesaj
+atabiliyor. <em>Status</em> ya da <em>monitor</em> sayfaları sunabiliyorsunuz, tatlı bir araç
+kendileri.</p>
+
+<p>👉 <a href="https://uptime.kuma.pet/">Docker</a></p>
+
+<hr />
+
+<p>Şimdilik bu kadar. Faydalı olması dileği ile…</p>]]></content><author><name>Alper Yazar</name></author><category term="tr" /><summary type="html"><![CDATA[Bu yazıda offline da çalışabilen ve çalışma veriminizi arttıracağını düşündüğüm 5 araçtan bahsediyorum.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.alperyazar.com/assets/img/24/13.jpg" /><media:content medium="image" url="https://www.alperyazar.com/assets/img/24/13.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Ekip Veriminizi Arttıracak, OFFLINE Çalışabilen 5 Araç</title><link href="https://www.alperyazar.com/self-hosted-5.html" rel="alternate" type="text/html" title="Ekip Veriminizi Arttıracak, OFFLINE Çalışabilen 5 Araç" /><published>2024-05-24T00:00:00+03:00</published><updated>2024-05-24T00:00:00+03:00</updated><id>https://www.alperyazar.com/self-hosted-5</id><content type="html" xml:base="https://www.alperyazar.com/self-hosted-5.html"><![CDATA[<p>Bireysel olarak veya bir ekip ile çalışırken kullandığımız çeşitli yazılım ve
+araçlar çalışma hızımızı ve verimimizi ciddi bir biçimde arttırabiliyor. Bu
+yazımda bireysel veya ekip olarak kullanabileceğiniz çeşitli araçlardan
+bahsedeceğim.</p>
+
+<p>Araçların ortak özellikleri</p>
+
+<ol>
+  <li>Web tabanlı olmaları yani internet tarayıcısı üzerinden kullanılmaları,</li>
+  <li>İnternete bağlı olmayan ortamda, <strong>on prem</strong>, <strong>on premise</strong> yani <strong>self hosted</strong>
+çalışabilmeleri. Bu sayede <strong>ürettiğiniz ve sakladığınız tüm verileri sizde
+tutabiliyor olmaları,</strong></li>
+  <li>Hepsinin <strong>Docker</strong> imajlarının olması sebebiyle rahat bir şekilde
+çalıştırılabilmesi</li>
+</ol>
+
+<p>olacaktır.</p>
+
+<p>Bu yazıda araçların kurulumlarını ve kullanımlarını detaylı bir şekilde
+anlatmayacağım. Kurulum talimatları zaten her aracın kendi sitesinde yer
+almaktadır. Kullanımlarının da size ne kadar uygun olup olmadığını denemeden
+bilemezsiniz. Ama ben en az 1 tanesini beğeneceğinizi düşünüyorum.</p>
+
+<p>Yazının sonunda bu araçları kullanmak için basit bir altyapı önerisinden de
+bahsedeceğim. Eğer <a href="https://www.reddit.com/r/homelab/">r/homelab</a> ve
+<a href="https://www.reddit.com/r/selfhosted/">r/selfhosted</a> tutkunları da geldiyse
+gelin araçlara bir bakalım…</p>
+
+<h2 id="1---mattermost">1 - Mattermost</h2>
+
+<p><img src="/assets/img/24/12-mm.jpg" alt="Mattermost" class="centered lazyload" /></p>
+
+<p><a href="https://mattermost.com/">Mattermost</a>, özünde bir chat uygulaması,
+<a href="https://slack.com/">Slack</a>‘e benzetebiliriz. Ücreti karşılığında doğrudan kendi
+altyapıları üzerinden de Mattermost’u kullanabiliyorsunuz. Fakat self-hosted
+seçeneği de mevcut. Burada ise hem <code class="language-plaintext highlighter-rouge">Free</code> hem de <code class="language-plaintext highlighter-rouge">Professional</code> paket var. Free
+paketin çeşitli limitleri mevcut fakat birçok kullanım senaryosu için yeterli
+olacağını düşünüyorum.</p>
+
+<p>Bakınız: <a href="https://mattermost.com/pricing/">Mattermost Pricing</a></p>
+
+<p>Uygulamada temelde <strong>takımlar</strong> ve bu takımların altında <strong>kanallar</strong> yani chat
+odaları oluşturuyorsunuz. Örneğin her proje için takımlar veya projeler için
+kanallar oluşturabilirsiniz, bu sizin yoğurt yeme şeklinize bağlı.</p>
+
+<p>Kanallardaki konuşmalar saklanıyor. Kanala daha sonra eklediğiniz kişi,
+geçmişteki konuşmaları okuyabiliyor.</p>
+
+<p>Bunun dışında benim pek tecrübe etmediğim
+<a href="https://mattermost.com/playbooks/">Playbooks</a> isminde bir otomasyon altyapısı
+da bulunuyor.</p>
+
+<p>DevOps, CI/CD alanında yer alan bir çok araçlar <a href="https://mattermost.com/marketplace/">entegre
+edilebiliyor.</a> Çeşitli araçların <strong>bot</strong>
+hesaplarını da ekleyerek birçok işi Mattermost üzerinden
+<a href="https://docs.gitlab.com/ee/ci/chatops/">ChatOps</a> yaklaşımı ile
+yapabiliyorsunuz. Eğer entegrasyon ile uğraşırsanız Mattermost’u tüm işlerinizi
+yapabileceğiniz bir merkez olarak kullanabilirsiniz.</p>
+
+<p>Aracı ister web üzerinden isterse bilgisayarınıza kuracağınız kendi istemci
+yazılımı ile kullanabiliyorsunuz. Kapsamlı bir araç olduğu için tüm
+özelliklerini anlatmam kolay olmayacak, o yüzden niyetiniz var ise denemenizi
+veya videolarını izlemenizi tavsiye ederim.</p>
+
+<p><strong>Bedava sürümünün çeşitli kısıtları</strong> olduğundan bahsetmiştim. Önemli
+kısıtlarından biri kanallardaki konuşmaların export edilememesi, yani HTML veya
+PDF gibi bir formatta kanaldaki konuşmaları çıkartamıyorsunuz. Diğer bir limiti
+ise Active Directory, LDAP gibi Single Sign-On (SSO) altyapılarının ücretsiz
+sürümde olmaması. Fakat ücretsiz sürüm login tarafında Gitlab ile (self-hosted
+olabilir) entegre olabiliyor ve zaten çalışan bir Gitlab var ise, ki kendisi
+LDAP ile entegre edilmiş olabilir, kullanıcıları buradan login edebilirsiniz. Bu
+durumda dolaylı yoldan Mattermost da LDAP ile entegre edilmiş olacaktır. Bunun
+dışında tipik kullanımda ücretsiz sürüm size ciddi bir kısıt getirmeyecektir.</p>
+
+<p><strong>Alternatif olarak</strong> da <a href="https://www.rocket.chat/">rocket.chat</a> ya da
+<a href="https://matrix.org/">matrix.org</a> araçlarına da bakabilirsiniz. Elbette her
+aracın kendine has bir kullanım tarzı, artı ve eksileri oluyor. O yüzden sizin
+veya ekbinizin ihtiyaçlarına ve tarzına uygun doğru aracı bulmak için denemeler
+yapmak gerekiyor.</p>
+
+<p><a href="https://docs.mattermost.com/install/install-docker.html">Docker</a> veya <a href="https://docs.mattermost.com/guides/deployment.html">diğer
+yollar</a> ile kurulum
+yapabilirsiniz.</p>
+
+<h2 id="2---jirafeau">2 - Jirafeau</h2>
+
+<p><img src="/assets/img/24/12-jirafeau.jpg" alt="Jirafeau" class="centered lazyload" /></p>
+
+<p><a href="https://gitlab.com/mojo42/Jirafeau">Jirafeau</a>, geçici dosya depolama ve
+transfer imkanı sağlıyor. <a href="https://send.vis.ee/">send.vis.ee</a> nin PHP ile
+yazılmış self-hosted versiyonu olarak düşünebilirsiniz. Örneğin arkadaşınıza bir
+dosya göndereceksiniz, dosyanın boyutu büyük ve mail atamıyorsunuz ya da küçük
+olsa bile mail kotasını doldurmak istemiyorsunuz. Jirafeau’ya yüklediğiniz zaman
+size verdiği tekil, unique, linki paylaştığınız kişiler dosyayı indiriyor. Bir
+süre sonra veya ilk indirmeden sonra ya da silme linkini kullanınca dosya
+siliniyor.</p>
+
+<p><a href="https://hub.docker.com/r/mojo42/jirafeau/">Docker</a></p>
+
+<h2 id="3---excalidraw-️">3 - Excalidraw ❤️</h2>
+
+<p><img src="/assets/img/24/12-excalidraw.jpg" alt="Excalidraw" class="centered lazyload" /></p>
+
+<p><a href="https://excalidraw.com/">excalidraw.com</a> un neredeyse aynısını self-hosted
+olarak çalıştırabilirsiniz. Daha çok toplantılarda, ekran paylaştığınız
+durumlarda hızlı çizimler yapmak için ya da taslak bir şeyler çizmek için
+kullanabilirsiniz. Varsayılan olarak el yazısı tarzı
+<a href="https://virgil.excalidraw.com/">Virgil</a> isimli bir yazı stili var,
+değiştirebiliyorsunuz. Benim favori araçlarımdan biri.</p>
+
+<p><a href="https://hub.docker.com/r/excalidraw/excalidraw">Docker</a></p>
+
+<h2 id="4---drawio">4 - draw.io</h2>
+
+<p><img src="/assets/img/24/12-drawio.jpg" alt="draw.io" class="centered lazyload" /></p>
+
+<p><a href="https://www.drawio.com/">draw.io</a> ünlü çizim araçlarından biri. Excalidraw’a
+kıyasla daha “resmi” çizimler oluşturmaya yarıyor. Microsoft Visio alternatifi
+gibi düşünebilirsiniz.</p>
+
+<p>draw.io’nun zaten <a href="https://github.com/jgraph/drawio-desktop/releases">masaüstü versiyonu
+mevcut.</a> Fakat dilerseniz web
+üzerinden de self-hosted olarak kullanabilirsiniz.</p>
+
+<p><a href="https://hub.docker.com/r/jgraph/drawio">Docker</a></p>
+
+<h2 id="5---cyberchef">5 - CyberChef</h2>
+
+<p><img src="/assets/img/24/12-cc.jpg" alt="draw.io" class="centered lazyload" /></p>
+
+<p>Son olarak bahsedeceğim araç <a href="https://gchq.github.io/CyberChef/">CyberChef</a>,
+<strong>The Cyber Swiss Army Knife</strong> olarak geçiyor. Var olan birçok minik modülü
+arka arkaya koyarak yeni şeyler <em>pişirebiliyorsunuz.</em> Kullanımı biraz da hayal
+gücünüze kalıyor. Nasıl çalıştığını anlamak için kurcalamanız gerekiyor!</p>
+
+<p><a href="https://github.com/gchq/CyberChef/pkgs/container/cyberchef">Docker</a></p>
+
+<hr />
+
+<h2 id="docker-compose-ve-reverse-proxy">Docker Compose ve Reverse Proxy</h2>
+
+<p>Yazıyı bitirmeden önce minik bir altyapı önerisinde bulunmak istiyorum.</p>
+
+<p>Birçok araç çalıştıracağınız zaman bunları ayrı ayrı <code class="language-plaintext highlighter-rouge">docker run</code> ile
+çalıştırmak yerine bilgilerinin bir <code class="language-plaintext highlighter-rouge">YAML</code> içerisinde bulunacağı <a href="https://docs.docker.com/compose/">Docker
+Compose</a> kullanmanızı öneririm. Bu sayede
+yeniden başlatma ve konfigürasyon değiştirme işlerinde işleriniz daha kolay
+olur.</p>
+
+<p>Araçları web üzerinden erişilebilir kılmak için çalıştırdığınız sunucu makinenin
+çeşitli portlarını <em>publish</em> etmek gerekiyor. Kendi bilgisayarınızda
+çalıştırıyorsanız sorun değil ama bir ekip olarak kullanıyorsanız araçları
+<code class="language-plaintext highlighter-rouge">http://makineadı:port</code> şeklinde açmak yerine <strong>Reverse Proxy</strong> kullanmanızı
+öneririm. Bu durumda her aracın kendi URL’si olacaktır. Örneğin
+<code class="language-plaintext highlighter-rouge">cyberchef.domain.abc</code>, <code class="language-plaintext highlighter-rouge">drawio.domain.abc</code> gibi. Bu sayede aracın adresi
+değişmeden arka planda değişiklik, sunucu ismi gibi yapabilirsiniz. Bu durumda
+port publish etmeniz de gerekmiyor. Elbette burada Docker Swarm ya da Kubernetes
+gibi daha kompleks çözümler kullanabilirsiniz fakat basit bir kullanım
+senaryosunu anlatıyorum.</p>
+
+<p><strong>Reverse Proxy</strong> nin bir avantajı da <strong>SSL termination</strong> ya da <strong>ForwardAuth</strong>
+gibi altyapıları kurabilmenize imkan sağlaması olacaktır. Örneğin Jirafeau
+servisini herkesin kullanmasını istemeyebilirsiniz. Fakat bu aracın kendine bir
+login mekanizması yok. İşte bu servisi bir Reverse Proxy arkasına alır ve
+ForwardAuth ile bir Authentication mekanizması kurarsanız bu servisi bir
+kullanıcı adı/şifre veya başka bir login mekanizması ile koruyabilirsiniz.</p>
+
+<p>Kullanabileceğiniz birçok reverse proxy mevcut,
+<a href="https://github.com/traefik/traefik">Traefik</a>, <a href="https://nginxproxymanager.com/">Nginx Proxy
+Manager</a> gibi. Yine her zaman olduğu gibi
+temelde aynı işi yapsalar da kullanım ve problem çözme tarzları farklı.</p>
+
+<p>Faydalı olması dileği ile…</p>]]></content><author><name>Alper Yazar</name></author><category term="tr" /><summary type="html"><![CDATA[Bu yazıda offline da çalışabilen ve çalışma veriminizi arttıracağını düşündüğüm 5 araçtan bahsediyorum.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.alperyazar.com/assets/img/24/12.jpg" /><media:content medium="image" url="https://www.alperyazar.com/assets/img/24/12.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Why do we have programming languages in the first place? Part 1</title><link href="https://www.alperyazar.com/why-programming-languages-part-1.html" rel="alternate" type="text/html" title="Why do we have programming languages in the first place? Part 1" /><published>2024-03-27T00:00:00+03:00</published><updated>2024-03-27T00:00:00+03:00</updated><id>https://www.alperyazar.com/why-programming-languages-part-1</id><content type="html" xml:base="https://www.alperyazar.com/why-programming-languages-part-1.html"><![CDATA[<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
+<script type="text/javascript">
+    window.location.href = "https://ayazar.dev/blog/24/why-programming-languages-part-1.html";
+</script>
+
+<!-- markdownlint-restore -->
+
+<p><a href="https://ayazar.dev/blog/24/why-programming-languages-part-1.html">Moved…</a></p>]]></content><author><name>Alper Yazar</name></author><category term="en" /><summary type="html"><![CDATA[There are hundreds of computer programming languages. But why? Why do we keep inventing them?]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.alperyazar.com/assets/img/24/9.jpg" /><media:content medium="image" url="https://www.alperyazar.com/assets/img/24/9.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">12 Yaşındaki Laptop’uma Hafta Sonu Linux Bakımı</title><link href="https://www.alperyazar.com/eski-laptop-linux-bakim.html" rel="alternate" type="text/html" title="12 Yaşındaki Laptop’uma Hafta Sonu Linux Bakımı" /><published>2024-02-10T00:00:00+03:00</published><updated>2024-02-10T00:00:00+03:00</updated><id>https://www.alperyazar.com/eski-laptop-linux-bakim</id><content type="html" xml:base="https://www.alperyazar.com/eski-laptop-linux-bakim.html"><![CDATA[<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
+<script type="text/javascript">
+    window.location.href = "https://ayazar.dev/blog/24/eski-laptop-linux-bakim.html";
+</script>
+
+<!-- markdownlint-restore -->
+
+<p>Yazı <a href="https://ayazar.dev/blog/24/eski-laptop-linux-bakim.html">taşınmıştır.</a></p>]]></content><author><name>Alper Yazar</name></author><category term="tr" /><summary type="html"><![CDATA[Debian, Linux Mint, XFCE, Ventoy, ZSH...]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.alperyazar.com/assets/img/24/6.jpg" /><media:content medium="image" url="https://www.alperyazar.com/assets/img/24/6.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Buildroot ile ilk derleme! Buildroot Öğreniyoruz - 4</title><link href="https://www.alperyazar.com/buildroot-ogreniyoruz-04.html" rel="alternate" type="text/html" title="Buildroot ile ilk derleme! Buildroot Öğreniyoruz - 4" /><published>2024-02-07T00:00:00+03:00</published><updated>2024-02-07T00:00:00+03:00</updated><id>https://www.alperyazar.com/buildroot-ogreniyoruz-04</id><content type="html" xml:base="https://www.alperyazar.com/buildroot-ogreniyoruz-04.html"><![CDATA[<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
+<script type="text/javascript">
+    window.location.href = "https://ayazar.dev/buildroot/ilk-derleme.html";
+</script>
+
+<!-- markdownlint-restore -->
+
+<p>Yazı <a href="https://ayazar.dev/buildroot/ilk-derleme.html">taşınmıştır.</a></p>]]></content><author><name>Alper Yazar</name></author><category term="tr" /><summary type="html"><![CDATA[Buildroot ile ilk derlememizi yapıyoruz. Elbette tahmin ettiğim gibi ilk seferde olmuyor, uğraşıyoruz..]]></summary></entry><entry><title type="html">Buildroot ile Tanışıyoruz Buildroot Öğreniyoruz - 3</title><link href="https://www.alperyazar.com/buildroot-ogreniyoruz-03.html" rel="alternate" type="text/html" title="Buildroot ile Tanışıyoruz Buildroot Öğreniyoruz - 3" /><published>2024-02-04T00:00:00+03:00</published><updated>2024-02-04T00:00:00+03:00</updated><id>https://www.alperyazar.com/buildroot-ogreniyoruz-03</id><content type="html" xml:base="https://www.alperyazar.com/buildroot-ogreniyoruz-03.html"><![CDATA[<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
+<script type="text/javascript">
+    window.location.href = "https://ayazar.dev/buildroot/tanisma.html";
+</script>
+
+<!-- markdownlint-restore -->
+
+<p>Yazı <a href="https://ayazar.dev/buildroot/tanisma.html">taşınmıştır.</a></p>]]></content><author><name>Alper Yazar</name></author><category term="tr" /><summary type="html"><![CDATA[Bu bölümde Buildroot ile artık tanışıyoruz. Nedir? Kimler kullanır? Nasıl kullanılır? Nereden indirilir? ...]]></summary></entry><entry><title type="html">Sadece İki Tıklama ile ChatGPT Konuşmalarını Dışa Aktarın! Markdown, HTML, txt, png…</title><link href="https://www.alperyazar.com/chatgpt-exporter.html" rel="alternate" type="text/html" title="Sadece İki Tıklama ile ChatGPT Konuşmalarını Dışa Aktarın! Markdown, HTML, txt, png…" /><published>2024-01-31T00:00:00+03:00</published><updated>2024-01-31T00:00:00+03:00</updated><id>https://www.alperyazar.com/chatgpt-exporter</id><content type="html" xml:base="https://www.alperyazar.com/chatgpt-exporter.html"><![CDATA[<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
+<script type="text/javascript">
+    window.location.href = "https://ayazar.dev/blog/24/chatgpt-exporter.html";
+</script>
+
+<!-- markdownlint-restore -->
+
+<p>Yazı <a href="https://ayazar.dev/blog/24/chatgpt-exporter.html">taşınmıştır.</a></p>]]></content><author><name>Alper Yazar</name></author><category term="tr" /><summary type="html"><![CDATA[Bu kısa videoda ChatGPT'te yaptığımız bir konuşmanın tamamını nasıl Markdown formatında (veya HTML, text, PNG gibi diğer formatlarda) dışarıya çıkartabileceğimizi yani export alabileceğimizi öğreniyoruz.]]></summary></entry><entry><title type="html">My Zsh Setup</title><link href="https://www.alperyazar.com/my-zsh-setup-2024.html" rel="alternate" type="text/html" title="My Zsh Setup" /><published>2024-01-27T00:00:00+03:00</published><updated>2024-01-27T00:00:00+03:00</updated><id>https://www.alperyazar.com/my-zsh-setup-2024</id><content type="html" xml:base="https://www.alperyazar.com/my-zsh-setup-2024.html"><![CDATA[<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
+<script type="text/javascript">
+    window.location.href = "https://ayazar.dev/blog/24/zsh.html";
+</script>
+
+<!-- markdownlint-restore -->
+
+<p><a href="https://ayazar.dev/blog/24/zsh.html">Moved…</a></p>]]></content><author><name>Alper Yazar</name></author><category term="en" /><summary type="html"><![CDATA[Zsh is modern, very customizable shell alternative]]></summary></entry><entry><title type="html">Gömülü (Embedded) Linux nedir? Buildroot ve Yocto ne işe yarar? Buildroot Öğreniyoruz - 2</title><link href="https://www.alperyazar.com/buildroot-ogreniyoruz-02.html" rel="alternate" type="text/html" title="Gömülü (Embedded) Linux nedir? Buildroot ve Yocto ne işe yarar? Buildroot Öğreniyoruz - 2" /><published>2024-01-20T00:00:00+03:00</published><updated>2024-01-20T00:00:00+03:00</updated><id>https://www.alperyazar.com/buildroot-ogreniyoruz-02</id><content type="html" xml:base="https://www.alperyazar.com/buildroot-ogreniyoruz-02.html"><![CDATA[<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
+<script type="text/javascript">
+    window.location.href = "https://ayazar.dev/buildroot/gomulu-linux-nedir.html";
+</script>
+
+<!-- markdownlint-restore -->
+
+<p>Yazı <a href="https://ayazar.dev/buildroot/gomulu-linux-nedir.html">taşınmıştır.</a></p>]]></content><author><name>Alper Yazar</name></author><category term="tr" /><summary type="html"><![CDATA[Bu videoda, temel olarak Gömülü Linux kavramını irdeleyip, Buildroot ve Yocto gibi araçların hangi problemimizi çözdüğünü, ne işe yaradığını kavrayacağız.]]></summary></entry><entry><title type="html">Buildroot İle Gömülü Linux: Başlıyoruz! Buildroot Öğreniyoruz - 1</title><link href="https://www.alperyazar.com/buildroot-ogreniyoruz-01.html" rel="alternate" type="text/html" title="Buildroot İle Gömülü Linux: Başlıyoruz! Buildroot Öğreniyoruz - 1" /><published>2024-01-14T00:00:00+03:00</published><updated>2024-01-14T00:00:00+03:00</updated><id>https://www.alperyazar.com/buildroot-ogreniyoruz-01</id><content type="html" xml:base="https://www.alperyazar.com/buildroot-ogreniyoruz-01.html"><![CDATA[<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
+<script type="text/javascript">
+    window.location.href = "https://ayazar.dev/buildroot/basliyoruz.html";
+</script>
+
+<!-- markdownlint-restore -->
+
+<p>Yazı <a href="https://ayazar.dev/buildroot/basliyoruz.html">taşınmıştır.</a></p>]]></content><author><name>Alper Yazar</name></author><category term="tr" /><summary type="html"><![CDATA['Buildroot Öğreniyoruz' serisine hoş geldiniz. Bu seride, Buildroot kullanarak nasıl gömülü Linux sistemleri oluşturabileceğimizi adım adım, hep beraber öğreneceğiz.]]></summary></entry></feed>
