@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Blog
+title: 📝 Blog
 ---
 
 <div class="home">
   {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "My Blog" }}</h2>
+    <h2 class="post-list-heading">{{ page.list_title | default: "Personal Blog" }}</h2>
       <!-- Pagination links -->
       <div class="pagination">
         <span class="page_number ">
@@ -17,7 +17,7 @@ title: Blog
           <span style="filter: grayscale(100%);">⬅️</span>
         {% endif %}
         {% if paginator.previous_page %}
-          <a href="/">⬆️</a>
+          <a href="/blog">⬆️</a>
         {% else %}
           <span style="filter: grayscale(100%);">⬆️</span>
         {% endif %}
@@ -80,7 +80,7 @@ title: Blog
         <span style="filter: grayscale(100%);">⬅️</span>
       {% endif %}
       {% if paginator.previous_page %}
-        <a href="/">⬆️</a>
+        <a href="/blog">⬆️</a>
       {% else %}
         <span style="filter: grayscale(100%);">⬆️</span>
       {% endif %}

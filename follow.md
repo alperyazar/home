@@ -10,7 +10,7 @@ I recommend following me on [LinkedIn](https://www.linkedin.com/in/alperyazar)
 or [mastodon](https://mastodon.social/@ayazar). I usually share my posts on these
 platforms.
 
-Looking for my e-mail address? Please visit the [about]({% link about.md %}) page.
+Looking for my e-mail address? Please visit the [about]({% link index.md %}) page.
 
 Here the list of my profiles on some platforms:
 

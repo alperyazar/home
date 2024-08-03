@@ -1,6 +1,6 @@
 ---
-title: "🤓 About"
-excerpt: 'About Alper Yazar, ayazar, "Full Stack Electronics" Engineer, ASELSAN'
+title: "About 🤓"
+excerpt: 'I am Alper Yazar, a "full stack electronics" engineer working mainly on embedded systems and FPGAs'
 layout: page
 published: true
 adsdisabled: true
@@ -15,7 +15,7 @@ adsdisabled: true
 **Alper Yazar**
 
 {:.text-align-center}
-*"Full Stack Electronics" Engineer*
+*["Full Stack Electronics"]({% post_url 2023-09-09-full-stack-elektronik %}) Engineer*
 
 I got my BSc and MSc degrees from the same department,
 [METU](https://www.metu.edu.tr/) EEE, in 2012 and 2015, respectively. My
