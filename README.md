@@ -31,6 +31,7 @@ This site is built with [Jekyll](https://jekyllrb.com/), a Ruby program.
 At root:
 
 ```shell
+gem install bundler
 bundle update
 bundle exec jekyll build
 ```
