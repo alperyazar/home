@@ -11,10 +11,11 @@ tags:
   - tr
 ---
 
-> İçerik, video olarak sunulmuştur. Bu yazıda (varsa) düzeltmeler ve videoda
-> geçen bağlantılar veya videoya ek notlar sunulmuştur.
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
+<script type="text/javascript">
+    window.location.href = "https://ayazar.dev/blog/24/chatgpt-exporter.html";
+</script>
+<!-- markdownlint-restore -->
 
-{% include youtubePlayer.html id="P_yvekEihfg" %}
-
-Bahsedilen eklenti:
-[chatgpt-exporter](https://github.com/pionxzh/chatgpt-exporter)
+Yazı [taşınmıştır.](https://ayazar.dev/blog/24/chatgpt-exporter.html)
