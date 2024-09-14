@@ -3,7 +3,7 @@
 title: "Buildroot ile ilk derleme! Buildroot Öğreniyoruz - 4"
 excerpt: "Buildroot ile ilk derlememizi yapıyoruz. Elbette tahmin ettiğim gibi ilk seferde olmuyor, uğraşıyoruz.."
 #image: /assets/img/24/5.png
-imageyt: sO_Sdf09DiY
+imageyt: GiNsDE4_hnk
 toc: true
 axseq: 5
 published: true
@@ -16,7 +16,7 @@ tags:
 > videoyu izlemenizi tavsiye ederim, çünkü bazı noktalarda yazıda olmayan
 > yorumlar yapıyorum.
 
-{% include youtubePlayer.html id="sO_Sdf09DiY" %}
+{% include youtubePlayer.html id="GiNsDE4_hnk" %}
 
 Buildroot yolculuğumuza, *Buildroot Öğreniyoruz* serisinin 4. bölümü ile devam
 ediyoruz. Bu bölümde, Buildroot ile ilk derlememizi yapacağız. Bir [önceki

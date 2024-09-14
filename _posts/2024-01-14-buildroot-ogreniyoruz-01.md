@@ -3,7 +3,7 @@
 title: "Buildroot İle Gömülü Linux: Başlıyoruz! Buildroot Öğreniyoruz - 1"
 excerpt: "'Buildroot Öğreniyoruz' serisine hoş geldiniz. Bu seride, Buildroot kullanarak nasıl gömülü Linux sistemleri oluşturabileceğimizi adım adım, hep beraber öğreneceğiz."
 #image: /assets/img/24/1.jpg
-imageyt: 3Y2P9UmT5xY
+imageyt: 3o1TP5c9_6k
 toc: true
 axseq: 1
 published: true
@@ -16,10 +16,10 @@ tags:
 > İçerik, video olarak sunulmuştur. Bu yazıda (varsa) düzeltmeler ve videoda
 > geçen bağlantılar veya videoya ek notlar sunulmuştur.
 
-{% include youtubePlayer.html id="3Y2P9UmT5xY" %}
+{% include youtubePlayer.html id="3o1TP5c9_6k" %}
 
 Bu video
-[serinin](https://www.youtube.com/playlist?list=PLr5LL6z9GIeE2auxES8u_MycPvl6AlCZw)
+[serinin](https://www.youtube.com/playlist?list=PLN87Yz_UzbiGWMQND0I-FdbjFcrFZrN_t)
 ilk videosu. Burada kendimden ve video serisinden bahsediyorum.
 
 Burada [bootlin](https://bootlin.com/) firmasının [Buildroot

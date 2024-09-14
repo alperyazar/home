@@ -25,7 +25,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.alperyazar.com" # the base hostname & protocol for your site, e.g. http://example.com
 linkedin_username: alperyazar
 github_username:  alperyazar
-youtube_username: "@ayazar"
+youtube_username: "@FSElektronik"
 mastodon:
   - username: ayazar
     instance: mastodon.social
@@ -121,7 +121,7 @@ social:
   links:
     - https://www.linkedin.com/in/alperyazar
     - https://twitter.com/alper_yazar
-    - https://www.youtube.com/@ayazar
+    - https://www.youtube.com/@FSElektronik
     - https://mastodon.social/@ayazar
 
 disqus:

@@ -3,7 +3,7 @@
 title: "Buildroot ile Tanışıyoruz Buildroot Öğreniyoruz - 3"
 excerpt: "Bu bölümde Buildroot ile artık tanışıyoruz. Nedir? Kimler kullanır? Nasıl kullanılır? Nereden indirilir? ..."
 #image: /assets/img/23/1.png
-imageyt: meLZZuCS4gI
+imageyt: pxtKh58Z5Vc
 toc: true
 axseq: 4
 published: true
@@ -14,10 +14,10 @@ tags:
 > İçerik, video olarak sunulmuştur. Bu yazıda (varsa) düzeltmeler ve videoda
 > geçen bağlantılar veya videoya ek notlar sunulmuştur.
 
-{% include youtubePlayer.html id="meLZZuCS4gI" %}
+{% include youtubePlayer.html id="pxtKh58Z5Vc" %}
 
 Bu video
-[serinin](https://www.youtube.com/playlist?list=PLr5LL6z9GIeE2auxES8u_MycPvl6AlCZw)
+[serinin](https://www.youtube.com/playlist?list=PLN87Yz_UzbiGWMQND0I-FdbjFcrFZrN_t)
 üçüncü videosu. Bu bölümde Buildroot nedir? kimler kullanır? nasıl kullanılır?
 nereden indirilir? gibi soruların cevabını arıyoruz.
 

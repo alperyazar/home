@@ -3,7 +3,7 @@
 title: "Gömülü (Embedded) Linux nedir? Buildroot ve Yocto ne işe yarar? Buildroot Öğreniyoruz - 2"
 excerpt: "Bu videoda, temel olarak Gömülü Linux kavramını irdeleyip, Buildroot ve Yocto gibi araçların hangi problemimizi çözdüğünü, ne işe yaradığını kavrayacağız."
 #image: /assets/img/24/2.jpg
-imageyt: Nv5_U1VWXlk
+imageyt: JyrXqdgTkto
 toc: true
 axseq: 2
 published: true
@@ -14,10 +14,10 @@ tags:
 > İçerik, video olarak sunulmuştur. Bu yazıda (varsa) düzeltmeler ve videoda
 > geçen bağlantılar veya videoya ek notlar sunulmuştur.
 
-{% include youtubePlayer.html id="Nv5_U1VWXlk" %}
+{% include youtubePlayer.html id="JyrXqdgTkto" %}
 
 Bu video
-[serinin](https://www.youtube.com/playlist?list=PLr5LL6z9GIeE2auxES8u_MycPvl6AlCZw)
+[serinin](https://www.youtube.com/playlist?list=PLN87Yz_UzbiGWMQND0I-FdbjFcrFZrN_t)
 ikinci videosu. Burada "gömülü Linux" gibi çok önemli kavramlara değiniyoruz.
 
 ## Önceki Bölüm
