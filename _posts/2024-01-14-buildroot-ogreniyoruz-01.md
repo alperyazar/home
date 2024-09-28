@@ -3,7 +3,7 @@
 title: "Buildroot İle Gömülü Linux: Başlıyoruz! Buildroot Öğreniyoruz - 1"
 excerpt: "'Buildroot Öğreniyoruz' serisine hoş geldiniz. Bu seride, Buildroot kullanarak nasıl gömülü Linux sistemleri oluşturabileceğimizi adım adım, hep beraber öğreneceğiz."
 #image: /assets/img/24/1.jpg
-imageyt: 3o1TP5c9_6k
+imageyt: 3Y2P9UmT5xY
 toc: true
 axseq: 1
 published: true
@@ -13,36 +13,11 @@ tags:
   - tr
 ---
 
-> İçerik, video olarak sunulmuştur. Bu yazıda (varsa) düzeltmeler ve videoda
-> geçen bağlantılar veya videoya ek notlar sunulmuştur.
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
+<script type="text/javascript">
+    window.location.href = "https://ayazar.dev/buildroot/basliyoruz.html";
+</script>
+<!-- markdownlint-restore -->
 
-{% include youtubePlayer.html id="3o1TP5c9_6k" %}
-
-Bu video
-[serinin](https://www.youtube.com/playlist?list=PLN87Yz_UzbiGWMQND0I-FdbjFcrFZrN_t)
-ilk videosu. Burada kendimden ve video serisinden bahsediyorum.
-
-Burada [bootlin](https://bootlin.com/) firmasının [Buildroot
-eğitimini](https://bootlin.com/training/buildroot/) takip edeceğiz.
-
-**Size Buildroot öğretmeyeceğim, beraber öğreneceğiz, çünkü ben de bilmiyorum!**
-
-Videoda bahsettiğim bağlantılar aşağıda verilmiştir.
-
-## Bağlantılar
-
-- Alper Yazar: [Web](https://www.alperyazar.com),
-  [LinkedIn](https://www.linkedin.com/in/alperyazar)
-- [ACCLOUD: A Novel FPGA Accelerated Cloud
-  Architecture](http://accloud.eee.metu.edu.tr/)
-- [bootlin Firması](https://bootlin.com/)
-- [Eğitim sayfası, materyaller](https://bootlin.com/training/buildroot/)
-- [Sunumların LaTeX kaynak
-  kodları](https://github.com/bootlin/training-materials)
-- Firmanın 2018 yılında Free Electron'dan Bootlin ismine geçiş
-  [hikayesi.](https://bootlin.com/blog/free-electrons-becomes-bootlin/)
-- [Elixir Cross Referencer](https://elixir.bootlin.com/linux/latest/source)
-
-## Sonraki Bölüm
-
-{% include ax_single.html reccmode="single" reccyear="24" reccaxseq="2" %}
+Yazı [taşınmıştır.](https://ayazar.dev/buildroot/basliyoruz.html)

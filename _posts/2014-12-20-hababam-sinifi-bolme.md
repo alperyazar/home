@@ -7,15 +7,11 @@ published: true
 axseq: 2
 ---
 
-Habam Sınıfı'nı ne zaman dinlesem bu bölümün tam sayı çıkmama sebini düşünürüm.
-Neden acaba? :)
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
+<script type="text/javascript">
+    window.location.href = "https://ayazar.dev/blog/14/hababam-sinifi-bolme.html";
+</script>
+<!-- markdownlint-restore -->
 
-{% include youtubePlayer.html id="hf2-8MRPGu8" %}
-
-Zaman: 1:02:21
-
-```text
-Adam başı 9000 liradan yılda 235.000 lira ediyoruz biz.
-```
-
-26.11 öğrenci ediyor.
+Yazı [taşınmıştır.](https://ayazar.dev/blog/14/hababam-sinifi-bolme.html)
