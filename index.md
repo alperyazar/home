@@ -1,5 +1,5 @@
 ---
-title: "About 🤓"
+title: "About me"
 excerpt: 'I am Alper Yazar, a "full stack electronics" engineer working mainly on embedded systems and FPGAs'
 layout: page
 published: true
