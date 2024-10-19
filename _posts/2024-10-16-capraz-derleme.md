@@ -15,3 +15,8 @@ tags:
 > geçen bağlantılar veya videoya ek notlar sunulmuştur.
 
 {% include youtubePlayer.html id="dKrrejX6Y0U" %}
+
+## Notlar
+
+- Video'da [Clang](https://clang.llvm.org/) derleyicisini `si lang` diye telaffuz
+  ediyorum, `kılenk` olarak da sıkça telaffuz edilmektedir.
