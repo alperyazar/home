@@ -7,11 +7,8 @@ published: true
 axseq: 6
 ---
 
-<!-- markdownlint-capture -->
-<!-- markdownlint-disable -->
-<script type="text/javascript">
-    window.location.href = "https://ayazar.dev/blog/20/tekrar-merhaba-mkdocs.html";
-</script>
-<!-- markdownlint-restore -->
-
-Yazı [taşınmıştır.](https://ayazar.dev/blog/20/tekrar-merhaba-mkdocs.html)
+Tekrar MkDocs'a geri döndüm. Bu sefer kendi temamı kullanıyorum, çok basit bir
+tema. Dokuwiki güzel ama bir şeyleri "host" etmek yerine Github Pages gibi bir
+servis üzerinden sunulması ve sunucu ile uğraşmamayı tercih ettim. Ek olarak
+içeriğin Git ile kontrol edilmesi de hoşuma gittiğinden statik site üreticisi
+olan MkDocs'a geri döndüm.

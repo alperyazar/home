@@ -7,11 +7,6 @@ published: true
 axseq: 4
 ---
 
-<!-- markdownlint-capture -->
-<!-- markdownlint-disable -->
-<script type="text/javascript">
-    window.location.href = "https://ayazar.dev/blog/19/yazamayanlara.html";
-</script>
-<!-- markdownlint-restore -->
-
-Yazı [taşınmıştır.](https://ayazar.dev/blog/19/yazamayanlara.html)
+Twitter’da doktora tezini, makalesini yazamayanlar ya da yazacak kişiler için
+bir kitap önerisi "flood"una denk geldim. Bir bakacağım:
+[Link](https://twitter.com/koseozlem/status/1169174168149123077?s=19)
