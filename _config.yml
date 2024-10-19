@@ -25,7 +25,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.alperyazar.com" # the base hostname & protocol for your site, e.g. http://example.com
 linkedin_username: alperyazar
 github_username:  alperyazar
-youtube_username: "@FSElektronik"
+youtube_username: "@ayazar"
 mastodon:
   - username: ayazar
     instance: mastodon.social
@@ -111,7 +111,7 @@ exclude:
 
 header_pages:
   - blog/index.html
-  - follow.md
+#  - follow.md
   - search.md
 
 # jekyll-seo-tag
@@ -121,7 +121,7 @@ social:
   links:
     - https://www.linkedin.com/in/alperyazar
     - https://twitter.com/alper_yazar
-    - https://www.youtube.com/@FSElektronik
+    - https://www.youtube.com/@ayazar
     - https://mastodon.social/@ayazar
 
 disqus:
