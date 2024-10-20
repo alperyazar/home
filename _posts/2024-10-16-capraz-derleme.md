@@ -20,3 +20,5 @@ tags:
 
 - Video'da [Clang](https://clang.llvm.org/) derleyicisini `si lang` diye telaffuz
   ediyorum, `kılenk` olarak da sıkça telaffuz edilmektedir.
+- Çapraz derleme ya da buna benzer C/C++ denemelerini kolayca yapmak için bu
+  videoda kullandığım <https://godbolt.org> sitesini kullanabilirsiniz.
