@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>LaTeX’te Otomatik Hecelemeyi Kapatma | Alper Yazar</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="LaTeX’te Otomatik Hecelemeyi Kapatma" />
+<meta name="author" content="Alper Yazar" />
+<meta property="og:locale" content="tr_TR" />
+<meta name="description" content="LaTeX’in sunduğu otomatik hecelemeyi her zaman istemeyebiliriz." />
+<meta property="og:description" content="LaTeX’in sunduğu otomatik hecelemeyi her zaman istemeyebiliriz." />
+<link rel="canonical" href="https://www.alperyazar.com/latex-otomatik-hecelemeyi-kapatma.html" />
+<meta property="og:url" content="https://www.alperyazar.com/latex-otomatik-hecelemeyi-kapatma.html" />
+<meta property="og:site_name" content="Alper Yazar" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2012-06-03T00:00:00+03:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="LaTeX’te Otomatik Hecelemeyi Kapatma" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alper Yazar"},"dateModified":"2012-06-03T00:00:00+03:00","datePublished":"2012-06-03T00:00:00+03:00","description":"LaTeX’in sunduğu otomatik hecelemeyi her zaman istemeyebiliriz.","headline":"LaTeX’te Otomatik Hecelemeyi Kapatma","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.alperyazar.com/latex-otomatik-hecelemeyi-kapatma.html"},"url":"https://www.alperyazar.com/latex-otomatik-hecelemeyi-kapatma.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css">
+    <script src="/assets/js/lazysizes.min.js" async=""></script><link type="application/atom+xml" rel="alternate" href="https://www.alperyazar.com/feed.xml" title="Alper Yazar" /><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"><!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S3B80PC7FC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-S3B80PC7FC');
+    </script>
+
+    <!-- Buy me a coffee -->
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="ayazar" data-description="Support me on Buy me a coffee!" data-message="" data-color="#FF5F5F" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+
+    
+    <!-- Adsense -->
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4580059638713287"
+    crossorigin="anonymous"></script> -->
+    <link rel="me" href="https://mastodon.social/@ayazar">
+  </head>
+<body><header class="site-header" role="banner">
+
+    <div class="wrapper"><a class="site-title" rel="author" href="/">Alper Yazar</a><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewBox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger"><a class="page-link" href="/blog/">📝 Blog</a><a class="page-link" href="/search.html">🔍 Search</a><!-- <a class="page-link" href="https://notes.alperyazar.com" target="_blank">🗒️ Notes</a> -->
+            <a rel="me" class="page-link" href="https://www.linkedin.com/in/alperyazar" target="_blank">💼 LinkedIn</a>
+            <a rel="me" class="page-link" href="https://www.youtube.com/@ayazar" target="_blank">🎬 YouTube</a>
+          </div>
+        </nav></div>
+  </header>
+
+  <div id="progressBar" class="progress-bar"></div>
+
+  <script>
+    // Listen for scroll events on the window
+window.onscroll = function() {
+    // Call the function to update the progress bar
+    updateProgressBar();
+};
+
+function updateProgressBar() {
+    // Get the total height of the page
+    var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    // Get the current scroll position
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    // Calculate the scroll percentage
+    var scrollPercentage = (scrollTop / scrollHeight) * 100;
+    // Update the width of the progress bar
+    document.getElementById("progressBar").style.width = scrollPercentage + "%";
+}
+  </script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">LaTeX&#39;te Otomatik Hecelemeyi Kapatma</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2012-06-03T00:00:00+03:00" itemprop="datePublished">
+        2012-06-03
+      </time>• 🇹🇷<span> • 12-2</span>
+      </p>
+  </header><div style="background: #eeeeff; border-radius: 2px; margin: 2px;"><center><p><span data-nosnippet>🔤 <small><a rel=”nofollow” href="https://www-alperyazar-com.translate.goog/latex-otomatik-hecelemeyi-kapatma.html?_x_tr_sl=auto&_x_tr_tl=en">Translate with Google</a></small> 🔤</span></p></center></div><div class="post-content e-content" itemprop="articleBody"><p><i>LaTeX'in sunduğu otomatik hecelemeyi her zaman istemeyebiliriz.</i></p>
+    <hr><p>Bu aralar biraz LaTeX ile uğraşmam gerekti. Yaklaşık bir sene önce bir rapor
+yazarken ilk olarak kullanmıştım LaTeX’i. Gerçekte istediğiniz formatta rahatça
+yazı yazmanızı sağlıyor.Başlamak, Microsoft Office gibi programları kullanmaya
+göre zor. Özellikle bilgisayar kodu yazma tecrübesi olmayanlar biraz daha
+zorlanabilir. Fakat sonradan LaTeX’te istediğiniz gibi formatta yazı
+çıkarabildiğinizi görmek (Tabi başlarda istediğiniz formata ulaşmak için
+internette araştırma yapmanız gerekecek. :) ) zevk verici. En azından Microsoft
+Office, OpenOffice, LibreOffice gibi WYSIWYG tipi yazılımların yazı yazma
+sırasında yaptığı ve saçınızı başınızı yolmanıza neden olan saçmalıkları
+yapmıyor. Dediğim gibi başlaması biraz zor olabilir belki. Fakat ben ilk
+denememde 60-70 sayfalık, resim tablo gibi birçok nesne içeren bir dökümanı
+yazabilmiştim.</p>
+
+<p>LaTeX’in reklamını yaptıktan sonra gelelim yazının konusuna. Kendime sonradan
+referans olması açısından ve birilerine de faydalı olabilir diye ufak bir
+sorunumun kolay bir çözümünü paylaşmak istedim.</p>
+
+<p>LaTeX, yazılan kelimeleri eğer bir şekilde satıra sığdıramazsa, otomatik
+heceleme yapabiliyor. Fakat bazı durumlarda bu özelliği kapatmak isterseniz,
+aşağıdaki kodu yazınızın başına koyabilirsiniz:</p>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\usepackage</span><span class="na">[none]</span><span class="p">{</span>hyphenat<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Bu sayede LaTeX kelimelerinizi otomatik olarak hecelemeyecektir. Fakat adam
+zaten düzgün sığdıramadığı için hecelediğinden, döküman görüntüsünü
+bozabilirsiniz. Bu arada en son uğraştığım dökümanı Türkçe yazdığımdan bende en
+başta şu kodlar da ekli:</p>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\usepackage</span><span class="na">[utf8]</span><span class="p">{</span>inputenc<span class="p">}</span>
+
+<span class="k">\usepackage</span><span class="na">[turkish]</span><span class="p">{</span>babel<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>Direkt İngilizce olarak üstekki paketleri kullanmadan hecelemeyi kapatabiliyor
+musunuz denemedim.</strong> Sadece Babel’e özgü olabilir, bilemiyorum. Denerseniz bana
+da haber verirseniz sevinirim.</p>
+
+    <hr><p><center><strong>Beğendiniz mi? Destek olmak ister misiniz?</strong> Eğer öyleyse bir kahve ısmarlayabilirsiniz:</center></p><p><center><a href="https://www.buymeacoffee.com/ayazar" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a></center></p>
+    <hr>
+    
+
+
+
+
+
+
+    
+    
+    
+<!--0-->
+        
+        
+            
+                
+                
+
+
+
+
+
+
+
+<ul class="post-list">
+<li style="background: #DDEEEE; padding: 10px; border-radius: 10px;">
+<h4>🤓 Bir içerik daha?</h4>
+
+<center>
+<p>
+<a class="post-link" href="/windirstat.html"><img alt="Teaser" data-srcset="/assets/img/22/1.png" srcset="/assets/lazyload.png" src="/assets/img/22/1.png" data-srcset="/assets/img/22/1.png"  srcset="/assets/lazyload.png" style="border-radius: 10px; height: auto; width: 95%; max-width: 700px;" class="lazyload"></a>
+</p>
+</center><h3>
+<a class="post-link" href="/windirstat.html">
+WinDirStat
+
+</a>
+</h3><h4>'Diskimde en çok hangi klasörler yer kaplıyor?' sorusuna cevap bulun!</h4></li>
+</ul>
+
+
+  </div><div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://www.alperyazar.com/latex-otomatik-hecelemeyi-kapatma.html';
+      this.page.identifier = 'https://www.alperyazar.com/latex-otomatik-hecelemeyi-kapatma.html';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://alperyazar.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/latex-otomatik-hecelemeyi-kapatma.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Alper Yazar</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Alper Yazar</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/alperyazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">alperyazar</span></a></li><li><a href="https://www.linkedin.com/in/alperyazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">alperyazar</span></a></li><li><a href="https://mastodon.social/@ayazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#mastodon"></use></svg> <span class="username">ayazar</span></a></li><li><a href="https://youtube.com/%40ayazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">@ayazar</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>&quot;Full Stack Electronics&quot; Engineer<br/><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a></p>
+        <p><a href="/disclaimer.html" />Disclaimer</a> <a href="/specimen.html" />Specimen</a> <a href="/about.html" />Contact</a></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer><!-- Default Statcounter code for Home
+https://www.alperyazar.com -->
+<script type="text/javascript">
+  var sc_project=12712694;
+  var sc_invisible=1;
+  var sc_security="1c071fc4";
+  </script>
+  <script type="text/javascript"
+  src="https://www.statcounter.com/counter/counter.js"
+  async></script>
+  <noscript><div class="statcounter"><a title="web statistics"
+  href="https://statcounter.com/" target="_blank"><img
+  class="statcounter"
+  src="https://c.statcounter.com/12712694/0/1c071fc4/1/"
+  alt="web statistics"
+  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+  <!-- End of Statcounter Code --></body>
+
+</html>

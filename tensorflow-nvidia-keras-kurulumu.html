@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Tensorflow (NVIDIA GPU Desteği ile) ve Keras Kurulumu | Alper Yazar</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Tensorflow (NVIDIA GPU Desteği ile) ve Keras Kurulumu" />
+<meta name="author" content="Alper Yazar" />
+<meta property="og:locale" content="tr_TR" />
+<meta name="description" content="GPU desteği ile Tensorflow ve Keras’ın Windows’a nasıl kurulabileceğini ve olası problem ve çözümleri anlatıyorum." />
+<meta property="og:description" content="GPU desteği ile Tensorflow ve Keras’ın Windows’a nasıl kurulabileceğini ve olası problem ve çözümleri anlatıyorum." />
+<link rel="canonical" href="https://www.alperyazar.com/tensorflow-nvidia-keras-kurulumu.html" />
+<meta property="og:url" content="https://www.alperyazar.com/tensorflow-nvidia-keras-kurulumu.html" />
+<meta property="og:site_name" content="Alper Yazar" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-02-10T00:00:00+03:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Tensorflow (NVIDIA GPU Desteği ile) ve Keras Kurulumu" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alper Yazar"},"dateModified":"2018-02-10T00:00:00+03:00","datePublished":"2018-02-10T00:00:00+03:00","description":"GPU desteği ile Tensorflow ve Keras’ın Windows’a nasıl kurulabileceğini ve olası problem ve çözümleri anlatıyorum.","headline":"Tensorflow (NVIDIA GPU Desteği ile) ve Keras Kurulumu","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.alperyazar.com/tensorflow-nvidia-keras-kurulumu.html"},"url":"https://www.alperyazar.com/tensorflow-nvidia-keras-kurulumu.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css">
+    <script src="/assets/js/lazysizes.min.js" async=""></script><link type="application/atom+xml" rel="alternate" href="https://www.alperyazar.com/feed.xml" title="Alper Yazar" /><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"><!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S3B80PC7FC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-S3B80PC7FC');
+    </script>
+
+    <!-- Buy me a coffee -->
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="ayazar" data-description="Support me on Buy me a coffee!" data-message="" data-color="#FF5F5F" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+
+    
+    <!-- Adsense -->
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4580059638713287"
+    crossorigin="anonymous"></script> -->
+    <link rel="me" href="https://mastodon.social/@ayazar">
+  </head>
+<body><header class="site-header" role="banner">
+
+    <div class="wrapper"><a class="site-title" rel="author" href="/">Alper Yazar</a><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewBox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger"><a class="page-link" href="/blog/">📝 Blog</a><a class="page-link" href="/search.html">🔍 Search</a><!-- <a class="page-link" href="https://notes.alperyazar.com" target="_blank">🗒️ Notes</a> -->
+            <a rel="me" class="page-link" href="https://www.linkedin.com/in/alperyazar" target="_blank">💼 LinkedIn</a>
+            <a rel="me" class="page-link" href="https://www.youtube.com/@ayazar" target="_blank">🎬 YouTube</a>
+          </div>
+        </nav></div>
+  </header>
+
+  <div id="progressBar" class="progress-bar"></div>
+
+  <script>
+    // Listen for scroll events on the window
+window.onscroll = function() {
+    // Call the function to update the progress bar
+    updateProgressBar();
+};
+
+function updateProgressBar() {
+    // Get the total height of the page
+    var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    // Get the current scroll position
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    // Calculate the scroll percentage
+    var scrollPercentage = (scrollTop / scrollHeight) * 100;
+    // Update the width of the progress bar
+    document.getElementById("progressBar").style.width = scrollPercentage + "%";
+}
+  </script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Tensorflow (NVIDIA GPU Desteği ile) ve Keras Kurulumu</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2018-02-10T00:00:00+03:00" itemprop="datePublished">
+        2018-02-10
+      </time>• 🇹🇷<span> • 18-1</span>
+      </p>
+  </header><div style="background: #eeeeff; border-radius: 2px; margin: 2px;"><center><p><span data-nosnippet>🔤 <small><a rel=”nofollow” href="https://www-alperyazar-com.translate.goog/tensorflow-nvidia-keras-kurulumu.html?_x_tr_sl=auto&_x_tr_tl=en">Translate with Google</a></small> 🔤</span></p></center></div><div class="post-content e-content" itemprop="articleBody"><p><i>GPU desteği ile Tensorflow ve Keras'ın Windows'a nasıl kurulabileceğini ve olası problem ve çözümleri anlatıyorum.</i></p>
+    <hr><blockquote>
+  <p>⚠️ <strong>Dikkat! Eski içerik.</strong> Bu yazı 2018’de yazılmış olup içerikte önemli bir
+güncelleme yapılmamıştır. Bu yüzden bu yazıdaki içerikler yüksek ihtimalle
+geçerliliğini yitirmiştir. Yazı, arşiv amaçlı tutulmaktadır ve daha güncel
+kaynaklara bakmanızı öneririm.</p>
+</blockquote>
+
+<p>ℹ️ Aşağıda yazdığım kısımlar konu ile ilgili kendime aldığım notlardır. Bir blog
+yazısına kıyasla daha az özenle yazılmıştır. Faydalı olması için paylaşıyorum.</p>
+
+<p>Doküman Kasım 2017 içinde hazırlandı. Sürümler şu şekilde:</p>
+
+<ul>
+  <li>Tensorflow 1.4</li>
+  <li>CUDA 8.0</li>
+  <li>cuDNN v6.0 for CUDA 8.0</li>
+  <li>Python 3.6.3 64 bit</li>
+  <li>Keras 2.1.1</li>
+</ul>
+
+<p>❗ 64-bit sistemlerde denendi yazılanlar.</p>
+
+<h2 id="windows-10-i̇çin">Windows 10 İçin</h2>
+
+<p>Win 7’ye kıyasla özel bir şey yok. Sadece bazı yerlerdeki Win 7 sürümleri yerine
+Win 10 sürümleri kurulmalı. Win 7 kısmını okurken nerede Win 10 için ayrı
+yazılım indirmeniz gerektiği anlaşılıyor olmalı.</p>
+
+<h2 id="windows-7-i̇çin">Windows 7 İçin</h2>
+
+<h3 id="nvidia-araçlarının-kurulumu">Nvidia Araçlarının Kurulumu</h3>
+
+<h4 id="cuda-80">CUDA 8.0</h4>
+
+<ol>
+  <li>İlk olarak ekran kartımızın CUDA desteği olup olmadığına bakıyoruz şu
+listeden:
+<a href="https://developer.nvidia.com/cuda-gpus">https://developer.nvidia.com/cuda-gpus</a>
+Tensorflow GPU desteği için CUDA Compute Capability en az 3.0 istiyor (Ref:
+<code class="language-plaintext highlighter-rouge">https://www.tensorflow.org/install/install_windows</code> <code class="language-plaintext highlighter-rouge">404 🔗</code>).
+Eğer ekran kartımız bunu desteklemiyorsa oturup ağlayabiliriz. Şaka şaka, GPU
+desteksiz kurulabilir Tensorflow. Bu dokümanda yazmadım ama daha basit
+olacaktır zaten, bodos Tensorflow kurulumu ile devam edilebilir bence.</li>
+  <li>Eğer ekran kartımızın desteği ile ilgili bir problem yoksa
+<a href="https://developer.nvidia.com/cuda-80-ga2-download-archive">https://developer.nvidia.com/cuda-80-ga2-download-archive</a>
+adresinden işletim sistemimize uygun olan versiyonu indiriyoruz. Installer
+type olarak “exe(local)” olanı tavsiye ederim. Hem “Base Installer”ı hem de
+“Patch2” yi kuruyoruz. Başka patch’ler varsa bu doküman hazırlandıktan sonra
+çıkan onları da kurun bence. Tabii ilk önce “Base Installer” sonra sırası ile
+(varsa birden fazla) patch’ler kurulmalı. An itibariyle sürüm <strong>CUDA
+8.0.61</strong>. CUDA’nın kurulumu biraz uzun sürebiliyor ve restart etmek gerekiyor
+bilgisayarı.</li>
+</ol>
+
+<h3 id="python">Python</h3>
+
+<ol>
+  <li>Python sitesinden Tensorflow’un istediği Python sürümü indirilir (Ref:
+<code class="language-plaintext highlighter-rouge">https://www.tensorflow.org/install/install_windows</code> <code class="language-plaintext highlighter-rouge">404 🔗</code>). An itibariyle
+python-3.6.3-amd64 indirdim.</li>
+  <li>Yüklerken “Add Python 3.6 to PATH” seçeneği seçilmelidir. Yükleme lokasyonu
+olarak <strong>C:/Python36_64</strong> seçtim.</li>
+  <li>Eğer yükleme ve PATH’e ekleme başarılı ise, Windows’ta <strong>cmd</strong> ile komut
+satırı açılır ve <strong>python</strong> yazılır. Bu komut başarı ile çalışmalıdır.
+PATH’te sorun varsa python bulunamadı diye hata alınır. Python açılınca
+sürümünün doğru olduğu (3.6.3 gibi) açılan yazılımdan kontrol edilir.</li>
+</ol>
+
+<h3 id="tensorflow">Tensorflow</h3>
+
+<ol>
+  <li>Tensorflow kurlumu için <code class="language-plaintext highlighter-rouge">pip3 install --upgrade tensorflow-gpu</code> komutu
+<strong>Window cmd</strong>’ye yazılır (python çalıştırıp içine değil). Tabii CUDA desteği
+eklenemediyse önceki adımlarda ekran kartının eski olması gibi bu durumda
+GPU’suz seçenekle kurulur. Detaylı bilgi için:
+<code class="language-plaintext highlighter-rouge">https://www.tensorflow.org/install/install_windows</code> <code class="language-plaintext highlighter-rouge">404 🔗</code>.</li>
+  <li>Yükleme adımı bittikten sonra Tensorflow’un ekosisteminin uygun olup
+olmadığının kontrol edilmesini öneriyorum. Bunun için
+<code class="language-plaintext highlighter-rouge">tensorflow_self_check.py</code> isimli scripti kullanacağız.
+<a href="https://gist.github.com/mrry/ee5dbcfdd045fa48a27d56664411d41c">Bunu</a>
+indiriyoruz ve dosyanın olduğu yerde windows CMD’yi açıp (Shift + Sağ click
+ve sonra Open Command Window Here veya cmd başlatıp cd ile o klasöre
+gidiyoruz) <code class="language-plaintext highlighter-rouge">pyton tensorflow_self_check.py</code> yazıyoruz.</li>
+  <li>Bu noktada muhtemelen cuDNN hatası alınacak. Onun için lütfen hata ayıklama
+kısmına bakın.</li>
+</ol>
+
+<h3 id="keras">Keras</h3>
+
+<ol>
+  <li>Keras kurulumu için <code class="language-plaintext highlighter-rouge">pip3 install keras</code> yazıyoruz yine Windows CMD’ye
+(Python shell değil).</li>
+  <li>Test etmek için örnek bir kod çalıştıracağız. Kod, MNIST set kullanacak ve
+MLP networkü eğitecek. Şu
+(<code class="language-plaintext highlighter-rouge">https://github.com/fchollet/keras/blob/master/examples/mnist_mlp.py</code> <code class="language-plaintext highlighter-rouge">404
+🔗</code>) adresten ilgili dosyayı indiriyoruz. Diğer python scriptleri
+çalıştırdığımız gibi <code class="language-plaintext highlighter-rouge">python mnist_mlp.py</code> ile çalıştırıyoruz. Not: Bu script
+ilk olarak MNIST data setini indiriyor internetten. O yüzden ilk çalıştırmada
+biraz bekletebilir. Daha sonra lokal’deki datayı kullanacaktır.</li>
+  <li>Eğer tam data işlenmeye başlanınca bilgisayar “xxx (Nvidia GPU modeli)
+çıkartılamaz” gibi bir hata verip çakılıyorsa ve PC donuyorsa <strong>Hata
+Ayıklama</strong> kısmına bakın.</li>
+</ol>
+
+<h2 id="hata-ayıklama">Hata Ayıklama</h2>
+
+<h3 id="tensorflow_self_checkpy-ile-cudnn-hatası-alınması">tensorflow_self_check.py ile CuDNN Hatası Alınması</h3>
+
+<h4 id="problem">Problem</h4>
+
+<p><code class="language-plaintext highlighter-rouge">pyton tensorflow_self_check.py</code> zaman aşağıdaki hata alınıyor:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Could not load 'cudnn64_5.dll'. The GPU version of TensorFlow
+  requires that this DLL be installed in a directory that is named in
+  your %PATH% environment variable. Note that installing cuDNN is a
+  separate step from installing CUDA, and it is often found in a
+  different directory from the CUDA DLLs. You may install the
+  necessary DLL by downloading cuDNN 5.1 from this URL:
+  https://developer.nvidia.com/cudnn
+
+- Could not find cuDNN.
+</code></pre></div></div>
+
+<h4 id="çözüm">Çözüm</h4>
+
+<ol>
+  <li>Bu korkulacak bir şey değil. Sistemimize birkaç şey daha kurmamız gerekiyor.
+<a href="https://developer.nvidia.com/cudnn">Şu</a> adrese gidelim.</li>
+  <li>Ne yazık ki bu noktada NVidia üyelik istiyor. Üye oluyoruz.</li>
+  <li>Lisans anlaşmasını kabul ediyoruz.</li>
+  <li>TensorFlow sürümümüz 1.3’ten büyük olduğu için cuDNN v6’yı indirmemiz
+gerekiyor. Script bize v5 kurun dese de v5’i kurunca bu sefer v6 kurmalıydın
+ama yanlış oldu diyor. O yüzden an itibariyle şunu indirmeliyiz: <strong>Download
+cuDNN v6.0 (April 27, 2017), for CUDA 8.0</strong>.</li>
+  <li>Buradan işletim sistemimize uygun olanı seçiyoruz: <strong>cuDNN v6.0 Library for
+Windows 7, cuDNN v6.0 Library for Windows 10</strong> gibi…</li>
+  <li>İndirdiğimiz zip dosyasını güzel bir yere extract ediyoruz. Mesela
+<code class="language-plaintext highlighter-rouge">C:\cuDNN60_CUDA80</code> gibi. Bu klasörün altında 3 adet klasörümüz oluyor:
+<code class="language-plaintext highlighter-rouge">bin</code>, <code class="language-plaintext highlighter-rouge">include</code> ve <code class="language-plaintext highlighter-rouge">lib</code>.</li>
+  <li>Daha sonra yüklediğimiz yerin bin dosyası sistemin PATH’ine eklenir:
+<code class="language-plaintext highlighter-rouge">C:\cuDNN60_CUDA80\bin</code> gibi.</li>
+  <li>PATH ekleme işleminden sonra PC’ye restart atmamız gerekiyor.</li>
+  <li>Restart sonrası <code class="language-plaintext highlighter-rouge">tensorflow_self_check.py</code> tekrar çalıştırılarak kontrol
+edilir. Hatanın gitmiş olması gerekir.</li>
+</ol>
+
+<h3 id="çalışırken-windowsun-ekran-kartının-çıkarılamayacağını-söylemesi-ve-takılması">Çalışırken Windows’un Ekran Kartının Çıkarılamayacağını Söylemesi ve Takılması</h3>
+
+<h4 id="problem-1">Problem</h4>
+
+<p>Ekran kartı kullanılmaya başlandığı anda PC takılıyor ve “hard reset” yapmadan
+çalışmıyor. Bu bende Nvidia 650M’de görüldü. Optimus teknolojisi ile de alakalı
+olabilir.</p>
+
+<h4 id="çözüm-1">Çözüm</h4>
+
+<p>Bence problemin kaynağı CUDA’nın kurulduğu anda ekran kartı sürücüleri ile
+oynaması. Benim durumumda son sürüm sürücüleri Nvidia sitesinden indirmek
+problemi çözdü. Fakat internette başka yazılımlarda (Adobe Premier gibi) sorun
+yaşayanlar olmuş. Onların bir kısmı BIOS’tan optimus’u kapatmış, kimisi Nvidia
+ayarlarından kendi yazılımları için sürekli Nvidia GPU’yu kullan diye ayar
+yapmış (bizim durumda bu python.exe oluyor). Net bir çözümü yok, biraz doğaçlama
+yapmak gerekecek böyle bir sorunda.</p>
+
+    <hr><p><center><strong>Beğendiniz mi? Destek olmak ister misiniz?</strong> Eğer öyleyse bir kahve ısmarlayabilirsiniz:</center></p><p><center><a href="https://www.buymeacoffee.com/ayazar" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a></center></p>
+    <hr>
+    
+
+
+
+
+
+
+    
+    
+    
+<!--0-->
+        
+        
+            
+                
+                
+
+
+
+
+
+
+
+<ul class="post-list">
+<li style="background: #DDEEEE; padding: 10px; border-radius: 10px;">
+<h4>🤓 Bir içerik daha?</h4>
+<h3>
+<a class="post-link" href="/dokuwiki-blog-deneme.html">
+Dokuwiki ile Blog Deneme
+
+</a>
+</h3><h4>Sphinx'ten Dokuwiki'ye geçiş</h4></li>
+</ul>
+
+
+  </div><div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://www.alperyazar.com/tensorflow-nvidia-keras-kurulumu.html';
+      this.page.identifier = 'https://www.alperyazar.com/tensorflow-nvidia-keras-kurulumu.html';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://alperyazar.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/tensorflow-nvidia-keras-kurulumu.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Alper Yazar</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Alper Yazar</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/alperyazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">alperyazar</span></a></li><li><a href="https://www.linkedin.com/in/alperyazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">alperyazar</span></a></li><li><a href="https://mastodon.social/@ayazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#mastodon"></use></svg> <span class="username">ayazar</span></a></li><li><a href="https://youtube.com/%40ayazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">@ayazar</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>&quot;Full Stack Electronics&quot; Engineer<br/><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a></p>
+        <p><a href="/disclaimer.html" />Disclaimer</a> <a href="/specimen.html" />Specimen</a> <a href="/about.html" />Contact</a></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer><!-- Default Statcounter code for Home
+https://www.alperyazar.com -->
+<script type="text/javascript">
+  var sc_project=12712694;
+  var sc_invisible=1;
+  var sc_security="1c071fc4";
+  </script>
+  <script type="text/javascript"
+  src="https://www.statcounter.com/counter/counter.js"
+  async></script>
+  <noscript><div class="statcounter"><a title="web statistics"
+  href="https://statcounter.com/" target="_blank"><img
+  class="statcounter"
+  src="https://c.statcounter.com/12712694/0/1c071fc4/1/"
+  alt="web statistics"
+  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+  <!-- End of Statcounter Code --></body>
+
+</html>
