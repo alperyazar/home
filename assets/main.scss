@@ -117,7 +117,8 @@ table{
 }
 
 /* https://stackoverflow.com/a/52058198/1766391 */
-a[target="_blank"]::after {
+article a[href^="http://"]:not([href^="http://www.alperyazar.com"])::after,
+article a[href^="https://"]:not([href^="https://www.alperyazar.com"])::after{
   content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
   margin: 0 3px 0 5px;
 }
