@@ -1,0 +1,50 @@
+---
+# License: CC-BY-SA-4.0.
+title: "Linux Terminalinizi Kaydedin ve Paylaşın! asciinema ile Tanışın!"
+excerpt: "Linux terminalinde yaptığınız işlemleri kaydetmek ve paylaşmak mı istiyorsunuz? asciinema ile bu artık çok kolay!"
+#image: /assets/img/23/1.png
+imageyt: mIzPfenZWvo
+toc: true
+axseq: 1
+published: true
+tags:
+  - tr
+---
+
+> İçerik, video olarak sunulmuştur. Bu yazıda (varsa) düzeltmeler ve videoda
+> geçen bağlantılar veya videoya ek notlar sunulmuştur.
+
+{% include youtubePlayer.html id="mIzPfenZWvo" %}
+
+## Bağlantılar
+
+Aşağıdaki bağlantılar videoda geçmektedir:
+
+- <https://asciinema.org>
+- <https://github.com/asciinema>
+- <https://docs.asciinema.org/manual/server/self-hosting/>
+
+## Jekyll ve asciinema Kullanımı
+
+Bu blog da altyapıda Jekyll kullanmaktadır. Örneğin
+[şu sayfada]({% post_url 2024-02-07-buildroot-ogreniyoruz-04 %}) asciinema player
+kullanılmaktadır. Sayfanın kaynak kodu
+[şuradadır.](https://raw.githubusercontent.com/alperyazar/home/refs/heads/master/_posts/2024-02-07-buildroot-ogreniyoruz-04.md)
+Jekyll için ChatGPT'ye minik bir plugin yazdırmıştım. İhtiyacınız varsa ilgili
+dosyaları inceleyebilirsiniz:
+
+- <https://github.com/alperyazar/home/blob/master/_plugins/Asciicast.rb>
+- <https://github.com/alperyazar/home/blob/master/_plugins/AsciicastSelf.rb>
+- <https://github.com/alperyazar/home/tree/master/assets/asciicasts>
+- <https://github.com/alperyazar/home/blob/master/assets/css/asciinema-player.css>
+- <https://github.com/alperyazar/home/blob/master/assets/js/asciinema-player.min.js>
+
+## Sphinx ve asciinema Kullanımı
+
+[Sphinx](https://www.sphinx-doc.org/en/master/) kullanıyorsanız da kendi
+repolarımdan şu linkleri incleyebilirsiniz:
+
+- <https://raw.githubusercontent.com/alperyazar/ayazar.dev/refs/heads/master/docs/source/buildroot/ilk-derleme.md>
+- <https://github.com/alperyazar/ayazar.dev/blob/master/Pipfile#L19>
+- <https://github.com/alperyazar/ayazar.dev/blob/master/docs/source/conf.py#L43>
+- <https://github.com/divi255/sphinxcontrib.asciinema>
