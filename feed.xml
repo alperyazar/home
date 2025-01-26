@@ -1,0 +1,2171 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://www.alperyazar.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.alperyazar.com/" rel="alternate" type="text/html" /><updated>2025-01-26T15:37:05+03:00</updated><id>https://www.alperyazar.com/feed.xml</id><title type="html">Alper Yazar</title><subtitle>&quot;Full Stack Electronics&quot; Engineer</subtitle><author><name>Alper Yazar</name></author><entry><title type="html">“Yeni Mezun Sistem Mühendisi Olur mu?”</title><link href="https://www.alperyazar.com/sistem-muhendisligi-taritmasi.html" rel="alternate" type="text/html" title="“Yeni Mezun Sistem Mühendisi Olur mu?”" /><published>2025-01-26T00:00:00+03:00</published><updated>2025-01-26T00:00:00+03:00</updated><id>https://www.alperyazar.com/sistem-muhendisligi-taritmasi</id><content type="html" xml:base="https://www.alperyazar.com/sistem-muhendisligi-taritmasi.html"><![CDATA[<p>Geçen hafta LinkedIn’de en çok önüme düşen konu, sistem mühendisliği ile ilgili
+bir tartışmaydı. Tartışmanın temel sorusu şuydu:</p>
+
+<p>🅰️ Sistem mühendisleri yeni mezun kişiler olabilir mi ya da olmalı mıdır?</p>
+
+<p>YOKSA</p>
+
+<p>🅱️ Sistem mühendisi önce elektronik tasarım, yazılım tasarımı, mekanik tasarım
+gibi temel tasarım alanlarında çalışıp tecrübe kazandıktan sonra mı bu unvana
+sahip olmalıdır?</p>
+
+<p>Hemen hemen her konuda olduğu gibi, bu konuda da kişiler iki gruba ayrıldı. Bir
+grup, yeni mezun bir kişinin sistem mühendisi olabileceğini ve bunun gayet
+normal olduğunu savunurken; diğer grup ise tam tersini, yani yeni mezun birinin
+sistem mühendisi olmaması gerektiğini, önce temel tasarım alanlarında tecrübe
+kazanıp daha sonra sistem mühendisi olması gerektiğini iddia etti.</p>
+
+<p>Her iki tarafın da kendine göre haklı sebepleri var. Madem bu kadar çok kişi
+fikir beyan etti, ben neden etmeyeyim diye düşündüm ve bu konuda bir yazı yazmak
+istedim. Bu yazıda, kendi görüşlerimi kısaca aktarmaya çalışacağım.</p>
+
+<hr />
+
+<p>ℹ️ <em>Kapak tasarımını DALL-E yaptı. Konuyu anlattıktan sonra bana bunu önerdi.</em></p>
+
+<hr />
+
+<h2 id="temelde-neden-ayrıştık">Temelde neden ayrıştık?</h2>
+
+<p>Buradaki temel görüş ayrılığının sebebinin, herkesin sistem mühendisliği
+algısının ve tecrübelerinin birbirinden farklı olmasına dayandığını düşünüyorum.
+Sistem mühendisliği dediğimiz görev tanımı, özellikle ülkemizde <strong>pratikte</strong> çok
+geniş bir görev alanını kapsıyor.</p>
+
+<p>Örneğin, <strong>sistem mühendisi dediğimiz zaman bu kişi tam olarak neler yapar,
+neler yapmaz?</strong> Bu sorunun cevabı, kurumdan kuruma, bölümden bölüme, ekipten
+ekibe, hatta kişiden kişiye değişebiliyor. Oysa, beyin cerrahı 🧠 ne yapar ya da
+ne yapmaz diye düşündüğümüzde, kurum ve kişilerden bağımsız bir görev tanımı
+oluşturabiliyoruz ve bu tanım üç aşağı beş yukarı herkesin kafasında aynı
+oluyor.</p>
+
+<p>Bırakın sistem mühendisliğini, görece daha temel bir disiplinde çalışan bir
+elektronik ya da bir yazılım mühendisi tam olarak ne yapar sorusuna bile net bir
+sınır çizmekte zorlanabiliyoruz. Bu noktada, kültürler de oldukça etkili oluyor.
+Sistem mühendisliğinde ise durum, bence, bu açıdan daha da karmaşık. Herkesin
+kabul ettiği ortak bir görev tanımı oluşturmak çok daha zor bir hale geliyor.
+Bazı organizasyonlarda sistem mühendisleri gerçekten mimari tasarımda görev
+alırken bazı durumlarda ise daha çok program/proje yönetimi gibi işleri yapıyor
+ve sistem tasarımını ağırlıklı olarak “altta” bulunan temel tasarım ekipleri
+üstleniyor.</p>
+
+<p>Zamanında bu konu ile ilgili hazırladığım <strong>Full Stack Elektronik Mühendisi?</strong>
+başlıklı yazımı da ilginizi çekebilir diye şuraya iliştiriyorum:</p>
+
+<ul class="post-list">
+<li style="background: #DDEEEE; padding: 10px; border-radius: 10px;">
+<h4>🔗 İlgili bir içerik</h4>
+
+<center>
+<p>
+<a class="post-link" href="/full-stack-elektronik.html"><img alt="Teaser" src="/assets/img/23/8-d.png" data-srcset="/assets/img/23/8-d.png" srcset="/assets/lazyload.png" style="border-radius: 10px; height: auto; width: 95%; max-width: 700px;" class="lazyload" /></a>
+</p>
+</center><h3>
+<a class="post-link" href="/full-stack-elektronik.html">
+Full Stack Elektronik Mühendisi?
+
+</a>
+</h3><h4>Full Stack Developer var. Peki Full Stack Elektronik Mühendisi neden olmasın? Belki siz de full stack'sinizdir?</h4></li>
+</ul>
+
+<p>İşte tam da bu yüzden, birçok kişinin savunduğu görüşün kendi tecrübeleri ve
+bakış açıları açısından doğru olabileceğini düşünüyorum. Bazı kişiler, onlarca
+yıl bu iş tanımında çalışmış olsalar da bu görüşlerden bir tanesini daha çok
+tecrübe etmiş ve dolayısıyla bunu daha sıkı savunur konumda olabiliyor. Bu da
+bence oldukça doğal bir durum.</p>
+
+<p>Bu açıdan düşündüğümüzde, bu soruya mutlak doğru bir cevap vermek gerçekten çok
+zor. En azından elimde herhangi bir tarafı objektif olarak destekleyecek bir
+veri yok…</p>
+
+<h2 id="güzel-gelişmeler-">Güzel gelişmeler 👍</h2>
+
+<p>Öte yandan, LinkedIn Türkiye topluluğu içerisinde böyle bir tartışmanın olması
+beni hem mutlu etti hem de biraz eğlendirdi. Uzun yıllar bu işe emek vermiş
+tecrübeli kişilerin, görüşlerini savunmak için örnekler araması ve tatlı
+tartışmalara girmesi, bence okuyucular için hem bilgilendirici hem de
+eğlendirici bir süreçti.</p>
+
+<p><img src="/assets/img/25/3-the-origin.jpg" alt="Oğuz Ergin LinkedIn gönderi" class="centered lazyload" /></p>
+
+<p class="text-align-center">Takip edebildiğim kadarıyla tartışmalar <a href="https://www.linkedin.com/in/oguzergin/">Oğuz Ergin</a> hocanın
+<a href="https://www.linkedin.com/posts/oguzergin_yeni-mezunlar-sistem-m%C3%BChendisli%C4%9Fine-al%C4%B1nmas%C4%B1n-activity-7287079639787708416-3jaf">şu</a>
+paylaşımı ile tetiklendi. 🙂</p>
+
+<hr />
+
+<p>LinkedIn’in gün geçtikçe kişisel gelişim çöplüğüne döndüğünü ve sürekli <em>“Bugün
+de dün olduğu kadar başarılıyım, yarın da başarılı olacağım, ahan da bu da
+kanıtı!”</em> tarzı paylaşımlarla dolduğunu düşünürsek, böyle bir
+tartışma ortamının oluşması, bu platformun varoluş sebebiyle örtüşüyor. Bu
+yüzden, böyle bir ortamın oluşmasından keyif aldım.</p>
+
+<p><img src="/assets/img/25/3-mserdark.jpg" alt="mserdark ve halasının facebook'u" class="centered lazyload" /></p>
+
+<p class="text-align-center">Adam haklı 🤣</p>
+
+<h2 id="ama-yine-de">Ama yine de…</h2>
+
+<p>Belirttiğim gibi, her iki tarafın da haklı olduğu noktalar var. Ancak ben, hiç
+(kağıt üstünde) sistem mühendisliği görevi yapmamış, tasarımda bulunmuş ama
+birçok sistemin sıfırdan tasarlanmasında görev almış ve sistem mühendisleriyle
+yakından çalışmış biri olarak, illa bir taraf seçmek zorunda kalsaydım, <strong>kendi
+tecrübelerime göre, yeni mezun kişilerin sistem mühendisliği yapması görüşünden
+ziyade, kişilerin temel tasarım ekiplerinde biraz tecrübe kazandıktan sonra bu
+göreve gelmesi seçeneğini seçerdim.</strong> Ama belirttiğim gibi, bu da benim
+deneyimlerimin bir sonucu; aksi doğru olmaz, kesinlikle böyle olmalıdır diyemem.
+Her iki taraf için de iyi çalışan ya da çalışmayan örnekler bulmak mümkündür.</p>
+
+<h2 id="zor-olan-hedef-belirlemek">Zor olan hedef belirlemek</h2>
+
+<p>Günün sonunda söyleyeceğim şey, <em>çok da takılmamak lazım</em> olurdu. Elbette bunu
+biraz şakayla karışık söylüyorum. Eğer tasarım alanında ilerlemek istiyorsanız,
+o alanın en iyisi, sistem mühendisliği alanında ilerlemek istiyorsanız da o
+alanın en iyisi olmayı hedeflemeliyiz. <strong>Kişisel kariyer yolculuğu açısından zor
+olan kısım ise, işte bu hedefi belirleyebilmek.</strong> Hedefi belirleyebildikten
+sonra, bu yola en başta hangi noktadan başladığımızın uzun vadede çok da kritik
+olmayacağını düşünenlerdenim.</p>
+
+<p>Zor olan kısım bunu belirlemek dedik. Peki bunu nasıl belirleyeceksiniz? Kaç
+kişiyi dinlerseniz dinleyin, ne okursanız okuyun günün sonunda bu sizin
+kararınız olacak. Sağlıklı bir karar vermek için de tecrübe etmeniz gerekecek.
+Her ne kadar sistem mühendisliğinden tasarım alanlarına ya da tam tersi şekilde
+geçişler mümkün olsa da pratikte temel tasarım ekiplerinden sistem
+mühendisliğine geçişlerin daha yaygın olduğunu söyleyebilirim, en azından kendi
+gözlemlerim çerçevesinde. Bu açıdan da düşününce en başta biraz temel tasarım
+ekiplerinde durup, bulunduğunuz ortamda sistem mühendislerinin yaptığı
+çalışmaları gözlemlemek de iyi bir tercih olabilir.</p>
+
+<h2 id="görev-tanımlarına-dikkat-">Görev tanımlarına dikkat ❗</h2>
+
+<p>Bazı bölümlerde adı sistem mühendisliği olan fakat pratikte aslında tasarım işi
+yapan ekipler olabilir. Örneğin bir algoritma geliştirme ekibi, sistem
+mühendisliği bünyesinde olabiliyor. Kağıt üstünde burada çalışan arkadaşlar da
+<em>sistem mühendisi</em> olarak gözükse de pratikte aslında bir temel tasarımcı gibi
+çalışıyorlar. Ya da tam tersi olarak, bir donanım tasarım biriminde çalışan bir
+ekip aslında bir sistem mühendisi gibi mimari tasarım yapılmasında kararlar
+alabiliyor. O yüzden başlıklardan ziyade görev tanımlarına odaklanmak en doğrusu
+olacaktır.</p>
+
+<hr />
+
+<p>Buraya kadar okuduğunuz için size ve LinkedIn platformunda görüşlerini aktaran
+herkese, bu ortamı oluşturdukları için teşekkür ederim.</p>
+
+<p>Bir başka yazıda görüşmek dileğiyle. 👋</p>]]></content><author><name>Alper Yazar</name></author><category term="tr" /><summary type="html"><![CDATA[LinkedIn'de dönen sistem mühendisliği tartışmasına ben de fikir beyan ediyorum.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.alperyazar.com/assets/img/25/3.png" /><media:content medium="image" url="https://www.alperyazar.com/assets/img/25/3.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Linux Terminalinizi Kaydedin ve Paylaşın! asciinema ile Tanışın!</title><link href="https://www.alperyazar.com/asciinema.html" rel="alternate" type="text/html" title="Linux Terminalinizi Kaydedin ve Paylaşın! asciinema ile Tanışın!" /><published>2025-01-18T00:00:00+03:00</published><updated>2025-01-18T00:00:00+03:00</updated><id>https://www.alperyazar.com/asciinema</id><content type="html" xml:base="https://www.alperyazar.com/asciinema.html"><![CDATA[<blockquote>
+  <p>İçerik, video olarak sunulmuştur. Bu yazıda (varsa) düzeltmeler ve videoda
+geçen bağlantılar veya videoya ek notlar sunulmuştur.</p>
+</blockquote>
+
+<!-- https://github.com/nathancy/jekyll-embed-video -->
+<!-- https://yoast.com/how-to-make-youtube-videos-responsive/ -->
+<div class="embed-container" style="text-align: center;">
+<iframe class="youtube-video lazyload" src="https://www.youtube.com/embed/mIzPfenZWvo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+</div>
+
+<center><a target="_blank" href="https://www.youtube.com/watch?v=mIzPfenZWvo" rel="nofollow">Video</a></center>
+
+<h2 id="bağlantılar">Bağlantılar</h2>
+
+<p>Aşağıdaki bağlantılar videoda geçmektedir:</p>
+
+<ul>
+  <li><a href="https://asciinema.org">https://asciinema.org</a></li>
+  <li><a href="https://github.com/asciinema">https://github.com/asciinema</a></li>
+  <li><a href="https://docs.asciinema.org/manual/server/self-hosting/">https://docs.asciinema.org/manual/server/self-hosting/</a></li>
+</ul>
+
+<h2 id="jekyll-ve-asciinema-kullanımı">Jekyll ve asciinema Kullanımı</h2>
+
+<p>Bu blog da altyapıda Jekyll kullanmaktadır. Örneğin
+<a href="/buildroot-ogreniyoruz-04.html">şu sayfada</a> asciinema player
+kullanılmaktadır. Sayfanın kaynak kodu
+<a href="https://raw.githubusercontent.com/alperyazar/home/refs/heads/master/_posts/2024-02-07-buildroot-ogreniyoruz-04.md">şuradadır.</a>
+Jekyll için ChatGPT’ye minik bir plugin yazdırmıştım. İhtiyacınız varsa ilgili
+dosyaları inceleyebilirsiniz:</p>
+
+<ul>
+  <li><a href="https://github.com/alperyazar/home/blob/master/_plugins/Asciicast.rb">https://github.com/alperyazar/home/blob/master/_plugins/Asciicast.rb</a></li>
+  <li><a href="https://github.com/alperyazar/home/blob/master/_plugins/AsciicastSelf.rb">https://github.com/alperyazar/home/blob/master/_plugins/AsciicastSelf.rb</a></li>
+  <li><a href="https://github.com/alperyazar/home/tree/master/assets/asciicasts">https://github.com/alperyazar/home/tree/master/assets/asciicasts</a></li>
+  <li><a href="https://github.com/alperyazar/home/blob/master/assets/css/asciinema-player.css">https://github.com/alperyazar/home/blob/master/assets/css/asciinema-player.css</a></li>
+  <li><a href="https://github.com/alperyazar/home/blob/master/assets/js/asciinema-player.min.js">https://github.com/alperyazar/home/blob/master/assets/js/asciinema-player.min.js</a></li>
+</ul>
+
+<h2 id="sphinx-ve-asciinema-kullanımı">Sphinx ve asciinema Kullanımı</h2>
+
+<p><a href="https://www.sphinx-doc.org/en/master/">Sphinx</a> kullanıyorsanız da kendi
+repolarımdan şu linkleri incleyebilirsiniz:</p>
+
+<ul>
+  <li><a href="https://raw.githubusercontent.com/alperyazar/ayazar.dev/refs/heads/master/docs/source/buildroot/ilk-derleme.md">https://raw.githubusercontent.com/alperyazar/ayazar.dev/refs/heads/master/docs/source/buildroot/ilk-derleme.md</a></li>
+  <li><a href="https://github.com/alperyazar/ayazar.dev/blob/master/Pipfile#L19">https://github.com/alperyazar/ayazar.dev/blob/master/Pipfile#L19</a></li>
+  <li><a href="https://github.com/alperyazar/ayazar.dev/blob/master/docs/source/conf.py#L43">https://github.com/alperyazar/ayazar.dev/blob/master/docs/source/conf.py#L43</a></li>
+  <li><a href="https://github.com/divi255/sphinxcontrib.asciinema">https://github.com/divi255/sphinxcontrib.asciinema</a></li>
+</ul>]]></content><author><name>Alper Yazar</name></author><category term="tr" /><summary type="html"><![CDATA[Linux terminalinde yaptığınız işlemleri kaydetmek ve paylaşmak mı istiyorsunuz? asciinema ile bu artık çok kolay!]]></summary></entry><entry><title type="html">Yapay Zeka Hızlandırıcıları, NPU | M. Sezgin Baloğlu, ML Compiler Engineer</title><link href="https://www.alperyazar.com/yapay-zeka-hizlandiricilari-sezgin-baloglu.html" rel="alternate" type="text/html" title="Yapay Zeka Hızlandırıcıları, NPU | M. Sezgin Baloğlu, ML Compiler Engineer" /><published>2024-11-09T00:00:00+03:00</published><updated>2024-11-09T00:00:00+03:00</updated><id>https://www.alperyazar.com/yapay-zeka-hizlandiricilari-sezgin-baloglu</id><content type="html" xml:base="https://www.alperyazar.com/yapay-zeka-hizlandiricilari-sezgin-baloglu.html"><![CDATA[<blockquote>
+  <p>İçerik, video olarak sunulmuştur. Bu yazıda (varsa) düzeltmeler ve videoda
+geçen bağlantılar veya videoya ek notlar sunulmuştur.</p>
+</blockquote>
+
+<!-- https://github.com/nathancy/jekyll-embed-video -->
+<!-- https://yoast.com/how-to-make-youtube-videos-responsive/ -->
+<div class="embed-container" style="text-align: center;">
+<iframe class="youtube-video lazyload" src="https://www.youtube.com/embed/ZMXVKpReEg8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+</div>
+
+<center><a target="_blank" href="https://www.youtube.com/watch?v=ZMXVKpReEg8" rel="nofollow">Video</a></center>]]></content><author><name>Alper Yazar</name></author><category term="tr" /><summary type="html"><![CDATA[Yapay zeka ve benzeri problemler yoğun hesaplama gücü gerektiriyor. Bu tarz problemlerin günümüzde verimli bir şekilde çözülebilmesi için donanım seviyesinde ciddi destekler gerekiyor.]]></summary></entry><entry><title type="html">Hard ve Soft Processor (İşlemci) ve IP Kavramı, FPGA ve SoC’ler</title><link href="https://www.alperyazar.com/hard-soft-islemci.html" rel="alternate" type="text/html" title="Hard ve Soft Processor (İşlemci) ve IP Kavramı, FPGA ve SoC’ler" /><published>2024-10-27T00:00:00+03:00</published><updated>2024-10-27T00:00:00+03:00</updated><id>https://www.alperyazar.com/hard-soft-islemci</id><content type="html" xml:base="https://www.alperyazar.com/hard-soft-islemci.html"><![CDATA[<blockquote>
+  <p>İçerik, video olarak sunulmuştur. Bu yazıda (varsa) düzeltmeler ve videoda
+geçen bağlantılar veya videoya ek notlar sunulmuştur.</p>
+</blockquote>
+
+<!-- https://github.com/nathancy/jekyll-embed-video -->
+<!-- https://yoast.com/how-to-make-youtube-videos-responsive/ -->
+<div class="embed-container" style="text-align: center;">
+<iframe class="youtube-video lazyload" src="https://www.youtube.com/embed/ZfILlT64EFA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+</div>
+
+<center><a target="_blank" href="https://www.youtube.com/watch?v=ZfILlT64EFA" rel="nofollow">Video</a></center>
+
+<h2 id="notlar">Notlar</h2>
+
+<ul>
+  <li>Videoda İngilizcesi <code class="language-plaintext highlighter-rouge">silicon</code> olan elementin adını Türkçe’ye ağız alışkanlığı
+<code class="language-plaintext highlighter-rouge">silikon</code> olarak çevirmişim. Oysa Türkçe’de <code class="language-plaintext highlighter-rouge">silikon</code> dediğimiz şey, İngilizce’de
+<code class="language-plaintext highlighter-rouge">silicone</code> olarak geçmektedir. Türkçe’deki doğru karşılığı <code class="language-plaintext highlighter-rouge">silisyum</code>
+olmalıdır. <sup id="fnref:1f"><a href="#fn:1f" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>, <sup id="fnref:2f"><a href="#fn:2f" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> Bu, videoyu çekerken hiç aklıma gelmedi. Aslında
+<code class="language-plaintext highlighter-rouge">silisyum</code> kelimesine de oldukça aşinayım çünkü küçüklüğümde <code class="language-plaintext highlighter-rouge">silisyum.net</code>
+sitesindeki yazıları az okumadım (an itibariyle ne yazık ki siste kapanmış,
+üzüldüm). Nerdeyse herkesin aklında bu kelimenin Türkçe karşılığının <code class="language-plaintext highlighter-rouge">silikon</code>
+olmasının önemli bir sebebi de <code class="language-plaintext highlighter-rouge">Silicon Valley</code>e hemen hemen her zaman
+<code class="language-plaintext highlighter-rouge">Silikon Vadisi</code> dememizdir, dilimize <code class="language-plaintext highlighter-rouge">Silisyum Vadisi</code> olarak yerleşmemiş
+olmasıdır. Bunu videoya yorum yazan <a href="https://www.youtube.com/@senoleker">Şenol Eker</a>
+Bey’in yorumu sayesinde fark ettim. Yorumun ekran görüntüsünü ekliyorum.
+Bu düzeltmeyi bu videoda yapamasam da ileride üreteceğim içeriklerde dikkat
+edeceğim. Kendisine buradan da teşekkür ederim.</li>
+</ul>
+
+<p><img src="/assets/img/24/15-senoleker.png" alt="senoleker yorum" class="centered lazyload" /></p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1f">
+      <p><a href="https://tr.wikipedia.org/wiki/Silisyum">https://tr.wikipedia.org/wiki/Silisyum</a> <a href="#fnref:1f" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2f">
+      <p><a href="https://kelimeler.gen.tr/silisyum-nedir-ne-demek-275440">https://kelimeler.gen.tr/silisyum-nedir-ne-demek-275440</a> <a href="#fnref:2f" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name>Alper Yazar</name></author><category term="tr" /><summary type="html"><![CDATA[FPGA ve SoClerle çalışan sayısal tasarımcı ve gömülü yazılımcıların karşılaştığı bir terim olan Hard Processor ve Soft Processor kavramına bakıyoruz.]]></summary></entry><entry><title type="html">GÖMÜLÜ YAZILIMIN olmazsa olmazı CROSS COMPILATION nedir?</title><link href="https://www.alperyazar.com/capraz-derleme.html" rel="alternate" type="text/html" title="GÖMÜLÜ YAZILIMIN olmazsa olmazı CROSS COMPILATION nedir?" /><published>2024-10-16T00:00:00+03:00</published><updated>2024-10-16T00:00:00+03:00</updated><id>https://www.alperyazar.com/capraz-derleme</id><content type="html" xml:base="https://www.alperyazar.com/capraz-derleme.html"><![CDATA[<blockquote>
+  <p>İçerik, video olarak sunulmuştur. Bu yazıda (varsa) düzeltmeler ve videoda
+geçen bağlantılar veya videoya ek notlar sunulmuştur.</p>
+</blockquote>
+
+<!-- https://github.com/nathancy/jekyll-embed-video -->
+<!-- https://yoast.com/how-to-make-youtube-videos-responsive/ -->
+<div class="embed-container" style="text-align: center;">
+<iframe class="youtube-video lazyload" src="https://www.youtube.com/embed/dKrrejX6Y0U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+</div>
+
+<center><a target="_blank" href="https://www.youtube.com/watch?v=dKrrejX6Y0U" rel="nofollow">Video</a></center>
+
+<h2 id="notlar">Notlar</h2>
+
+<ul>
+  <li>Video’da <a href="https://clang.llvm.org/">Clang</a> derleyicisini <code class="language-plaintext highlighter-rouge">si lang</code> diye telaffuz
+ediyorum, <code class="language-plaintext highlighter-rouge">kılenk</code> olarak da sıkça telaffuz edilmektedir.</li>
+  <li>Çapraz derleme ya da buna benzer C/C++ denemelerini kolayca yapmak için bu
+videoda kullandığım <a href="https://godbolt.org">https://godbolt.org</a> sitesini kullanabilirsiniz.</li>
+</ul>]]></content><author><name>Alper Yazar</name></author><category term="tr" /><summary type="html"><![CDATA[Cross Compilation yani Çapraz Derleme özellikle gömülü yazılım alanının olmazsa olmaz kavramlarından biri, gelin öğrenelim!]]></summary></entry><entry><title type="html">Ekip Veriminizi Arttıracak, OFFLINE Çalışabilen 5 Araç - 2</title><link href="https://www.alperyazar.com/self-hosted-5-2.html" rel="alternate" type="text/html" title="Ekip Veriminizi Arttıracak, OFFLINE Çalışabilen 5 Araç - 2" /><published>2024-05-31T00:00:00+03:00</published><updated>2024-05-31T00:00:00+03:00</updated><id>https://www.alperyazar.com/self-hosted-5-2</id><content type="html" xml:base="https://www.alperyazar.com/self-hosted-5-2.html"><![CDATA[<p>Bir önceki yazımda, internet bağlantısı olmadan kullanabileceğiniz yani
+<strong>self-hosted</strong> çalışan 5 adet araçtan ve temel bir altyapı önerisinden
+bahsetmiştim. Bu yazımda da yine faydalı olabileceğini düşündüğüm 5 adet araç
+tanıtacağım. Eğer okumadıysanız bir önceki yazıyı okuyarak başlamanızı öneririm:</p>
+
+<ul class="post-list">
+<li style="background: #DDEEEE; padding: 10px; border-radius: 10px;">
+<h4>🔗 İlgili bir içerik</h4>
+
+<center>
+<p>
+<a class="post-link" href="/self-hosted-5.html"><img alt="Teaser" src="/assets/img/24/12.jpg" data-srcset="/assets/img/24/12.jpg" srcset="/assets/lazyload.png" style="border-radius: 10px; height: auto; width: 95%; max-width: 700px;" class="lazyload" /></a>
+</p>
+</center><h3>
+<a class="post-link" href="/self-hosted-5.html">
+Ekip Veriminizi Arttıracak, OFFLINE Çalışabilen 5 Araç
+
+</a>
+</h3><h4>Bu yazıda offline da çalışabilen ve çalışma veriminizi arttıracağını düşündüğüm 5 araçtan bahsediyorum.</h4></li>
+</ul>
+
+<p>Bu araçlarda bir öncekiler gibi <strong>web tabanlı</strong> ve <strong>Docker container</strong> olarak
+paketlenmiş sürümleri bulunan araçlar olacak.</p>
+
+<h2 id="asciinema">Asciinema</h2>
+
+<p><img src="/assets/img/24/13-asciinema.png" alt="Asciinema" class="centered lazyload" /></p>
+
+<p>Asciinema, sloganı <strong>terminal session recorder</strong> olarak geçen bir araç. Linux
+üzerinde terminalde bir şeyler yapan ve bunları paylaşmak isteyen kişilere hitap
+ediyor. OBS gibi ekranı video olarak kaydeden bir yazılımla arasındaki temel
+fark kaydı bir metin dosyası olarak alıyor olması. Oynatıcısında da bir video
+gibi izlesek de aslında arkada metin oynatılıyor. <strong>İzlerken durdurup, faremizle
+o metni kopyalayıp yapıştırabiliyoruz.</strong> Diyelim ki bir tutorial hazırladınız,
+bunu takip eden kişiler sizin yazdığınız komutları doğrudan kopyalayıp
+kendilerine yapıştırabiliyorlar. Kayıtlar da metin tabanlı tutulduğu için bir
+video kaydına göre çok az yer kaplıyor.</p>
+
+<p>Bu servisi dilerseniz <a href="https://asciinema.org/">asciinema.org</a> adresinde de
+kullanabilir ya deneyebilirsiniz. Burada gördüğünüz servisin aynısını kendi
+makinelerinizde de çalıştırabiliyorsunuz. SMTP entegrasyonu yapmanız biraz şart
+gibi çünkü login sistemi mail üzerinden gönderilen tek kullanımlık linkler ile
+çalışıyor.</p>
+
+<p>Eğer ZSH gibi terminallerde, Unicode karakterler ile çalışıyorsanız kaydettiğiniz
+terminal kayıtları web üzerinden oynatılırken düzgün gözükmeyebilir. Burada bir
+deneme yapmanızı veya kayıt sırasında daha basit bir terminal düzenine geçmenizi
+öneririm.</p>
+
+<p>Kayıt sırasında <strong>otomatik jump cut</strong> yaptırabiliyorsunuz. Belirlediğiniz süre
+boyunca terminalde bir işlem yapmazsanız o boşluklar kaydedilmiyor. Böylece
+daha kısa süren kayıtlar elde edebiliyorsunuz. İzleyen kişiler de “Vay be
+hiç düşünmeden takır tukur yazıyor” diyorlar. 😉</p>
+
+<p>Aşağıdaki yazımda kaydettiğim birkaç örneği de görebilirsiniz:</p>
+
+<ul class="post-list">
+<li style="background: #DDEEEE; padding: 10px; border-radius: 10px;">
+<h4>🔗 İlgili bir içerik</h4>
+
+<center>
+<p>
+<a class="post-link" href="/buildroot-ogreniyoruz-04.html"><img alt="Teaser" data-sizes="auto" src="https://i.ytimg.com/vi/sO_Sdf09DiY/hq720.jpg" data-srcset="https://i.ytimg.com/vi/sO_Sdf09DiY/hq720.jpg 1280w" srcset="/assets/lazyload.png" style="border-radius: 10px; height: auto; width: 95%; max-width: 700px;" class="lazyload" /></a>
+</p>
+</center><h3>
+<a class="post-link" href="/buildroot-ogreniyoruz-04.html">
+Buildroot ile ilk derleme! Buildroot Öğreniyoruz - 4
+
+</a>
+</h3><h4>Buildroot ile ilk derlememizi yapıyoruz. Elbette tahmin ettiğim gibi ilk seferde olmuyor, uğraşıyoruz..</h4></li>
+</ul>
+
+<p>👉 <a href="https://docs.asciinema.org/manual/cli/installation/#container-image">Docker</a></p>
+
+<h2 id="hedgedoc">HedgeDoc</h2>
+
+<p><img src="/assets/img/24/13-hedgedoc.png" alt="HedgeDoc" class="centered lazyload" /></p>
+
+<p>Bu aracın sloganı: <strong>Ideas grow better together</strong> İsminden de anlayabileceğiniz
+gibi beraber bir şeyler yapmayı sağlıyor. Peki ne? Bu araç sayesinde bir
+Markdown dosyası üzerinde ekip arkadaşlarınızla çalışabiliyorsunuz, aynı anda.
+Aynı satırları değiştirmeye çalışmadığınız sürece dokümanın farklı yerlerini
+aynı anda değiştirebiliyorsunuz. <strong>Overleaf</strong> i biliyorsanız, onun Markdown
+versiyonu gibi düşünebilirsiniz.</p>
+
+<p>Bununla beraber bir dokümanın değişiklikleri de otomatik olarak kaydediliyor ve
+eski bir sürüme dönebiliyorsunuz.</p>
+
+<p>Çok kapsamlı olmasa da Markdown dokümanınızdan sunum da hazırlayabiliyorsunuz
+fakat temel amacınız bu ise <a href="https://marp.app/">Marp</a> gibi araçlar daha uygun
+olacaktır.</p>
+
+<p>Yazdığınız dokümanları PDF olarak da export edebiliyorsunuz.</p>
+
+<p><a href="https://hedgedoc.org/demo/">Demo instance</a></p>
+
+<p>Yukarıdaki linkten test edebilirsiniz.</p>
+
+<p>Gitlab, Github, LDAP, OAuth, SAML gibi birçok authentication mekanizmasını
+<a href="https://docs.hedgedoc.org/guides/auth/ldap-ad/">destekliyor</a>, bu çeşitlilik
+beni şaşırttı genelde bu kadar fazla sayıda entegrasyon olmuyor.</p>
+
+<p>Merak edenler için HedgeDoc ile CodiMD vs HackMD arasındaki ilişki
+<a href="https://hedgedoc.org/history/">burada</a> gösteriliyor, güzel bir gösterim.</p>
+
+<p>👉 <a href="https://docs.hedgedoc.org/setup/docker/">Docker</a></p>
+
+<h2 id="json-editor-online">JSON Editor Online</h2>
+
+<p><img src="/assets/img/24/13-json.png" alt="JSON Editor Online" class="centered lazyload" /></p>
+
+<p>JSON dosyaları ile uğraşıyorsanız bu aracı bir <em>linter</em> veya <em>editor</em> olarak
+kullanabilirsiniz.</p>
+
+<p><a href="https://jsoneditoronline.org/">jsoneditoronline.org</a></p>
+
+<p>adresinden kullanabilir veya test edebilirsiniz.</p>
+
+<p>👉 <a href="https://hub.docker.com/r/djmattyg007/jsoneditor">Docker</a></p>
+
+<h2 id="word-to-markdown-converter">Word to Markdown Converter</h2>
+
+<p><code class="language-plaintext highlighter-rouge">word2md</code> olarak da geçen aracın yaptığı iş adında, Word dosyalarınızı Markdown
+dosyalarına çeviriyor. Çok kullanmadığım için başarısı konusunda pek bir
+yorumum yok.</p>
+
+<p><a href="https://word2md.com/">word2md.com</a></p>
+
+<p>adresinden kullanabilir ya da test edebilirsiniz. Self-hosted olarak çalışırken
+beklediğimden fazla bellek tüketiyor diye aklımda kalmış ama tam da emin değilim.</p>
+
+<p>Eğer bu çevrimin tersini yani Markdown’dan Word’e bir çevrim arıyorsanız, ya da
+herhangi bir dokümanı herhangi bir formata dönüştürmek istiyorsanız muhakkak
+<a href="https://pandoc.org/">pandoc</a> a bakmalısınız. <strong>Pandoc</strong> yapamıyorsa, o iş
+olmuyordur muhtemelen…</p>
+
+<p>👉 <a href="https://github.com/benbalter/word-to-markdown-server/pkgs/container/word-to-markdown-server">Docker</a></p>
+
+<h2 id="uptime-kuma">Uptime Kuma</h2>
+
+<p><img src="/assets/img/24/13-uptime.png" alt="Uptime Kuma" class="centered lazyload" /></p>
+
+<p>Bu araç doğrudan işinize yarayacak bir araç değil. Fakat bunu saymazsak ilk yazıdan
+itibaren 9 adet araç tanıdık ve diyelim ki bunları veya başka araçları altyapımıza
+kurduk. Peki bunlar güzel güzel çalışıyor mu? Erişilebiliyor mu?</p>
+
+<p>İşte bu soruların cevabı için bir monitör aracı kullanabiliriz. Uptime Kuma da
+bir monitör aracı. Servislerimizin çalışıp çalışmadığını kontrol edebiliriz.</p>
+
+<p><a href="https://uptime.kuma.pet/">Sitesi ve Demo</a></p>
+
+<p>Elbette <a href="https://www.zabbix.com/">Zabbix</a> gibi çok daha kapsamlı araçlar mevcut.
+Uptime Kuma daha basit bir araç. SMTP entegrasyonu yaparsanız size bir şeyler ters
+gidince mail atabiliyor ya da bir önceki yazıda belirttiğim Mattermost’a mesaj
+atabiliyor. <em>Status</em> ya da <em>monitor</em> sayfaları sunabiliyorsunuz, tatlı bir araç
+kendileri.</p>
+
+<p>👉 <a href="https://uptime.kuma.pet/">Docker</a></p>
+
+<hr />
+
+<p>Şimdilik bu kadar. Faydalı olması dileği ile…</p>]]></content><author><name>Alper Yazar</name></author><category term="tr" /><summary type="html"><![CDATA[Bu yazıda offline da çalışabilen ve çalışma veriminizi arttıracağını düşündüğüm 5 araçtan bahsediyorum.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.alperyazar.com/assets/img/24/13.jpg" /><media:content medium="image" url="https://www.alperyazar.com/assets/img/24/13.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Ekip Veriminizi Arttıracak, OFFLINE Çalışabilen 5 Araç</title><link href="https://www.alperyazar.com/self-hosted-5.html" rel="alternate" type="text/html" title="Ekip Veriminizi Arttıracak, OFFLINE Çalışabilen 5 Araç" /><published>2024-05-24T00:00:00+03:00</published><updated>2024-05-24T00:00:00+03:00</updated><id>https://www.alperyazar.com/self-hosted-5</id><content type="html" xml:base="https://www.alperyazar.com/self-hosted-5.html"><![CDATA[<p>Bireysel olarak veya bir ekip ile çalışırken kullandığımız çeşitli yazılım ve
+araçlar çalışma hızımızı ve verimimizi ciddi bir biçimde arttırabiliyor. Bu
+yazımda bireysel veya ekip olarak kullanabileceğiniz çeşitli araçlardan
+bahsedeceğim.</p>
+
+<p>Araçların ortak özellikleri</p>
+
+<ol>
+  <li>Web tabanlı olmaları yani internet tarayıcısı üzerinden kullanılmaları,</li>
+  <li>İnternete bağlı olmayan ortamda, <strong>on prem</strong>, <strong>on premise</strong> yani <strong>self hosted</strong>
+çalışabilmeleri. Bu sayede <strong>ürettiğiniz ve sakladığınız tüm verileri sizde
+tutabiliyor olmaları,</strong></li>
+  <li>Hepsinin <strong>Docker</strong> imajlarının olması sebebiyle rahat bir şekilde
+çalıştırılabilmesi</li>
+</ol>
+
+<p>olacaktır.</p>
+
+<p>Bu yazıda araçların kurulumlarını ve kullanımlarını detaylı bir şekilde
+anlatmayacağım. Kurulum talimatları zaten her aracın kendi sitesinde yer
+almaktadır. Kullanımlarının da size ne kadar uygun olup olmadığını denemeden
+bilemezsiniz. Ama ben en az 1 tanesini beğeneceğinizi düşünüyorum.</p>
+
+<p>Yazının sonunda bu araçları kullanmak için basit bir altyapı önerisinden de
+bahsedeceğim. Eğer <a href="https://www.reddit.com/r/homelab/">r/homelab</a> ve
+<a href="https://www.reddit.com/r/selfhosted/">r/selfhosted</a> tutkunları da geldiyse
+gelin araçlara bir bakalım…</p>
+
+<h2 id="1---mattermost">1 - Mattermost</h2>
+
+<p><img src="/assets/img/24/12-mm.jpg" alt="Mattermost" class="centered lazyload" /></p>
+
+<p><a href="https://mattermost.com/">Mattermost</a>, özünde bir chat uygulaması,
+<a href="https://slack.com/">Slack</a>‘e benzetebiliriz. Ücreti karşılığında doğrudan kendi
+altyapıları üzerinden de Mattermost’u kullanabiliyorsunuz. Fakat self-hosted
+seçeneği de mevcut. Burada ise hem <code class="language-plaintext highlighter-rouge">Free</code> hem de <code class="language-plaintext highlighter-rouge">Professional</code> paket var. Free
+paketin çeşitli limitleri mevcut fakat birçok kullanım senaryosu için yeterli
+olacağını düşünüyorum.</p>
+
+<p>Bakınız: <a href="https://mattermost.com/pricing/">Mattermost Pricing</a></p>
+
+<p>Uygulamada temelde <strong>takımlar</strong> ve bu takımların altında <strong>kanallar</strong> yani chat
+odaları oluşturuyorsunuz. Örneğin her proje için takımlar veya projeler için
+kanallar oluşturabilirsiniz, bu sizin yoğurt yeme şeklinize bağlı.</p>
+
+<p>Kanallardaki konuşmalar saklanıyor. Kanala daha sonra eklediğiniz kişi,
+geçmişteki konuşmaları okuyabiliyor.</p>
+
+<p>Bunun dışında benim pek tecrübe etmediğim
+<a href="https://mattermost.com/playbooks/">Playbooks</a> isminde bir otomasyon altyapısı
+da bulunuyor.</p>
+
+<p>DevOps, CI/CD alanında yer alan bir çok araçlar <a href="https://mattermost.com/marketplace/">entegre
+edilebiliyor.</a> Çeşitli araçların <strong>bot</strong>
+hesaplarını da ekleyerek birçok işi Mattermost üzerinden
+<a href="https://docs.gitlab.com/ee/ci/chatops/">ChatOps</a> yaklaşımı ile
+yapabiliyorsunuz. Eğer entegrasyon ile uğraşırsanız Mattermost’u tüm işlerinizi
+yapabileceğiniz bir merkez olarak kullanabilirsiniz.</p>
+
+<p>Aracı ister web üzerinden isterse bilgisayarınıza kuracağınız kendi istemci
+yazılımı ile kullanabiliyorsunuz. Kapsamlı bir araç olduğu için tüm
+özelliklerini anlatmam kolay olmayacak, o yüzden niyetiniz var ise denemenizi
+veya videolarını izlemenizi tavsiye ederim.</p>
+
+<p><strong>Bedava sürümünün çeşitli kısıtları</strong> olduğundan bahsetmiştim. Önemli
+kısıtlarından biri kanallardaki konuşmaların export edilememesi, yani HTML veya
+PDF gibi bir formatta kanaldaki konuşmaları çıkartamıyorsunuz. Diğer bir limiti
+ise Active Directory, LDAP gibi Single Sign-On (SSO) altyapılarının ücretsiz
+sürümde olmaması. Fakat ücretsiz sürüm login tarafında Gitlab ile (self-hosted
+olabilir) entegre olabiliyor ve zaten çalışan bir Gitlab var ise, ki kendisi
+LDAP ile entegre edilmiş olabilir, kullanıcıları buradan login edebilirsiniz. Bu
+durumda dolaylı yoldan Mattermost da LDAP ile entegre edilmiş olacaktır. Bunun
+dışında tipik kullanımda ücretsiz sürüm size ciddi bir kısıt getirmeyecektir.</p>
+
+<p><strong>Alternatif olarak</strong> da <a href="https://www.rocket.chat/">rocket.chat</a> ya da
+<a href="https://matrix.org/">matrix.org</a> araçlarına da bakabilirsiniz. Elbette her
+aracın kendine has bir kullanım tarzı, artı ve eksileri oluyor. O yüzden sizin
+veya ekbinizin ihtiyaçlarına ve tarzına uygun doğru aracı bulmak için denemeler
+yapmak gerekiyor.</p>
+
+<p><a href="https://docs.mattermost.com/install/install-docker.html">Docker</a> veya <a href="https://docs.mattermost.com/guides/deployment.html">diğer
+yollar</a> ile kurulum
+yapabilirsiniz.</p>
+
+<h2 id="2---jirafeau">2 - Jirafeau</h2>
+
+<p><img src="/assets/img/24/12-jirafeau.jpg" alt="Jirafeau" class="centered lazyload" /></p>
+
+<p><a href="https://gitlab.com/mojo42/Jirafeau">Jirafeau</a>, geçici dosya depolama ve
+transfer imkanı sağlıyor. <a href="https://send.vis.ee/">send.vis.ee</a> nin PHP ile
+yazılmış self-hosted versiyonu olarak düşünebilirsiniz. Örneğin arkadaşınıza bir
+dosya göndereceksiniz, dosyanın boyutu büyük ve mail atamıyorsunuz ya da küçük
+olsa bile mail kotasını doldurmak istemiyorsunuz. Jirafeau’ya yüklediğiniz zaman
+size verdiği tekil, unique, linki paylaştığınız kişiler dosyayı indiriyor. Bir
+süre sonra veya ilk indirmeden sonra ya da silme linkini kullanınca dosya
+siliniyor.</p>
+
+<p><a href="https://hub.docker.com/r/mojo42/jirafeau/">Docker</a></p>
+
+<h2 id="3---excalidraw-️">3 - Excalidraw ❤️</h2>
+
+<p><img src="/assets/img/24/12-excalidraw.jpg" alt="Excalidraw" class="centered lazyload" /></p>
+
+<p><a href="https://excalidraw.com/">excalidraw.com</a> un neredeyse aynısını self-hosted
+olarak çalıştırabilirsiniz. Daha çok toplantılarda, ekran paylaştığınız
+durumlarda hızlı çizimler yapmak için ya da taslak bir şeyler çizmek için
+kullanabilirsiniz. Varsayılan olarak el yazısı tarzı
+<a href="https://virgil.excalidraw.com/">Virgil</a> isimli bir yazı stili var,
+değiştirebiliyorsunuz. Benim favori araçlarımdan biri.</p>
+
+<p><a href="https://hub.docker.com/r/excalidraw/excalidraw">Docker</a></p>
+
+<h2 id="4---drawio">4 - draw.io</h2>
+
+<p><img src="/assets/img/24/12-drawio.jpg" alt="draw.io" class="centered lazyload" /></p>
+
+<p><a href="https://www.drawio.com/">draw.io</a> ünlü çizim araçlarından biri. Excalidraw’a
+kıyasla daha “resmi” çizimler oluşturmaya yarıyor. Microsoft Visio alternatifi
+gibi düşünebilirsiniz.</p>
+
+<p>draw.io’nun zaten <a href="https://github.com/jgraph/drawio-desktop/releases">masaüstü versiyonu
+mevcut.</a> Fakat dilerseniz web
+üzerinden de self-hosted olarak kullanabilirsiniz.</p>
+
+<p><a href="https://hub.docker.com/r/jgraph/drawio">Docker</a></p>
+
+<h2 id="5---cyberchef">5 - CyberChef</h2>
+
+<p><img src="/assets/img/24/12-cc.jpg" alt="draw.io" class="centered lazyload" /></p>
+
+<p>Son olarak bahsedeceğim araç <a href="https://gchq.github.io/CyberChef/">CyberChef</a>,
+<strong>The Cyber Swiss Army Knife</strong> olarak geçiyor. Var olan birçok minik modülü
+arka arkaya koyarak yeni şeyler <em>pişirebiliyorsunuz.</em> Kullanımı biraz da hayal
+gücünüze kalıyor. Nasıl çalıştığını anlamak için kurcalamanız gerekiyor!</p>
+
+<p><a href="https://github.com/gchq/CyberChef/pkgs/container/cyberchef">Docker</a></p>
+
+<hr />
+
+<h2 id="docker-compose-ve-reverse-proxy">Docker Compose ve Reverse Proxy</h2>
+
+<p>Yazıyı bitirmeden önce minik bir altyapı önerisinde bulunmak istiyorum.</p>
+
+<p>Birçok araç çalıştıracağınız zaman bunları ayrı ayrı <code class="language-plaintext highlighter-rouge">docker run</code> ile
+çalıştırmak yerine bilgilerinin bir <code class="language-plaintext highlighter-rouge">YAML</code> içerisinde bulunacağı <a href="https://docs.docker.com/compose/">Docker
+Compose</a> kullanmanızı öneririm. Bu sayede
+yeniden başlatma ve konfigürasyon değiştirme işlerinde işleriniz daha kolay
+olur.</p>
+
+<p>Araçları web üzerinden erişilebilir kılmak için çalıştırdığınız sunucu makinenin
+çeşitli portlarını <em>publish</em> etmek gerekiyor. Kendi bilgisayarınızda
+çalıştırıyorsanız sorun değil ama bir ekip olarak kullanıyorsanız araçları
+<code class="language-plaintext highlighter-rouge">http://makineadı:port</code> şeklinde açmak yerine <strong>Reverse Proxy</strong> kullanmanızı
+öneririm. Bu durumda her aracın kendi URL’si olacaktır. Örneğin
+<code class="language-plaintext highlighter-rouge">cyberchef.domain.abc</code>, <code class="language-plaintext highlighter-rouge">drawio.domain.abc</code> gibi. Bu sayede aracın adresi
+değişmeden arka planda değişiklik, sunucu ismi gibi yapabilirsiniz. Bu durumda
+port publish etmeniz de gerekmiyor. Elbette burada Docker Swarm ya da Kubernetes
+gibi daha kompleks çözümler kullanabilirsiniz fakat basit bir kullanım
+senaryosunu anlatıyorum.</p>
+
+<p><strong>Reverse Proxy</strong> nin bir avantajı da <strong>SSL termination</strong> ya da <strong>ForwardAuth</strong>
+gibi altyapıları kurabilmenize imkan sağlaması olacaktır. Örneğin Jirafeau
+servisini herkesin kullanmasını istemeyebilirsiniz. Fakat bu aracın kendine bir
+login mekanizması yok. İşte bu servisi bir Reverse Proxy arkasına alır ve
+ForwardAuth ile bir Authentication mekanizması kurarsanız bu servisi bir
+kullanıcı adı/şifre veya başka bir login mekanizması ile koruyabilirsiniz.</p>
+
+<p>Kullanabileceğiniz birçok reverse proxy mevcut,
+<a href="https://github.com/traefik/traefik">Traefik</a>, <a href="https://nginxproxymanager.com/">Nginx Proxy
+Manager</a> gibi. Yine her zaman olduğu gibi
+temelde aynı işi yapsalar da kullanım ve problem çözme tarzları farklı.</p>
+
+<p>Faydalı olması dileği ile…</p>]]></content><author><name>Alper Yazar</name></author><category term="tr" /><summary type="html"><![CDATA[Bu yazıda offline da çalışabilen ve çalışma veriminizi arttıracağını düşündüğüm 5 araçtan bahsediyorum.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.alperyazar.com/assets/img/24/12.jpg" /><media:content medium="image" url="https://www.alperyazar.com/assets/img/24/12.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Why do we have programming languages in the first place? Part 1</title><link href="https://www.alperyazar.com/why-programming-languages-part-1.html" rel="alternate" type="text/html" title="Why do we have programming languages in the first place? Part 1" /><published>2024-03-27T00:00:00+03:00</published><updated>2024-03-27T00:00:00+03:00</updated><id>https://www.alperyazar.com/why-programming-languages-part-1</id><content type="html" xml:base="https://www.alperyazar.com/why-programming-languages-part-1.html"><![CDATA[<p>In this two-part mini-series, I will share my understanding and thoughts on
+programming languages and computers in general. This first part will cover:</p>
+
+<ul>
+  <li>Types of processors</li>
+  <li>The language bridging us and processors</li>
+  <li>Key terms such as <strong>instruction set, instruction set architecture (ISA), machine
+code, assembly language</strong></li>
+</ul>
+
+<p>We have at least <strong>500 programming languages in existence today.</strong> <sup id="fnref:4f"><a href="#fn:4f" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> But why
+do we continue to invent them? Let’s talk! But first:</p>
+
+<h2 id="why-do-computers-exist-in-the-first-place-">Why do computers exist in the first place? 💻</h2>
+
+<p>Computers are expensive and require extensive engineering effort to develop. As
+individuals, we invest hundreds of dollars 💲 each year in our personal computers,
+including laptops, gaming consoles, mobile phones, desktops, and more. <strong>But why?</strong>
+They must serve a purpose, correct? Indeed. Actually, each of these computers
+addresses a specific problem we encounter. Computers can perform complex
+mathematical computations, facilitate aircraft landings, entertain us, enable
+over-the-air communication, and even contribute to the discovery of planets in
+space! But how do they accomplish these tasks? <strong>What is the magic behind their
+functionality?</strong></p>
+
+<hr />
+
+<p><img src="/assets/img/24/9-eniac.jpg" alt="ENIAC" class="centered lazyload" /></p>
+
+<p class="text-align-center"><a href="https://en.wikipedia.org/wiki/ENIAC">ENIAC</a>, <strong>E</strong>lectronic <strong>N</strong>umerical
+<strong>I</strong>ntegrator <strong>a</strong>nd <strong>C</strong>omputer, <strong>designed in 1945</strong> to solve
+military-related problems, stands as one of the earliest computers (The whole
+thing in the room is a single computer. Power consumption was <strong>higher than 150
+kW</strong>). With a cost exceeding <strong>6 million US Dollars</strong> (adjusted for inflation),
+it was capable of performing only <strong>5000 operations per second</strong>—a figure that
+may seem modest compared to today’s standards but still exceeded human capacity
+at the time.
+<a href="https://commons.wikimedia.org/wiki/File:Classic_shot_of_the_ENIAC.jpg">Photo</a></p>
+
+<hr />
+
+<p>The magic lies in the ability to <strong>leverage information</strong> to accomplish these
+tasks. Computers possess <strong>memory</strong> to <strong>store</strong> information and fast
+<strong>communication</strong> links to facilitate the exchange of data. Ultimately, the crux
+of computer functionality revolves around the generation and processing of
+information.</p>
+
+<blockquote>
+  <p>Computers are incredible inventions created by smart people, but there’s no
+actual magic involved. They work because they’ve been carefully designed and
+engineered. If you want to experience something truly magical, consider
+exploring the wonders of nature through the study of natural sciences. 🪄</p>
+</blockquote>
+
+<p>Nearly all problems solved by computers boil down to mathematical problems.
+Computers excel with numbers, capable of executing algorithms on data orders of
+magnitude faster than a human could. <strong>But how do they achieve this?</strong></p>
+
+<h2 id="processors">Processors</h2>
+
+<p>Processors serve as the heart ❤️ of computers (or brains 🧠, whatever organ you
+choose). A processor is an electronic hardware component capable of manipulating
+numbers at an incredibly high speed. While processors themselves can’t store
+data, they “process” (hence their name) the stored data, such as in RAM, and
+generate new data. They can achieve this at rates of billions of operations per
+second. Examples of processors include the <strong>CPU</strong> (Central <strong>Process</strong>ing
+Unit), <strong>GPU</strong> (Graphics <strong>Process</strong>ing Unit), and <strong>TPU</strong> (Tensor
+<strong>Process</strong>ing Unit).</p>
+
+<p><strong>CPU</strong>s, or <strong>Central Processing Units</strong>, are general-purpose processors found in
+nearly all computers and many electronic devices. They are designed to handle a
+wide range of tasks, such as text editing, web surfing, and number crunching,
+typical of personal computers. Unlike specialized processors optimized for
+specific tasks, CPUs are not tailored to excel in any single function but rather
+are engineered to efficiently handle a variety of tasks.</p>
+
+<p><img src="/assets/img/24/9-6502.jpg" alt="6502" class="centered lazyload" /></p>
+
+<p class="text-align-center">The <a href="https://en.wikipedia.org/wiki/MOS_Technology_6502">MOS Technology 6502</a> is
+a highly renowned microprocessor introduced in 1975, widely utilized in numerous
+microcomputers and video game consoles during the 1980s era. Capable of
+executing 1-2 million operations per second, it represented a significant leap
+in computing power compared to the 5000 operations per second capability of the
+ENIAC, which was designed in 1945. Despite its enhanced performance, the price
+of the 6502 remains relatively affordable, around $150 today when adjusted for
+inflation (originally $25 in 1975).
+<a href="https://en.wikipedia.org/wiki/File:MOS_6502AD_4585_top.jpg">Photo</a></p>
+
+<hr />
+
+<p><strong>GPU</strong>s, or <strong>Graphics Processing Units</strong>, differ from CPUs. While they are also
+processors, their internal architecture is specifically optimized to efficiently
+handle calculations required for graphical tasks. GPUs excel in processing
+graphical data by leveraging parallel computing, utilizing thousands of multiple
+processors designed to execute tasks simultaneously. Because neural network
+problems share a similar parallel nature to graphics tasks, GPUs are
+increasingly being utilized not only for graphical applications but also for
+solving AI problems. Nonetheless, they remain processors at their core.</p>
+
+<p><img src="/assets/img/24/9-rtx-4090.jpg" alt="RTX 4090" class="centered lazyload" /></p>
+
+<p class="text-align-center">The modern GPU card, Nvidia’s RTX 4090, released in 2022 for approximately
+$1600, boasts impressive capabilities. With its <a href="https://en.wikipedia.org/wiki/GeForce_40_series">GeForce 40 series
+GPU</a>, it can perform 73,000
+billion single-precision floating-point operations per second while operating
+under 450W. <a href="https://en.wikipedia.org/wiki/File:NVIDIA_RTX_4090.jpg">Photo</a></p>
+
+<hr />
+
+<p><strong>TPU</strong>s, or <strong>Tensor Processing Units</strong>, are custom processors specifically
+designed for neural network applications. Developed by Google,
+<a href="https://en.wikipedia.org/wiki/Tensor_Processing_Unit">TPU</a>s are engineered to
+perform the mathematical operations necessary for neural network tasks more
+efficiently than GPUs. Unlike GPUs, TPUs are tailored solely for optimizing the
+performance of neural network computations.</p>
+
+<p><img src="/assets/img/24/9-TPUv3.jpg" alt="TPU" class="centered lazyload" /></p>
+
+<p class="text-align-center">Photo of TPUv3 processors. We can’t see them directly because they are under
+heatsinks. TPUv4 announced in 2021 is capable of doing 275,000 billion
+operations per second while operating under 170W.
+<a href="https://en.wikipedia.org/wiki/File:Tensor_Processing_Unit_3.0.jpg">Photo</a></p>
+
+<hr />
+
+<p><strong>Microcontroller</strong>s, MCUs, present in nearly all electronic devices, also
+contain processors within them. In general, these processors are specifically
+designed to handle tasks that are not computationally intensive. However,
+certain microcontrollers are engineered to execute tasks with minimal power
+consumption, enabling devices to operate for years a single battery.</p>
+
+<p><img src="/assets/img/24/9-PIC18F8720.jpg" alt="PIC" class="centered lazyload" /></p>
+
+<p class="text-align-center">A <a href="https://en.wikipedia.org/wiki/PIC_microcontrollers">PIC</a> microcontroller from
+<a href="https://en.wikipedia.org/wiki/Microchip_Technology">Microchip Technology</a>.
+<a href="https://commons.wikimedia.org/wiki/File:PIC18F8720.jpg">Photo</a></p>
+
+<hr />
+
+<p>As evident, there exist numerous types of processors, beyond the examples
+provided, each tailored for specific purposes. Various companies are involved in
+the design and manufacturing of these processors. For instance, Intel and AMD
+are renowned for their CPUs, while Nvidia specializes in GPUs.</p>
+
+<p><strong>However, regardless of the type or manufacturer, all these processors
+fundamentally operate in a similar manner. The process of utilizing or
+programming them has remained essentially the same for decades, spanning across
+a wide range of processors.</strong></p>
+
+<h2 id="talking-with-processors">Talking with Processors</h2>
+
+<p>Now that we’ve grasped the importance of the processor in a computer system,
+whether it’s a CPU, GPU, TPU, or any other variant, let’s delve into its primary
+functions. Broadly speaking, a processor performs two types of tasks:
+<strong>arithmetic operations</strong>, which involve mathematical computations like
+addition, multiplication, and division, and <strong>logical operations</strong>, which entail
+making decisions based on conditions—for instance, determining if number <code class="language-plaintext highlighter-rouge">A</code> is
+greater than <code class="language-plaintext highlighter-rouge">B</code> and taking appropriate actions accordingly. But how exactly do
+we communicate with a processor to get our tasks done?</p>
+
+<p>Let’s imagine that I’ve purchased an <a href="https://www.amd.com/en/products/apu/amd-ryzen-7-8700g">AMD Ryzen 7
+8700G</a> CPU from a
+computer store. This CPU, designed by AMD and released in early 2024, is capable
+of performing billions of operations per second, which is quite impressive. Now,
+let’s say I simply want to add two numbers together and obtain the result. How
+can I communicate this task to the CPU? How do I tell the CPU, <strong>“Hey, here are
+two numbers. Please add them together and return the result to me?”</strong></p>
+
+<p><img src="/assets/img/24/9-amd-ryzen-7-8700g.jpg" alt="AMD Ryzen 7 8700G" class="centered lazyload" /></p>
+
+<p class="text-align-center">AMD Ryzen 7 8700G. Photo by <a href="https://www.tomshardware.com/pc-components/cpus/amd-ryzen-7-8700g-cpu-review">Tom’s
+Hardware.</a></p>
+
+<hr />
+
+<p>As we’ve observed, there is a wide array of processors available today, each
+tailored to different applications with various optimizations such as power
+consumption and speed. Over the past 80 years, these processors have undergone
+dramatic changes in size, performance, and price. Comparing the computational
+power of a modern basic cell phone to that of the <a href="https://en.wikipedia.org/wiki/Apollo_Guidance_Computer">Apollo Guidance
+Computer</a>, for example,
+would be practically meaningless. However, with all these historical
+advancements and variations, one fundamental aspect remains nearly unchanged:
+<strong>the basic operational principle of a processor.</strong></p>
+
+<p>Processors are essentially devices designed to execute tasks, functioning as an
+<em>execution engine</em> of sorts. Regardless of their processing power, a processor
+simply carries out the instructions it is given—no more, no less. We provide a
+list of commands, or <strong>instruction</strong>s, to a processor, and it executes them one
+by one. Each instruction tells the processor precisely what action to take. A
+computer program essentially consists of an ordered set of instructions for the
+processor to follow. These instructions are stored in memory, typically RAM, and
+can be accessed by the processor. The processor then begins executing these
+instructions sequentially, from start to finish. Below is an illustration of how
+a program appears in memory:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Instruction 001: Do this
+Instruction 002: Do that
+Instruction 003: If A &lt; N, do this otherwise do that
+...
+Instruction 875: Do this
+Instruction 876: End
+</code></pre></div></div>
+
+<p>As you may have noticed, for a processor to be capable of performing useful
+tasks, it needs to support more than just one instruction. A processor that can
+only add two numbers together without any additional functionality wouldn’t be
+very practical, would it? Therefore, processors are designed to support a wide
+range of instructions, and the set of instructions supported by a processor is
+called its <strong>Instruction Set</strong>.</p>
+
+<p>If you’re interested in this topic, you may have come across two terms: <strong>RISC</strong>
+and <strong>CISC</strong>. In these terms, <code class="language-plaintext highlighter-rouge">IS</code> in the middle stands for <strong>I</strong>nstruction
+<strong>S</strong>et. RISC stands for <strong>R</strong>educed <strong>I</strong>nstruction <strong>S</strong>et <strong>C</strong>omputer, while
+CISC stands for <strong>C</strong>omplex <strong>I</strong>nstruction <strong>S</strong>et <strong>C</strong>omputer. Anyway, let’s
+proceed with our exploration: talking with processors.</p>
+
+<hr />
+
+<p>Let’s delve into instructions in more detail. As mentioned earlier, instructions
+are stored in memory and are accessible by the processor. Computers operate
+using numbers, <a href="https://en.wikipedia.org/wiki/Binary_number">binary numbers</a>
+most of the time, which consist of 0s and 1s. This applies to both memory and
+processors. Each instruction communicates to the processor what action to take.
+To efficiently store these commands in memory, each command is encoded with a
+number. For instance, for a specific processor, reading a “01” from memory might
+indicate an addition operation, “10” for subtraction, “11” for comparison, and so
+on. In a moment, I’ll provide a real-life example from a processor to illustrate
+this further. Stay tuned!</p>
+
+<h3 id="example-pic16f84">Example: PIC16F84</h3>
+
+<p>Let’s examine a real-life example. To maintain simplicity and focus on the topic
+without getting distracted by advanced features implemented by a processor, I’ve
+chosen an old microcontroller from Microchip Technology: the
+<a href="https://www.microchip.com/en-us/product/pic16f84">PIC16F84</a>. This
+microcontroller holds a special significance for me because it was the first
+microcontroller I programmed when I began experimenting with hobby electronics
+in high school.</p>
+
+<p><img src="/assets/img/24/9-PIC16C84.jpg" alt="PIC 16C84" class="centered lazyload" /></p>
+
+<p class="text-align-center"><a href="https://en.wikipedia.org/wiki/PIC16x84">PIC16C84</a> is an older version of
+PIC16F84. It was introduced in 1993.
+<a href="https://commons.wikimedia.org/wiki/File:Two_Microchip_PIC16C84_chips.jpg">Photo</a></p>
+
+<p>The datasheet of the PIC16F84 microcontroller is available on the
+<a href="https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/30430D.pdf">manufacturer’s
+website.</a>
+Let’s navigate to the “Instruction Set Summary” section, located on page 55, to
+gain insight into the instructions supported by this microcontroller.</p>
+
+<p>This microcontroller consists of a CPU and an internal memory to store
+instructions that will be executed sequentially by the CPU. However, the memory
+structure is somewhat unusual because each row has a width of <strong>14 bits.</strong>
+Typically, we are familiar with memories with widths that are multiples of 8
+bits, such as 8, 16, or 32 bits. Nevertheless, there’s nothing inherently wrong
+with having a memory width of 14 bits. We can visualize the memory as follows:</p>
+
+<p><img src="/assets/img/24/9-PIC-memory.png" alt="PIC 16F84 Memory" class="centered lazyload" /></p>
+
+<p class="text-align-center">Note that each row is filled with random 14-bit data just for illustrative purposes.</p>
+
+<p>The internal program memory of the PIC16F84 is capable of holding 1024
+instructions, each with a width of 14 bits.</p>
+
+<p>On the same page, page 55, the instruction format is illustrated as follows:</p>
+
+<p><img src="/assets/img/24/9-figure-9-1.png" alt="PIC16F84 Instruction Format" class="centered lazyload" /></p>
+
+<p class="text-align-center">PIC16F84 Instruction Format</p>
+
+<p>The first notable aspect is that this particular processor can interpret four
+different instruction formats. Depending on the instruction category, each bit
+in the 14-bit word carries a distinct significance. Every instruction includes a
+common field known as <strong>OPCODE</strong>. All instructions supported by the processor are
+assigned a unique number, referred to as the OPCODE. The remaining bits may be
+interpreted differently by the processor based on the instruction, i.e., the
+OPCODE.</p>
+
+<p>On the next page in the datasheet, Table 9-2 lists all instructions, i.e., the
+<strong>Instruction Set</strong>, along with their corresponding OPCODEs.</p>
+
+<p><img src="/assets/img/24/9-table-9-2.png" alt="PIC16F84 All Instructions" class="centered lazyload" /></p>
+
+<p class="text-align-center">All instructions supported by PIC16F84</p>
+
+<p>The PIC16F84 supports 35 distinct instructions. For humans, it is not practical
+to memorize the bit patterns for all instructions. Therefore, each instruction
+is assigned a <em>nickname</em> called a <strong>mnemonic.</strong> In this context, a mnemonic is
+the term for the instruction name.</p>
+
+<p>Some instructions, like <code class="language-plaintext highlighter-rouge">SLEEP</code>, don’t require any additional information from
+the programmer. However, many instructions do need additional information to
+operate. For instance, <code class="language-plaintext highlighter-rouge">CLRF</code> is used to fill a memory location with all 0s.
+However, we have to provide the address of the location, otherwise <code class="language-plaintext highlighter-rouge">CLRF</code> won’t
+know which memory location to clear. These additional parameters given with
+instruction names are called <strong>operands</strong> in this context.</p>
+
+<p>To delve deeper into the subject, let’s analyze an instruction thoroughly. Let’s
+consider the <code class="language-plaintext highlighter-rouge">ANDLW</code> instruction. The detailed explanation is provided on page 57
+of the datasheet as follows:</p>
+
+<p><img src="/assets/img/24/9-andlw.png" alt="ANDLW" class="centered lazyload" /></p>
+
+<p>The first 6-bit value, <code class="language-plaintext highlighter-rouge">111001</code>, represents the OPCODE of this instruction. The
+remaining 8 bits constitute the single operand required for the instruction.
+Essentially, the <code class="language-plaintext highlighter-rouge">ANDLW</code> instruction performs a logical AND operation between
+the content of the <code class="language-plaintext highlighter-rouge">W</code> register and the constant value encoded in the 8-bit
+operand field. The result is then stored back into the <code class="language-plaintext highlighter-rouge">W</code> register.</p>
+
+<p>ℹ Note that the <code class="language-plaintext highlighter-rouge">W</code> register is a special storage area found in the processor of
+this microcontroller. This name is specific to this processor, and other
+processors may have a different number of registers with different names.
+Therefore, don’t worry too much about this naming convention—it’s unique to this
+particular microcontroller.</p>
+
+<p>The processor in the microcontroller essentially reads 14-bit wide instructions
+from the program memory, row by row. Let’s say the processor reads the value
+<code class="language-plaintext highlighter-rouge">11100100010010</code>. When we split this value, we have <code class="language-plaintext highlighter-rouge">111001</code> concatenated with
+<code class="language-plaintext highlighter-rouge">00010010</code>. This represents the <code class="language-plaintext highlighter-rouge">ANDLW</code> instruction with an operand value of
+0x12 (in hexadecimal, 18 in decimal). When the processor reads this particular
+14-bit value, it performs a logical AND operation between the value stored in
+the <code class="language-plaintext highlighter-rouge">W</code> register and 0x12, and then writes the result back to the <code class="language-plaintext highlighter-rouge">W</code> register.</p>
+
+<p>The program memory could be like this:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;14-bit wide instruction&gt;
+&lt;14-bit wide instruction&gt;
+...
+11100100010010 -&gt; ANDLW 0x12
+...
+&lt;14-bit wide instruction&gt;
+</code></pre></div></div>
+
+<p>If you continue reading the remaining part of the datasheet, you’ll notice that
+each instruction is explained in detail. Similarly, all processors have similar
+documents that explain each instruction and its effects on the state of the
+processor (such as registers).</p>
+
+<p>The set of instructions + the architecture that behaves according to those
+instructions is referred to as the <strong>Instruction Set Architecture (ISA)</strong>.</p>
+
+<hr />
+
+<p>In summary, processors only understand instructions, often accompanied by
+operands. To achieve meaningful outcomes, programmers must provide instructions
+in a logical order. Processors lack awareness of the tasks they are performing
+(such as calculating the Fibonacci Sequence); it is the programmer’s
+responsibility to ensure that the set of instructions executed by the processor
+yields a meaningful result. This result may be stored in main memory, such as
+RAM. Importantly, <strong>processors do not understand programming languages like
+JavaScript, Python, or C.</strong> They can only execute instructions stored in memory,
+supported by their own ISA, one by one, without deviation.</p>
+
+<h2 id="isa-the-contract">ISA: The Contract</h2>
+
+<p>Commonly, ISA is defined as the contract between software and hardware.
+Considering ISA as an agreement between hardware and software people is a very
+apt representation. Let’s explore why.</p>
+
+<p>In the previous example, we explored the ISA implemented by Microchip company in
+the PIC16F84 microcontroller. However, we didn’t delve into the internals of the
+processor. We don’t know how Microchip uses flip-flops and transistors to build
+the processor. We don’t know how the logical AND operation is implemented at the
+transistor level, and <strong>we don’t need to!</strong> The only thing we need to utilize a
+processor designed by a company is the details explained in the ISA.</p>
+
+<p>The concept of <strong>ISA is similar to API (Application Programming Interface)</strong> in the
+software world. As programmers who are willing to utilize existing processors,
+rather than design them, we only need to know how to use them, not their
+internal structure. As long as processor manufacturers adhere to the rules
+defined in the corresponding ISA, they are free to design whatever circuit they
+like, and programmers won’t notice any difference.</p>
+
+<p><img src="/assets/img/24/9-isa.png" alt="ISA" class="centered lazyload" /></p>
+
+<p class="text-align-center">ISA is the contract between software and hardware. Taken from <a href="https://people.inf.ethz.ch/omutlu/">Onur
+Mutlu</a>’s lecture slides.</p>
+
+<p>Processor design companies, also known as hardware companies, have the
+flexibility to design processors with vastly different internal architectures
+while still supporting exactly the same ISA. These differences in internal
+structures can result in the design of processors that are more power-efficient,
+faster, or cheaper.</p>
+
+<p>The contrast between two processors supporting the same ISA can be significant.
+One processor may be widely adopted and used in numerous systems, while the
+other may not be used at all, potentially leading to financial crises within a
+company.</p>
+
+<p>In summary, the metrics of two processors can be dramatically opposite, even if
+they implement the same ISA.</p>
+
+<h2 id="isa-bad-and-good-news">ISA: Bad and Good News</h2>
+
+<p>Okay, we understand that in order to utilize a processor and write programs that
+perform valuable tasks, we have to study the ISA of the processor and program it
+accordingly. <strong>But how many ISAs are currently in use?</strong> Can we talk about a
+<strong>universal ISA</strong> that all processors support, so we as programmers can learn
+one ISA to work with all processors?</p>
+
+<p>The bad news is that there is not just one ISA, I’m afraid. Since the inception
+of the first electronic processors, companies began developing their own ISAs.
+Therefore, we can’t talk about a universal ISA. However, the good news is that
+processors are grouped together in such a way that a group of processors
+implements the same ISA. So, the number of ISAs is less than the number of
+designed processors.</p>
+
+<p>For example, as programmers, we don’t need to learn a different ISA for each CPU
+designed by Intel; fortunately, they share a common ISA base.</p>
+
+<p>The term <strong>architecture</strong> commonly refers to the ISA implemented by a processor.
+From a CPU standpoint, common architectures (ISAs) include <strong>ARM (v7, v8, v9…),
+x86, x86-64, MIPS, RISC-V,</strong> etc. For example, there are multiple processor design
+companies designing ARM CPUs. From a programmer’s viewpoint, instructions
+suitable for the ARMv7 ISA, for instance, can be executed on CPUs from both
+companies.</p>
+
+<p>Today, many architectures (ISAs) have “plugin” capabilities. While maintaining
+the base instructions as a minimum requirement, a vendor may implement
+additional instructions. These additional instructions are often referred to as
+<strong>extensions.</strong></p>
+
+<p>For example, ARM has SVE (Scalable Vector Extension) to implement fast
+vector-based operations. If a program uses these kinds of extensions, these
+instructions won’t work on a similar processor lacking that extension.</p>
+
+<h2 id="putting-instructions-into-the-memory">Putting Instructions into The Memory</h2>
+
+<p>Until now, we’ve assumed that instructions executed by the processor are
+available in the memory somehow.
+<strong>But how do we actually put those instructions into memory?</strong></p>
+
+<p>In today’s computers, when we double-click an application, the instructions for
+the application are loaded into memory by the operating system (OS). We don’t
+even think about the process of reading instructions from disk and putting them
+into memory (RAM) and letting the CPU run the instructions. However, this
+process wasn’t as trivial in the old days as it is today.</p>
+
+<p>Many old computers lacked an operating system to read instructions from storage
+and load them into memory. Some had operating systems available, but the cost of
+operating systems or computers capable of running them was prohibitively high,
+so people often didn’t choose those systems. Additionally, storing programs on
+paper (punch cards) could be cheaper than storing them on hard disks. Since this
+subject is beyond the scope of this post, I won’t go into details, but if you’re
+interested, I recommend watching the following video:</p>
+
+<!-- https://github.com/nathancy/jekyll-embed-video -->
+<!-- https://yoast.com/how-to-make-youtube-videos-responsive/ -->
+<div class="embed-container" style="text-align: center;">
+<iframe class="youtube-video lazyload" src="https://www.youtube.com/embed/nwDq4adJwzM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+</div>
+
+<center><a target="_blank" href="https://www.youtube.com/watch?v=nwDq4adJwzM" rel="nofollow">Video</a></center>
+
+<p>and</p>
+
+<!-- https://github.com/nathancy/jekyll-embed-video -->
+<!-- https://yoast.com/how-to-make-youtube-videos-responsive/ -->
+<div class="embed-container" style="text-align: center;">
+<iframe class="youtube-video lazyload" src="https://www.youtube.com/embed/KG2M4ttzBnY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+</div>
+
+<center><a target="_blank" href="https://www.youtube.com/watch?v=KG2M4ttzBnY" rel="nofollow">Video</a></center>
+
+<h3 id="altair-8800">Altair 8800</h3>
+
+<p>As an example, I would like to talk about the Altair 8800. According to many
+resources, it is considered the first personal (micro)computer. <sup id="fnref:1f"><a href="#fn:1f" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> It
+features an Intel 8080 processor and was designed by MITS in 1974. The Altair
+8800 played a significant role in the history of Microsoft and Apple.</p>
+
+<p><img src="/assets/img/24/9-altair.jpg" alt="Altair 8800" class="centered lazyload" /></p>
+
+<p class="text-align-center"><a href="https://commons.wikimedia.org/wiki/File:Altair_8800_Computer.jpg">Altair 8800</a></p>
+
+<p>Did you notice something? This computer doesn’t have a keyboard, mouse, or
+screen! How are you supposed to program it? Well, you would use the front panel,
+which consists of a bunch of switches and LEDs, and perform something called
+<strong>Front Panel Programming.</strong></p>
+
+<p><img src="/assets/img/24/9-altair-panel.jpg" alt="Altair 8800 Front Panel" class="centered lazyload" /></p>
+
+<p class="text-align-center"><a href="https://commons.wikimedia.org/wiki/File:MITS_Altair_8800_Front_Panel.jpg">Altair 8800 Front Panel</a></p>
+
+<p>By toggling switches, a programmer inputs 0s and 1s into the memory, which are
+then read by the processor. After inputting all instructions one by one and
+hitting the <code class="language-plaintext highlighter-rouge">RUN</code> button, the processor executes the instructions stored in the
+memory. After running all instructions, the results can be read back by toggling
+switches and observing LEDs.</p>
+
+<p><strong>This is how a “real programmer” operates a computer!</strong></p>
+
+<!-- https://github.com/nathancy/jekyll-embed-video -->
+<!-- https://yoast.com/how-to-make-youtube-videos-responsive/ -->
+<div class="embed-container" style="text-align: center;">
+<iframe class="youtube-video lazyload" src="https://www.youtube.com/embed/cwEmnfy2BhI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+</div>
+
+<center><a target="_blank" href="https://www.youtube.com/watch?v=cwEmnfy2BhI" rel="nofollow">Video</a></center>
+
+<p>and</p>
+
+<!-- https://github.com/nathancy/jekyll-embed-video -->
+<!-- https://yoast.com/how-to-make-youtube-videos-responsive/ -->
+<div class="embed-container" style="text-align: center;">
+<iframe class="youtube-video lazyload" src="https://www.youtube.com/embed/7nDcTRqZu8E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+</div>
+
+<center><a target="_blank" href="https://www.youtube.com/watch?v=7nDcTRqZu8E" rel="nofollow">Video</a></center>
+
+<h2 id="machine-language">Machine Language</h2>
+
+<p>As you can see, we communicate with computers via instructions given in the
+corresponding ISA. The instruction set resembles a dictionary for a language
+that a processor can understand. This language, which a processor can understand
+or “speak,” is called <strong>machine language.</strong> Communicating with a processor, or with
+a more technical term, programming it with raw instructions using 0s and 1s, is
+called <strong>machine language programming.</strong> Programming a computer with 0s and 1s
+directly is the lowest level of programming possible. Machine language is also
+known as <strong>machine code.</strong></p>
+
+<p>In programming terminology, we have <strong>low-level</strong> and <strong>high-level</strong> languages.
+Low-level languages are closer to the machine than to a human. On the other
+hand, high-level languages are more suitable for humans; they resemble natural
+human language more than machine language.</p>
+
+<p>Clearly, programs written with 0s and 1s are very close to machines but not to
+humans. However, this is what computers or processors understand: 0s and 1s.</p>
+
+<h2 id="assembly-the-first-step-towards-to-programming-languages">Assembly: The First Step Towards to Programming Languages</h2>
+
+<p>Although programming a computer with machine language is a natural way of
+programming from the perspective of a processor or computer, understanding a
+bunch of 0s and 1s put together isn’t an easy task for a human. A programmer
+needs to communicate with colleagues, review code, and so on. However, trying to
+understand 0s and 1s and writing programs with them is error-prone and a very
+time-consuming task.</p>
+
+<p>So instead of writing programs in 0s and 1s, why can’t we write them in a more
+human-readable way and then convert them to 0s and 1s that a processor can
+understand? This is exactly how <strong>assembly languages</strong> work!</p>
+
+<blockquote>
+  <p>🤔 Trivia: It is believed that the first assembler program was developed for a
+British computer known as EDSAC in 1949. <sup id="fnref:2f"><a href="#fn:2f" class="footnote" rel="footnote" role="doc-noteref">3</a></sup></p>
+</blockquote>
+
+<p>If you remember, we defined two terms with the PIC16F84 example: <em>mnemonic</em> and
+<em>operand.</em> Instead of writing raw 0s and 1s, we can write instructions using
+“nicknames” of instructions like <code class="language-plaintext highlighter-rouge">ADD</code>, <code class="language-plaintext highlighter-rouge">SUB</code>, <code class="language-plaintext highlighter-rouge">GOTO</code>, <code class="language-plaintext highlighter-rouge">CLRF</code>, etc. Then, a
+computer program called an <strong>assembler</strong> converts those words into 0s and 1s
+that a particular CPU can understand. Programmers can interpret words like <code class="language-plaintext highlighter-rouge">ADD</code>
+more easily than <code class="language-plaintext highlighter-rouge">000100101</code>, right?</p>
+
+<p>An assembler serves a broader purpose beyond simply translating words into 0s
+and 1s. I’ll delve deeper into this concept with an explanation using a specific
+assembly program designed for the
+<a href="https://www.microchip.com/en-us/product/pic16f628">PIC16F628</a>, a well-known
+microcontroller from Microchip.</p>
+
+<pre><code class="language-asm">CNTR1 EQU H'20'
+CNTR2 EQU H'21'
+
+  CLRF    PORTB ; Clear PORTB
+  BANKSEL TRISB
+  CLRF    TRISB
+  BANKSEL PORTB
+LOOP
+  MOVLW h'00'
+  MOVWF PORTB
+  CALL  DELAY
+  MOVLW h'FF'
+  MOVWF PORTB
+  CALL  DELAY
+  GOTO  LOOP
+DELAY
+  MOVLW h'FF'
+  MOVWF CNTR1
+LOOP1
+  MOVLW h'FF'
+  MOVWF CNTR2
+LOOP2
+  DECFSZ CNTR2, F
+  GOTO   LOOP2
+  DECFSZ CNTR1, F
+  GOTO   LOOP1
+  RETURN
+  END
+</code></pre>
+
+<p>This code doesn’t accomplish anything particularly useful; it simply sets some
+registers and then loops through two nested loops. However, the intention here
+is to illustrate the structure of an assembly language program.</p>
+
+<p>Most of the lines in the program correspond to a single instruction for the
+processor, such as <code class="language-plaintext highlighter-rouge">MOVLW</code>, <code class="language-plaintext highlighter-rouge">MOVWF</code>, and <code class="language-plaintext highlighter-rouge">CALL</code>. Some of them are included for
+the sake of simplicity in creating assembly programs.</p>
+
+<p>For example, <code class="language-plaintext highlighter-rouge">CNTR1 EQU H'20'</code> creates a substitution word <code class="language-plaintext highlighter-rouge">CNTR1</code>, which will
+be replaced by <code class="language-plaintext highlighter-rouge">0x20</code> when the assembler converts the program into 0s and 1s
+that the processor can understand. This functionality is very similar to the
+<code class="language-plaintext highlighter-rouge">#define CNTR1 0x20</code> preprocessor directive in C. The same concept applies to
+<code class="language-plaintext highlighter-rouge">CNTR2</code>, <code class="language-plaintext highlighter-rouge">PORTB</code>, and <code class="language-plaintext highlighter-rouge">TRISB</code>. This feature of the assembler simplifies
+modifications to the program. Instead of writing <code class="language-plaintext highlighter-rouge">0x20</code> everywhere and then
+performing a search-and-replace, one can easily change <code class="language-plaintext highlighter-rouge">CNTR1 EQU H'20'</code> to
+another value if needed. The definitions for <code class="language-plaintext highlighter-rouge">PORTB</code> and <code class="language-plaintext highlighter-rouge">TRISB</code> are provided by
+the vendor so that the user doesn’t need to memorize the actual register
+addresses.</p>
+
+<p>Another feature commonly supported by assemblers is the use of labels. <code class="language-plaintext highlighter-rouge">DELAY</code>,
+<code class="language-plaintext highlighter-rouge">LOOP</code>, <code class="language-plaintext highlighter-rouge">LOOP1</code>, and <code class="language-plaintext highlighter-rouge">LOOP2</code> are labels. When a label is used with an
+instruction like <code class="language-plaintext highlighter-rouge">GOTO</code>, the assembler automatically calculates the address of
+the instruction labeled by the label and generates the correct instruction that
+directs the processor to start executing that instruction. This simplifies the
+programmer’s life, as otherwise, the programmer would need to manually calculate
+offsets between instructions.</p>
+
+<p>Many assemblers offer features to fill a memory region with text, typically
+represented in ASCII, along with other handy functionalities. However, an
+assembly language for a processor strictly adheres to its ISA and machine
+language specifications. These additional features simply make a programmer’s
+life a bit easier. Since assembly language closely mirrors machine language with
+some helpful additions, it is also referred to as <strong>symbolic machine language</strong>
+or <strong>symbolic machine code.</strong> While we write programs in a manner similar to
+machine language but we use symbols to create them. Ultimately, the assembler
+converts the program into machine language, consisting solely of 0s and 1s.</p>
+
+<h3 id="example">Example</h3>
+
+<p>Since assembly languages strictly adhere to the instructions defined in a
+particular ISA, <strong>we have different assembly languages for each architecture.</strong>
+Let’s write a very simple function for different architectures. The function takes
+two inputs and calculates the sum of their squares: <code class="language-plaintext highlighter-rouge">x^2 + y^2</code>.</p>
+
+<p>For <strong>x86-64</strong> architecture:</p>
+
+<pre><code class="language-asm">mov     eax, DWORD PTR [rbp-20]
+imul    eax, eax
+mov     edx, eax
+mov     eax, DWORD PTR [rbp-24]
+imul    eax, eax
+add     eax, edx
+mov     DWORD PTR [rbp-4], eax
+</code></pre>
+
+<p>For <strong>RISC-V 64-bits</strong> architecture:</p>
+
+<pre><code class="language-asm">lw      a5,-36(s0)
+mulw    a5,a5,a5
+sext.w  a4,a5
+lw      a5,-40(s0)
+mulw    a5,a5,a5
+sext.w  a5,a5
+addw    a5,a4,a5
+sw      a5,-20(s0)
+</code></pre>
+
+<p>and for <strong>MIPS</strong>:</p>
+
+<pre><code class="language-asm">lw      $2,24($fp)
+nop
+mult    $2,$2
+mflo    $3
+lw      $2,28($fp)
+nop
+mult    $2,$2
+mflo    $2
+addu    $2,$3,$2
+sw      $2,8($fp)
+</code></pre>
+
+<p>As you may easily notice, the same functionality is achieved with different
+assembly programs for different architectures. Since their ISAs are different,
+the corresponding assembly programs also differ. Although all of them share a
+similar pattern and some instructions appear similar, one has to learn each
+assembly language for the processors they work on.</p>
+
+<p>A similar issue persists even when working with very similar processors. Let’s
+consider another example. In this case, assume we have three variables, x, y,
+and z, and we aim to implement z = x + y, where all of them are integers with a
+width of 64 bits.</p>
+
+<p>For ARMv7:</p>
+
+<pre><code class="language-asm">ldr     r1, [sp, #16]
+ldr     r0, [sp, #20]
+ldr     r3, [sp, #8]
+ldr     r2, [sp, #12]
+adds    r1, r1, r3
+adc     r0, r0, r2
+str     r1, [sp]
+str     r0, [sp, #4]
+</code></pre>
+
+<p>For ARMv8:</p>
+
+<pre><code class="language-asm">ldr     x8, [sp, #24]
+ldr     x9, [sp, #16]
+add     x8, x8, x9
+str     x8, [sp, #8]
+</code></pre>
+
+<p>The assembly programs for both architectures are very similar; they both contain
+almost the same instructions. However, the program for ARMv8 has almost half the
+number of instructions compared to the program for ARMv7. This is because ARMv8
+is a 64-bit processor architecture, and since the “natural” word length of this
+architecture is 64 bits, a single <code class="language-plaintext highlighter-rouge">add</code> instruction is sufficient to sum up two
+64-bit variables. On the other hand, ARMv7 is a 32-bit processor architecture
+and cannot handle 64-bit variables as easily as ARMv8. Therefore, one has to
+split a 64-bit variable into two 32-bit variables and perform multiple
+additions.</p>
+
+<hr />
+
+<p>As you can see, programming in assembly language is easier than programming in
+machine language. However, one must learn the ISA for each architecture and
+consider other factors such as variable sizes and architectural details. Let’s
+imagine that you’ve written a fairly large assembly program for the ARMv7
+architecture, and one day you need to run the same program on an x86-64
+architecture. In that case, you would have to rewrite your program in x86-64
+assembly language. Rewriting the same program for a different architecture or
+system is known as <strong>porting.</strong> At the assembly language level, porting is not
+an easy task because you have to rewrite the entire program again. If you are
+supposed to port the same program to five different architectures, good luck!
+You will have to rewrite and debug the same program five times using different
+assembly languages.</p>
+
+<p>As we conclude this section, it’s important to recognize that even within the
+same architecture, there can be multiple assembly language variants. Take x86
+assembly, for instance, where two prominent styles exist: <strong>AT&amp;T and Intel.</strong>
+<sup id="fnref:3f"><a href="#fn:3f" class="footnote" rel="footnote" role="doc-noteref">4</a></sup> While these styles may appear similar, they differ in the order of
+instruction parameters. Nevertheless, despite these variations, they ultimately
+produce the same machine code.</p>
+
+<p>This concludes part 1. In part 2, we’ll explore what can be built on top of
+assembly language, and I’ll share my personal insights on the existence of
+various programming languages. Stay tuned for more!</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:4f">
+      <p><a href="https://en.wikipedia.org/wiki/List_of_programming_languages">https://en.wikipedia.org/wiki/List_of_programming_languages</a> <a href="#fnref:4f" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:1f">
+      <p><a href="https://en.wikipedia.org/wiki/Altair_8800">https://en.wikipedia.org/wiki/Altair_8800</a> <a href="#fnref:1f" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2f">
+      <p><a href="https://en.wikipedia.org/wiki/EDSAC">https://en.wikipedia.org/wiki/EDSAC</a> <a href="#fnref:2f" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3f">
+      <p><a href="https://en.wikipedia.org/wiki/X86_assembly_language#Syntax">https://en.wikipedia.org/wiki/X86_assembly_language#Syntax</a> <a href="#fnref:3f" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name>Alper Yazar</name></author><category term="en" /><summary type="html"><![CDATA[There are hundreds of computer programming languages. But why? Why do we keep inventing them?]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.alperyazar.com/assets/img/24/9.jpg" /><media:content medium="image" url="https://www.alperyazar.com/assets/img/24/9.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">12 Yaşındaki Laptop’uma Hafta Sonu Linux Bakımı</title><link href="https://www.alperyazar.com/eski-laptop-linux-bakim.html" rel="alternate" type="text/html" title="12 Yaşındaki Laptop’uma Hafta Sonu Linux Bakımı" /><published>2024-02-10T00:00:00+03:00</published><updated>2024-02-10T00:00:00+03:00</updated><id>https://www.alperyazar.com/eski-laptop-linux-bakim</id><content type="html" xml:base="https://www.alperyazar.com/eski-laptop-linux-bakim.html"><![CDATA[<blockquote>
+  <p>Kapak fotosunu DALL-E çizdi. Çalışma ortamıma benzeyen tek şey Ankara’nın da
+bugün güneşli olması…</p>
+</blockquote>
+
+<p>Hafta sonunun verdiği boşlukla uzun zamandır yapmayı düşündüğüm bir işi yapmaya
+karar verdim. Bir yandan da bu blog yazısına yaptıklarımı not alayım dedim.</p>
+
+<p>2012’de aldığım, hala çalışan ve arada bir kullandığım bir Samsung marka
+laptop’um var. Zamanına göre iyi bir bilgisayardı, 8G RAM, 1TB HDD ve <a href="https://www.intel.com/content/www/us/en/products/sku/64899/intel-core-i73610qm-processor-6m-cache-up-to-3-30-ghz/specifications.html">Intel
+i7-3610QM</a>
+işlemci (<a href="https://meltdownattack.com/">Spectre ve Meltdown</a> açıkları var diye
+kullanmayı bırakacak değilim). Dual Boot olan bu laptop’un bir tarafı Windows
+10, bir tarafı ise GNOME masaüstü ile Debian Buster (10). Son Buster sürümü olan
+10.13, Eylül 2022’de yayınlandı, bu sürüm Haziran 2024 sonuna kadar ise LTS
+projesi kapsamında destekleniyor <sup id="fnref:1f"><a href="#fn:1f" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>. Anlayacağınız artık yolun sonuna geldim.</p>
+
+<blockquote>
+  <p>Windows 10’u kullanmak imkansız. Belki şaka gibi gelecek ama laptop’un HDD’si
+o kadar düşük bir performansa sahip ki (+ fazla açılış uygulaması ve optimize
+edilmemiş şeyler olabilir, kabul) Windows 10’un açılıp, kullanılabilir hale gelmesi
+<strong>45 dakika</strong> sürüyor. Evet, tam 45 dakika. Ama hala yanımda götürdüğümde bir
+yerde ihtiyaç olur diye Windows’u tutuyorum. Hoş, kullanması imkansız olsa da.
+Laptop’u zaten çok az kullanıyorum, onda da Debian’ı kullanıyorum.</p>
+</blockquote>
+
+<p>XFCE gibi masaüstü ortamı yerine GNOME kullanmam garip gelmiş olabilir. GNOME
+pek sevilen bir masaüstü ortamı değil (nerede o eski GNOME 2). Özellikle benim
+laptop’um gibi kaynağı az olan bilgisayarlar için pek de önerilmez. Kullanıcıya
+pek değiştirme seçeneği sunmadığı ve tablet arayüzü gibi bir arayüz sunduğu
+söylenir. İşte tam da ben bundan dolayı laptop’ta GNOME kullanıyordum. Çünkü
+bu benim ana çalışma bilgisayarım değil, 1-2 adet programı beraber ya açıyorum
+ya açmıyorum. Küçük ekranda, o “tabletvari” arayüzü bana kullanışlı geliyordu.
+GNOME’ın kendi yazılımlarının birbiriyle çok iyi entegre çalışmasını da seviyorum
+(keyring vs). Milletin bayıldığı KDE’yi de ben bir türlü sevemedim. O kadar çok
+fazla ayar var ki onlar olunca hepsini kurcalamadan rahat edemiyorum. GNOME adeta
+“Kullan geç” diyor. Ama çoklu ekranlı esas kullandığım masaüstü bilgisayarımda da
+GNOME çok sade kalıyor, yani kullanışsız oluyordu. Orada da XFCE gibi ortamları
+seviyorum. Laptop’taki 8 GB RAM, üzerinde çalışan az sayıda programı düşününce
+GNOME açısından problem olmuyor.</p>
+
+<p>Linux dağıtımlarını içeriden upgrade etmeyi pek sevmiyorum. Üniversite yıllarımda
+Ubuntu’yu upgrade ederken yaşamış olduğum tramvalarım var. Şu an daha düzgündür
+muhtemelen ama birkaç yılda bir format atmak bence bir temizlik yapmak için de
+fırsat oluyor.</p>
+
+<p>Bir aralar tam bir <strong>Distrohoper</strong> dım. O Distro senin bu Distro benim atlar
+dururdum. Arch Linux gibi dağıtımları sevsem de artık yaşlandım ve dağıtımın
+çıkartabileceği problemlerle uğraşmak istemiyorum. Siz Arch Linux ile hiç
+problem yaşamamış olabilirsiniz ama ben ne zaman kullansam birkaç aya kalmadan
+patlıyorum kardeşim! Projeyi ve arkasındaki mantığı (ve elbette Wiki’sini) çok
+sevsem de Virtualbox dışında artık bir yere kurmak istemiyorum. O yüzden
+laptop’ta da zamanında Debian tercih etmiştim. İş ve evi ortaklamak için artık
+Debian temelli sistemlerden devam ediyorum (Evet, <code class="language-plaintext highlighter-rouge">apt</code> en iyi paket yöneticisi
+olmayabilir ama, hayat işte…). Bir ara laptop’ta Fedora kullanıyordum, o da
+çok tatlı ve acayip güncel bir distro.</p>
+
+<p>Bu sefer Linux Mint’e şans vermek istedim. Bir süredir başka bilgisayarlarda
+kullanıyorum, hoşuma gidiyor. Bu sefer <strong>Linux Mint 21.3 Virginia Xfce Edition</strong>
+kuracağım.</p>
+
+<p>Debian 10 kurarken <code class="language-plaintext highlighter-rouge">dm-crypt</code> (?) ile disk şifreleme (sonuçta laptop) ve üzerine
+LVM vs kurabilmiştim. LVM’i niye kurdum bilmiyorum ama neden olmasın? Mint’te de
+benzer bir kurgu oluşturabileceğim bence. Ha bir de laptop’u uykuya yatırmak
+için RAM’in sığabileceği bir şifreli Swap alanı. Bunlardan bir miktar
+vazgeçebilirim, yükleyicinin advanced mode’unu açıp uğraşasım yok ama içinme
+sinmeyecek bir noktaya gelirse yani Linux Mint’te bunları kolayca yapamazsam
+Debian 12 basar geçerim. (Direkt öyle mi yapsam acep? Neyse…)</p>
+
+<p>Disk layout’um şöyle bir şey(miş):</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>NAME             MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINT
+sda                8:0    0 931.5G  0 disk
+├─sda1             8:1    0   450M  0 part
+├─sda2             8:2    0   100M  0 part  /boot/efi
+├─sda3             8:3    0    16M  0 part
+├─sda4             8:4    0 389.6G  0 part
+├─sda5             8:5    0   518M  0 part
+├─sda6             8:6    0   550M  0 part
+├─sda7             8:7    0     2G  0 part  /boot
+├─sda8             8:8    0 493.8G  0 part
+│ └─sda8_crypt   254:0    0 493.7G  0 crypt
+│   ├─vg-lv_swap 254:1    0  15.3G  0 lvm   [SWAP]
+│   └─vg-lv_root 254:2    0 478.5G  0 lvm   /
+└─sda9             8:9    0  44.6G  0 part
+</code></pre></div></div>
+
+<blockquote>
+  <p>Bir süredir rolling release gibi Debian <code class="language-plaintext highlighter-rouge">testing</code> mi kullansam diye düşünmüyor
+da değilim, kullanlar stabilitesini seviyor. Debian’ın <code class="language-plaintext highlighter-rouge">testing</code> i, Arch’tan
+stabil diyenler var, lol, ama bu çok bel altı!</p>
+</blockquote>
+
+<p><img src="/assets/img/24/6-brutal.jpg" alt="Brutal" class="centered lazyload" /></p>
+
+<p class="text-align-center">Goygoyumuzu da yapalım</p>
+
+<h2 id="taşınma-hazırlıkları">Taşınma Hazırlıkları</h2>
+
+<p><code class="language-plaintext highlighter-rouge">~</code> dizinimi biraz temizledikten sonra taşımak istediğim dosyaları <code class="language-plaintext highlighter-rouge">tar.xz</code> ile
+sıkıştırıyorum ve SFTP üzerinden başka bir bilgisayara alıyorum. Format sonrası
+(muhtemelen bir daha asla açmamak üzere) yeni <code class="language-plaintext highlighter-rouge">~</code> dizinime getireceğim.</p>
+
+<h2 id="ventoy">Ventoy</h2>
+
+<p>Gelelim kurulum USB belleğimizi hazırlamaya. Bu tarafta kısa bir süredir
+<a href="https://www.ventoy.net/">Ventoy</a> yazılımını kullanıyorum, yeni keşfettim
+sayılır. Normalde indirdiğimiz ISO’yu yazıyorduk USB belleğe, <code class="language-plaintext highlighter-rouge">dd</code> ya da
+Windows’ta <a href="https://rufus.ie/en/">Rufus</a> ile falan. Ventoy’un ise kendi bir
+“bootloader”ı var, içine birden fazla ISO atabiliyoruz ve açılışta istediğimiz
+ISO’yu seçebiliyoruz. Ayrıca büyük bir bellek ise, kalan kısmını normal USB
+bellek gibi de kullanabiliyoruz. Hani derler ya, Linux ile uğraşanlar ya da
+sistem yöneticileri yanında USB bellek ile her zaman bir Linux kurulumu ya da
+Live ISO taşısınlar diye, işte Ventoy ile tek USB bellek ile yanınızda bir sürü
+ISO taşıyabilirsiniz. Kullanmıyorsanız, muhakkak bakın.</p>
+
+<!-- https://github.com/nathancy/jekyll-embed-video -->
+<!-- https://yoast.com/how-to-make-youtube-videos-responsive/ -->
+<div class="embed-container" style="text-align: center;">
+<iframe class="youtube-video lazyload" src="https://www.youtube.com/embed/3PsRxJZTXEY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+</div>
+
+<center><a target="_blank" href="https://www.youtube.com/watch?v=3PsRxJZTXEY" rel="nofollow">Video</a></center>
+
+<p>Bendeki manzara şöyle:</p>
+
+<p><img src="/assets/img/24/6-ventoy.png" alt="Ventoy " class="centered lazyload" /></p>
+
+<p>Burada USB belleğiniz normal bir bellek gibi gözüküyor aslında. <code class="language-plaintext highlighter-rouge">ISO</code> klasörü
+içerisine istediğim ISO’ları koyuyorum. Dikkat ederseniz dosyalar açılmış yani
+belleğe yazılmış halde değil, internetten indirildiği gibi duruyor.</p>
+
+<p><img src="/assets/img/24/6-ventoy-laptop.jpg" alt="Ventoy " class="centered lazyload" /></p>
+
+<p class="text-align-center">Boot ettikten sonra Ventoy’un ekranı geliyor ve kullanmak istediğimiz imajı
+seçiyoruz.</p>
+
+<h2 id="kurulum">Kurulum</h2>
+
+<p>Linux Mint’in kurulumunda merak ettiğim kısım eski disk layout’umu yapıp
+yapamayacağımdı ve <strong>yapamadım.</strong> Şifreli bölüm üretebildim ama LVM yapamadım,
+ayrıca farklı partition’lar da yaratamadım. Kendisi şifrelediğim diski otomatik
+olarak <code class="language-plaintext highlighter-rouge">ext4</code> olarak formatladı. Formatı değiştirmek mümkündü ama <code class="language-plaintext highlighter-rouge">sdax_crypt</code>
+altında oluşan diskin altına birden fazla partition oluşturamadım. Ben GUI’de
+görememiş olabilirim, bakındım ama… Bir dediğim gibi “advanced mode” gibi bir
+şeyle de uğraşmak istemedim, var mı onu bile bilmiyorum.</p>
+
+<p>Onun dışında kurulum standard Ubuntu kurulumu.</p>
+
+<h2 id="kullanım">Kullanım</h2>
+
+<p>Linux Mint’in en güzel özelliği kullanışlı ve tema açısından da güzel bir entegrasyon
+sağlanmış iyi bir masasüstü deneyimi sağlaması. Bu konuda da yine beni hoşnut
+etti. Benim ekranıma göre biraz yazılar küçük geldi ama bunlar kolayca ayarlanacak
+şeyler (ayarlamadım).</p>
+
+<p><strong>FAKAT</strong> disk layout’umu istediğim gibi yapamadığım için <strong>hibernate</strong>
+yapamıyorum. Bunun böyle olabileceğini kurulum sırasında fark ettim fakat
+laptop’u çok az kullandığım ve bu kullanımların da çok azında hibernate yaptığım
+için (yani kapağı kapatıp, sistemi komple diske kaydetme ve laptop’un gücünü
+tamamen kapatabilme) bunu göze alarak kuruluma devam ettim. Ventoy’un sayesinde
+diskte Debian olmasına rağmen, ki zamanında Debian kurulumunda bu disk
+layout’unu yapabilmiş (gösterdiğim üzere) ve hibernate desteği getirebilmiştim,
+hem üşendiğimden (tekrar reboot falan) hem de Linux Mint’i de laptopta biraz
+denemek istediğimden devam ettim.</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ lsblk
+NAME           MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINTS
+sda              8:0    0 931,5G  0 disk
+├─sda1           8:1    0   450M  0 part
+├─sda2           8:2    0   100M  0 part  /boot/efi
+├─sda3           8:3    0    16M  0 part
+├─sda4           8:4    0 389,6G  0 part
+├─sda5           8:5    0   518M  0 part
+├─sda6           8:6    0   550M  0 part
+├─sda7           8:7    0     2G  0 part  /boot
+├─sda8           8:8    0 493,7G  0 part
+│ └─sda8_crypt 253:0    0 493,7G  0 crypt /
+└─sda9           8:9    0  44,6G  0 part
+sr0             11:0    1  1024M  0 rom
+</code></pre></div></div>
+
+<p class="text-align-center">Yeni layout’ta Swap, LVM falan hak getire…</p>
+
+<p>Bana ilginç gelen, Hibernation özelliğinin Mint forumlarında hala istenen
+özellik olarak tartışılıyor olması oldu. <sup id="fnref:2f"><a href="#fn:2f" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> Masaüstü kullanımı (yani server
+amaçlı olmayan, laptop dahil) amaçlayan bir dağıtımın böyle bir özelliği bence
+desteklemesi gerekiyor. Öte yandan, <strong>Suspend</strong> özelliği var. Burada,
+Hibernate’ten farklı olarak laptopun kapağı kapatıldığı zaman (ya da elle bu
+moda sokulduğu zaman) bilgisayar uykuya geçerken bilgileri RAM’de “donduruyor.”
+Ama RAM’in çalışması için, bilgisayarın az da olsa biraz güç tüketmesi
+gerekiyor. Laptop güçteyse problem yok, pilden çalışıyorsa yine saatlerce hatta
+günlerce bu modda kalabiliyor. Hibernate ise “derin uyku” olarak düşünülebilir.
+RAM’e kaydedilmek yerine, diske kaydediliyor bilgiler. Bunun için disk
+partition’larının uygun olması gerekiyor (swap alan, şifreli alan vs…). Bu
+durumda bilgisayar komple kapatılabiliyor. Bu da teoride sınırsız bir uyku
+süresi demek. Bu açıdan düşününce çoğu durumda Suspend yeterli, sonuçta pili
+olan bir laptop bu durumda çok rahat saatlerce durabilir. Ama yine de masaüstü
+kullanımı hedefleyen bir dağıtımın Hibernate’i “out-of-box” desteklemesi
+gerekirdi bence. Sunucu kullanımı hedefleyen dağıtımlar için bu zaten anlamlı
+değil.</p>
+
+<p>Suspend ve Hibernate’ten konuşunca, 10 yıl önce yazdığım şu yazı aklıma geldi.
+Hey gidi günler…</p>
+
+<ul class="post-list">
+<li style="background: #DDEEEE; padding: 10px; border-radius: 10px;">
+<h4>🔗 İlgili bir içerik</h4>
+<h3>
+<a class="post-link" href="/windows-hazirda-beklet-uyku.html">
+Windows’un Sunduğu ‘Hazırda Beklet’ ve ‘Uyku’ Seçeneklerini Sürekli Ters Algılamam
+
+</a>
+</h3><h4>Uyku dediğin derin olur!</h4></li>
+</ul>
+
+<p>Benim kurduğum Linux Mint XFCE dağtımında laptop prizdeyken ekranı kapatmak
+(fiziksel olarak) sadece ekranı kilitliyor, bunu Suspend olarak değiştirdim ve
+biraz denedim. Suspend’e giriş çıkışta bir problem görmedim, Wi-Fi dahil.</p>
+
+<p>Laptop’ta olan Realtek entegreli ağ arayüzleri için bir sürücü kurmam gerekmedi.
+Debian’da ayrıca kurmuştum fakat bu Debian’ın sadece repo lisans politikası ile
+ilgiliydi sanırım, Linux Mint (yani Ubuntu) bu konuda daha “gevşek” olabilir.</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ free -h
+               total        used        free      shared  buff/cache   available
+Mem:           7,6Gi       1,6Gi       552Mi       300Mi       5,6Gi       5,5Gi
+Swap:          2,0Gi          0B       2,0Gi
+$ swapon -s
+Filename  Type  Size  Used  Priority
+/swapfile
+</code></pre></div></div>
+
+<p>Bu arada, kurulum sırasında bir Swap alanı oluşturmasam da otomatik olarak
+2GB boyutunda <code class="language-plaintext highlighter-rouge">/swapfile</code> oluşturulmuş. Diskim geniş ve RAM’im görece az
+olduğu için ben RAM boyutunda yani 8GB boyutunda bir Swap oluştururdum bu
+sistem için ama pek bir uygulama da çalıştırmadığım için buna dokunmayacağım.</p>
+
+<p>Linux Mint’in varsayılan masaüstü ortamı Cinnamon, aynı topluluk tarafından
+geliştiriliyor. Bunun dışında MATE ve Xfce de destekleniyor,
+<a href="https://www.linuxmint.com/download.php">buradan</a> bakabilirsiniz. İşin güzel
+yani, tüm masaüstü ortamlarının neredeyse aynı görünecek şekilde ayarlanmış
+olması. Linux Mint’in yaşattığı masaüstü deneyimi gerçekten güzel. Ubuntu
+temelli olması da bir şeyleri kurmak ve uyumluluk açısından iyi bir avantaj
+sağlıyor. Ayrıca otomatik sürücü bulması, özellikle NVIDIA kullanıcıları için
+bir kolaylık. Benim laptopta da çok eski bir ekran kartı olsa da varsayılan açık
+kaynak sürücüden devam ediyorum şimdilik.</p>
+
+<p>Laptop’u pilde çok sık kullansaydım güç tüketimini optimize etmek adına başka
+dağıtımlara bakabilir ya da kernel ayarları ile oynayabilirdim. Ama ben neredeyse
+hep prizde kullandığım için buraları kurcalamıyorum.</p>
+
+<p>Şöyle bir saflık yaptım: Linux Mint, Ubuntu 22.04 temelli ve Nisan 2027’ye kadar
+desteklenecek. Biraz daha bekleseydim ki, Debian 10 Debian LTS projesi tarafından
+Haziran 2024’e kadar desteklenecek, yeni LTS sürümü olacak Ubuntu 24.04 temelli
+yeni Linux Mint’i kurabilirdim. Bu da muhtemelen 2029’a kadar destekleniyor olacak,
+böylece 2 sene daha kazanırdım. Neyse 2027 uzun bir süre, daha 3 yıl var…</p>
+
+<p>Format sonrası kullandığım yazılımları ve temaları kuracağım, birazcık daha
+işim var. Belki bu aralar uğraştığım <strong>Buildroot Öğreniyoruz</strong> serisine de
+buradan devam ederim? Bilmeyenler için an itibariyle serideki son yazım:</p>
+
+<ul class="post-list">
+<li style="background: #DDEEEE; padding: 10px; border-radius: 10px;">
+<h4>🔗 İlgili bir içerik</h4>
+
+<center>
+<p>
+<a class="post-link" href="/buildroot-ogreniyoruz-04.html"><img alt="Teaser" data-sizes="auto" src="https://i.ytimg.com/vi/sO_Sdf09DiY/hq720.jpg" data-srcset="https://i.ytimg.com/vi/sO_Sdf09DiY/hq720.jpg 1280w" srcset="/assets/lazyload.png" style="border-radius: 10px; height: auto; width: 95%; max-width: 700px;" class="lazyload" /></a>
+</p>
+</center><h3>
+<a class="post-link" href="/buildroot-ogreniyoruz-04.html">
+Buildroot ile ilk derleme! Buildroot Öğreniyoruz - 4
+
+</a>
+</h3><h4>Buildroot ile ilk derlememizi yapıyoruz. Elbette tahmin ettiğim gibi ilk seferde olmuyor, uğraşıyoruz..</h4></li>
+</ul>
+
+<p>İlerleyen zamanlarda karta bir şeyler atmak için SD Card arayüzüne ihtiyacım
+olacak. Bu da esas masaüstü çalışma bilgisayarımda yok, bir tek bu laptop’ta var.
+Derlenmiş dosyaları taşımak yerine, direkt laptop üzerinde de çalışabilirim belki.
+Bir düşüneyim…</p>
+
+<p>Sizin de benim gibi “patates” bilgisayarınız varsa şu videoya bakabilirsiniz:</p>
+
+<!-- https://github.com/nathancy/jekyll-embed-video -->
+<!-- https://yoast.com/how-to-make-youtube-videos-responsive/ -->
+<div class="embed-container" style="text-align: center;">
+<iframe class="youtube-video lazyload" src="https://www.youtube.com/embed/GVfAL1PwXC0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+</div>
+
+<center><a target="_blank" href="https://www.youtube.com/watch?v=GVfAL1PwXC0" rel="nofollow">Video</a></center>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1f">
+      <p><a href="https://www.debian.org/releases/buster/">https://www.debian.org/releases/buster/</a> <a href="#fnref:1f" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2f">
+      <p><a href="https://forums.linuxmint.com/viewtopic.php?t=374320">https://forums.linuxmint.com/viewtopic.php?t=374320</a> <a href="#fnref:2f" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name>Alper Yazar</name></author><category term="tr" /><summary type="html"><![CDATA[Debian, Linux Mint, XFCE, Ventoy, ZSH...]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.alperyazar.com/assets/img/24/6.jpg" /><media:content medium="image" url="https://www.alperyazar.com/assets/img/24/6.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Buildroot ile ilk derleme! Buildroot Öğreniyoruz - 4</title><link href="https://www.alperyazar.com/buildroot-ogreniyoruz-04.html" rel="alternate" type="text/html" title="Buildroot ile ilk derleme! Buildroot Öğreniyoruz - 4" /><published>2024-02-07T00:00:00+03:00</published><updated>2024-02-07T00:00:00+03:00</updated><id>https://www.alperyazar.com/buildroot-ogreniyoruz-04</id><content type="html" xml:base="https://www.alperyazar.com/buildroot-ogreniyoruz-04.html"><![CDATA[<blockquote>
+  <p>İçerik, bu sayfadaki yazıların üzerine anlatım yapılarak video olarak
+sunulmuştur. Her ne kadar yazı ile video içerik benzese de vaktiniz var ise
+videoyu izlemenizi tavsiye ederim, çünkü bazı noktalarda yazıda olmayan
+yorumlar yapıyorum.</p>
+</blockquote>
+
+<!-- https://github.com/nathancy/jekyll-embed-video -->
+<!-- https://yoast.com/how-to-make-youtube-videos-responsive/ -->
+<div class="embed-container" style="text-align: center;">
+<iframe class="youtube-video lazyload" src="https://www.youtube.com/embed/sO_Sdf09DiY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+</div>
+
+<center><a target="_blank" href="https://www.youtube.com/watch?v=sO_Sdf09DiY" rel="nofollow">Video</a></center>
+
+<p>Buildroot yolculuğumuza, <em>Buildroot Öğreniyoruz</em> serisinin 4. bölümü ile devam
+ediyoruz. Bu bölümde, Buildroot ile ilk derlememizi yapacağız. Bir <a href="/buildroot-ogreniyoruz-03.html">önceki
+bölümde</a>, Buildroot ile
+tanışmış, tasarım felsefesine, kimler tarafından kullanıldığına ve nasıl
+kullanıldığına bakmıştık. Bu bölümde ise, bir önceki bölümde öğrendiklerimizin
+adeta pratiğini yapacağız. Eğer bir önceki bölümü izlemediyseniz konu bütünlüğü
+açısından önceki bölüme bakmanızı öneririm. 👇</p>
+
+<ul class="post-list">
+<li style="background: #DDEEEE; padding: 10px; border-radius: 10px;">
+<h4>🔗 İlgili bir içerik</h4>
+
+<center>
+<p>
+<a class="post-link" href="/buildroot-ogreniyoruz-03.html"><img alt="Teaser" data-sizes="auto" src="https://i.ytimg.com/vi/meLZZuCS4gI/hq720.jpg" data-srcset="https://i.ytimg.com/vi/meLZZuCS4gI/hq720.jpg 1280w" srcset="/assets/lazyload.png" style="border-radius: 10px; height: auto; width: 95%; max-width: 700px;" class="lazyload" /></a>
+</p>
+</center><h3>
+<a class="post-link" href="/buildroot-ogreniyoruz-03.html">
+Buildroot ile Tanışıyoruz Buildroot Öğreniyoruz - 3
+
+</a>
+</h3><h4>Bu bölümde Buildroot ile artık tanışıyoruz. Nedir? Kimler kullanır? Nasıl kullanılır? Nereden indirilir? ...</h4></li>
+</ul>
+
+<h2 id="geliştirme-ortamının-oluşturulması-">Geliştirme Ortamının Oluşturulması 💻</h2>
+
+<p>Önceki bölümde, Buildroot’un bir Linux dağıtımı üzerinde çalıştığından
+bahsetmiştik.</p>
+
+<p><strong>Buildroot bir Linux dağıtımı oluşturma aracı fakat kendisi de Linux üzerinde
+çalışıyor.</strong> 🐧</p>
+
+<p>Günlük yaşantısında zaten Linux ile çalışan arkadaşlar, kendi işletim
+sistemlerinde çalışmaya devam edebilirler. Birazdan değineceğiz ama Buildroot’un
+çalışmak için talep ettiği bileşenler (paketler) oldukça genel, herhangi bir
+dağıtıma bağımlılığı bulmuyor. O yüzden zaten bir Linux dağıtımı (Ubuntu, Linux
+Mint, Pardus, Fedora, Arch (BTW)) üzerinde çalışıyorsanız devam edebilirsiniz.</p>
+
+<h3 id="windows-">Windows 🪟</h3>
+
+<p><strong>Windows</strong> üzerinde çalışan arkadaşlar için ise durum biraz farklı. Önceki
+bölümde, <a href="https://learn.microsoft.com/en-us/windows/wsl/install">WSL</a> yani
+Windows Subsystem for Linux ile tek bir deneme yaptığımdan ve bu denememde
+<code class="language-plaintext highlighter-rouge">/dev/pts</code> kaynaklı çeşitli uyarı mesajları aldığımdan bahsetmiştim. Windows
+üzerinde çalışacak arkadaşlara (ben de kullanıyorum),
+<a href="https://www.virtualbox.org/">Virtualbox</a> yazılımını önermiştim.</p>
+
+<p>Buildroot’un, WSL üzerinde çalıştırılması ile ilgili çeşitli
+<a href="https://www.reddit.com/r/embedded/comments/fgnw1u/is_buildroot_or_yocto_or_alternatives_available/">tartışmalar</a>
+ve
+<a href="https://blog.mjjames.co.uk/2019/06/can-you-use-buildroot-with-windows.html">blog</a>
+yazıları internette mevcut. Son sürümlerinin WSL ile çalıştığını okusam da ben
+WSL üzerinden devam etmeyeceğim. Bu seri boyunca duruma göre ya bir Linux
+dağıtımı ya da Windows üzerinde Virtualbox üzerinde çalışacağım. Sizlere de
+Virtualbox kullanmanızı öneririm.</p>
+
+<p><img src="/assets/img/24/5-reddit.png" alt="Reddit Yorumu" class="centered lazyload" /></p>
+
+<p class="text-align-center">Bağlantısı verdiğim
+<a href="https://www.reddit.com/r/embedded/comments/fgnw1u/is_buildroot_or_yocto_or_alternatives_available/">Reddit</a>
+tartışmasından bir yorum. Ben de aynı fikirdeyim ama size karışamam. 😝</p>
+
+<h3 id="virtualbox">Virtualbox</h3>
+
+<p><img src="/assets/img/24/5-virtualbox.png" alt="VirtualBox" class="centered lazyload" /></p>
+
+<p><a href="https://www.virtualbox.org/">VirtualBox</a>, bilgisayarınızda sanal bilgisayarlar
+oluşturmanızı sağlayan bir yazılım. Windows ve Linux üzerinde çalışabiliyor.
+Buildroot serisi özelinde, zaten Linux bir makineniz varsa üzerine tekrar
+Virtualbox ile bir sanal makine daha oluşturmanıza gerek yok.</p>
+
+<p>Önceki bölümde, Virtualbox kurulumunu göstereceğimi söylemiştim. Sonra tekrar
+düşündüm de, her yerde bulabileceğiniz bu bilgiyi (içeriği kısa tutmak adına da
+)benim tekrar anlatmama gerek yok. Buildroot için herhangi bir Linux dağıtımı
+kullanabilirsiniz. Tipik olarak <a href="https://ubuntu.com/download/desktop">Ubuntu 22.04
+LTS</a> veya en güncel sürüm olan <a href="https://ubuntu.com/download/desktop">Ubuntu
+23.10</a> tercih edebilirsiniz. <strong>Ben Ubuntu
+22.04 kullanacağım.</strong></p>
+
+<p>Virtualbox üzerinde Ubuntu 22.04 kurulumu ile ilgili YouTube üzerinde de birçok
+<a href="https://www.youtube.com/results?search_query=virtualbox+ubuntu+22.04">anlatım
+mevcut.</a>
+Hangi dağıtımı kurarsanız kurun, zaten süreç benzer olacaktır.</p>
+
+<p>Bilgisayarınızın gücüne bağlı olarak istediğiniz kaynakları verebilirsiniz ama
+ben 50-100 GB arası bir disk tahsis etmenizi öneriyorum.</p>
+
+<p>Ben ise 8 çekirdek, 6 GB RAM ve 100 GB disk verdim. Virtualbox’ta <code class="language-plaintext highlighter-rouge">preallocate</code>
+demediğiniz sürece disk 100 GB (ya da ne seçtiyseniz) gözükse de diskinizde
+fiziksel olarak bu kadar yer kaplamayacak, kurduğunuz sanal makine diski
+kullandıkça diskinizdeki sanal disk dosyası büyüyecektir. Tahmin ediyorum ki
+Buildroot derlenirken birden fazla çekirdek kullanabiliyordur. Bu yüzden CPU ve
+RAM’i ne kadar fazla verirseniz derleme süreleri muhtemelen kısalır.</p>
+
+<p><img src="/assets/img/24/5-ubuntu-kurulum.png" alt="Ubuntu Kurulum" class="centered lazyload" /></p>
+
+<p class="text-align-center">Ubuntu’yu <code class="language-plaintext highlighter-rouge">Minimal Installation</code> ve güncellemeleri kurulum
+sırasında yükleyecek şekilde kurdum. Siz diğer seçenekleri de tercih edebilirsiniz.</p>
+
+<p>Bilgisayarınıza (temelde SSD vs HDD) göre değişkenlik gösterecek olmasına rağmen
+kurulum yaklaşık 10-20 dakika sürmektedir. Kurduktan sonra,</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">sudo apt update
+sudo apt upgrade
+</span></code></pre></div></div>
+
+<p>ile sisteminizi güncelleştirmenizi öneririm.</p>
+
+<p>Sanal makine deneyiminizi iyileştirmek için (ekran çözünürlüğünü dinamik olarak
+büyütme, dosya ve pano (clipboard) paylaşımı gibi) <strong>VirtualBox Guest
+Additions</strong> kurmanızı öneriyorum. Yine YouTube üzerinden
+<a href="https://www.youtube.com/results?search_query=virtualbox+ubuntu+guest+additions">izleyebilirsiniz.</a></p>
+
+<hr />
+
+<p><strong>Bu noktadan sonra sanal veya gerçek bir Linux makine üzerinde
+çalışabildiğinizi varsayıyorum.</strong></p>
+
+<hr />
+
+<h2 id="buildrootun-edinilmesi-️">Buildroot’un Edinilmesi ⬇️</h2>
+
+<p>Ben de yeni kurulmuş bir Ubuntu 22.04 üzerinden anlatımıma devam edeceğim.</p>
+
+<blockquote>
+  <p>ℹ️ Yazının devamında bulacağını ekran kayıtları ve görüntüler farklı farklı
+olabilir. İçeriği uygunluk durumuma göre başka bilgisayarlar üzerinde
+hazırlıyorum. Sizin açınızdan değişen bir şey olmayacaktır, sadece görsel
+değişiklikler (terminal teması gibi) var gibi düşünebilirsiniz.</p>
+</blockquote>
+
+<hr />
+
+<blockquote>
+  <p>💡 İlerleyen kısımlarda <a href="https://asciinema.org/">asciinema</a> ile alınmış
+kayıtlar görecekseniz. Video gibi dursa da aslında bu kayıtlar metin yani text
+tabanlıdır. İzlerken durdurup, izleme ekranından metinleri seçebilir,
+kopyalayabilirsiniz. Bu kayıtları alırken bir şey olmadığı zaman (kullanıcı
+girdisi ya da ekrana yazı basılması) kayıt uzamasın diye <code class="language-plaintext highlighter-rouge">asciinema</code> ya
+otomatik “jump cut” yaptırtıyorum. O yüzden bazı işlemler olduğundan biraz
+kısa gözüküyor olabilir. Bundan bağımsız olarak bilgisayarınızın özelliklerine
+göre (ve internet hızınız) sizde farklı süreler çıkabilir.</p>
+</blockquote>
+
+<p>İlk olarak kendimize bir çalışma dizini seçelim ve altında <code class="language-plaintext highlighter-rouge">git clone
+https://git.buildroot.net/buildroot</code> komutunu çalıştıralım. Eğer minimal bir
+kurulum yaptıysanız <code class="language-plaintext highlighter-rouge">git</code> kurulmamış olabilir, bu durumda hata alıyorsanız
+öncesinde <code class="language-plaintext highlighter-rouge">sudo apt install git</code> ile <code class="language-plaintext highlighter-rouge">git</code> kurulumu yapınız.</p>
+
+<script async="" id="asciicast-9ULE3zYW4U4s7tpuWkRgls2RZ" src="https://asciinema.org/a/9ULE3zYW4U4s7tpuWkRgls2RZ.js"></script>
+
+<p>clone işleminin süresi bağlantı hızınıza ve bir miktar bilgisayarınızın gücüne
+göre değişecektir. 20-25 Mbps bir internet bağlantısı ve görece zayıf bir
+bilgisayarda benim işlemim yaklaşık 1 dakika sürdü. Görebileceğiniz üzere daha
+sonra <code class="language-plaintext highlighter-rouge">git tag -l --sort=-v:refname</code> komutu ile git’te verilmiş etiketlere
+sıralı bir şekilde bakabiliyoruz. Önceki bölümde her bir sürüm için bir etiket
+var demiştik, hatırlıyor musunuz? İşte onlar bunlar.</p>
+
+<p><code class="language-plaintext highlighter-rouge">git clone</code> ile projenin tüm geçmişini çeksek bile benim diskimde 180 MB yer
+kaplıyor ve bu boyut günümüz disk kapasiteleri ve diğer projeler düşünülünce
+oldukça düşük kalıyor.</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ du -sh buildroot
+180M    buildroot
+</code></pre></div></div>
+
+<p>O yüzden <code class="language-plaintext highlighter-rouge">git clone</code> yapabiliyorsanız <code class="language-plaintext highlighter-rouge">tar.xz</code> ile hiç uğraşmayın, <code class="language-plaintext highlighter-rouge">git</code> ile
+çekin gitsin. Bundan önceki bölümde de bahsetmiştik.</p>
+
+<h2 id="paketlerin-kurulması-">Paketlerin Kurulması 📦</h2>
+
+<p>Buildroot’un çalışabilmesi için derleme yapacağımız sistemde olması gereken
+<strong>zorunlu</strong> ve <strong>opsyionel</strong> yazılımlar vardır. <sup id="fnref:1f"><a href="#fn:1f" class="footnote" rel="footnote" role="doc-noteref">1</a></sup></p>
+
+<p>Zorunlu paketler:</p>
+
+<p><code class="language-plaintext highlighter-rouge">which sed make bintuilt build-essential diffutils gcc g++ bash patch gzip bzip2
+perl tar cpio unzip rsync file bc findutils wget</code></p>
+
+<p>araçlardır. Bunlardan</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">make</code> versiyonu 3.81’den büyük</li>
+  <li><code class="language-plaintext highlighter-rouge">build-essential</code> sadece Debian tabanlı sistemlerde (Ubuntu ve Linux Mint gibi)</li>
+  <li><code class="language-plaintext highlighter-rouge">gcc</code> versiyonu 4.8’den büyük</li>
+  <li><code class="language-plaintext highlighter-rouge">g++</code> versiyonu 4.8’den büyük</li>
+  <li><code class="language-plaintext highlighter-rouge">perl</code> versiyonu 5.8.7’den büyük</li>
+  <li><code class="language-plaintext highlighter-rouge">file</code> ise <code class="language-plaintext highlighter-rouge">/usr/bin/file</code> da olmalıdır (buna neden gerek duyuyor anlamadım).</li>
+</ul>
+
+<p>Yine bunlar dışında çeşitli yardımcı araçların çalışması için önerilen araçlar
+vardır, isimlerini tek tek yazmıyorum burada, Buildroot’un sitesinde varlar.
+<sup id="fnref:1f:1"><a href="#fn:1f" class="footnote" rel="footnote" role="doc-noteref">1</a></sup></p>
+
+<p>Bootlin firması aşağıdaki komut ile Debian tabanlı sistemlerde doğru geliştirme
+ortamını sağlayacağımız söylüyor:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">sudo apt install sed make binutils gcc g++ bash patch \
+gzip bzip2 perl tar cpio python unzip rsync wget libncurses-dev
+</span></code></pre></div></div>
+
+<p>Burada şöyle bir problem var. Ubuntu’da <code class="language-plaintext highlighter-rouge">python</code> paketini kurmak istediğiniz
+zaman bu başarısız oluyor, ya <code class="language-plaintext highlighter-rouge">python2</code> ya da <code class="language-plaintext highlighter-rouge">python3</code> seçmek gerekiyor.
+Buildroot’un sayfasında opsiyonel olarak belirtilen Python yazılımının hangi
+versiyonunun istendiği yazmıyor. Ama tahmin ediyorum ki Python 2 değildir çünkü
+Python 2’ye, 1 Ocak 2020’de “çivi çakılmama” kararı alındı <sup id="fnref:4f"><a href="#fn:4f" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> ve yazılımlar
+zaten çok daha önceden Python 2’den Python 3’e geçmeye başlamıştı. Bu yüzden
+Buildroot’un Python 2’ye bağımlı bir bileşen içerdiğini düşünmüyorum. O yüzden
+üstteki komuttaki <code class="language-plaintext highlighter-rouge">python</code> paketini <code class="language-plaintext highlighter-rouge">python3</code> paketi ile değiştirince bende
+eksik bir paket olmadığını görüyorum.</p>
+
+<p><code class="language-plaintext highlighter-rouge">python3</code> düzeltilmiş komut:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">sudo apt install sed make binutils gcc g++ bash patch \
+gzip bzip2 perl tar cpio python3 unzip rsync wget libncurses-dev
+</span></code></pre></div></div>
+
+<script async="" id="asciicast-G0whSD1KFQsBVKzxG43w7sLRt" src="https://asciinema.org/a/G0whSD1KFQsBVKzxG43w7sLRt.js"></script>
+
+<p>Son olarak yukarıda belirtilen versiyon ve <code class="language-plaintext highlighter-rouge">file</code> programının
+konum koşullarını sağlayıp sağlamadığımıza bakalım:</p>
+
+<script async="" id="asciicast-CAQRLpALjCLWGieTejOeTBcUY" src="https://asciinema.org/a/CAQRLpALjCLWGieTejOeTBcUY.js"></script>
+
+<p><strong>Evet görüldüğü üzere artık hazırız!</strong> 🥳</p>
+
+<h2 id="buildrootu-kullanmaya-başlama-">Buildroot’u Kullanmaya Başlama 🚀</h2>
+
+<p>Serinin önceki bölümünde, Buildroot’un kullandığı <code class="language-plaintext highlighter-rouge">make</code>, <code class="language-plaintext highlighter-rouge">Kconfig</code>, <code class="language-plaintext highlighter-rouge">Kbuild</code> gibi
+araçlardan bahsetmiştim. Bu konulara tekrar girmeyeceğim.</p>
+
+<p>Konfigürasyon tarafında Buildroot tarafından <code class="language-plaintext highlighter-rouge">menuconfig</code>, <code class="language-plaintext highlighter-rouge">nconfig</code>, <code class="language-plaintext highlighter-rouge">xconfig</code>,
+<code class="language-plaintext highlighter-rouge">gconfig</code> araçları destekliyor. Bu 4 aracın da ortak özelliği bizlerin görsel
+yani kolay ve doğru şekilde bir derleme konfigürasyonu oluşturmamızı sağlamak.
+İşte Buildroot’u bu araçlar ile konfigüre edeceğiz. Bu araçlardan <code class="language-plaintext highlighter-rouge">menuconfig</code>
+ve <code class="language-plaintext highlighter-rouge">nconfig</code> terminal tabanlı araçlar. Yani konsol içerisinde çalışıyorlar.
+Bunlara <strong>Text-based User Interface (TUI)</strong> tarzı araçlar diyebiliriz. <sup id="fnref:5f"><a href="#fn:5f" class="footnote" rel="footnote" role="doc-noteref">3</a></sup>
+<code class="language-plaintext highlighter-rouge">xconfig</code> QT kütüphanesi, <code class="language-plaintext highlighter-rouge">gconfig</code> ise GTK kütüphanesini kullanan <strong>Graphical
+User Interface (GUI)</strong> araçlardır. <sup id="fnref:6f"><a href="#fn:6f" class="footnote" rel="footnote" role="doc-noteref">4</a></sup> Terminal tabanlı olması sebebiyle
+pratikliğinden, GUI kütüphaneleri gerektirmemesinden (<code class="language-plaintext highlighter-rouge">libncurses-dev</code>
+yeterlidir) dolayı SSH gibi bağlantılar üzerinden de sorunsuz çalışabilmesinden
+(uzak bir geliştirme bilgisayarına SSH ile bağlısınız ve Buildroot orada
+çalışıyor diyelim) dolayı <code class="language-plaintext highlighter-rouge">menuconfig</code> ve <code class="language-plaintext highlighter-rouge">nconfig</code> araçları gözlemlerime göre
+daha sık kullanılmaktadır.</p>
+
+<script async="" id="asciicast-ePL2Br7BDggFHRDB4cx5fdiky" src="https://asciinema.org/a/ePL2Br7BDggFHRDB4cx5fdiky.js"></script>
+
+<p>Burada ilk olarak <code class="language-plaintext highlighter-rouge">git checkout -b bootlin 2022.02</code> komutu ile <code class="language-plaintext highlighter-rouge">2022.02</code>
+versiyonundan (tag) <code class="language-plaintext highlighter-rouge">bootlin</code> isimli bir branch oluşturuyoruz. <code class="language-plaintext highlighter-rouge">make help</code> ile
+Buildroot’un desteklediği işlemlere bakıyoruz. <code class="language-plaintext highlighter-rouge">make clean</code> eğer varsa kalmış
+ara dosyaların temizlenmesini sağlıyor. Biz zaten ilk defa çalışmaya
+başladığımız için bu işlem aslında gerekli değil bu aşamada. <code class="language-plaintext highlighter-rouge">make menuconfig</code>
+ile, <code class="language-plaintext highlighter-rouge">menuconfig</code> aracını çalıştırıp Buildroot ile beraber gelen <code class="language-plaintext highlighter-rouge">Kconfig</code>
+dosyalarına göre konfigürasyonu görüyoruz. Burada ok, <code class="language-plaintext highlighter-rouge">Enter</code>, <code class="language-plaintext highlighter-rouge">ESC</code> ve <code class="language-plaintext highlighter-rouge">TAB</code>
+tuşları ile gezinebiliyoruz. Benzer şekilde <code class="language-plaintext highlighter-rouge">make nconfig</code> ile <code class="language-plaintext highlighter-rouge">nconfig</code> aracını
+gösteriyorum. Dikkat ederseniz ikinci <code class="language-plaintext highlighter-rouge">make menuconfig</code> komutu hemen çalışıyor
+ama <code class="language-plaintext highlighter-rouge">make clean</code> dersek, <code class="language-plaintext highlighter-rouge">make menuconfig</code> tarafından kullanılan dosyalar da
+silineceği için tekrar <code class="language-plaintext highlighter-rouge">make menuconfig</code> dediğim zaman menünün açılması zaman
+alıyor.</p>
+
+<p>Şimdi gelin, <code class="language-plaintext highlighter-rouge">gconfig</code> ve <code class="language-plaintext highlighter-rouge">xconfig</code> araçlarına bakalım.</p>
+
+<script async="" id="asciicast-tsN4RuKhng57Ww7xaztQN3Icv" src="https://asciinema.org/a/tsN4RuKhng57Ww7xaztQN3Icv.js"></script>
+
+<p>Kayıttan da görebileceğiniz üzere <code class="language-plaintext highlighter-rouge">gconfig</code> ve <code class="language-plaintext highlighter-rouge">xconfig</code> araçlarını hemen
+kullanamadık. Önceki bölümde de belirttiğim gibi, <code class="language-plaintext highlighter-rouge">gconfig</code> aracı GTK kütüphanelerine,
+<code class="language-plaintext highlighter-rouge">xconfig</code> aracı ise QT kütüphanelerine bağımlı.</p>
+
+<p><code class="language-plaintext highlighter-rouge">gconfig</code> i çalıştırabilmek için:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">sudo apt install libgtk2.0-dev libglib2.0-dev libglade2-dev
+</span></code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">xconfig</code> için:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">sudo apt install qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools
+</span></code></pre></div></div>
+
+<p>paketlerini kurmak gerekti. Bu kurulumlardan sonra <code class="language-plaintext highlighter-rouge">make gconfig</code> ve
+<code class="language-plaintext highlighter-rouge">make xconfig</code> komutlarını çalıştırabildim. <code class="language-plaintext highlighter-rouge">menuconfig</code> ve <code class="language-plaintext highlighter-rouge">nconfig</code> komutlarının
+aksine bu iki konfigürasyon aracının görüntülerini yukarıdaki terminal
+kaydında göremiyorsunuz çünkü bu araçlar ayrı bir pencerede açılıyor. Belirttiğim
+gibi, GUI araçları. Örnek olması açısından, birer adet görüntüyü ekliyorum.</p>
+
+<p><strong>İlerleyen bölümlerde sadece <code class="language-plaintext highlighter-rouge">menuconfig</code> veya <code class="language-plaintext highlighter-rouge">nconfig</code> kullanacağız.</strong></p>
+
+<p><img src="/assets/img/24/5-gconfig.png" alt="gconfig" class="centered lazyload" /></p>
+
+<p class="text-align-center">gconfig</p>
+
+<p><img src="/assets/img/24/5-xconfig.png" alt="xconfig" class="centered lazyload" /></p>
+
+<p class="text-align-center">xconfig</p>
+
+<h2 id="derleyelim-️">Derleyelim 🛠️</h2>
+
+<p>Geliştirme ortamımız hazır, ilk derlememizi yapalım.</p>
+
+<p>Burada Bootlin’in, Beaglebone için hazırladığı <a href="https://bootlin.com/doc/training/buildroot/buildroot-labs.pdf">lab
+materyallerini</a>
+takip edeceğim (Sayfa 5, <code class="language-plaintext highlighter-rouge">Configuring Buildroot</code> kısmı). Amacımız her
+aşamayı anlamak değil, kurduğumuz araçları test etmek olacak. Aşamaları tek tek
+buraya yazmıyorum, Bootlin’in dokümanlarından bakarak yapacağım. Aşağıdaki
+kayıta ve lab dokümanlarına bakarak siz de kendinizde deneyebilirsiniz.</p>
+
+<p>Bakalım karta yüklenmeye hazır bir şeyler çıkartabilecek miyiz?</p>
+
+<script async="" id="asciicast-eBguOqKc7hwk8kudfMJSl8rZ5" src="https://asciinema.org/a/eBguOqKc7hwk8kudfMJSl8rZ5.js"></script>
+
+<p>Belirttiğim gibi şimdilik sadece “Derleyebiliyor muyuz?” diye baktığımız için
+seçenekleri Bootlin’in tariflediği gibi yapıp, geçiyorum. İlerleyen bölümlerde
+detaylara gireceğiz (muhtemelen).</p>
+
+<h3 id="openssl-">OpenSSL? 🔒</h3>
+
+<p>Burada bana ilginç olan, kernel seçeneklerinde OpenSSL ile ilgili bir ayar
+yapmamız oldu. İlk başta “Acaba Secure Boot gibi bir mekanizma için bir şeylerin
+imzalanması mı gerekiyor?” diye düşündüm, sonra bu düşünceden uzaklaştım.</p>
+
+<p>Bootlin’in dokümanlarında şöyle bir ifade geçiyor:</p>
+
+<blockquote>
+  <p>The kernel configuration for this platform requires having OpenSSL available on
+the host machine. To avoid depending on the OpenSSL development files installed
+by your host machine Linux distribution, Buildroot can build its own version:
+just enable the Needs host OpenSSL option.</p>
+</blockquote>
+
+<p>Bunun tam neden olduğunu henüz anlayamasam da platformun kablosuz özelliğinden
+dolayı olabileceğini düşünüyorum <sup id="fnref:7f"><a href="#fn:7f" class="footnote" rel="footnote" role="doc-noteref">5</a></sup>. Karşılaştırma yapmak adına, Bootlin’in
+eğitim için önerdiği ikinci platformun, <a href="https://www.st.com/en/evaluation-tools/stm32mp157a-dk1.html">STM32MP1 Discovery Kit
+1</a>, <a href="https://bootlin.com/doc/training/buildroot-stm32/buildroot-stm32-labs.pdf">lab
+dokümanlarına</a>
+da baktım. Burada da aynı ifade geçiyor fakat bu platfomun da Bluetooth ve Wi-Fi
+özellikleri var. O yüzden hala bununla ilgili olabileceğini düşünüyorum, ilerleyen
+zamanlarda burayı kurcalarız.</p>
+
+<hr />
+
+<p>Bootlin’in dokümanlarında önerdiği şekilde,</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">make 2&gt;</span>&amp;1 | <span class="nb">tee </span>build.log
+</code></pre></div></div>
+
+<p>derlemeyi başlatalım. Burada sadece <code class="language-plaintext highlighter-rouge">make</code> deseniz de yeterli. Önceki bölümde
+anlattığım gibi burada <code class="language-plaintext highlighter-rouge">tee</code> komutu, <code class="language-plaintext highlighter-rouge">make</code> in oluşturduğu yazıların, yani logların,
+hem ekrana gösterilmesini hem de <code class="language-plaintext highlighter-rouge">build.log</code> isimli bir dosyaya kaydedilmesini
+sağlıyor. <code class="language-plaintext highlighter-rouge">2&gt;&amp;1</code> ifadesi ise <code class="language-plaintext highlighter-rouge">make</code> in <code class="language-plaintext highlighter-rouge">stderr</code> çıkışının da <code class="language-plaintext highlighter-rouge">stdout</code> çıkışına
+yönlendirilmesini sağlıyor, ama şu aşamada konumuzun dışında bu kavram.</p>
+
+<p>İlk derleme girişimimizin kaydına bir bakalım:</p>
+
+<script async="" id="asciicast-YgRAdbY9SlloLd0xQQ5YFq10B" src="https://asciinema.org/a/YgRAdbY9SlloLd0xQQ5YFq10B.js"></script>
+
+<p>Loglar akarken şunlar dikkatimi çekti:</p>
+
+<ul>
+  <li>Burada Buildroot’un arka planda birçok işlem yaptığını görebiliyoruz. İşte
+böyle bir araç kullanmasaydık, her şeyi elle yapsaydık, buralarda muhtemelen
+hatalar yapacaktık ve saatler sürecekti. Bu kavrama serinin
+<a href="/buildroot-ogreniyoruz-02.html">ikinci bölümünde</a>
+detaylıca değinmiştik.</li>
+  <li>Beklendiği üzere internetten bir şeyler çekiyor. İleriye soru: Offline ortamda
+derleme yapabilir miyiz eğer geliştirme ortamımızın internet bağlantısı yoksa?</li>
+  <li>Toolchain de (derleyici vs) internetten hazır olarak çekildi, bunun ayarını
+yapmıştık.</li>
+  <li>Busybox çekildi.</li>
+</ul>
+
+<p><strong>Fakat patladık!</strong> 🤦</p>
+
+<p>İlk girişimimiz hata ile sonuçlandı, ben dedim demek istemiyorum ama bir
+önceki bölümde muhtemelen problemsiz olmayacak demiştim. Dikkat ederseniz
+<code class="language-plaintext highlighter-rouge">openssl/evp.h</code> dosyasının bulunamadığı bize söyleniyor. OpenSSL dedim dedim,
+başımıza dert açtı. 😅</p>
+
+<p>Normalde bu tarz header dosyaları, ilgili bileşenin “geliştirme paketleri”
+kurulu değilse sistemde bulunmuyor. Fakat Bootlin’in dokümanlarında şöyle
+bir açıklama vardı, yukarıda vermiştim:</p>
+
+<blockquote>
+  <p>…
+To avoid depending on the OpenSSL development files installed
+by your host machine Linux distribution, Buildroot can build its own version:
+…</p>
+</blockquote>
+
+<p>Benim beklentim, benim sistemimde OpenSSL’in geliştirme dosyaları olmasa da
+bir problem yaşamamamdı. Yanlış anlamış olabilirim, ama <code class="language-plaintext highlighter-rouge">Needs host OpenSSL</code>
+seçeneğini açtığımız için benim sistemimde OpenSSL’in geliştirme dosyaları
+olmasa da Buildroot’un temin etmesini bekliyordum.</p>
+
+<p>İnternette de tahmin ettiğim şekilde bir çözüm sunulmuş <sup id="fnref:8f"><a href="#fn:8f" class="footnote" rel="footnote" role="doc-noteref">6</a></sup>: Derleme yaptığımız
+sisteme OpenSSL’in geliştirme paketini kuralım ve derlemeyi tekrar deneyelim.</p>
+
+<script async="" id="asciicast-jEdZORfgObR4rYvAbM5In3Jee" src="https://asciinema.org/a/jEdZORfgObR4rYvAbM5In3Jee.js"></script>
+
+<p>Bu sayede hatayı düzeltmiş olduk. Tekrar <code class="language-plaintext highlighter-rouge">make</code> dediğim zaman derleme işlemi
+kaldığı yerden devam etti. <strong>Bu da <code class="language-plaintext highlighter-rouge">make</code> gibi sistemlerin bizlere sunduğu en
+büyük avantajlardan biri:</strong> Sadece değişen veya yarım kalan kısımlar derleniyor,
+bu da büyük bir zaman avantajı oluşturuyor. Gerçi bizim durumda kernel derlendiği
+için zaman avantajını görememiş gibi olduk ama tüm işler bittikten sonra tekrar
+<code class="language-plaintext highlighter-rouge">make</code> derseniz aslında hiçbir işlem yapılmadığını görebilirsiniz. Çünkü hiç
+bir ayar değiştirmedik, o yüzden var olan bir çıktıyı tekrar oluşturmaya gerek
+yok diye düşünüyor <code class="language-plaintext highlighter-rouge">make</code>.</p>
+
+<p>Bu sırada bir hatamı daha düzeltmiş oldum. Bootlin dokümanlarına göre, Kernel
+ayarlarına <code class="language-plaintext highlighter-rouge">defconfig</code> olarak <code class="language-plaintext highlighter-rouge">omap2plus_defconfig</code> yazmamız gerekiyordu, ben de
+o şekilde yazdım. Fakat loglardan anladığım kadarıyla “birileri” bunun sonuna
+otomatik olarak <code class="language-plaintext highlighter-rouge">_defconfig</code> ekliyor ve <code class="language-plaintext highlighter-rouge">omap2plus_defconfig_defconfig</code> oluyor,
+bu da hataya sebep oluyor. O yüzden tekrar ayarlara girip, bu sefer
+değişiklik olsun diye <code class="language-plaintext highlighter-rouge">menu nconfig</code> kullandım, <code class="language-plaintext highlighter-rouge">omap2plus_defconfig</code> yerine
+<code class="language-plaintext highlighter-rouge">omap2plus</code> yazdım ve devam edebildim.</p>
+
+<blockquote>
+  <p>Yukarıdaki paragraftaki hatamı videoyu çekerken fark ettim. Bootlin dokümanları
+aslında doğruymuş, ben yanlış yazmışım en başta.</p>
+</blockquote>
+
+<p>Gözlemler:</p>
+
+<ul>
+  <li>Kernel kaynak kodudan baştan derleniyor ve derleme sırasında çoklu çekirdek
+kullanımı oluyor. Çok fazla RAM tüketimi yok, fakat çekirdek sayınız ne kadar
+çok olursa belli oranda derleme süreniz azalacaktır.</li>
+  <li>Her ne kadar bir önceki aşamada OpenSSL ile ilgili bir şeyler kurmamız gerekse
+de yine OpenSSL ile ilgili bir şeylerin indirildiğini gördüm. Yani seçtiğimiz
+<code class="language-plaintext highlighter-rouge">Needs host OpenSSL</code> ayarı bir etki gösteriyor bence ama niye header dosyalarını
+kurmamız gerekti tam çözemedim. Onu niye temin etmiyor?</li>
+  <li>Loglar arasında <code class="language-plaintext highlighter-rouge">TI</code> ve <code class="language-plaintext highlighter-rouge">Wireless</code> kelimeleri geçiyor. BeagleBone Black, bir
+Texas Instruments üretimi SoC barındırdığı ve Wi-Fi bağlantısı olduğunu düşününce
+bunlar sürpriz değil.</li>
+</ul>
+
+<p>Derleme sonrasında çıktılar <code class="language-plaintext highlighter-rouge">output/images</code> altında oluşuyor:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">am335x-boneblack-wireless.dtb</code>: Bizim devicetree’miz.</li>
+  <li><code class="language-plaintext highlighter-rouge">MLO</code>: U-Boot SPL (Secondary Program Loader)’in adı, config ile biz seçmiştik.</li>
+  <li><code class="language-plaintext highlighter-rouge">rootfs.tar</code>: RootFS dosya sistemimiz. Yani oluşturduğumuz Linux dağıtımı asılnda
+Karta koyacağımız Linux’ta buradaki dosyalar olacak.</li>
+  <li><code class="language-plaintext highlighter-rouge">u-boot.bin</code>: U-Boot yani bootloader</li>
+  <li><code class="language-plaintext highlighter-rouge">zImage</code>: Sıkıştırılmış Linux yani kernel dosyası. Kart ayağa kalkarken
+Bootloader tarafından açılıp, RAM’e konulacak.</li>
+</ul>
+
+<p>Hatırlarsanız önceki bölümde Buildroot’un derleme süresi ve RootFS dosya boyutu
+açısından iddalı olduğunu görmüştük. 2 MB’a kadar düşebildiğini söylüyordu, biz
+şu an 31 MB’tayız (<code class="language-plaintext highlighter-rouge">rootfs.tar</code>). Belki ilerleyen bölümlerde bunu küçültmeye
+yönelik lablarımız da olur, bilemiyorum. Derleme süresi olarak baktığımızda da
+RootFS kısmının (bu durumda Busybox) görece hızlı olduğunu düşünüyorum. En
+çok süreyi kernelin derlenmesi aldı.</p>
+
+<h2 id="kapanış">Kapanış</h2>
+
+<p>Bir sonraki bölümde oluşturduğumuz imajı (RootFS + Bootloader + Kernel) karta
+atıp, deneyeceğiz. Fakat şöyle bir sorun var, ilk bölümde bahsetmiştim:</p>
+
+<p><strong>Bende BeagleBone Black yok, diğer STM32 kiti de yok!</strong></p>
+
+<p>BeagleBone Black temin etmeye çalıştım ama bulamadım. Bende ilk BeagleBone var,
+beyaz olan ve birkaç farklı model RaspberryPi var. Artık bir sonraki bölüme
+kadar birini seçip devam edeceğim. Bootlin’in eğitiminde olmayan bir kartı
+kullanmak daha da öğretici olabilir belki 😇.</p>
+
+<p>Kendinize iyi bakın 🤒 🙋.</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1f">
+      <p><a href="https://buildroot.org/downloads/manual/manual.html#requirement">https://buildroot.org/downloads/manual/manual.html#requirement</a> <a href="#fnref:1f" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:1f:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:4f">
+      <p><a href="https://www.python.org/doc/sunset-python-2/">https://www.python.org/doc/sunset-python-2/</a> <a href="#fnref:4f" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:5f">
+      <p><a href="https://en.wikipedia.org/wiki/Text-based_user_interface">https://en.wikipedia.org/wiki/Text-based_user_interface</a> <a href="#fnref:5f" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:6f">
+      <p><a href="https://en.wikipedia.org/wiki/Graphical_user_interface">https://en.wikipedia.org/wiki/Graphical_user_interface</a> <a href="#fnref:6f" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:7f">
+      <p><a href="https://buildroot.uclibc.narkive.com/BX6jn0vO/patch-04-23-configs-qemu-x86-64-defconfig-remove-kernel-options-that-need-openssl-libelf#post9">https://buildroot.uclibc.narkive.com/BX6jn0vO/patch-04-23-configs-qemu-x86-64-defconfig-remove-kernel-options-that-need-openssl-libelf#post9</a> <a href="#fnref:7f" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:8f">
+      <p><a href="https://elinux.org/Building_BBB_Kernel">https://elinux.org/Building_BBB_Kernel</a> <a href="#fnref:8f" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name>Alper Yazar</name></author><category term="tr" /><summary type="html"><![CDATA[Buildroot ile ilk derlememizi yapıyoruz. Elbette tahmin ettiğim gibi ilk seferde olmuyor, uğraşıyoruz..]]></summary></entry></feed>
