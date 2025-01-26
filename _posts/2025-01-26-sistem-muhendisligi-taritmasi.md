@@ -12,7 +12,7 @@ tags:
 ---
 
 Geçen hafta LinkedIn'de en çok önüme düşen konu, sistem mühendisliği ile ilgili
-bir tartışmaydı. Tartışmanın temel konusu sorusu şuydu:
+bir tartışmaydı. Tartışmanın temel sorusu şuydu:
 
 🅰️ Sistem mühendisleri yeni mezun kişiler olabilir mi ya da olmalı mıdır?
 
@@ -98,7 +98,7 @@ paylaşımı ile tetiklendi. 🙂
 
 LinkedIn’in gün geçtikçe kişisel gelişim çöplüğüne döndüğünü ve sürekli *"Bugün
 de dün olduğu kadar başarılıyım, yarın da başarılı olacağım, ahan da bu da
-kanıtı, alın fakirler!"* tarzı paylaşımlarla dolduğunu düşünürsek, böyle bir
+kanıtı!"* tarzı paylaşımlarla dolduğunu düşünürsek, böyle bir
 tartışma ortamının oluşması, bu platformun varoluş sebebiyle örtüşüyor. Bu
 yüzden, böyle bir ortamın oluşmasından keyif aldım.
 
@@ -148,6 +148,6 @@ olacaktır.
 ---
 
 Buraya kadar okuduğunuz için size ve LinkedIn platformunda görüşlerini aktaran
-herkese, bu ortama oluşturdukları için teşekkür ederim.
+herkese, bu ortamı oluşturdukları için teşekkür ederim.
 
 Bir başka yazıda görüşmek dileğiyle. 👋
