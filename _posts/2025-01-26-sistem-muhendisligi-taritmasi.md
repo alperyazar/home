@@ -85,8 +85,6 @@ tecrübeli kişilerin, görüşlerini savunmak için örnekler araması ve tatl�
 tartışmalara girmesi, bence okuyucular için hem bilgilendirici hem de
 eğlendirici bir süreçti.
 
----
-
 ![Oğuz Ergin LinkedIn gönderi](/assets/img/25/3-the-origin.jpg){:.centered .lazyload}
 
 {:.text-align-center}
@@ -101,6 +99,11 @@ de dün olduğu kadar başarılıyım, yarın da başarılı olacağım, ahan da
 kanıtı!"* tarzı paylaşımlarla dolduğunu düşünürsek, böyle bir
 tartışma ortamının oluşması, bu platformun varoluş sebebiyle örtüşüyor. Bu
 yüzden, böyle bir ortamın oluşmasından keyif aldım.
+
+![mserdark ve halasının facebook'u](/assets/img/25/3-mserdark.jpg){:.centered .lazyload}
+
+{:.text-align-center}
+Adam haklı 🤣
 
 ## Ama yine de…
 
