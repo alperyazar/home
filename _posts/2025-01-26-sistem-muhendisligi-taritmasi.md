@@ -88,7 +88,8 @@ eğlendirici bir süreçti.
 ![Oğuz Ergin LinkedIn gönderi](/assets/img/25/3-the-origin.jpg){:.centered .lazyload}
 
 {:.text-align-center}
-Takip edebildiğim kadarıyla tartışmalar [Oğuz Ergin](https://www.linkedin.com/in/oguzergin/) hocanın
+Takip edebildiğim kadarıyla tartışmalar [Oğuz
+Ergin](https://www.linkedin.com/in/oguzergin/) hocanın
 [şu](https://www.linkedin.com/posts/oguzergin_yeni-mezunlar-sistem-m%C3%BChendisli%C4%9Fine-al%C4%B1nmas%C4%B1n-activity-7287079639787708416-3jaf)
 paylaşımı ile tetiklendi. 🙂
 
