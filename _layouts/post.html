@@ -55,6 +55,7 @@ layout: default
     <hr>
     {%- endif -%}
     {{ content }}
+    {% comment %}
     <hr>
     {%- if page.tags contains 'tr' -%}
     <p><center><strong>Beğendiniz mi? Destek olmak ister misiniz?</strong> Eğer öyleyse bir kahve ısmarlayabilirsiniz:</center></p>
@@ -63,6 +64,7 @@ layout: default
     <p><center><strong>Did you like it? Wanna give me a support?</strong> If yes then you may</center></p>
     {%- endif -%}
     <p><center><a href="https://www.buymeacoffee.com/ayazar" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a></center></p>
+    {% endcomment %}
     <hr>
     {% include ax_single.html reccmode="random"%}
   </div>
