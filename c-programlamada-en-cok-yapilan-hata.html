@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>C programlamada gördüğüm en sık yapılan hata | Alper Yazar</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="C programlamada gördüğüm en sık yapılan hata" />
+<meta name="author" content="Alper Yazar" />
+<meta property="og:locale" content="tr_TR" />
+<meta name="description" content="Gözden kaçabilen, masum görünen fakat canınızı sıkabilecek bir C hatası" />
+<meta property="og:description" content="Gözden kaçabilen, masum görünen fakat canınızı sıkabilecek bir C hatası" />
+<link rel="canonical" href="https://www.alperyazar.com/c-programlamada-en-cok-yapilan-hata.html" />
+<meta property="og:url" content="https://www.alperyazar.com/c-programlamada-en-cok-yapilan-hata.html" />
+<meta property="og:site_name" content="Alper Yazar" />
+<meta property="og:image" content="https://www.alperyazar.com/assets/img/22/8.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-06-05T00:00:00+03:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://www.alperyazar.com/assets/img/22/8.png" />
+<meta property="twitter:title" content="C programlamada gördüğüm en sık yapılan hata" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alper Yazar"},"dateModified":"2022-06-05T00:00:00+03:00","datePublished":"2022-06-05T00:00:00+03:00","description":"Gözden kaçabilen, masum görünen fakat canınızı sıkabilecek bir C hatası","headline":"C programlamada gördüğüm en sık yapılan hata","image":"https://www.alperyazar.com/assets/img/22/8.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.alperyazar.com/c-programlamada-en-cok-yapilan-hata.html"},"url":"https://www.alperyazar.com/c-programlamada-en-cok-yapilan-hata.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css">
+    <script src="/assets/js/lazysizes.min.js" async=""></script><link type="application/atom+xml" rel="alternate" href="https://www.alperyazar.com/feed.xml" title="Alper Yazar" /><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"><!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S3B80PC7FC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-S3B80PC7FC');
+    </script>
+
+    
+
+    
+    <!-- Adsense -->
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4580059638713287"
+    crossorigin="anonymous"></script> -->
+    <link rel="me" href="https://mastodon.social/@ayazar">
+  </head>
+<body><header class="site-header" role="banner">
+
+    <div class="wrapper"><a class="site-title" rel="author" href="/">Alper Yazar</a><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewBox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger"><a class="page-link" href="/blog/">📝 Blog</a><a class="page-link" href="/search.html">🔍 Search</a><!-- <a class="page-link" href="https://notes.alperyazar.com" target="_blank">🗒️ Notes</a> -->
+            <a rel="me" class="page-link" href="https://www.linkedin.com/in/alperyazar" target="_blank">💼 LinkedIn</a>
+            <a rel="me" class="page-link" href="https://www.youtube.com/@ayazar" target="_blank">🎬 YouTube</a>
+          </div>
+        </nav></div>
+  </header>
+
+  <div id="progressBar" class="progress-bar"></div>
+
+  <script>
+    // Listen for scroll events on the window
+window.onscroll = function() {
+    // Call the function to update the progress bar
+    updateProgressBar();
+};
+
+function updateProgressBar() {
+    // Get the total height of the page
+    var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    // Get the current scroll position
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    // Calculate the scroll percentage
+    var scrollPercentage = (scrollTop / scrollHeight) * 100;
+    // Update the width of the progress bar
+    document.getElementById("progressBar").style.width = scrollPercentage + "%";
+}
+  </script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">C programlamada gördüğüm en sık yapılan hata</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2022-06-05T00:00:00+03:00" itemprop="datePublished">
+        2022-06-05
+      </time>• 🇹🇷<span> • 22-8</span>
+      </p>
+  </header><div style="background: #eeeeff; border-radius: 2px; margin: 2px;"><center><p><span data-nosnippet>🔤 <small><a rel=”nofollow” href="https://www-alperyazar-com.translate.goog/c-programlamada-en-cok-yapilan-hata.html?_x_tr_sl=auto&_x_tr_tl=en">Translate with Google</a></small> 🔤</span></p></center></div><div class="post-content e-content" itemprop="articleBody"><center>
+    <p>
+    <a class="post-link" href="/c-programlamada-en-cok-yapilan-hata.html"><img alt="Teaser" data-srcset="/assets/img/22/8.png" srcset="/assets/lazyload.png" src="/assets/img/22/8.png" data-srcset="/assets/img/22/8.png"  srcset="/assets/lazyload.png" style="border-radius: 10px;" class="lazyload"></a>
+    </p>
+    </center><p><i>Gözden kaçabilen, masum görünen fakat canınızı sıkabilecek bir C hatası</i></p>
+    <hr><p>Gömülü sistemlerle uğraşan biri olarak C dili ile ilgileniyorum. Bu yazıda
+oldukça masum duran fakat başımızı derde sokabilecek bir kodlama hatasından
+bahsetmek istiyorum. <strong>Yeni öğrenen kişilerin kodlarında (dikkatsizlik
+durumunda görece tecrübeli kişilerinkilerde bile) karşıma en sık çıkan C
+programlama hatası bu.</strong></p>
+
+<p>İlk olarak hatalı olmayan bir duruma bakalım. Bir fonksiyonun içerisinde
+x isminde bir tam sayı (integer) nesnesi yaratıp, buna daha sonra bir değer
+atayalım.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">foo</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">x</span><span class="p">;</span>
+    <span class="cm">/*...*/</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Burada hiç bir problem yok. Şimdi de diyelim ki integer tipinde bir gösterici
+(pointer) tanımlayalım ve benzer şekilde kodumuzun içerisinde daha sonra değer
+atıyor olalım.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">foo</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="o">*</span><span class="n">y</span><span class="p">;</span>
+    <span class="cm">/*...*/</span>
+    <span class="o">*</span><span class="n">y</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>⚠️ <code class="language-plaintext highlighter-rouge">x</code>i nasıl kullandıysak aynı şekilde <code class="language-plaintext highlighter-rouge">y</code>yi kullandık değil mi?
+<strong>Değil</strong>, geçmiş olsun.</p>
+</blockquote>
+
+<h2 id="bu-neden-hatalı">Bu neden hatalı?</h2>
+
+<p>Çünkü, buradaki <code class="language-plaintext highlighter-rouge">x</code> ve <code class="language-plaintext highlighter-rouge">y</code> fonksiyon faaliyet alanında (<em>function scope</em>)
+bulunan otomatik ömürlü (<em>automatic storage duration</em>) nesnelerdir. Otomatik
+ömürlü nesnelerin ilk değerleri belirsizdir. İnanmazsanız mesela C99
+standardının <code class="language-plaintext highlighter-rouge">6.2.4.5</code> nolu maddesine göz atabilirsiniz (<em>Storage durations of
+objects</em> başlığı altında). <strong><code class="language-plaintext highlighter-rouge">x</code> ve <code class="language-plaintext highlighter-rouge">y</code>nin içinde başlangıçta ne var
+bilmiyoruz! Çöp bir değer var.</strong> Yani <code class="language-plaintext highlighter-rouge">*y=10</code> ifadesi ile nereyi gösterdiği
+belli olmayan bir pointer’ın gösterdiği yere gidip 10 yazmış olduk. <code class="language-plaintext highlighter-rouge">x</code>
+durumunda problem olmamasının sebebi zaten bizim için ayrılmış olan bir yere
+bir değer atamamız. Eğer <code class="language-plaintext highlighter-rouge">y</code>yi güncelliyor olsaydık (<code class="language-plaintext highlighter-rouge">*y</code> değil, <code class="language-plaintext highlighter-rouge">y</code>) yine
+problem yoktu, derleyici bizim için <code class="language-plaintext highlighter-rouge">y</code> isminde bir int tipinden pointer
+ayırdı, istediğimizi yapabiliriz. AMA gidip <em>kullanım hakkı</em> bizim elimizde
+olmayan, değeri <code class="language-plaintext highlighter-rouge">y</code>nin içerisinde olan rastgele bir adrese <code class="language-plaintext highlighter-rouge">*y</code> ile erişirsek
+işte o zaman haddimizi aşmış oluyoruz.</p>
+
+<h2 id="bu-hatayı-neden-yapıyoruz">Bu hatayı neden yapıyoruz?</h2>
+
+<p>Dediğim gibi bu hata karşılaştığım en sık hata. Çünkü sanıyorum <code class="language-plaintext highlighter-rouge">x</code> ile <code class="language-plaintext highlighter-rouge">y</code>
+aynıymış gibi düşünülüyor ve bu hatalı durum oluşuyor. Bunun bir sebebi de
+belki şudur: <code class="language-plaintext highlighter-rouge">int *y</code> ile <code class="language-plaintext highlighter-rouge">*y</code>yi tanımladık ve <code class="language-plaintext highlighter-rouge">*y</code>yi kullandık değil mi? Öyle
+olmuyor maalesef çünkü buradaki <code class="language-plaintext highlighter-rouge">*</code>ın iki yerdeki görevi farklı. <code class="language-plaintext highlighter-rouge">y</code>yi
+tanımlarken <code class="language-plaintext highlighter-rouge">int* y</code> de diyebilirdik, belki o zaman kafalar karışmazdı. Fakat
+genelde <code class="language-plaintext highlighter-rouge">int *y</code> olarak yazılır yani <code class="language-plaintext highlighter-rouge">*</code> karakteri <code class="language-plaintext highlighter-rouge">y</code>ye bitişik, <code class="language-plaintext highlighter-rouge">ìnt</code>e değil.
+Kod içerisinde <code class="language-plaintext highlighter-rouge">*y</code> ile <code class="language-plaintext highlighter-rouge">y</code> nin gösterdiği yerdeki int değere erişme işlemi de
+<em>dereferencing</em> olarak adlandırılır. Tanımlama kısmında ise gösterici
+(<em>pointer</em>) tanımladığımızı söylüyor derleyiciye <code class="language-plaintext highlighter-rouge">*</code> karakteri. Yani <em>görsel</em>
+olarak tanımlamada ve kullanım sırasında<code class="language-plaintext highlighter-rouge">*y</code>yi görsek de <code class="language-plaintext highlighter-rouge">*</code>ların görevleri
+farklı. İşte burası sanıyorum bu hatanın ve yanılgının temel sebebi. Şekilsel
+olarak tanımladığımız bir şeye erişiyoruz gibi oluyor, ama öyle değil.</p>
+
+<h2 id="örnek">Örnek</h2>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">y</span><span class="p">,</span> <span class="o">*</span><span class="n">w</span><span class="p">,</span> <span class="n">z</span><span class="p">;</span>
+
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span> <span class="cm">/* Problem yok */</span>
+
+    <span class="cm">/* YAPMAYIN! y'de "çöp" bir değer var, nereyi gösteriyor? */</span>
+    <span class="cm">/* Programımız çökebilir, saçmalayabilir, her şey mümkün */</span>
+    <span class="o">*</span><span class="n">y</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+    <span class="n">x</span> <span class="o">=</span> <span class="n">z</span><span class="p">;</span> <span class="cm">/* z'de de çöp değer var ama program zarar görmez */</span>
+
+    <span class="cm">/* w'yu okumak da programımızı çökertebilir */</span>
+    <span class="cm">/* Sorun yazma ile sınırlı değil, okuma da sıkıntı */</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="o">*</span><span class="n">w</span><span class="p">;</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Burada örneği biraz daha genişlettim. İlk olarak <code class="language-plaintext highlighter-rouge">*y=10</code> satırının probleminden
+zaten konuştuk, ne olduğu belli olmayan bir adrese bir şey yazıyoruz. Hemen
+altında <code class="language-plaintext highlighter-rouge">x = z</code> var. Burada da aslında <code class="language-plaintext highlighter-rouge">z</code>de çöp değer var ve <code class="language-plaintext highlighter-rouge">x</code>e bunu
+atıyoruz ama bu programımıza herhangi bir zarar vermez (işletim sisteminin
+programı sonlandırması gibi), sadece <code class="language-plaintext highlighter-rouge">z</code>nin ilk değerinin 0 olduğunu düşünerek
+bir şey yaptıysak hata ayıklama sırasında saç baş yoldurtabilir. Son olarak da
+<code class="language-plaintext highlighter-rouge">y</code> ile benzer şekilde oluşturulmuş <code class="language-plaintext highlighter-rouge">w</code>nun okunduğu <code class="language-plaintext highlighter-rouge">x = *w</code> satırı var. <strong>Bu
+da problem!</strong> Yani sadece yazma değil okuma da problem çünkü sonuçta
+bilmediğiniz bir adrese erişiyorsunuz. İşletim sistemi üzerinde çalışıyorsanız
+işletim sisteminin programınızı sonlandırması çok olası, erişim hakkınızın
+olmadığı bir bellek alanına erişiyor olacaksınız muhtemelen (yazma ya da
+okuma).</p>
+
+<p>Bir de işletim sistemsiz bir ortamda, MCU üzerinde vs çalışıyorsanız bu hata
+yüzünden şu cümleyi kurabilirsiniz:</p>
+
+<p class="notice--info">“Ya abi çok ilginç bir şey oluyor, seri kanaldan mesaj işleyen fonksiyona girince
+kart reset atıyor/LED yanıyor.”</p>
+
+<p>Kart reset atsa biraz şüphelenirsiniz de LED yanarsa iyice garip değil mi? Tamam,
+bir LED’in yanması çok olası değil ama <em>yeteri kadar şanslı</em> iseniz <code class="language-plaintext highlighter-rouge">y</code>ye
+alacağınız çöp değer GPIO biriminin çıkış yazmacını (<em>register</em>) gösteriyor olabilir.
+Reset olayında da <em>unaligned memory access</em> yaşanıyor olabilir. Olaylar olaylar…</p>
+
+<h2 id="derleme-sırasında-yakalayalım">Derleme sırasında yakalayalım</h2>
+
+<p>Bu tarz hataları derleme sırasında yakalamak oldukça kolay. Öncelikle kod
+yazdığınız editör yüksek ihtimalle bunu fark edecektir. Mesela, yukarıdaki kodu
+Visual Studio 2022 içerisine koyduğum zaman aşağıdaki gibi bir görüntü çıkıyor.</p>
+
+<p class="text-align-center"><img src="/assets/img/22/8-vs.png" alt="Visual Studio 2022 uyarılar" /></p>
+
+<p>Burada fark ederseniz problemli olan kısımların altlarında işaretler var.
+Mesela bize <code class="language-plaintext highlighter-rouge">C60001: Using uninitialized memory</code> uyarısını veriyor. Detaylı
+bilgi
+<a href="https://docs.microsoft.com/tr-tr/cpp/code-quality/c6001?view=msvc-170">şurada</a>
+var.</p>
+
+<p>Bitti mi? Hayır. Derleyiciden de uyarı mesajları alabilirsiniz. Mesela
+<a href="https://gcc.gnu.org/">GCC</a> ve <a href="https://clang.llvm.org/">Clang</a> ile kodu
+derleyelim. Yukarıdaki örnek kodu <code class="language-plaintext highlighter-rouge">test.c</code> ismiyle kaydettim. Bu durumda
+aşağıdaki gibi derleyebiliriz. Örnek olarak Ubuntu 20.04 kullanıyorum.</p>
+
+<div class="language-terminal highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>gcc test.c
+<span class="gp">$</span><span class="w"> </span>clang test.c
+</code></pre></div></div>
+
+<p>İkisi de uslu uslu derledi. Çünkü kod geçerli bir C kodu, sadece çalışma sırasında
+görebileceğiniz bir hata içeriyor. Fakat her iki derleyiciden size uyarı mesajlarını
+basmasını isterseniz şu çıktılar gelecektir.</p>
+
+<div class="language-terminal highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>gcc <span class="nt">-Wall</span> test.c
+</code></pre></div></div>
+
+<p>dediğimizde</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>test.c: In function ‘main’:
+test.c:3:9: warning: variable ‘x’ set but not used [-Wunused-but-set-variable]
+    3 |     int x, *y, *w, z;
+      |         ^
+test.c:9:8: warning: ‘y’ is used uninitialized in this function [-Wuninitialized]
+    9 |     *y = 10;
+      |     ~~~^~~~
+test.c:11:7: warning: ‘z’ is used uninitialized in this function [-Wuninitialized]
+   11 |     x = z; /* z'de de çöp değer var ama program zarar görmez */
+      |     ~~^~~
+test.c:14:7: warning: ‘w’ is used uninitialized in this function [-Wuninitialized]
+   14 |     x = *w;
+      |     ~~^~~~
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Wuninitialized</code> uyarısını görüyoruz.</p>
+
+<p>ya da</p>
+
+<div class="language-terminal highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>clang <span class="nt">-Wall</span> test.c
+</code></pre></div></div>
+
+<p>dediğimizde de</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>test.c:9:6: warning: variable 'y' is uninitialized when used here [-Wuninitialized]
+    *y = 10;
+     ^
+test.c:3:14: note: initialize the variable 'y' to silence this warning
+    int x, *y, *w, z;
+             ^
+              = 0
+test.c:11:9: warning: variable 'z' is uninitialized when used here [-Wuninitialized]
+    x = z; /* z'de de çöp değer var ama program zarar görmez */
+        ^
+test.c:3:21: note: initialize the variable 'z' to silence this warning
+    int x, *y, *w, z;
+                    ^
+                     = 0
+test.c:14:10: warning: variable 'w' is uninitialized when used here [-Wuninitialized]
+    x = *w;
+         ^
+test.c:3:18: note: initialize the variable 'w' to silence this warning
+    int x, *y, *w, z;
+                 ^
+                  = 0
+3 warnings generated.
+</code></pre></div></div>
+
+<p>aynı uyarı çıkıyor.</p>
+
+<p>Bir de <a href="https://cppcheck.sourceforge.io/">cppcheck</a> isimli <em>Linter</em> aracından
+geçirelim kodumuzu bakalım ne diyecek?</p>
+
+<div class="language-terminal highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>cppcheck test.c
+</code></pre></div></div>
+
+<p>dedik ve bize</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Checking test.c ...
+test.c:9:6: error: Uninitialized variable: y [uninitvar]
+    *y = 10;
+     ^
+test.c:14:10: error: Uninitialized variable: w [uninitvar]
+    x = *w;
+         ^
+test.c:11:9: error: Uninitialized variable: z [uninitvar]
+    x = z; /* z'de de çöp değer var ama program zarar görmez */
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">uninitvar</code> dedi.</p>
+
+<p>GCC ve Clang kodumuzu uyarı verse de derliyor, peki çalıştıralım bakalım.</p>
+
+<div class="language-terminal highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>./a.out
+<span class="go">Segmentation fault (core dumped)
+</span></code></pre></div></div>
+
+<p>Tüh, işletim sistemi harcadı güzel programımızı!</p>
+
+<p>Eğer <code class="language-plaintext highlighter-rouge">*y = 10</code> ve <code class="language-plaintext highlighter-rouge">x = *w</code> satırlarını kaldırırsak program hatasız çalışacaktır
+(Uyarı veren <code class="language-plaintext highlighter-rouge">x = z</code> kalsa bile, buna işletim sistemi laf etmez). Fakat bu iki
+satırdan bir tanesinin olması bu hatayı <em>verdirebilir.</em> Her durumda hata
+almayabilirsiniz. Mesela Clang ile derlediğim yazılım gayet güzel çalıştı ama
+GCC ile derlediğim sürümde yukarıdaki hatayı aldım. Yani siz de deneyip bir
+hata almazsanız çalışma sırasında “Bak bir şey olmuyor” demeyin.</p>
+
+<h2 id="özetle">Özetle</h2>
+
+<ul>
+  <li>Pointer’ları sevin.</li>
+  <li>Bilmediğiniz adreslere erişmeyin (en iyisi evdeki adreslere erişmek, dışarda
+nasıl yapıldığı belli değil).</li>
+  <li>Editör ve IDE’nizin turuncu yaptığı, altını çizdiği şeylere dikkat edin.
+“Derleniyor ya!” demeyin. C derleyicileri bir Vivado değil, hunharca uyarı
+basmazlar, varsa da bir bakıverin.</li>
+</ul>
+
+<p class="text-align-center"><img src="/assets/img/22/8-meme.jpg" alt="Vivado Meme" /></p>
+
+<p><a href="https://www.reddit.com/r/FPGA/comments/mdi4te/its_just_a_warning_right/">Vivado Meme</a></p>
+
+<ul>
+  <li>Kullandığınız derleyicinin <em>flag</em>lerini bir kurcalayın (<code class="language-plaintext highlighter-rouge">-Wall</code> falan).</li>
+  <li>Bir C kodunun derleniyor olması, sizin sisteminizde sorunsuzca çalışıyor olması
+o kodun başka bir derleyicide düzgün derleneceğinin, çalıştırılabilir kodun
+başka bir sistemde <strong>hatta başka bir zaman sizin sisteminizde de</strong> düzgün
+çalışacağı anlamına gelmez (genel olarak, bu duruma özgü değil).</li>
+</ul>
+
+    
+    <hr>
+    
+
+
+
+
+
+
+    
+    
+    
+<!--0-->
+        
+        
+            
+                
+                
+
+
+
+
+
+
+
+<ul class="post-list">
+<li style="background: #DDEEEE; padding: 10px; border-radius: 10px;">
+<h4>🤓 Bir içerik daha?</h4>
+
+<center>
+<p>
+<a class="post-link" href="/ctf.html"><img alt="Teaser" data-srcset="/assets/img/23/7.jpg" srcset="/assets/lazyload.png" src="/assets/img/23/7.jpg" data-srcset="/assets/img/23/7.jpg"  srcset="/assets/lazyload.png" style="border-radius: 10px; height: auto; width: 95%; max-width: 700px;" class="lazyload"></a>
+</p>
+</center><h3>
+<a class="post-link" href="/ctf.html">
+İlk CTF Deneyimim
+
+</a>
+</h3><h4>Çalıştığım kurumda düzenlenen CTF (Capture the Flag) yarışmasına katılıp ikinci oldum. Bu bahaneyle kısaca CTF'ten bahsediyorum.</h4></li>
+</ul>
+
+
+  </div><div class="gicus_comments" style="border-top: 2px dashed; margin-top: 10px;"><h2 style="padding-top: 10px;">💭 Yorumlar</h2>
+  <p><small>Yorum altyapısı <a href="https://giscus.app/">giscus</a> tarafından (evet tarafından!) sağlanmaktadır.
+    Yorum yazabilmek için <a href="https://github.com/">GitHub</a> hesabınız üzerinden giriş yapmanız gerekmektedir.
+    Yazılan yorumlar <a href="https://github.com/alperyazar/home/discussions/categories/comments">Github Discussions</a> üzerinde saklanmaktadır.</small></p><script src="https://giscus.app/client.js"
+        data-repo="alperyazar/home"
+        data-repo-id="R_kgDOJoQiqA"
+        data-category="Comments"
+        data-category-id="DIC_kwDOJoQiqM4Cne4h"
+        data-mapping="specific"
+        data-term='22-8''
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"data-lang="tr"data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+<p>🫆 <code>22-8</code></p>
+</div><a class="u-url" href="/c-programlamada-en-cok-yapilan-hata.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Alper Yazar</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Alper Yazar</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/alperyazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">alperyazar</span></a></li><li><a href="https://www.linkedin.com/in/alperyazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">alperyazar</span></a></li><li><a href="https://mastodon.social/@ayazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#mastodon"></use></svg> <span class="username">ayazar</span></a></li><li><a href="https://youtube.com/%40ayazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">@ayazar</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>&quot;Full Stack Electronics&quot; Engineer<br/>© 2011 - 2025<br/><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a></p>
+        <p><a href="/disclaimer.html" />Disclaimer</a> <a href="/specimen.html" />Specimen</a> <a href="/" />Contact</a></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer><!-- Default Statcounter code for Home
+https://www.alperyazar.com -->
+<script type="text/javascript">
+  var sc_project=12712694;
+  var sc_invisible=1;
+  var sc_security="1c071fc4";
+  </script>
+  <script type="text/javascript"
+  src="https://www.statcounter.com/counter/counter.js"
+  async></script>
+  <noscript><div class="statcounter"><a title="web statistics"
+  href="https://statcounter.com/" target="_blank"><img
+  class="statcounter"
+  src="https://c.statcounter.com/12712694/0/1c071fc4/1/"
+  alt="web statistics"
+  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+  <!-- End of Statcounter Code --></body>
+
+</html>
