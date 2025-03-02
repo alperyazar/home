@@ -124,5 +124,7 @@ social:
     - https://www.youtube.com/@ayazar
     - https://mastodon.social/@ayazar
 
-disqus:
-  shortname: alperyazar
+# disqus:
+#  shortname: alperyazar
+
+giscus_enabled: true

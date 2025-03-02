@@ -1,0 +1,38 @@
+{%- if page.comments != false and page.axseq and page.date -%}
+
+<div class="gicus_comments" style="border-top: 2px dashed; margin-top: 10px;">
+  {%- if page.tags contains 'tr' -%}
+  <h2 style="padding-top: 10px;">💭 Yorumlar</h2>
+  <p><small>Yorum altyapısı <a href="https://giscus.app/">giscus</a> tarafından (evet tarafından!) sağlanmaktadır.
+    Yorum yazabilmek için <a href="https://github.com/">GitHub</a> hesabınız üzerinden giriş yapmanız gerekmektedir.
+    Yazılan yorumlar <a href="https://github.com/alperyazar/home/discussions/categories/comments">Github Discussions</a> üzerinde saklanmaktadır.</small></p>
+  {%- else -%}
+  <h2 style="padding-top: 10px;">💭 Comments</h2>
+  <p><small>Comments are provided by <a href="https://giscus.app/">giscus.</a>
+    You need to use and authenticate your <a href="https://github.com/">GitHub</a> account to post a comment.
+    Comments are stored on the <a href="https://github.com/alperyazar/home/discussions/categories/comments">Github Discussions.</a></small></p>
+  {%- endif -%}
+  <script src="https://giscus.app/client.js"
+        data-repo="alperyazar/home"
+        data-repo-id="R_kgDOJoQiqA"
+        data-category="Comments"
+        data-category-id="DIC_kwDOJoQiqM4Cne4h"
+        data-mapping="specific"
+        data-term='{{ page.date | date: "%y" }}-{{ page.axseq }}''
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        {%- if page.tags contains 'tr' -%}
+        data-lang="tr"
+        {%- else -%}
+        data-lang="en"
+        {%- endif -%}
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+<p>🫆 <code>{{ page.date | date: "%y" }}-{{ page.axseq }}</code></p>
+</div>
+{%- endif -%}
