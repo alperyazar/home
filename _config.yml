@@ -128,3 +128,7 @@ social:
 #  shortname: alperyazar
 
 giscus_enabled: true
+
+# https://github.com/aleung/jekyll-post-revision
+revision:
+  max_count: 10 # Silme, temada kullanılıyor!
