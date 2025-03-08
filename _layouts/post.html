@@ -10,9 +10,17 @@ layout: default
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {{ page.date | date: date_format }}
       </time>
+      {%- assign page_last_modified_date = page.last_modified_at | date: "%Y-%m-%d" -%}
+      {%- assign page_date = page.date | date: "%Y-%m-%d" -%}
       {%- if page.modified_date -%}
       ~
       {%- assign mdate = page.modified_date | date_to_xmlschema -%}
+      <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
+        {{ mdate | date: date_format }}
+      </time>
+      {%- elsif page.last_modified_at and page_last_modified_date != page_date -%}
+      ~
+      {%- assign mdate = page.last_modified_at | date_to_xmlschema -%}
       <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
         {{ mdate | date: date_format }}
       </time>
@@ -68,6 +76,23 @@ layout: default
     <hr>
     {% include ax_single.html reccmode="random"%}
   </div>
+
+  {% if page.revisions.size > 0 %}
+  <div class="revisions" style="border-top: 2px dashed; margin-top: 10px;">
+  {%- if page.tags contains 'tr' -%}
+  <h2 style="padding-top: 10px;">🔄 Değişiklikler (Son {{site.revision.max_count}}) </h2>
+  {%- else -%}
+  <h2 style="padding-top: 10px;">🔄 Updates (Last {{site.revision.max_count}})</h2>
+  {%- endif -%}
+    <ul style="list-style-type: none;">
+    {% for rev in page.revisions %}
+      <li>
+        <div class="post-meta"><code>{{ rev.date | date: date_format }}</code> {{ rev.message }}</div>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
 
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}

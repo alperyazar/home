@@ -32,6 +32,31 @@
     </div>
   </header>
 
+  {% assign son_yazi = site.posts | first %}
+
+<div id="son_yazi_banner" style="
+background: linear-gradient(to right, rgba(250, 191, 200, 0.3), rgba(23, 86, 169, 0.2));
+color: rgb(52, 55, 67);
+text-align: center;
+padding: 15px;
+border-radius: 10px;
+border: 0px dashed rgba(250, 191, 200, 0.5);
+box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+margin: 10px 0px 10px 0px;">
+{%- if page.tags contains 'tr' -%}
+🚀 Son blog yazısı:
+{%- else -%}
+🚀 The latest blog post:
+{%- endif -%}
+  &nbsp;<a href="{{ son_yazi.url | relative_url }}" style="font-weight: bold;"><span style="font-weight: bold;">{{ son_yazi.title | escape }}</span></a>&nbsp;
+  {%- if son_yazi.tags contains 'tr' -%}
+  🇹🇷
+  {%- endif -%}
+  {%- if son_yazi.tags contains 'en' -%}
+  🇬🇧
+  {%- endif -%}
+</div>
+
   <div id="progressBar" class="progress-bar"></div>
 
   <script>

@@ -41,9 +41,15 @@ title: 📝 Blog
         {%- if post.tags contains 'tr' -%}<span class="post-meta">🇹🇷</span>&nbsp;{%- endif -%}
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <span class="post-meta">{{ post.date | date: date_format }}</span>
+        {%- assign post_last_modified_date = post.last_modified_at | date: "%Y-%m-%d" -%}
+        {%- assign post_date = post.date | date: "%Y-%m-%d" -%}
         {%- if post.modified_date -%}
         {%- assign mdate = post.modified_date | date_to_xmlschema -%}
-        &nbsp;~&nbsp;
+        &nbsp;~
+        <span class="post-meta">{{ mdate | date: date_format }}</span>
+        {%- elsif post.last_modified_at and post_last_modified_date != post_date -%}
+        {%- assign mdate = post.last_modified_at | date_to_xmlschema -%}
+        &nbsp;~
         <span class="post-meta">{{ mdate | date: date_format }}</span>
         {%- endif -%}
         <span class="post-meta" style="float: right;">{{ post.date | date: "%y" }}-{{ post.axseq }}</span>
