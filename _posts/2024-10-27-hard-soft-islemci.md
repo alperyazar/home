@@ -11,28 +11,11 @@ tags:
   - tr
 ---
 
-> İçerik, video olarak sunulmuştur. Bu yazıda (varsa) düzeltmeler ve videoda
-> geçen bağlantılar veya videoya ek notlar sunulmuştur.
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
+<script type="text/javascript">
+    window.location.href = "https://ayazar.dev/video/hard-soft-ip.html";
+</script>
+<!-- markdownlint-restore -->
 
-{% include youtubePlayer.html id="ZfILlT64EFA" %}
-
-## Notlar
-
-- Videoda İngilizcesi `silicon` olan elementin adını Türkçe'ye ağız alışkanlığı
-  `silikon` olarak çevirmişim. Oysa Türkçe'de `silikon` dediğimiz şey, İngilizce'de
-  `silicone` olarak geçmektedir. Türkçe'deki doğru karşılığı `silisyum`
-  olmalıdır. [^1f], [^2f] Bu, videoyu çekerken hiç aklıma gelmedi. Aslında
-  `silisyum` kelimesine de oldukça aşinayım çünkü küçüklüğümde `silisyum.net`
-  sitesindeki yazıları az okumadım (an itibariyle ne yazık ki siste kapanmış,
-  üzüldüm). Nerdeyse herkesin aklında bu kelimenin Türkçe karşılığının `silikon`
-  olmasının önemli bir sebebi de `Silicon Valley`e hemen hemen her zaman
-  `Silikon Vadisi` dememizdir, dilimize `Silisyum Vadisi` olarak yerleşmemiş
-  olmasıdır. Bunu videoya yorum yazan [Şenol Eker](https://www.youtube.com/@senoleker)
-  Bey'in yorumu sayesinde fark ettim. Yorumun ekran görüntüsünü ekliyorum.
-  Bu düzeltmeyi bu videoda yapamasam da ileride üreteceğim içeriklerde dikkat
-  edeceğim. Kendisine buradan da teşekkür ederim.
-
-![senoleker yorum](/assets/img/24/15-senoleker.png){:.centered .lazyload}
-
-[^1f]: <https://tr.wikipedia.org/wiki/Silisyum>
-[^2f]: <https://kelimeler.gen.tr/silisyum-nedir-ne-demek-275440>
+[Moved...](https://ayazar.dev/video/hard-soft-ip.html)
