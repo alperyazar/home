@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.alperyazar.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.alperyazar.com/" rel="alternate" type="text/html" /><updated>2025-03-18T22:11:53+03:00</updated><id>https://www.alperyazar.com/feed.xml</id><title type="html">Alper Yazar</title><subtitle>&quot;Full Stack Electronics&quot; Engineer</subtitle><author><name>Alper Yazar</name></author><entry><title type="html">Gömülü yani Embedded C var mıdır?</title><link href="https://www.alperyazar.com/gomulu-embedded-c.html" rel="alternate" type="text/html" title="Gömülü yani Embedded C var mıdır?" /><published>2025-02-11T00:00:00+03:00</published><updated>2025-03-16T20:59:07+03:00</updated><id>https://www.alperyazar.com/gomulu-embedded-c</id><content type="html" xml:base="https://www.alperyazar.com/gomulu-embedded-c.html"><![CDATA[<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
+<script type="text/javascript">
+    window.location.href = "https://ayazar.dev/video/gomulu-embedded-c.html";
+</script>
+
+<!-- markdownlint-restore -->
+
+<p><a href="https://ayazar.dev/video/gomulu-embedded-c.html">Moved…</a></p>]]></content><author><name>Alper Yazar</name></author><category term="tr" /><summary type="html"><![CDATA[Birçok gömülü yani embedded sistemde C dili ile çalışmalar yapıyoruz. Peki bu durumda Gömülü yani Embedded C var diyebilir miyiz?]]></summary></entry><entry><title type="html">“Yeni Mezun Sistem Mühendisi Olur mu?”</title><link href="https://www.alperyazar.com/sistem-muhendisligi-taritmasi.html" rel="alternate" type="text/html" title="“Yeni Mezun Sistem Mühendisi Olur mu?”" /><published>2025-01-26T00:00:00+03:00</published><updated>2025-03-16T20:48:24+03:00</updated><id>https://www.alperyazar.com/sistem-muhendisligi-taritmasi</id><content type="html" xml:base="https://www.alperyazar.com/sistem-muhendisligi-taritmasi.html"><![CDATA[<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
+<script type="text/javascript">
+    window.location.href = "https://ayazar.dev/blog/25/sistem-muhendisligi-taritmasi.html";
+</script>
+
+<!-- markdownlint-restore -->
+
+<p><a href="https://ayazar.dev/blog/25/sistem-muhendisligi-taritmasi.html">Moved…</a></p>]]></content><author><name>Alper Yazar</name></author><category term="tr" /><summary type="html"><![CDATA[LinkedIn'de dönen sistem mühendisliği tartışmasına ben de fikir beyan ediyorum.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.alperyazar.com/assets/img/25/3.png" /><media:content medium="image" url="https://www.alperyazar.com/assets/img/25/3.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Linux Terminalinizi Kaydedin ve Paylaşın! asciinema ile Tanışın!</title><link href="https://www.alperyazar.com/asciinema.html" rel="alternate" type="text/html" title="Linux Terminalinizi Kaydedin ve Paylaşın! asciinema ile Tanışın!" /><published>2025-01-18T00:00:00+03:00</published><updated>2025-03-16T21:48:38+03:00</updated><id>https://www.alperyazar.com/asciinema</id><content type="html" xml:base="https://www.alperyazar.com/asciinema.html"><![CDATA[<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
+<script type="text/javascript">
+    window.location.href = "https://ayazar.dev/video/asciinema.html";
+</script>
+
+<!-- markdownlint-restore -->
+
+<p><a href="https://ayazar.dev/video/asciinema.html">Moved…</a></p>]]></content><author><name>Alper Yazar</name></author><category term="tr" /><summary type="html"><![CDATA[Linux terminalinde yaptığınız işlemleri kaydetmek ve paylaşmak mı istiyorsunuz? asciinema ile bu artık çok kolay!]]></summary></entry><entry><title type="html">Yapay Zeka Hızlandırıcıları, NPU | M. Sezgin Baloğlu, ML Compiler Engineer</title><link href="https://www.alperyazar.com/yapay-zeka-hizlandiricilari-sezgin-baloglu.html" rel="alternate" type="text/html" title="Yapay Zeka Hızlandırıcıları, NPU | M. Sezgin Baloğlu, ML Compiler Engineer" /><published>2024-11-09T00:00:00+03:00</published><updated>2025-03-18T22:11:14+03:00</updated><id>https://www.alperyazar.com/yapay-zeka-hizlandiricilari-sezgin-baloglu</id><content type="html" xml:base="https://www.alperyazar.com/yapay-zeka-hizlandiricilari-sezgin-baloglu.html"><![CDATA[<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
+<script type="text/javascript">
+    window.location.href = "https://ayazar.dev/video/yapay-zeka-hizlandiricilari-sezgin-baloglu.html";
+</script>
+
+<!-- markdownlint-restore -->
+
+<p><a href="https://ayazar.dev/video/yapay-zeka-hizlandiricilari-sezgin-baloglu.html">Moved…</a></p>]]></content><author><name>Alper Yazar</name></author><category term="tr" /><summary type="html"><![CDATA[Yapay zeka ve benzeri problemler yoğun hesaplama gücü gerektiriyor. Bu tarz problemlerin günümüzde verimli bir şekilde çözülebilmesi için donanım seviyesinde ciddi destekler gerekiyor.]]></summary></entry><entry><title type="html">Hard ve Soft Processor (İşlemci) ve IP Kavramı, FPGA ve SoC’ler</title><link href="https://www.alperyazar.com/hard-soft-islemci.html" rel="alternate" type="text/html" title="Hard ve Soft Processor (İşlemci) ve IP Kavramı, FPGA ve SoC’ler" /><published>2024-10-27T00:00:00+03:00</published><updated>2025-03-18T18:26:27+03:00</updated><id>https://www.alperyazar.com/hard-soft-islemci</id><content type="html" xml:base="https://www.alperyazar.com/hard-soft-islemci.html"><![CDATA[<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
+<script type="text/javascript">
+    window.location.href = "https://ayazar.dev/video/hard-soft-ip.html";
+</script>
+
+<!-- markdownlint-restore -->
+
+<p><a href="https://ayazar.dev/video/hard-soft-ip.html">Moved…</a></p>]]></content><author><name>Alper Yazar</name></author><category term="tr" /><summary type="html"><![CDATA[FPGA ve SoClerle çalışan sayısal tasarımcı ve gömülü yazılımcıların karşılaştığı bir terim olan Hard Processor ve Soft Processor kavramına bakıyoruz.]]></summary></entry><entry><title type="html">GÖMÜLÜ YAZILIMIN olmazsa olmazı CROSS COMPILATION nedir?</title><link href="https://www.alperyazar.com/capraz-derleme.html" rel="alternate" type="text/html" title="GÖMÜLÜ YAZILIMIN olmazsa olmazı CROSS COMPILATION nedir?" /><published>2024-10-16T00:00:00+03:00</published><updated>2025-03-18T22:03:19+03:00</updated><id>https://www.alperyazar.com/capraz-derleme</id><content type="html" xml:base="https://www.alperyazar.com/capraz-derleme.html"><![CDATA[<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
+<script type="text/javascript">
+    window.location.href = "https://ayazar.dev/video/cross-compilation.html";
+</script>
+
+<!-- markdownlint-restore -->
+
+<p><a href="https://ayazar.dev/video/cross-compilation.html">Moved…</a></p>]]></content><author><name>Alper Yazar</name></author><category term="tr" /><summary type="html"><![CDATA[Cross Compilation yani Çapraz Derleme özellikle gömülü yazılım alanının olmazsa olmaz kavramlarından biri, gelin öğrenelim!]]></summary></entry><entry><title type="html">Ekip Veriminizi Arttıracak, OFFLINE Çalışabilen 5 Araç - 2</title><link href="https://www.alperyazar.com/self-hosted-5-2.html" rel="alternate" type="text/html" title="Ekip Veriminizi Arttıracak, OFFLINE Çalışabilen 5 Araç - 2" /><published>2024-05-31T00:00:00+03:00</published><updated>2025-03-18T22:05:38+03:00</updated><id>https://www.alperyazar.com/self-hosted-5-2</id><content type="html" xml:base="https://www.alperyazar.com/self-hosted-5-2.html"><![CDATA[<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
+<script type="text/javascript">
+    window.location.href = "https://ayazar.dev/devops/tool/index.html";
+</script>
+
+<!-- markdownlint-restore -->
+
+<p><a href="https://ayazar.dev/devops/tool/index.html">Moved…</a></p>]]></content><author><name>Alper Yazar</name></author><category term="tr" /><summary type="html"><![CDATA[Bu yazıda offline da çalışabilen ve çalışma veriminizi arttıracağını düşündüğüm 5 araçtan bahsediyorum.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.alperyazar.com/assets/img/24/13.jpg" /><media:content medium="image" url="https://www.alperyazar.com/assets/img/24/13.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Ekip Veriminizi Arttıracak, OFFLINE Çalışabilen 5 Araç</title><link href="https://www.alperyazar.com/self-hosted-5.html" rel="alternate" type="text/html" title="Ekip Veriminizi Arttıracak, OFFLINE Çalışabilen 5 Araç" /><published>2024-05-24T00:00:00+03:00</published><updated>2025-03-18T22:05:38+03:00</updated><id>https://www.alperyazar.com/self-hosted-5</id><content type="html" xml:base="https://www.alperyazar.com/self-hosted-5.html"><![CDATA[<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
+<script type="text/javascript">
+    window.location.href = "https://ayazar.dev/devops/tool/index.html";
+</script>
+
+<!-- markdownlint-restore -->
+
+<p><a href="https://ayazar.dev/devops/tool/index.html">Moved…</a></p>]]></content><author><name>Alper Yazar</name></author><category term="tr" /><summary type="html"><![CDATA[Bu yazıda offline da çalışabilen ve çalışma veriminizi arttıracağını düşündüğüm 5 araçtan bahsediyorum.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.alperyazar.com/assets/img/24/12.jpg" /><media:content medium="image" url="https://www.alperyazar.com/assets/img/24/12.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Why do we have programming languages in the first place? Part 1</title><link href="https://www.alperyazar.com/why-programming-languages-part-1.html" rel="alternate" type="text/html" title="Why do we have programming languages in the first place? Part 1" /><published>2024-03-27T00:00:00+03:00</published><updated>2025-03-16T20:48:24+03:00</updated><id>https://www.alperyazar.com/why-programming-languages-part-1</id><content type="html" xml:base="https://www.alperyazar.com/why-programming-languages-part-1.html"><![CDATA[<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
+<script type="text/javascript">
+    window.location.href = "https://ayazar.dev/blog/24/why-programming-languages-part-1.html";
+</script>
+
+<!-- markdownlint-restore -->
+
+<p><a href="https://ayazar.dev/blog/24/why-programming-languages-part-1.html">Moved…</a></p>]]></content><author><name>Alper Yazar</name></author><category term="en" /><summary type="html"><![CDATA[There are hundreds of computer programming languages. But why? Why do we keep inventing them?]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.alperyazar.com/assets/img/24/9.jpg" /><media:content medium="image" url="https://www.alperyazar.com/assets/img/24/9.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">12 Yaşındaki Laptop’uma Hafta Sonu Linux Bakımı</title><link href="https://www.alperyazar.com/eski-laptop-linux-bakim.html" rel="alternate" type="text/html" title="12 Yaşındaki Laptop’uma Hafta Sonu Linux Bakımı" /><published>2024-02-10T00:00:00+03:00</published><updated>2025-03-16T20:48:24+03:00</updated><id>https://www.alperyazar.com/eski-laptop-linux-bakim</id><content type="html" xml:base="https://www.alperyazar.com/eski-laptop-linux-bakim.html"><![CDATA[<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
+<script type="text/javascript">
+    window.location.href = "https://ayazar.dev/blog/24/eski-laptop-linux-bakim.html";
+</script>
+
+<!-- markdownlint-restore -->
+
+<p>Yazı <a href="https://ayazar.dev/blog/24/eski-laptop-linux-bakim.html">taşınmıştır.</a></p>]]></content><author><name>Alper Yazar</name></author><category term="tr" /><summary type="html"><![CDATA[Debian, Linux Mint, XFCE, Ventoy, ZSH...]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.alperyazar.com/assets/img/24/6.jpg" /><media:content medium="image" url="https://www.alperyazar.com/assets/img/24/6.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
