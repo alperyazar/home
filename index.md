@@ -17,18 +17,20 @@ adsdisabled: true
 {:.text-align-center}
 *["Full Stack Electronics"]({% post_url 2023-09-09-full-stack-elektronik %}) Engineer*
 
-I got my BSc and MSc degrees from the same department,
+I earned my BSc and MSc degrees from the same department,
 [METU](https://www.metu.edu.tr/) EEE, in 2012 and 2015, respectively. My
-master's thesis was about statistical signal processing. In the past, I was
-working on FPGA accelerated cloud computing as PhD candidate. At the work, most
-of the time I work on FPGA/embedded related stuffs. I am also experienced in
-analog/digital circuit and PCB design.
+master's thesis focused on statistical signal processing. As a PhD candidate, I
+worked on FPGA-accelerated cloud computing.
 
-I love spending my time on electronics and computers since I was 10. I like
-doing projects, reading blogs/projects/codes, watching videos and attending
-courses/webinars, publishing papers and doing other geeky things. I am a big fan
-of free and open source projects and initiatives 🐧. Besides, I like music and
-musical instruments 🎵.
+At work, I mainly focus on FPGAs and embedded systems. I also have experience in
+analog/digital circuit design and PCB design.
+
+I've been passionate about electronics and computers since I was 10. I enjoy
+working on projects, reading blogs, exploring code, watching technical videos,
+attending courses and webinars, publishing papers, and engaging in other geeky
+activities. I'm a big supporter of free and open-source projects 🐧.
+
+Besides technology, I also love music and musical instruments 🎵.
 
 ## ✉️ Contact
 
