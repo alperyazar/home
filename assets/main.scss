@@ -122,3 +122,84 @@ article a[href^="https://"]:not([href^="https://www.alperyazar.com"])::after{
   content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
   margin: 0 3px 0 5px;
 }
+
+
+.floating-icon-heart {
+  position: fixed;
+  bottom: 2vw; /* Adjust position relative to screen */
+  right: 2vw;
+  width: 5vw; /* Responsive size */
+  height: 5vw;
+  max-width: 64px; /* Prevent oversized icon */
+  max-height: 64px;
+  background-color: #e63946; /* Heart red */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.2s;
+  animation: heartbeat 120s infinite;
+  animation-delay: 10s; /* Initial delay before first heartbeat */
+  overflow: hidden; /* Ensures shine effect stays inside */
+}
+
+/* The pseudo-element for the left-to-right shine effect */
+.floating-icon-heart::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.6) 50%, transparent 70%);
+  transition: none;
+  animation: shine 120s infinite;
+  animation-delay: 10s; /* Syncs with heartbeat */
+}
+
+/* Hover Effect */
+.floating-icon-heart:hover {
+  background-color: #b71c1c; /* Darker red on hover */
+  transform: scale(1.1);
+}
+
+/* Heartbeat Effect */
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  1% { transform: scale(1.15); }
+  2% { transform: scale(1); }
+}
+
+/* Shine animation that moves from left to right */
+@keyframes shine {
+  0% { left: -150%; }
+  1% { left: 100%; }
+  2% { left: -150%; }
+  50% { left: -150%; }
+  51% { left: 100%; }
+  52% { left: -150%; }
+  100% { left: -150%; }
+}
+
+/* Scale the <img> inside the button */
+.floating-icon-heart img {
+  width: 85%; /* Keep it within the button */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 64px; /* Prevent it from being too big */
+}
+
+/* Adjust size for very small screens */
+@media (max-width: 400px) {
+  .floating-icon-heart {
+      width: 10vw;
+      height: 10vw;
+  }
+  .floating-icon-heart img {
+      width: 70%; /* Slightly increase img size on small screens */
+      max-width: 35px;
+  }
+}
