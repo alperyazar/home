@@ -1,0 +1,17 @@
+---
+# License: CC-BY-SA-4.0.
+title: "Yapay Zeka Hızlandırıcıları, NPU | M. Sezgin Baloğlu, ML Compiler Engineer"
+excerpt: "Yapay zeka ve benzeri problemler yoğun hesaplama gücü gerektiriyor. Bu tarz problemlerin günümüzde verimli bir şekilde çözülebilmesi için donanım seviyesinde ciddi destekler gerekiyor."
+#image: /assets/img/23/1.png
+imageyt: ZMXVKpReEg8
+toc: true
+axseq: 16
+published: false
+tags:
+  - tr
+---
+
+> İçerik, video olarak sunulmuştur. Bu yazıda (varsa) düzeltmeler ve videoda
+> geçen bağlantılar veya videoya ek notlar sunulmuştur.
+
+{% include youtubePlayer.html id="ZMXVKpReEg8" %}

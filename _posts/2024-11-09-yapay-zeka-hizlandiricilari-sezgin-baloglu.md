@@ -11,7 +11,11 @@ tags:
   - tr
 ---
 
-> İçerik, video olarak sunulmuştur. Bu yazıda (varsa) düzeltmeler ve videoda
-> geçen bağlantılar veya videoya ek notlar sunulmuştur.
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
+<script type="text/javascript">
+    window.location.href = "https://ayazar.dev/video/yapay-zeka-hizlandiricilari-sezgin-baloglu.html";
+</script>
+<!-- markdownlint-restore -->
 
-{% include youtubePlayer.html id="ZMXVKpReEg8" %}
+[Moved...](https://ayazar.dev/video/yapay-zeka-hizlandiricilari-sezgin-baloglu.html)
