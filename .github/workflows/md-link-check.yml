@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Link Checker
-        uses: lycheeverse/lychee-action@v2.3.0
+        uses: lycheeverse/lychee-action@v2.4.1
         with:
           args: --verbose --exclude-path ./vendor './**/*.md'
           # Don't fail action on broken links
