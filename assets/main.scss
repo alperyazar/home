@@ -203,3 +203,20 @@ article a[href^="https://"]:not([href^="https://www.alperyazar.com"])::after{
       max-width: 35px;
   }
 }
+
+#special-flag {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  z-index: 9999;
+  display: none;
+}
+
+#special-flag img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: scaleX(1) rotate(0deg);
+}
