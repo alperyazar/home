@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.alperyazar.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.alperyazar.com/" rel="alternate" type="text/html" /><updated>2025-07-26T19:58:39+03:00</updated><id>https://www.alperyazar.com/feed.xml</id><title type="html">Alper Yazar</title><subtitle>&quot;Full Stack Electronics&quot; Engineer</subtitle><author><name>Alper Yazar</name></author><entry><title type="html">🔴 cocotb: Python verification framework | FPGA, Gömülü Sistemler Muhabbet | Ortaya Karışık - 3</title><link href="https://www.alperyazar.com/ortaya-karisik-3.html" rel="alternate" type="text/html" title="🔴 cocotb: Python verification framework | FPGA, Gömülü Sistemler Muhabbet | Ortaya Karışık - 3" /><published>2025-06-25T00:00:00+03:00</published><updated>2025-06-25T22:36:06+03:00</updated><id>https://www.alperyazar.com/ortaya-karisik-3</id><content type="html" xml:base="https://www.alperyazar.com/ortaya-karisik-3.html"><![CDATA[<blockquote>
+  <p>İçerik, video olarak sunulmuştur. Bu yazıda (varsa) düzeltmeler ve videoda
+geçen bağlantılar veya videoya ek notlar sunulmuştur.</p>
+</blockquote>
+
+<!-- https://github.com/nathancy/jekyll-embed-video -->
+<!-- https://yoast.com/how-to-make-youtube-videos-responsive/ -->
+<div class="embed-container" style="text-align: center;">
+<iframe class="youtube-video lazyload" src="https://www.youtube.com/embed/_-tSBsm21Bs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+</div>
+
+<center><a target="_blank" href="https://www.youtube.com/watch?v=_-tSBsm21Bs" rel="nofollow">Video</a></center>
+
+<p>Bu yayında ilk olarak Python dilinde HDL yani RTL yani VHDL/Verilog dilleri için
+testbench yazmamızı sağlayan <a href="https://www.cocotb.org/">cocotb</a> aracına değindik.
+Daha sonra serbest format sohbetimizi gerçekleştirdik, hoş pek katılım olmadı bu
+sefer.</p>
+
+<p>Yayında aynı zamanda cocotb ile CI/CD ortamında da bir test yaptık.
+İlgili repoya:</p>
+
+<ul>
+  <li><a href="https://gitlab.com/yunusesergun2316/cocotb-demo">https://gitlab.com/yunusesergun2316/cocotb-demo</a></li>
+</ul>
+
+<p>veya</p>
+
+<ul>
+  <li><a href="https://gitlab.com/alperyazar/cocotb-demo">https://gitlab.com/alperyazar/cocotb-demo</a></li>
+</ul>
+
+<p>adresinden ulaşabilirsiniz.</p>
+
+<p>Başka bir yayında/yazıda görüşmek dileği ile…</p>]]></content><author><name>Alper Yazar</name></author><category term="tr" /><summary type="html"><![CDATA[Bu bölümde ilk olarak Python dilinde sayısal tasarım doğrulama yapma imkanı sağlayan cocotb'ye bakıp, serbest format muhabbet edeceğiz.]]></summary></entry><entry><title type="html">🔴 Gömülü Sistemler, FPGA, Elektronik, Yazılım, Linux… | Ortaya Karışık - 2</title><link href="https://www.alperyazar.com/ortaya-karisik-2.html" rel="alternate" type="text/html" title="🔴 Gömülü Sistemler, FPGA, Elektronik, Yazılım, Linux… | Ortaya Karışık - 2" /><published>2025-02-19T00:00:00+03:00</published><updated>2025-06-22T23:14:37+03:00</updated><id>https://www.alperyazar.com/ortaya-karisik-2</id><content type="html" xml:base="https://www.alperyazar.com/ortaya-karisik-2.html"><![CDATA[<blockquote>
+  <p>İçerik, video olarak sunulmuştur. Bu yazıda (varsa) düzeltmeler ve videoda
+geçen bağlantılar veya videoya ek notlar sunulmuştur.</p>
+</blockquote>
+
+<!-- https://github.com/nathancy/jekyll-embed-video -->
+<!-- https://yoast.com/how-to-make-youtube-videos-responsive/ -->
+<div class="embed-container" style="text-align: center;">
+<iframe class="youtube-video lazyload" src="https://www.youtube.com/embed/b8S4bKZV5Ao" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+</div>
+
+<center><a target="_blank" href="https://www.youtube.com/watch?v=b8S4bKZV5Ao" rel="nofollow">Video</a></center>
+
+<h2 id="bakılacak-sorular-ve-cevapları">Bakılacak Sorular ve Cevapları</h2>
+
+<p>Canlı yayında bazı soruları not alıyoruz, sonradan bakalım diye. Bu kısımda
+o soruları yayın sonrası araştırarak yanıtlamaya çalışıyoruz.</p>
+
+<h3 id="ftdi-entegrelerini-xilinx-jtag-programlayıcıya-çevirmek">FTDI Entegrelerini Xilinx JTAG Programlayıcıya Çevirmek</h3>
+
+<p>Bu soru videonun <code class="language-plaintext highlighter-rouge">17:20</code> dakikasında geliyor. Soruyu ilk başta anlamıyoruz ama
+sonradan anlıyoruz ki, soru sahibi ile de sonradan özel mesajla konuşmuştuk
+diye hatırlıyorum Yunus ile, kendi yaptıkları ve FTDI entegresi koydukları
+bir karta JTAG özelliği getirilmek isteniyor. Kendiniz bir demo board yapıp
+ona dahili JTAG özelliği getirmek gibi düşünebilirsiniz.</p>
+
+<p>Normalde Digilen’ten kullanabileceğiniz <em>JTAG Module</em> ürünleri var, fakat bunlar
+gerçekten pahalı. Örneğin
+<a href="https://digilent.com/shop/jtag-smt2-surface-mount-programming-module/">JTAG-SMT2</a>
+ürününün güncel satış fiyatı <strong>54 USD</strong>, “biraz” fazla bence.</p>
+
+<hr />
+
+<p>Vivado’nun ya da benzer diğer EDA araçlarının FTDI entegresini kendilerinin
+tanıyabileceği şekilde görmesi için FTDI entegresinin programlanması gerekiyor.
+Aksi taktirde örneğin Xilinx için Platform Cable olarak bu cihazlar gözükmüyor.
+Fakat bu atılması gereken program/konfigürasyon açıkça bulunmuyordu.</p>
+
+<p>Güncel durum için şunu söyleyebiliriz: Vivado 2022.1’den itibaren Xilinx resmi
+olarak FTDI’a ait FT232H, FT2232H ve FT4232H entegrelerinin bu şekilde
+programlanmasını destekliyor. <sup id="fnref:1f"><a href="#fn:1f" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> Yani günümüzde artık bunu bu şekilde
+yapabiliriz.</p>
+
+<p>Bundan önce de bazı kişiler çalışan FTDI entegrelerinden içeriği <em>dump</em> edip
+çeşitli yerlerde paylaşmışlar ve kendi programlayıcılarını yapmışlar. Artık
+çok gerekli olmasa da ilgili olabilecek bağlantılar:</p>
+
+<ul>
+  <li><a href="https://www.reddit.com/r/FPGA/comments/ydt7fx/xilinx_now_supports_custom_ftdibased_usbjtag/">https://www.reddit.com/r/FPGA/comments/ydt7fx/xilinx_now_supports_custom_ftdibased_usbjtag/</a></li>
+  <li><a href="https://github.com/anthony-bernaert/ftdi-jtag-programmer">https://github.com/anthony-bernaert/ftdi-jtag-programmer</a></li>
+  <li><a href="https://github.com/dragonlock2/ftdi_dumps">https://github.com/dragonlock2/ftdi_dumps</a></li>
+</ul>
+
+<p><em>Geçen Çin’den ucuzcana bir Xilinx Platform Cable klon ürün aldım, onu da takınca
+Digilent olarak gördü Vivado, herhalde benzer şekillerde yaptılar 🤣</em></p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1f">
+      <p><a href="https://docs.amd.com/r/2022.1-English/ug908-vivado-programming-debugging/Programming-FTDI-Devices-for-Vivado-Hardware-Manager-Support">https://docs.amd.com/r/2022.1-English/ug908-vivado-programming-debugging/Programming-FTDI-Devices-for-Vivado-Hardware-Manager-Support</a> <a href="#fnref:1f" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name>Alper Yazar</name></author><category term="tr" /><summary type="html"><![CDATA[Arkadaşlarımla beraber ağırlıklı gömülü sistemler, FPGA, elektronik, yazılım, Linux gibi konularda konuşacağımız, SORU SORABİLECEĞİNİZ, serbest format muhabbet yayını.]]></summary></entry><entry><title type="html">Gömülü yani Embedded C var mıdır?</title><link href="https://www.alperyazar.com/gomulu-embedded-c.html" rel="alternate" type="text/html" title="Gömülü yani Embedded C var mıdır?" /><published>2025-02-11T00:00:00+03:00</published><updated>2025-05-09T19:32:32+03:00</updated><id>https://www.alperyazar.com/gomulu-embedded-c</id><content type="html" xml:base="https://www.alperyazar.com/gomulu-embedded-c.html"><![CDATA[<blockquote>
+  <p>İçerik, video olarak sunulmuştur. Bu yazıda (varsa) düzeltmeler ve videoda
+geçen bağlantılar veya videoya ek notlar sunulmuştur.</p>
+</blockquote>
+
+<!-- https://github.com/nathancy/jekyll-embed-video -->
+<!-- https://yoast.com/how-to-make-youtube-videos-responsive/ -->
+<div class="embed-container" style="text-align: center;">
+<iframe class="youtube-video lazyload" src="https://www.youtube.com/embed/6U1jNb_Y8E4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+</div>
+
+<center><a target="_blank" href="https://www.youtube.com/watch?v=6U1jNb_Y8E4" rel="nofollow">Video</a></center>
+
+<h2 id="videoda-geçen-bağlantılar">Videoda Geçen Bağlantılar</h2>
+
+<ul>
+  <li>İlgili kitabın linki:
+<a href="https://www.nobelyayin.com/gomulu-sistemler-icin-c-21828.html">https://www.nobelyayin.com/gomulu-sistemler-icin-c-21828.html</a></li>
+  <li>Kendi kanalımda yaptığım anket (oy verebilirsiniz):
+<a href="http://youtube.com/post/UgkxZaUvKT34zYxKpiLzXBibuULOM_KNXiHq">http://youtube.com/post/UgkxZaUvKT34zYxKpiLzXBibuULOM_KNXiHq</a></li>
+  <li>WG14:
+<a href="https://en.wikipedia.org/wiki/ISO/IEC_JTC_1/SC_22">https://en.wikipedia.org/wiki/ISO/IEC_JTC_1/SC_22</a></li>
+  <li>TR 18037:2008 yani <strong>Embedded C</strong> dokümanı:
+<a href="https://standards.iso.org/ittf/PubliclyAvailableStandards/c051126_ISO_IEC_TR_18037_2008.zip">https://standards.iso.org/ittf/PubliclyAvailableStandards/c051126_ISO_IEC_TR_18037_2008.zip</a></li>
+  <li><a href="https://godbolt.org">https://godbolt.org</a></li>
+  <li>LLVM StdFix Functions: <a href="https://libc.llvm.org/headers/math/stdfix.html">https://libc.llvm.org/headers/math/stdfix.html</a></li>
+  <li>QNX <code class="language-plaintext highlighter-rouge">&lt;iohw.h&gt;</code>:
+<a href="https://www.qnx.com/developers/docs/6.5.0SP1.update/com.qnx.doc.dinkum_en_c99/iohw.html">https://www.qnx.com/developers/docs/6.5.0SP1.update/com.qnx.doc.dinkum_en_c99/iohw.html</a></li>
+  <li><code class="language-plaintext highlighter-rouge">iohw.h</code> tartışması:
+<a href="https://www.embeddedrelated.com/showthread/comp.arch.embedded/100697-1.php">https://www.embeddedrelated.com/showthread/comp.arch.embedded/100697-1.php</a></li>
+  <li><em>Gömülü Linux ve Gömülü C Yoktur</em> dediğim videom, dakika <code class="language-plaintext highlighter-rouge">10:32</code></li>
+</ul>
+
+<!-- https://github.com/nathancy/jekyll-embed-video -->
+<!-- https://yoast.com/how-to-make-youtube-videos-responsive/ -->
+<div class="embed-container" style="text-align: center;">
+<iframe class="youtube-video lazyload" src="https://www.youtube.com/embed/Nv5_U1VWXlk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+</div>
+
+<center><a target="_blank" href="https://www.youtube.com/watch?v=Nv5_U1VWXlk" rel="nofollow">Video</a></center>
+
+<ul>
+  <li>Necati (Ergin) Hoca’dan aldığım C dersini değerlendirdiğim yazım:</li>
+</ul>
+
+<ul class="post-list">
+<li style="background: #DDEEEE; padding: 10px; border-radius: 10px;">
+<h4>🔗 İlgili bir içerik</h4>
+
+<center>
+<p>
+<a class="post-link" href="/220-saatlik-c-kursu-alinir-mi.html"><img alt="Teaser" src="/assets/img/23/15.jpg" data-srcset="/assets/img/23/15.jpg" srcset="/assets/lazyload.png" style="border-radius: 10px; height: auto; width: 95%; max-width: 700px;" class="lazyload" /></a>
+</p>
+</center><h3>
+<a class="post-link" href="/220-saatlik-c-kursu-alinir-mi.html">
+220 saatlik C kursu alınır mı?
+
+</a>
+</h3><h4>Necati Ergin Bey'den aldığım kurs sonrasında kendisinin ve Kaan Aslan Bey'in (CSD) verdiği uzun C kursu hakkında görüşlerimi aktarıyorum.</h4></li>
+</ul>
+
+<ul>
+  <li>Bahsettiğim Linkedin post’u:
+<a href="https://www.linkedin.com/posts/amar-mahmutbegovic_there-is-no-such-thing-as-embedded-c-contrary-activity-7133390058153238528-_sCw">https://www.linkedin.com/posts/amar-mahmutbegovic_there-is-no-such-thing-as-embedded-c-contrary-activity-7133390058153238528-_sCw</a></li>
+  <li>ASELSAN Gömülü Yazılım Tasarım Mühendisi ilanı:
+<a href="https://www.linkedin.com/jobs/view/haberle%C5%9Fme-ve-bilgi-teknolojileri-g%C3%B6m%C3%BCl%C3%BC-yaz%C4%B1l%C4%B1m-tasar%C4%B1m-m%C3%BChendisi-at-aselsan-4142053583/">https://www.linkedin.com/jobs/view/haberle%C5%9Fme-ve-bilgi-teknolojileri-g%C3%B6m%C3%BCl%C3%BC-yaz%C4%B1l%C4%B1m-tasar%C4%B1m-m%C3%BChendisi-at-aselsan-4142053583/</a></li>
+</ul>]]></content><author><name>Alper Yazar</name></author><category term="tr" /><summary type="html"><![CDATA[Birçok gömülü yani embedded sistemde C dili ile çalışmalar yapıyoruz. Peki bu durumda Gömülü yani Embedded C var diyebilir miyiz?]]></summary></entry><entry><title type="html">“Yeni Mezun Sistem Mühendisi Olur mu?”</title><link href="https://www.alperyazar.com/sistem-muhendisligi-taritmasi.html" rel="alternate" type="text/html" title="“Yeni Mezun Sistem Mühendisi Olur mu?”" /><published>2025-01-26T00:00:00+03:00</published><updated>2025-05-09T19:32:32+03:00</updated><id>https://www.alperyazar.com/sistem-muhendisligi-taritmasi</id><content type="html" xml:base="https://www.alperyazar.com/sistem-muhendisligi-taritmasi.html"><![CDATA[<p>Geçen hafta LinkedIn’de en çok önüme düşen konu, sistem mühendisliği ile ilgili
+bir tartışmaydı. Tartışmanın temel sorusu şuydu:</p>
+
+<p>🅰️ Sistem mühendisleri yeni mezun kişiler olabilir mi ya da olmalı mıdır?</p>
+
+<p>YOKSA</p>
+
+<p>🅱️ Sistem mühendisi önce elektronik tasarım, yazılım tasarımı, mekanik tasarım
+gibi temel tasarım alanlarında çalışıp tecrübe kazandıktan sonra mı bu unvana
+sahip olmalıdır?</p>
+
+<p>Hemen hemen her konuda olduğu gibi, bu konuda da kişiler iki gruba ayrıldı. Bir
+grup, yeni mezun bir kişinin sistem mühendisi olabileceğini ve bunun gayet
+normal olduğunu savunurken; diğer grup ise tam tersini, yani yeni mezun birinin
+sistem mühendisi olmaması gerektiğini, önce temel tasarım alanlarında tecrübe
+kazanıp daha sonra sistem mühendisi olması gerektiğini iddia etti.</p>
+
+<p>Her iki tarafın da kendine göre haklı sebepleri var. Madem bu kadar çok kişi
+fikir beyan etti, ben neden etmeyeyim diye düşündüm ve bu konuda bir yazı yazmak
+istedim. Bu yazıda, kendi görüşlerimi kısaca aktarmaya çalışacağım.</p>
+
+<hr />
+
+<p>ℹ️ <em>Kapak tasarımını DALL-E yaptı. Konuyu anlattıktan sonra bana bunu önerdi.</em></p>
+
+<hr />
+
+<h2 id="temelde-neden-ayrıştık">Temelde neden ayrıştık?</h2>
+
+<p>Buradaki temel görüş ayrılığının sebebinin, herkesin sistem mühendisliği
+algısının ve tecrübelerinin birbirinden farklı olmasına dayandığını düşünüyorum.
+Sistem mühendisliği dediğimiz görev tanımı, özellikle ülkemizde <strong>pratikte</strong> çok
+geniş bir görev alanını kapsıyor.</p>
+
+<p>Örneğin, <strong>sistem mühendisi dediğimiz zaman bu kişi tam olarak neler yapar,
+neler yapmaz?</strong> Bu sorunun cevabı, kurumdan kuruma, bölümden bölüme, ekipten
+ekibe, hatta kişiden kişiye değişebiliyor. Oysa, beyin cerrahı 🧠 ne yapar ya da
+ne yapmaz diye düşündüğümüzde, kurum ve kişilerden bağımsız bir görev tanımı
+oluşturabiliyoruz ve bu tanım üç aşağı beş yukarı herkesin kafasında aynı
+oluyor.</p>
+
+<p>Bırakın sistem mühendisliğini, görece daha temel bir disiplinde çalışan bir
+elektronik ya da bir yazılım mühendisi tam olarak ne yapar sorusuna bile net bir
+sınır çizmekte zorlanabiliyoruz. Bu noktada, kültürler de oldukça etkili oluyor.
+Sistem mühendisliğinde ise durum, bence, bu açıdan daha da karmaşık. Herkesin
+kabul ettiği ortak bir görev tanımı oluşturmak çok daha zor bir hale geliyor.
+Bazı organizasyonlarda sistem mühendisleri gerçekten mimari tasarımda görev
+alırken bazı durumlarda ise daha çok program/proje yönetimi gibi işleri yapıyor
+ve sistem tasarımını ağırlıklı olarak “altta” bulunan temel tasarım ekipleri
+üstleniyor.</p>
+
+<p>Zamanında bu konu ile ilgili hazırladığım <strong>Full Stack Elektronik Mühendisi?</strong>
+başlıklı yazımı da ilginizi çekebilir diye şuraya iliştiriyorum:</p>
+
+<ul class="post-list">
+<li style="background: #DDEEEE; padding: 10px; border-radius: 10px;">
+<h4>🔗 İlgili bir içerik</h4>
+
+<center>
+<p>
+<a class="post-link" href="/full-stack-elektronik.html"><img alt="Teaser" src="/assets/img/23/8-d.png" data-srcset="/assets/img/23/8-d.png" srcset="/assets/lazyload.png" style="border-radius: 10px; height: auto; width: 95%; max-width: 700px;" class="lazyload" /></a>
+</p>
+</center><h3>
+<a class="post-link" href="/full-stack-elektronik.html">
+Full Stack Elektronik Mühendisi?
+
+</a>
+</h3><h4>Full Stack Developer var. Peki Full Stack Elektronik Mühendisi neden olmasın? Belki siz de full stack'sinizdir?</h4></li>
+</ul>
+
+<p>İşte tam da bu yüzden, birçok kişinin savunduğu görüşün kendi tecrübeleri ve
+bakış açıları açısından doğru olabileceğini düşünüyorum. Bazı kişiler, onlarca
+yıl bu iş tanımında çalışmış olsalar da bu görüşlerden bir tanesini daha çok
+tecrübe etmiş ve dolayısıyla bunu daha sıkı savunur konumda olabiliyor. Bu da
+bence oldukça doğal bir durum.</p>
+
+<p>Bu açıdan düşündüğümüzde, bu soruya mutlak doğru bir cevap vermek gerçekten çok
+zor. En azından elimde herhangi bir tarafı objektif olarak destekleyecek bir
+veri yok…</p>
+
+<h2 id="güzel-gelişmeler-">Güzel gelişmeler 👍</h2>
+
+<p>Öte yandan, LinkedIn Türkiye topluluğu içerisinde böyle bir tartışmanın olması
+beni hem mutlu etti hem de biraz eğlendirdi. Uzun yıllar bu işe emek vermiş
+tecrübeli kişilerin, görüşlerini savunmak için örnekler araması ve tatlı
+tartışmalara girmesi, bence okuyucular için hem bilgilendirici hem de
+eğlendirici bir süreçti.</p>
+
+<p><img src="/assets/img/25/3-the-origin.jpg" alt="Oğuz Ergin LinkedIn gönderi" class="centered lazyload" /></p>
+
+<p class="text-align-center">Takip edebildiğim kadarıyla tartışmalar <a href="https://www.linkedin.com/in/oguzergin/">Oğuz
+Ergin</a> hocanın
+<a href="https://www.linkedin.com/posts/oguzergin_yeni-mezunlar-sistem-m%C3%BChendisli%C4%9Fine-al%C4%B1nmas%C4%B1n-activity-7287079639787708416-3jaf">şu</a>
+paylaşımı ile tetiklendi. 🙂</p>
+
+<hr />
+
+<p>LinkedIn’in gün geçtikçe kişisel gelişim çöplüğüne döndüğünü ve sürekli <em>“Bugün
+de dün olduğu kadar başarılıyım, yarın da başarılı olacağım, ahan da bu da
+kanıtı!”</em> tarzı paylaşımlarla dolduğunu düşünürsek, böyle bir
+tartışma ortamının oluşması, bu platformun varoluş sebebiyle örtüşüyor. Bu
+yüzden, böyle bir ortamın oluşmasından keyif aldım.</p>
+
+<p><img src="/assets/img/25/3-mserdark.jpg" alt="mserdark ve halasının facebook'u" class="centered lazyload" /></p>
+
+<p class="text-align-center">Adam haklı 🤣</p>
+
+<h2 id="ama-yine-de">Ama yine de…</h2>
+
+<p>Belirttiğim gibi, her iki tarafın da haklı olduğu noktalar var. Ancak ben, hiç
+(kağıt üstünde) sistem mühendisliği görevi yapmamış, tasarımda bulunmuş ama
+birçok sistemin sıfırdan tasarlanmasında görev almış ve sistem mühendisleriyle
+yakından çalışmış biri olarak, illa bir taraf seçmek zorunda kalsaydım, <strong>kendi
+tecrübelerime göre, yeni mezun kişilerin sistem mühendisliği yapması görüşünden
+ziyade, kişilerin temel tasarım ekiplerinde biraz tecrübe kazandıktan sonra bu
+göreve gelmesi seçeneğini seçerdim.</strong> Ama belirttiğim gibi, bu da benim
+deneyimlerimin bir sonucu; aksi doğru olmaz, kesinlikle böyle olmalıdır diyemem.
+Her iki taraf için de iyi çalışan ya da çalışmayan örnekler bulmak mümkündür.</p>
+
+<h2 id="zor-olan-hedef-belirlemek">Zor olan hedef belirlemek</h2>
+
+<p>Günün sonunda söyleyeceğim şey, <em>çok da takılmamak lazım</em> olurdu. Elbette bunu
+biraz şakayla karışık söylüyorum. Eğer tasarım alanında ilerlemek istiyorsanız,
+o alanın en iyisi, sistem mühendisliği alanında ilerlemek istiyorsanız da o
+alanın en iyisi olmayı hedeflemeliyiz. <strong>Kişisel kariyer yolculuğu açısından zor
+olan kısım ise, işte bu hedefi belirleyebilmek.</strong> Hedefi belirleyebildikten
+sonra, bu yola en başta hangi noktadan başladığımızın uzun vadede çok da kritik
+olmayacağını düşünenlerdenim.</p>
+
+<p>Zor olan kısım bunu belirlemek dedik. Peki bunu nasıl belirleyeceksiniz? Kaç
+kişiyi dinlerseniz dinleyin, ne okursanız okuyun günün sonunda bu sizin
+kararınız olacak. Sağlıklı bir karar vermek için de tecrübe etmeniz gerekecek.
+Her ne kadar sistem mühendisliğinden tasarım alanlarına ya da tam tersi şekilde
+geçişler mümkün olsa da pratikte temel tasarım ekiplerinden sistem
+mühendisliğine geçişlerin daha yaygın olduğunu söyleyebilirim, en azından kendi
+gözlemlerim çerçevesinde. Bu açıdan da düşününce en başta biraz temel tasarım
+ekiplerinde durup, bulunduğunuz ortamda sistem mühendislerinin yaptığı
+çalışmaları gözlemlemek de iyi bir tercih olabilir.</p>
+
+<h2 id="görev-tanımlarına-dikkat-">Görev tanımlarına dikkat ❗</h2>
+
+<p>Bazı bölümlerde adı sistem mühendisliği olan fakat pratikte aslında tasarım işi
+yapan ekipler olabilir. Örneğin bir algoritma geliştirme ekibi, sistem
+mühendisliği bünyesinde olabiliyor. Kağıt üstünde burada çalışan arkadaşlar da
+<em>sistem mühendisi</em> olarak gözükse de pratikte aslında bir temel tasarımcı gibi
+çalışıyorlar. Ya da tam tersi olarak, bir donanım tasarım biriminde çalışan bir
+ekip aslında bir sistem mühendisi gibi mimari tasarım yapılmasında kararlar
+alabiliyor. O yüzden başlıklardan ziyade görev tanımlarına odaklanmak en doğrusu
+olacaktır.</p>
+
+<hr />
+
+<p>Buraya kadar okuduğunuz için size ve LinkedIn platformunda görüşlerini aktaran
+herkese, bu ortamı oluşturdukları için teşekkür ederim.</p>
+
+<p>Bir başka yazıda görüşmek dileğiyle. 👋</p>]]></content><author><name>Alper Yazar</name></author><category term="tr" /><summary type="html"><![CDATA[LinkedIn'de dönen sistem mühendisliği tartışmasına ben de fikir beyan ediyorum.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.alperyazar.com/assets/img/25/3.png" /><media:content medium="image" url="https://www.alperyazar.com/assets/img/25/3.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Linux Terminalinizi Kaydedin ve Paylaşın! asciinema ile Tanışın!</title><link href="https://www.alperyazar.com/asciinema.html" rel="alternate" type="text/html" title="Linux Terminalinizi Kaydedin ve Paylaşın! asciinema ile Tanışın!" /><published>2025-01-18T00:00:00+03:00</published><updated>2025-05-09T19:32:32+03:00</updated><id>https://www.alperyazar.com/asciinema</id><content type="html" xml:base="https://www.alperyazar.com/asciinema.html"><![CDATA[<blockquote>
+  <p>İçerik, video olarak sunulmuştur. Bu yazıda (varsa) düzeltmeler ve videoda
+geçen bağlantılar veya videoya ek notlar sunulmuştur.</p>
+</blockquote>
+
+<!-- https://github.com/nathancy/jekyll-embed-video -->
+<!-- https://yoast.com/how-to-make-youtube-videos-responsive/ -->
+<div class="embed-container" style="text-align: center;">
+<iframe class="youtube-video lazyload" src="https://www.youtube.com/embed/mIzPfenZWvo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+</div>
+
+<center><a target="_blank" href="https://www.youtube.com/watch?v=mIzPfenZWvo" rel="nofollow">Video</a></center>
+
+<h2 id="bağlantılar">Bağlantılar</h2>
+
+<p>Aşağıdaki bağlantılar videoda geçmektedir:</p>
+
+<ul>
+  <li><a href="https://asciinema.org">https://asciinema.org</a></li>
+  <li><a href="https://github.com/asciinema">https://github.com/asciinema</a></li>
+  <li><a href="https://docs.asciinema.org/manual/server/self-hosting/">https://docs.asciinema.org/manual/server/self-hosting/</a></li>
+</ul>
+
+<h2 id="jekyll-ve-asciinema-kullanımı">Jekyll ve asciinema Kullanımı</h2>
+
+<p>Bu blog da altyapıda Jekyll kullanmaktadır. Örneğin
+<a href="/buildroot-ogreniyoruz-04.html">şu sayfada</a> asciinema player
+kullanılmaktadır. Sayfanın kaynak kodu
+<a href="https://raw.githubusercontent.com/alperyazar/home/refs/heads/master/_posts/2024-02-07-buildroot-ogreniyoruz-04.md">şuradadır.</a>
+Jekyll için ChatGPT’ye minik bir plugin yazdırmıştım. İhtiyacınız varsa ilgili
+dosyaları inceleyebilirsiniz:</p>
+
+<ul>
+  <li><a href="https://github.com/alperyazar/home/blob/master/_plugins/Asciicast.rb">https://github.com/alperyazar/home/blob/master/_plugins/Asciicast.rb</a></li>
+  <li><a href="https://github.com/alperyazar/home/blob/master/_plugins/AsciicastSelf.rb">https://github.com/alperyazar/home/blob/master/_plugins/AsciicastSelf.rb</a></li>
+  <li><a href="https://github.com/alperyazar/home/tree/master/assets/asciicasts">https://github.com/alperyazar/home/tree/master/assets/asciicasts</a></li>
+  <li><a href="https://github.com/alperyazar/home/blob/master/assets/css/asciinema-player.css">https://github.com/alperyazar/home/blob/master/assets/css/asciinema-player.css</a></li>
+  <li><a href="https://github.com/alperyazar/home/blob/master/assets/js/asciinema-player.min.js">https://github.com/alperyazar/home/blob/master/assets/js/asciinema-player.min.js</a></li>
+</ul>
+
+<h2 id="sphinx-ve-asciinema-kullanımı">Sphinx ve asciinema Kullanımı</h2>
+
+<p><a href="https://www.sphinx-doc.org/en/master/">Sphinx</a> kullanıyorsanız da kendi
+repolarımdan şu linkleri incleyebilirsiniz:</p>
+
+<ul>
+  <li><a href="https://raw.githubusercontent.com/alperyazar/ayazar.dev/refs/heads/master/docs/source/buildroot/ilk-derleme.md">https://raw.githubusercontent.com/alperyazar/ayazar.dev/refs/heads/master/docs/source/buildroot/ilk-derleme.md</a></li>
+  <li><a href="https://github.com/alperyazar/ayazar.dev/blob/master/Pipfile#L19">https://github.com/alperyazar/ayazar.dev/blob/master/Pipfile#L19</a></li>
+  <li><a href="https://github.com/alperyazar/ayazar.dev/blob/master/docs/source/conf.py#L43">https://github.com/alperyazar/ayazar.dev/blob/master/docs/source/conf.py#L43</a></li>
+  <li><a href="https://github.com/divi255/sphinxcontrib.asciinema">https://github.com/divi255/sphinxcontrib.asciinema</a></li>
+</ul>]]></content><author><name>Alper Yazar</name></author><category term="tr" /><summary type="html"><![CDATA[Linux terminalinde yaptığınız işlemleri kaydetmek ve paylaşmak mı istiyorsunuz? asciinema ile bu artık çok kolay!]]></summary></entry><entry><title type="html">Yapay Zeka Hızlandırıcıları, NPU | M. Sezgin Baloğlu, ML Compiler Engineer</title><link href="https://www.alperyazar.com/yapay-zeka-hizlandiricilari-sezgin-baloglu.html" rel="alternate" type="text/html" title="Yapay Zeka Hızlandırıcıları, NPU | M. Sezgin Baloğlu, ML Compiler Engineer" /><published>2024-11-09T00:00:00+03:00</published><updated>2025-05-09T19:32:32+03:00</updated><id>https://www.alperyazar.com/yapay-zeka-hizlandiricilari-sezgin-baloglu</id><content type="html" xml:base="https://www.alperyazar.com/yapay-zeka-hizlandiricilari-sezgin-baloglu.html"><![CDATA[<blockquote>
+  <p>İçerik, video olarak sunulmuştur. Bu yazıda (varsa) düzeltmeler ve videoda
+geçen bağlantılar veya videoya ek notlar sunulmuştur.</p>
+</blockquote>
+
+<!-- https://github.com/nathancy/jekyll-embed-video -->
+<!-- https://yoast.com/how-to-make-youtube-videos-responsive/ -->
+<div class="embed-container" style="text-align: center;">
+<iframe class="youtube-video lazyload" src="https://www.youtube.com/embed/ZMXVKpReEg8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+</div>
+
+<center><a target="_blank" href="https://www.youtube.com/watch?v=ZMXVKpReEg8" rel="nofollow">Video</a></center>]]></content><author><name>Alper Yazar</name></author><category term="tr" /><summary type="html"><![CDATA[Yapay zeka ve benzeri problemler yoğun hesaplama gücü gerektiriyor. Bu tarz problemlerin günümüzde verimli bir şekilde çözülebilmesi için donanım seviyesinde ciddi destekler gerekiyor.]]></summary></entry><entry><title type="html">Hard ve Soft Processor (İşlemci) ve IP Kavramı, FPGA ve SoC’ler</title><link href="https://www.alperyazar.com/hard-soft-islemci.html" rel="alternate" type="text/html" title="Hard ve Soft Processor (İşlemci) ve IP Kavramı, FPGA ve SoC’ler" /><published>2024-10-27T00:00:00+03:00</published><updated>2025-05-09T19:32:32+03:00</updated><id>https://www.alperyazar.com/hard-soft-islemci</id><content type="html" xml:base="https://www.alperyazar.com/hard-soft-islemci.html"><![CDATA[<blockquote>
+  <p>İçerik, video olarak sunulmuştur. Bu yazıda (varsa) düzeltmeler ve videoda
+geçen bağlantılar veya videoya ek notlar sunulmuştur.</p>
+</blockquote>
+
+<!-- https://github.com/nathancy/jekyll-embed-video -->
+<!-- https://yoast.com/how-to-make-youtube-videos-responsive/ -->
+<div class="embed-container" style="text-align: center;">
+<iframe class="youtube-video lazyload" src="https://www.youtube.com/embed/ZfILlT64EFA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+</div>
+
+<center><a target="_blank" href="https://www.youtube.com/watch?v=ZfILlT64EFA" rel="nofollow">Video</a></center>
+
+<h2 id="notlar">Notlar</h2>
+
+<ul>
+  <li>Videoda İngilizcesi <code class="language-plaintext highlighter-rouge">silicon</code> olan elementin adını Türkçe’ye ağız alışkanlığı
+<code class="language-plaintext highlighter-rouge">silikon</code> olarak çevirmişim. Oysa Türkçe’de <code class="language-plaintext highlighter-rouge">silikon</code> dediğimiz şey, İngilizce’de
+<code class="language-plaintext highlighter-rouge">silicone</code> olarak geçmektedir. Türkçe’deki doğru karşılığı <code class="language-plaintext highlighter-rouge">silisyum</code>
+olmalıdır. <sup id="fnref:1f"><a href="#fn:1f" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>, <sup id="fnref:2f"><a href="#fn:2f" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> Bu, videoyu çekerken hiç aklıma gelmedi. Aslında
+<code class="language-plaintext highlighter-rouge">silisyum</code> kelimesine de oldukça aşinayım çünkü küçüklüğümde <code class="language-plaintext highlighter-rouge">silisyum.net</code>
+sitesindeki yazıları az okumadım (an itibariyle ne yazık ki siste kapanmış,
+üzüldüm). Nerdeyse herkesin aklında bu kelimenin Türkçe karşılığının <code class="language-plaintext highlighter-rouge">silikon</code>
+olmasının önemli bir sebebi de <code class="language-plaintext highlighter-rouge">Silicon Valley</code>e hemen hemen her zaman
+<code class="language-plaintext highlighter-rouge">Silikon Vadisi</code> dememizdir, dilimize <code class="language-plaintext highlighter-rouge">Silisyum Vadisi</code> olarak yerleşmemiş
+olmasıdır. Bunu videoya yorum yazan <a href="https://www.youtube.com/@senoleker">Şenol Eker</a>
+Bey’in yorumu sayesinde fark ettim. Yorumun ekran görüntüsünü ekliyorum.
+Bu düzeltmeyi bu videoda yapamasam da ileride üreteceğim içeriklerde dikkat
+edeceğim. Kendisine buradan da teşekkür ederim.</li>
+</ul>
+
+<p><img src="/assets/img/24/15-senoleker.png" alt="senoleker yorum" class="centered lazyload" /></p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1f">
+      <p><a href="https://tr.wikipedia.org/wiki/Silisyum">https://tr.wikipedia.org/wiki/Silisyum</a> <a href="#fnref:1f" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2f">
+      <p><a href="https://kelimeler.gen.tr/silisyum-nedir-ne-demek-275440">https://kelimeler.gen.tr/silisyum-nedir-ne-demek-275440</a> <a href="#fnref:2f" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name>Alper Yazar</name></author><category term="tr" /><summary type="html"><![CDATA[FPGA ve SoClerle çalışan sayısal tasarımcı ve gömülü yazılımcıların karşılaştığı bir terim olan Hard Processor ve Soft Processor kavramına bakıyoruz.]]></summary></entry><entry><title type="html">GÖMÜLÜ YAZILIMIN olmazsa olmazı CROSS COMPILATION nedir?</title><link href="https://www.alperyazar.com/capraz-derleme.html" rel="alternate" type="text/html" title="GÖMÜLÜ YAZILIMIN olmazsa olmazı CROSS COMPILATION nedir?" /><published>2024-10-16T00:00:00+03:00</published><updated>2025-05-09T19:32:32+03:00</updated><id>https://www.alperyazar.com/capraz-derleme</id><content type="html" xml:base="https://www.alperyazar.com/capraz-derleme.html"><![CDATA[<blockquote>
+  <p>İçerik, video olarak sunulmuştur. Bu yazıda (varsa) düzeltmeler ve videoda
+geçen bağlantılar veya videoya ek notlar sunulmuştur.</p>
+</blockquote>
+
+<!-- https://github.com/nathancy/jekyll-embed-video -->
+<!-- https://yoast.com/how-to-make-youtube-videos-responsive/ -->
+<div class="embed-container" style="text-align: center;">
+<iframe class="youtube-video lazyload" src="https://www.youtube.com/embed/dKrrejX6Y0U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+</div>
+
+<center><a target="_blank" href="https://www.youtube.com/watch?v=dKrrejX6Y0U" rel="nofollow">Video</a></center>
+
+<h2 id="notlar">Notlar</h2>
+
+<ul>
+  <li>Video’da <a href="https://clang.llvm.org/">Clang</a> derleyicisini <code class="language-plaintext highlighter-rouge">si lang</code> diye telaffuz
+ediyorum, <code class="language-plaintext highlighter-rouge">kılenk</code> olarak da sıkça telaffuz edilmektedir.</li>
+  <li>Çapraz derleme ya da buna benzer C/C++ denemelerini kolayca yapmak için bu
+videoda kullandığım <a href="https://godbolt.org">https://godbolt.org</a> sitesini kullanabilirsiniz.</li>
+</ul>]]></content><author><name>Alper Yazar</name></author><category term="tr" /><summary type="html"><![CDATA[Cross Compilation yani Çapraz Derleme özellikle gömülü yazılım alanının olmazsa olmaz kavramlarından biri, gelin öğrenelim!]]></summary></entry><entry><title type="html">Ekip Veriminizi Arttıracak, OFFLINE Çalışabilen 5 Araç - 2</title><link href="https://www.alperyazar.com/self-hosted-5-2.html" rel="alternate" type="text/html" title="Ekip Veriminizi Arttıracak, OFFLINE Çalışabilen 5 Araç - 2" /><published>2024-05-31T00:00:00+03:00</published><updated>2025-05-09T19:32:32+03:00</updated><id>https://www.alperyazar.com/self-hosted-5-2</id><content type="html" xml:base="https://www.alperyazar.com/self-hosted-5-2.html"><![CDATA[<p>Bir önceki yazımda, internet bağlantısı olmadan kullanabileceğiniz yani
+<strong>self-hosted</strong> çalışan 5 adet araçtan ve temel bir altyapı önerisinden
+bahsetmiştim. Bu yazımda da yine faydalı olabileceğini düşündüğüm 5 adet araç
+tanıtacağım. Eğer okumadıysanız bir önceki yazıyı okuyarak başlamanızı öneririm:</p>
+
+<ul class="post-list">
+<li style="background: #DDEEEE; padding: 10px; border-radius: 10px;">
+<h4>🔗 İlgili bir içerik</h4>
+
+<center>
+<p>
+<a class="post-link" href="/self-hosted-5.html"><img alt="Teaser" src="/assets/img/24/12.jpg" data-srcset="/assets/img/24/12.jpg" srcset="/assets/lazyload.png" style="border-radius: 10px; height: auto; width: 95%; max-width: 700px;" class="lazyload" /></a>
+</p>
+</center><h3>
+<a class="post-link" href="/self-hosted-5.html">
+Ekip Veriminizi Arttıracak, OFFLINE Çalışabilen 5 Araç
+
+</a>
+</h3><h4>Bu yazıda offline da çalışabilen ve çalışma veriminizi arttıracağını düşündüğüm 5 araçtan bahsediyorum.</h4></li>
+</ul>
+
+<p>Bu araçlarda bir öncekiler gibi <strong>web tabanlı</strong> ve <strong>Docker container</strong> olarak
+paketlenmiş sürümleri bulunan araçlar olacak.</p>
+
+<h2 id="asciinema">Asciinema</h2>
+
+<p><img src="/assets/img/24/13-asciinema.png" alt="Asciinema" class="centered lazyload" /></p>
+
+<p>Asciinema, sloganı <strong>terminal session recorder</strong> olarak geçen bir araç. Linux
+üzerinde terminalde bir şeyler yapan ve bunları paylaşmak isteyen kişilere hitap
+ediyor. OBS gibi ekranı video olarak kaydeden bir yazılımla arasındaki temel
+fark kaydı bir metin dosyası olarak alıyor olması. Oynatıcısında da bir video
+gibi izlesek de aslında arkada metin oynatılıyor. <strong>İzlerken durdurup, faremizle
+o metni kopyalayıp yapıştırabiliyoruz.</strong> Diyelim ki bir tutorial hazırladınız,
+bunu takip eden kişiler sizin yazdığınız komutları doğrudan kopyalayıp
+kendilerine yapıştırabiliyorlar. Kayıtlar da metin tabanlı tutulduğu için bir
+video kaydına göre çok az yer kaplıyor.</p>
+
+<p>Bu servisi dilerseniz <a href="https://asciinema.org/">asciinema.org</a> adresinde de
+kullanabilir ya deneyebilirsiniz. Burada gördüğünüz servisin aynısını kendi
+makinelerinizde de çalıştırabiliyorsunuz. SMTP entegrasyonu yapmanız biraz şart
+gibi çünkü login sistemi mail üzerinden gönderilen tek kullanımlık linkler ile
+çalışıyor.</p>
+
+<p>Eğer ZSH gibi terminallerde, Unicode karakterler ile çalışıyorsanız kaydettiğiniz
+terminal kayıtları web üzerinden oynatılırken düzgün gözükmeyebilir. Burada bir
+deneme yapmanızı veya kayıt sırasında daha basit bir terminal düzenine geçmenizi
+öneririm.</p>
+
+<p>Kayıt sırasında <strong>otomatik jump cut</strong> yaptırabiliyorsunuz. Belirlediğiniz süre
+boyunca terminalde bir işlem yapmazsanız o boşluklar kaydedilmiyor. Böylece
+daha kısa süren kayıtlar elde edebiliyorsunuz. İzleyen kişiler de “Vay be
+hiç düşünmeden takır tukur yazıyor” diyorlar. 😉</p>
+
+<p>Aşağıdaki yazımda kaydettiğim birkaç örneği de görebilirsiniz:</p>
+
+<ul class="post-list">
+<li style="background: #DDEEEE; padding: 10px; border-radius: 10px;">
+<h4>🔗 İlgili bir içerik</h4>
+
+<center>
+<p>
+<a class="post-link" href="/buildroot-ogreniyoruz-04.html"><img alt="Teaser" data-sizes="auto" src="https://i.ytimg.com/vi/sO_Sdf09DiY/hq720.jpg" data-srcset="https://i.ytimg.com/vi/sO_Sdf09DiY/hq720.jpg 1280w" srcset="/assets/lazyload.png" style="border-radius: 10px; height: auto; width: 95%; max-width: 700px;" class="lazyload" /></a>
+</p>
+</center><h3>
+<a class="post-link" href="/buildroot-ogreniyoruz-04.html">
+Buildroot ile ilk derleme! Buildroot Öğreniyoruz - 4
+
+</a>
+</h3><h4>Buildroot ile ilk derlememizi yapıyoruz. Elbette tahmin ettiğim gibi ilk seferde olmuyor, uğraşıyoruz..</h4></li>
+</ul>
+
+<p>👉 <a href="https://docs.asciinema.org/manual/cli/installation/#container-image">Docker</a></p>
+
+<h2 id="hedgedoc">HedgeDoc</h2>
+
+<p><img src="/assets/img/24/13-hedgedoc.png" alt="HedgeDoc" class="centered lazyload" /></p>
+
+<p>Bu aracın sloganı: <strong>Ideas grow better together</strong> İsminden de anlayabileceğiniz
+gibi beraber bir şeyler yapmayı sağlıyor. Peki ne? Bu araç sayesinde bir
+Markdown dosyası üzerinde ekip arkadaşlarınızla çalışabiliyorsunuz, aynı anda.
+Aynı satırları değiştirmeye çalışmadığınız sürece dokümanın farklı yerlerini
+aynı anda değiştirebiliyorsunuz. <strong>Overleaf</strong> i biliyorsanız, onun Markdown
+versiyonu gibi düşünebilirsiniz.</p>
+
+<p>Bununla beraber bir dokümanın değişiklikleri de otomatik olarak kaydediliyor ve
+eski bir sürüme dönebiliyorsunuz.</p>
+
+<p>Çok kapsamlı olmasa da Markdown dokümanınızdan sunum da hazırlayabiliyorsunuz
+fakat temel amacınız bu ise <a href="https://marp.app/">Marp</a> gibi araçlar daha uygun
+olacaktır.</p>
+
+<p>Yazdığınız dokümanları PDF olarak da export edebiliyorsunuz.</p>
+
+<p><a href="https://hedgedoc.org/demo/">Demo instance</a></p>
+
+<p>Yukarıdaki linkten test edebilirsiniz.</p>
+
+<p>Gitlab, Github, LDAP, OAuth, SAML gibi birçok authentication mekanizmasını
+<a href="https://docs.hedgedoc.org/guides/auth/ldap-ad/">destekliyor</a>, bu çeşitlilik
+beni şaşırttı genelde bu kadar fazla sayıda entegrasyon olmuyor.</p>
+
+<p>Merak edenler için HedgeDoc ile CodiMD vs HackMD arasındaki ilişki
+<a href="https://hedgedoc.org/history/">burada</a> gösteriliyor, güzel bir gösterim.</p>
+
+<p>👉 <a href="https://docs.hedgedoc.org/setup/docker/">Docker</a></p>
+
+<h2 id="json-editor-online">JSON Editor Online</h2>
+
+<p><img src="/assets/img/24/13-json.png" alt="JSON Editor Online" class="centered lazyload" /></p>
+
+<p>JSON dosyaları ile uğraşıyorsanız bu aracı bir <em>linter</em> veya <em>editor</em> olarak
+kullanabilirsiniz.</p>
+
+<p><a href="https://jsoneditoronline.org/">jsoneditoronline.org</a></p>
+
+<p>adresinden kullanabilir veya test edebilirsiniz.</p>
+
+<p>👉 <a href="https://hub.docker.com/r/djmattyg007/jsoneditor">Docker</a></p>
+
+<h2 id="word-to-markdown-converter">Word to Markdown Converter</h2>
+
+<p><code class="language-plaintext highlighter-rouge">word2md</code> olarak da geçen aracın yaptığı iş adında, Word dosyalarınızı Markdown
+dosyalarına çeviriyor. Çok kullanmadığım için başarısı konusunda pek bir
+yorumum yok.</p>
+
+<p><a href="https://word2md.com/">word2md.com</a></p>
+
+<p>adresinden kullanabilir ya da test edebilirsiniz. Self-hosted olarak çalışırken
+beklediğimden fazla bellek tüketiyor diye aklımda kalmış ama tam da emin değilim.</p>
+
+<p>Eğer bu çevrimin tersini yani Markdown’dan Word’e bir çevrim arıyorsanız, ya da
+herhangi bir dokümanı herhangi bir formata dönüştürmek istiyorsanız muhakkak
+<a href="https://pandoc.org/">pandoc</a> a bakmalısınız. <strong>Pandoc</strong> yapamıyorsa, o iş
+olmuyordur muhtemelen…</p>
+
+<p>👉 <a href="https://github.com/benbalter/word-to-markdown-server/pkgs/container/word-to-markdown-server">Docker</a></p>
+
+<h2 id="uptime-kuma">Uptime Kuma</h2>
+
+<p><img src="/assets/img/24/13-uptime.png" alt="Uptime Kuma" class="centered lazyload" /></p>
+
+<p>Bu araç doğrudan işinize yarayacak bir araç değil. Fakat bunu saymazsak ilk yazıdan
+itibaren 9 adet araç tanıdık ve diyelim ki bunları veya başka araçları altyapımıza
+kurduk. Peki bunlar güzel güzel çalışıyor mu? Erişilebiliyor mu?</p>
+
+<p>İşte bu soruların cevabı için bir monitör aracı kullanabiliriz. Uptime Kuma da
+bir monitör aracı. Servislerimizin çalışıp çalışmadığını kontrol edebiliriz.</p>
+
+<p><a href="https://uptime.kuma.pet/">Sitesi ve Demo</a></p>
+
+<p>Elbette <a href="https://www.zabbix.com/">Zabbix</a> gibi çok daha kapsamlı araçlar mevcut.
+Uptime Kuma daha basit bir araç. SMTP entegrasyonu yaparsanız size bir şeyler ters
+gidince mail atabiliyor ya da bir önceki yazıda belirttiğim Mattermost’a mesaj
+atabiliyor. <em>Status</em> ya da <em>monitor</em> sayfaları sunabiliyorsunuz, tatlı bir araç
+kendileri.</p>
+
+<p>👉 <a href="https://uptime.kuma.pet/">Docker</a></p>
+
+<hr />
+
+<p>Şimdilik bu kadar. Faydalı olması dileği ile…</p>]]></content><author><name>Alper Yazar</name></author><category term="tr" /><summary type="html"><![CDATA[Bu yazıda offline da çalışabilen ve çalışma veriminizi arttıracağını düşündüğüm 5 araçtan bahsediyorum.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.alperyazar.com/assets/img/24/13.jpg" /><media:content medium="image" url="https://www.alperyazar.com/assets/img/24/13.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Ekip Veriminizi Arttıracak, OFFLINE Çalışabilen 5 Araç</title><link href="https://www.alperyazar.com/self-hosted-5.html" rel="alternate" type="text/html" title="Ekip Veriminizi Arttıracak, OFFLINE Çalışabilen 5 Araç" /><published>2024-05-24T00:00:00+03:00</published><updated>2025-05-09T19:32:32+03:00</updated><id>https://www.alperyazar.com/self-hosted-5</id><content type="html" xml:base="https://www.alperyazar.com/self-hosted-5.html"><![CDATA[<p>Bireysel olarak veya bir ekip ile çalışırken kullandığımız çeşitli yazılım ve
+araçlar çalışma hızımızı ve verimimizi ciddi bir biçimde arttırabiliyor. Bu
+yazımda bireysel veya ekip olarak kullanabileceğiniz çeşitli araçlardan
+bahsedeceğim.</p>
+
+<p>Araçların ortak özellikleri</p>
+
+<ol>
+  <li>Web tabanlı olmaları yani internet tarayıcısı üzerinden kullanılmaları,</li>
+  <li>İnternete bağlı olmayan ortamda, <strong>on prem</strong>, <strong>on premise</strong> yani <strong>self hosted</strong>
+çalışabilmeleri. Bu sayede <strong>ürettiğiniz ve sakladığınız tüm verileri sizde
+tutabiliyor olmaları,</strong></li>
+  <li>Hepsinin <strong>Docker</strong> imajlarının olması sebebiyle rahat bir şekilde
+çalıştırılabilmesi</li>
+</ol>
+
+<p>olacaktır.</p>
+
+<p>Bu yazıda araçların kurulumlarını ve kullanımlarını detaylı bir şekilde
+anlatmayacağım. Kurulum talimatları zaten her aracın kendi sitesinde yer
+almaktadır. Kullanımlarının da size ne kadar uygun olup olmadığını denemeden
+bilemezsiniz. Ama ben en az 1 tanesini beğeneceğinizi düşünüyorum.</p>
+
+<p>Yazının sonunda bu araçları kullanmak için basit bir altyapı önerisinden de
+bahsedeceğim. Eğer <a href="https://www.reddit.com/r/homelab/">r/homelab</a> ve
+<a href="https://www.reddit.com/r/selfhosted/">r/selfhosted</a> tutkunları da geldiyse
+gelin araçlara bir bakalım…</p>
+
+<h2 id="1---mattermost">1 - Mattermost</h2>
+
+<p><img src="/assets/img/24/12-mm.jpg" alt="Mattermost" class="centered lazyload" /></p>
+
+<p><a href="https://mattermost.com/">Mattermost</a>, özünde bir chat uygulaması,
+<a href="https://slack.com/">Slack</a>‘e benzetebiliriz. Ücreti karşılığında doğrudan kendi
+altyapıları üzerinden de Mattermost’u kullanabiliyorsunuz. Fakat self-hosted
+seçeneği de mevcut. Burada ise hem <code class="language-plaintext highlighter-rouge">Free</code> hem de <code class="language-plaintext highlighter-rouge">Professional</code> paket var. Free
+paketin çeşitli limitleri mevcut fakat birçok kullanım senaryosu için yeterli
+olacağını düşünüyorum.</p>
+
+<p>Bakınız: <a href="https://mattermost.com/pricing/">Mattermost Pricing</a></p>
+
+<p>Uygulamada temelde <strong>takımlar</strong> ve bu takımların altında <strong>kanallar</strong> yani chat
+odaları oluşturuyorsunuz. Örneğin her proje için takımlar veya projeler için
+kanallar oluşturabilirsiniz, bu sizin yoğurt yeme şeklinize bağlı.</p>
+
+<p>Kanallardaki konuşmalar saklanıyor. Kanala daha sonra eklediğiniz kişi,
+geçmişteki konuşmaları okuyabiliyor.</p>
+
+<p>Bunun dışında benim pek tecrübe etmediğim
+<a href="https://mattermost.com/playbooks/">Playbooks</a> isminde bir otomasyon altyapısı
+da bulunuyor.</p>
+
+<p>DevOps, CI/CD alanında yer alan bir çok araçlar <a href="https://mattermost.com/marketplace/">entegre
+edilebiliyor.</a> Çeşitli araçların <strong>bot</strong>
+hesaplarını da ekleyerek birçok işi Mattermost üzerinden
+<a href="https://docs.gitlab.com/ee/ci/chatops/">ChatOps</a> yaklaşımı ile
+yapabiliyorsunuz. Eğer entegrasyon ile uğraşırsanız Mattermost’u tüm işlerinizi
+yapabileceğiniz bir merkez olarak kullanabilirsiniz.</p>
+
+<p>Aracı ister web üzerinden isterse bilgisayarınıza kuracağınız kendi istemci
+yazılımı ile kullanabiliyorsunuz. Kapsamlı bir araç olduğu için tüm
+özelliklerini anlatmam kolay olmayacak, o yüzden niyetiniz var ise denemenizi
+veya videolarını izlemenizi tavsiye ederim.</p>
+
+<p><strong>Bedava sürümünün çeşitli kısıtları</strong> olduğundan bahsetmiştim. Önemli
+kısıtlarından biri kanallardaki konuşmaların export edilememesi, yani HTML veya
+PDF gibi bir formatta kanaldaki konuşmaları çıkartamıyorsunuz. Diğer bir limiti
+ise Active Directory, LDAP gibi Single Sign-On (SSO) altyapılarının ücretsiz
+sürümde olmaması. Fakat ücretsiz sürüm login tarafında Gitlab ile (self-hosted
+olabilir) entegre olabiliyor ve zaten çalışan bir Gitlab var ise, ki kendisi
+LDAP ile entegre edilmiş olabilir, kullanıcıları buradan login edebilirsiniz. Bu
+durumda dolaylı yoldan Mattermost da LDAP ile entegre edilmiş olacaktır. Bunun
+dışında tipik kullanımda ücretsiz sürüm size ciddi bir kısıt getirmeyecektir.</p>
+
+<p><strong>Alternatif olarak</strong> da <a href="https://www.rocket.chat/">rocket.chat</a> ya da
+<a href="https://matrix.org/">matrix.org</a> araçlarına da bakabilirsiniz. Elbette her
+aracın kendine has bir kullanım tarzı, artı ve eksileri oluyor. O yüzden sizin
+veya ekbinizin ihtiyaçlarına ve tarzına uygun doğru aracı bulmak için denemeler
+yapmak gerekiyor.</p>
+
+<p><a href="https://docs.mattermost.com/install/install-docker.html">Docker</a> veya <a href="https://docs.mattermost.com/guides/deployment.html">diğer
+yollar</a> ile kurulum
+yapabilirsiniz.</p>
+
+<h2 id="2---jirafeau">2 - Jirafeau</h2>
+
+<p><img src="/assets/img/24/12-jirafeau.jpg" alt="Jirafeau" class="centered lazyload" /></p>
+
+<p><a href="https://gitlab.com/mojo42/Jirafeau">Jirafeau</a>, geçici dosya depolama ve
+transfer imkanı sağlıyor. <a href="https://send.vis.ee/">send.vis.ee</a> nin PHP ile
+yazılmış self-hosted versiyonu olarak düşünebilirsiniz. Örneğin arkadaşınıza bir
+dosya göndereceksiniz, dosyanın boyutu büyük ve mail atamıyorsunuz ya da küçük
+olsa bile mail kotasını doldurmak istemiyorsunuz. Jirafeau’ya yüklediğiniz zaman
+size verdiği tekil, unique, linki paylaştığınız kişiler dosyayı indiriyor. Bir
+süre sonra veya ilk indirmeden sonra ya da silme linkini kullanınca dosya
+siliniyor.</p>
+
+<p><a href="https://hub.docker.com/r/mojo42/jirafeau/">Docker</a></p>
+
+<h2 id="3---excalidraw-️">3 - Excalidraw ❤️</h2>
+
+<p><img src="/assets/img/24/12-excalidraw.jpg" alt="Excalidraw" class="centered lazyload" /></p>
+
+<p><a href="https://excalidraw.com/">excalidraw.com</a> un neredeyse aynısını self-hosted
+olarak çalıştırabilirsiniz. Daha çok toplantılarda, ekran paylaştığınız
+durumlarda hızlı çizimler yapmak için ya da taslak bir şeyler çizmek için
+kullanabilirsiniz. Varsayılan olarak el yazısı tarzı
+<a href="https://virgil.excalidraw.com/">Virgil</a> isimli bir yazı stili var,
+değiştirebiliyorsunuz. Benim favori araçlarımdan biri.</p>
+
+<p><a href="https://hub.docker.com/r/excalidraw/excalidraw">Docker</a></p>
+
+<h2 id="4---drawio">4 - draw.io</h2>
+
+<p><img src="/assets/img/24/12-drawio.jpg" alt="draw.io" class="centered lazyload" /></p>
+
+<p><a href="https://www.drawio.com/">draw.io</a> ünlü çizim araçlarından biri. Excalidraw’a
+kıyasla daha “resmi” çizimler oluşturmaya yarıyor. Microsoft Visio alternatifi
+gibi düşünebilirsiniz.</p>
+
+<p>draw.io’nun zaten <a href="https://github.com/jgraph/drawio-desktop/releases">masaüstü versiyonu
+mevcut.</a> Fakat dilerseniz web
+üzerinden de self-hosted olarak kullanabilirsiniz.</p>
+
+<p><a href="https://hub.docker.com/r/jgraph/drawio">Docker</a></p>
+
+<h2 id="5---cyberchef">5 - CyberChef</h2>
+
+<p><img src="/assets/img/24/12-cc.jpg" alt="draw.io" class="centered lazyload" /></p>
+
+<p>Son olarak bahsedeceğim araç <a href="https://gchq.github.io/CyberChef/">CyberChef</a>,
+<strong>The Cyber Swiss Army Knife</strong> olarak geçiyor. Var olan birçok minik modülü
+arka arkaya koyarak yeni şeyler <em>pişirebiliyorsunuz.</em> Kullanımı biraz da hayal
+gücünüze kalıyor. Nasıl çalıştığını anlamak için kurcalamanız gerekiyor!</p>
+
+<p><a href="https://github.com/gchq/CyberChef/pkgs/container/cyberchef">Docker</a></p>
+
+<hr />
+
+<h2 id="docker-compose-ve-reverse-proxy">Docker Compose ve Reverse Proxy</h2>
+
+<p>Yazıyı bitirmeden önce minik bir altyapı önerisinde bulunmak istiyorum.</p>
+
+<p>Birçok araç çalıştıracağınız zaman bunları ayrı ayrı <code class="language-plaintext highlighter-rouge">docker run</code> ile
+çalıştırmak yerine bilgilerinin bir <code class="language-plaintext highlighter-rouge">YAML</code> içerisinde bulunacağı <a href="https://docs.docker.com/compose/">Docker
+Compose</a> kullanmanızı öneririm. Bu sayede
+yeniden başlatma ve konfigürasyon değiştirme işlerinde işleriniz daha kolay
+olur.</p>
+
+<p>Araçları web üzerinden erişilebilir kılmak için çalıştırdığınız sunucu makinenin
+çeşitli portlarını <em>publish</em> etmek gerekiyor. Kendi bilgisayarınızda
+çalıştırıyorsanız sorun değil ama bir ekip olarak kullanıyorsanız araçları
+<code class="language-plaintext highlighter-rouge">http://makineadı:port</code> şeklinde açmak yerine <strong>Reverse Proxy</strong> kullanmanızı
+öneririm. Bu durumda her aracın kendi URL’si olacaktır. Örneğin
+<code class="language-plaintext highlighter-rouge">cyberchef.domain.abc</code>, <code class="language-plaintext highlighter-rouge">drawio.domain.abc</code> gibi. Bu sayede aracın adresi
+değişmeden arka planda değişiklik, sunucu ismi gibi yapabilirsiniz. Bu durumda
+port publish etmeniz de gerekmiyor. Elbette burada Docker Swarm ya da Kubernetes
+gibi daha kompleks çözümler kullanabilirsiniz fakat basit bir kullanım
+senaryosunu anlatıyorum.</p>
+
+<p><strong>Reverse Proxy</strong> nin bir avantajı da <strong>SSL termination</strong> ya da <strong>ForwardAuth</strong>
+gibi altyapıları kurabilmenize imkan sağlaması olacaktır. Örneğin Jirafeau
+servisini herkesin kullanmasını istemeyebilirsiniz. Fakat bu aracın kendine bir
+login mekanizması yok. İşte bu servisi bir Reverse Proxy arkasına alır ve
+ForwardAuth ile bir Authentication mekanizması kurarsanız bu servisi bir
+kullanıcı adı/şifre veya başka bir login mekanizması ile koruyabilirsiniz.</p>
+
+<p>Kullanabileceğiniz birçok reverse proxy mevcut,
+<a href="https://github.com/traefik/traefik">Traefik</a>, <a href="https://nginxproxymanager.com/">Nginx Proxy
+Manager</a> gibi. Yine her zaman olduğu gibi
+temelde aynı işi yapsalar da kullanım ve problem çözme tarzları farklı.</p>
+
+<p>Faydalı olması dileği ile…</p>]]></content><author><name>Alper Yazar</name></author><category term="tr" /><summary type="html"><![CDATA[Bu yazıda offline da çalışabilen ve çalışma veriminizi arttıracağını düşündüğüm 5 araçtan bahsediyorum.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.alperyazar.com/assets/img/24/12.jpg" /><media:content medium="image" url="https://www.alperyazar.com/assets/img/24/12.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
