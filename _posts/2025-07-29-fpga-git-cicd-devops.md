@@ -15,7 +15,7 @@ Bu yazımda,
 
 - FPGA projelerini Git gibi bir versiyon kontrolü ile neden takip etmemiz
   gerektiğinden
-- Bu süreçte dikkat etmemiz gereken temellerden
+- Bu süreçte dikkat etmemiz gereken temel noktalardan
 - Yazılım dünyasındaki DevOps, CI/CD gibi kavramlardan nasıl
   faydalanabileceğimizden
 
@@ -39,11 +39,12 @@ düzgün bir şekilde Github/Gitlab gibi platformlarda nasıl tutabiliriz?**
 başlıklı araştırmalarımı ve denemelerimi hayata geçirmek için bir fırsat
 oluşturdu. FPGA projelerimizi, Gitlab üzerinde tutmaya başladık. Bu çalışmada
 Xilinx, şimdiki AMD, firmasının ürünleri ve araçları kullanıldı. Fakat önemli
-bir engel vardı. **Xilinx gibi FPGA firmalarının araçlarının çoğu, Vivado gibi,
-Git ile konfigürasyon takibi yapmaya ve CI/CD süreçleri ile otomatik derleme
-yapmaya çok da uygun değildi. Hangi dosyalar versiyon kontrolünde olmalıydı?
-CI/CD süreçlerinde otomatik derleme en kolay nasıl yapılabilirdi? Hem Windows,
-hem Linux üzerinde çalışan kişiler için uyumlu bir sistem nasıl olabilirdi?**
+bir engeller vardı: **Xilinx gibi FPGA firmalarının araçlarının çoğu, Vivado
+gibi, Git ile konfigürasyon takibi yapmaya ve CI/CD süreçleri ile otomatik
+derleme yapmaya çok da uygun değildi. Hangi dosyalar versiyon kontrolünde
+olmalıydı? CI/CD süreçlerinde otomatik derleme en kolay nasıl yapılabilirdi? Hem
+Windows, hem Linux üzerinde çalışan kişiler için uyumlu bir sistem nasıl
+olabilirdi?**
 
 Bu yazıda bahsettiklerim o yıllardan beri biriken çalışmalara dayanmaktadır.
 
@@ -139,9 +140,9 @@ sorunsuzca derleyebiliyor olmamız gerekiyor, elbette elle yapmak zorunda değil
 otomasyon kurabiliriz. Git (veya SVN fark etmez) gibi bir versiyon kontrol
 sisteminde de ara dosyaların olmaması gerekiyor.
 
-Konuyu gerçek projelerden örnekler vererek derinleştirelim.
+Konuyu örnekler vererek derinleştirelim.
 
-## Gerçek Dünyadan Hikaye - 1 😯
+## Hikaye - 1 😯
 
 Xilinx (AMD) Vivado'dan örnek verecek olursak, bir IP core OOC, out-of-context,
 gibi yöntemle sentezlendiğinde Design Check Point, `.dcp`, uzantılı dosyalar
@@ -172,23 +173,24 @@ Temel motivasyonumuz bu değil. Temel motivasyonumuz versiyon kontrolünü düzg
 yapmak ve yukarıda da bahsettiğim *`git diff` noise* gibi problemlerden
 kaçınmak.
 
-## Gerçek Dünyadan Hikaye - 2 😲
+## Hikaye - 2 😲
 
-Şimdi daha "ibret verici" bir hikayeden bahsedeceğim. Bir projenin yukarıda
-gösterdiğim gibi tüm ara çıktıları ile, ne var ne yoksa tüm dosyaları ile
-saklandığını hayal edin. Bu dosyaların içerisinde çeşitli lisanslı IP core'ların
-çıktıları da var. Yıllar boyunca projede IP core'ların ayarları değiştirilmediği
-için sentez sırasında aslında IP core'lar tekrar sentezlenmiyor, araç tarafından
-lisansları kontrol edilmiyor ve var olan ara dosyalar adeta cache dosyaları
-kullanılıyor. Bir gün IP core'ların birinin ayarı değiştirilmek istenince de
-aslında **IP core'un lisansının yıllar önce bittiği ve değişiklik yapılamadığı**
-anlaşılıyor. Neden? Çünkü proje *clean build* alınarak derlenmediği için bu tarz
-problemler gözden kaçıyor. Tam da yumurta kapıya dayandığı zaman bunu fark
-ediyorsunuz. Güzel bir deneyim değil kesinlikle.
+Şimdi daha "ibretlik" bir hikayeden bahsedeceğim, anlatacaklarımı yaşadığınızı
+hayal edin. Bir projenin yukarıda gösterdiğim gibi tüm ara çıktıları ile, ne var
+ne yoksa tüm dosyaları ile saklandığını hayal edin. Bu dosyaların içerisinde
+çeşitli lisanslı IP core'ların çıktıları da var. Yıllar boyunca projede IP
+core'ların ayarları değiştirilmediği için sentez sırasında aslında IP core'lar
+tekrar sentezlenmiyor, araç tarafından lisansları kontrol edilmiyor ve var olan
+ara dosyalar, adeta cache dosyaları, kullanılıyor. Bir gün IP core'ların birinin
+ayarı değiştirilmek istenince de aslında **IP core'un lisansının yıllar önce
+bittiği ve aslında değişiklik yapılamadığı** anlaşılıyor. Neden? Çünkü proje
+*clean build* alınarak derlenmediği için bu tarz problemler gözden kaçıyor. Tam
+da yumurta kapıya dayandığı zaman bunu fark ediyorsunuz. Böyle bir durumda
+kalmak istemezsiniz değil mi?
 
 ---
 
-Sanıyorum ki **tekralanabilir** bir şekilde bir projenin **clean build** olarak
+Sanıyorum ki **tekralanabilir** bir şekilde bir projenin **clean build** alarak
 derlenebilmesinin neden önemli olduğunu ve bunun için temelde nelere dikkat
 etmemiz gerektiğini biraz anlatabilmişimdir.
 
@@ -197,9 +199,9 @@ Gelin devam edelim.
 ## "Headless Build", "Scriptable Build" Gibi Kavramlar
 
 Sıfırdan, tekrarlanabilir derleme konularındaki **en önemli aracımız
-otomasyon.** Bu konuda *Github Actions*, *Gitlab Runner* gibi sistemler
-yardımımıza koşuyor. Bu sayede, Git üzerinde takip edilen kodumuzda bir
-değişiklik olduğu zaman ya da periyodik olarak istediğimiz sıklıkta FPGA
+otomasyon.** Bu konuda *Github Actions*, *Gitlab Runner*, *Jenkins* gibi
+sistemler yardımımıza koşuyor. Bu sayede, Git üzerinde takip edilen kodumuzda
+bir değişiklik olduğu zaman ya da periyodik olarak istediğimiz sıklıkta FPGA
 projemizi otomatik olarak hem de *clean build* şeklinde derleyebiliyoruz.
 FPGA'den bağımsız olarak bu konuları **DevOps**, **CI/CD** gibi anahtar
 kelimelerle aratabilirsiniz.
@@ -208,10 +210,10 @@ Fakat bu sistemlerin sağlıklı çalışabiliyor olması için bizim FPGA proje
 sentezleme/derleme işlemini düzgün bir şekilde komut satırından yani Linux'ta
 BASH, Window'ta Power Shell ya da CMD üzerinden yapabilmemiz gerekiyor. GUI
 üzerinden sağa sola tıklanarak yapılan işlemleri hem otomatize etmek hem de bir
-kullanıcının düzgün *tekralanabilir* şekilde projeyi bilgisayarında derlemesi
-çok zor. O yüzden burada da önümüze **headless build** ya da **scriptable build**
-gibi kavramlar ortaya çıkıyor. *Headless* kelimesi bir monitör ya da GUI olmadan
-yapılan anlamında kullanılıyor.
+kullanıcının düzgün *tekralanabilir* şekilde projeyi bilgisayarında oluşturması
+ve derlemesi çok zor. O yüzden burada da önümüze **headless build** ya da
+**scriptable build** gibi kavramlar ortaya çıkıyor. *Headless* kelimesi bir
+monitör ya da GUI olmadan yapılan anlamında kullanılıyor.
 
 Özetle sizin tüm derleme sürecinizi, bitstream oluşturma, soft/hard işlemci
 varsa onun kodunu derleyip ELF dosyası oluşturma, bitstream ile ELF'i
@@ -243,23 +245,26 @@ araç ve proje bazında araştırma yaparak ve tecrübe ederek mümkün olabilir
 Burada projelerimizde 4️⃣ numaralı maddede bahsedeceğim araçları kullanmak da
 fayda sağlayacaktır.
 
-2️⃣ Otomasyon en büyük yardımcımız. Github, Gitlab gibi sistemlerin
-"otomatik olarak bir şey yaptırtma" altyapıları oldukça iyi, bizim de bunları
-kullanmamız gerekiyor. Burada da kullanacağımız anahtar kelimelerin başında
-`DevOps`, `CI/CD` geliyor. Gitlab kullanıyorsanız Gitlab'ın, Github Actions
-kullanıyorsanız Github'ın otomasyon kısmını iyi anlamak gerekiyor. Bundan
-bağımsız olarak *Bu DevOps gibi çözümler neyi çözmeye çalışıyor ve ben bunu
-FPGA işlerine nasıl uyarlayabilirim?* diye düşünmek gerekiyor.
+2️⃣ Otomasyon en büyük yardımcımız. Github, Gitlab gibi sistemlerin "otomatik
+olarak bir şey yaptırtma" ve bunların çıktılarını kullanma (örneğin bitstream
+😉) altyapıları oldukça iyi, bizim de bunları kullanmamız gerekiyor. Burada da
+kullanacağımız anahtar kelimelerin başında `DevOps`, `CI/CD` geliyor. Gitlab
+kullanıyorsanız Gitlab'ın, Github Actions kullanıyorsanız Github'ın otomasyon
+kısmını iyi anlamak gerekiyor. Bundan bağımsız olarak *Bu DevOps gibi çözümler
+neyi çözmeye çalışıyor ve ben bunu FPGA işlerine nasıl uyarlayabilirim?* diye
+düşünmek gerekiyor.
 
-3️⃣ Geliştirme ortamınızı, örneğin Vivado'nun yıllar sonra da düzgün
-çalışacağını, koruma altına almak gerekiyor. Bu, otomasyon kapsamında Github
-Actions, Gitlab Runner, Jenkins gibi ortamlarda Docker/Podman gibi altyapılarda
-Vivado gibi araçları çalıştırmak için de çok anlamlı. Aynı zamanda ileriye dönük
-ortamı korumak için de önemli. Buna bu yazıda pek değinmedik ama container
-teknolojilerinin iyi bir çözüm olabileceğini düşünüyorum. Kendi repomun
-reklamını da yapayım:
+3️⃣ Geliştirme ortamımızı koruma altına almak gerekiyor. Örneğin kullandığımız
+Vivado versiyonunu yıllar sonra da düzgün çalıştırabilecek miyiz? Bu, otomasyon
+kapsamında Github Actions, Gitlab Runner, Jenkins gibi ortamlarda Docker/Podman
+gibi altyapılarda Vivado gibi araçları çalıştırmak için de çok anlamlı. Aynı
+zamanda ileriye dönük ortamı korumak için de önemli. Buna bu yazıda pek
+değinmedik ama container teknolojilerinin iyi bir çözüm olabileceğini
+düşünüyorum. Kendi repomun reklamını da yapayım:
 
 <https://github.com/alperyazar/ebox>
+
+Elbette başka çözümler de mevcut.
 
 4️⃣ Script ya da komut satırı tabanlı derleme sistemlerinin öneminden bahsettik.
 **Burada kendinizin sıfırdan bir şey geliştirmenizi, "in-house" bir build
@@ -269,7 +274,7 @@ her bir bileşenin technical debt oluşturduğunu unutmayın.** Bir gazla kendi 
 scriptleri ile bir şeyler yapmaya çalışıp, 1-2 senede patatese 🥔 dönenleri
 gördüğüm için (mesela ben) anlık gazla build sistemi yazmaya çalışmayın.
 Öğrenmek için kendi kendinize takılın, ona bir şey demem.
-[FuseSoC](https://github.com/olofk/fusesoc),
+[FuseSoC ❤️](https://github.com/olofk/fusesoc),
 [HoG](https://hog.readthedocs.io/en/latest/) gibi çözümlere bakın. Eksik
 buluyorsanız onlara katkıda bulunun, *bu işimi görmüyor ya* deyip kestirip
 atmayın.
