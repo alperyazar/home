@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Blog | Alper Yazar</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Blog" />
+<meta name="author" content="Alper Yazar" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="“Full Stack Electronics” Engineer" />
+<meta property="og:description" content="“Full Stack Electronics” Engineer" />
+<link rel="canonical" href="https://www.alperyazar.com/blog.md.bak" />
+<meta property="og:url" content="https://www.alperyazar.com/blog.md.bak" />
+<meta property="og:site_name" content="Alper Yazar" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Blog" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Alper Yazar"},"dateModified":"2024-02-08T13:01:37+03:00","description":"“Full Stack Electronics” Engineer","headline":"Blog","url":"https://www.alperyazar.com/blog.md.bak"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css">
+    <script src="/assets/js/lazysizes.min.js" async=""></script><link type="application/atom+xml" rel="alternate" href="https://www.alperyazar.com/feed.xml" title="Alper Yazar" /><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"><!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S3B80PC7FC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-S3B80PC7FC');
+    </script>
+
+    
+
+    
+    <!-- Adsense -->
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4580059638713287"
+    crossorigin="anonymous"></script> -->
+    <link rel="me" href="https://mastodon.social/@ayazar">
+  </head>
+<body><header class="site-header" role="banner">
+
+    <div class="wrapper"><a class="site-title" rel="author" href="/">Alper Yazar</a><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewBox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger"><a class="page-link" href="/blog/">📝 Blog</a><a class="page-link" href="/search.html">🔍 Search</a><!-- <a class="page-link" href="https://ayazar.dev" target="_blank">🗂️ Notes</a> -->
+            <a rel="me" class="page-link" href="https://www.linkedin.com/in/alperyazar" target="_blank">💼 LinkedIn</a>
+            <a rel="me" class="page-link" href="https://www.youtube.com/@ayazar" target="_blank">🎬 YouTube</a>
+          </div>
+        </nav></div>
+  </header>
+
+  
+
+<div id="son_yazi_banner" style="
+background: linear-gradient(to right, rgba(250, 191, 200, 0.3), rgba(23, 86, 169, 0.2));
+color: rgb(52, 55, 67);
+text-align: center;
+padding: 15px;
+border-radius: 10px;
+border: 0px dashed rgba(250, 191, 200, 0.5);
+box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+margin: 10px 0px 10px 0px;">🚀 The latest blog post:&nbsp;<a href="/fpga-git-cicd-devops.html" style="font-weight: bold;"><span style="font-weight: bold;">FPGA, Git, DevOps, CI/CD</span></a>&nbsp;🇹🇷</div>
+
+  <div id="progressBar" class="progress-bar"></div>
+
+  <script>
+    // Listen for scroll events on the window
+window.onscroll = function() {
+    // Call the function to update the progress bar
+    updateProgressBar();
+};
+
+function updateProgressBar() {
+    // Get the total height of the page
+    var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    // Get the current scroll position
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    // Calculate the scroll percentage
+    var scrollPercentage = (scrollTop / scrollHeight) * 100;
+    // Update the width of the progress bar
+    document.getElementById("progressBar").style.width = scrollPercentage + "%";
+}
+  </script>
+
+<a href='/support.html' class="floating-icon-heart" width="48" target="_blank"><img src='/assets/img/icons8-heart-64.png' alt="❤️ Support/Destek" title="❤️ Support/Destek"></a>
+
+<div id="special-flag">
+  <a id="special-flag-link" href="#" target="_blank" title="">
+    <img src='/assets/img/bayrak.png' alt="Türk Bayrağı">
+  </a>
+</div>
+
+<script>
+  /*
+   * Ref: https://www.pau.edu.tr/tks/tr/sayfa/milli-ve-dini-bayramlar
+   * Ref: https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=859034&MevzuatTur=2&MevzuatTertip=5
+   * Ref: https://www.eserotomatikbayrak.com/bayrak-asilacak-tarihler.pdf
+   * Net bir şey bulmak zor :(
+  */
+  const specialDays = [
+    ["03-18", "https://tr.wikipedia.org/wiki/18_Mart_%C3%87anakkale_Zaferi_ve_%C5%9Eehitleri_Anma_G%C3%BCn%C3%BC", "Çanakkale Zaferi ve Şehitleri Anma Günü"],
+    ["04-23", "https://tr.wikipedia.org/wiki/23_Nisan_Ulusal_Egemenlik_ve_%C3%87ocuk_Bayram%C4%B1", "Ulusal Egemenlik ve Çocuk Bayramı"],
+    ["05-01", "https://tr.wikipedia.org/wiki/1_May%C4%B1s_%C4%B0%C5%9F%C3%A7i_Bayram%C4%B1", "Emek ve Dayanışma Günü"],
+    ["05-19", "https://tr.wikipedia.org/wiki/19_May%C4%B1s_Atat%C3%BCrk%27%C3%BC_Anma,_Gen%C3%A7lik_ve_Spor_Bayram%C4%B1", "Atatürk'ü Anma, Gençlik ve Spor Bayramı"],
+    ["07-15", "https://tr.wikipedia.org/wiki/Demokrasi_ve_Mill%C3%AE_Birlik_G%C3%BCn%C3%BC", "Demokrasi ve Millî Birlik Günü"],
+    ["08-30", "https://tr.wikipedia.org/wiki/30_A%C4%9Fustos_Zafer_Bayram%C4%B1", "Zafer Bayramı"],
+    ["10-29", "https://tr.wikipedia.org/wiki/29_Ekim_Cumhuriyet_Bayram%C4%B1", "Cumhuriyet Bayramı"],
+    ["11-10", "https://tr.wikipedia.org/wiki/10_Kas%C4%B1m_Atat%C3%BCrk%27%C3%BC_anma_g%C3%BCn%C3%BC_ve_Atat%C3%BCrk_haftas%C4%B1", "Atatürk'ü Anma Günü"]
+  ];
+
+  const today = new Date();
+  const todayKey = `${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+
+  const match = specialDays.find(([key]) => key === todayKey);
+  if (match) {
+    const [_, url, tooltip] = match;
+    const flagDiv = document.getElementById("special-flag");
+    const flagLink = document.getElementById("special-flag-link");
+    flagLink.href = url;
+    flagLink.title = tooltip;
+    flagDiv.style.display = "block";
+  }
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="home"><h1 class="page-heading">Blog</h1>ℹ️ Posts tagged with 🇹🇷 or 🇬🇧 are in Turkish or in English, respectively.
+
+
+<h2 class="post-list-heading"> </h2>
+    <ul class="post-list"><li><span class="post-meta">2025-07-29</span>
+        <h3>
+          <a class="post-link" href="/fpga-git-cicd-devops.html">
+            FPGA, Git, DevOps, CI/CD
+          </a>
+        </h3>Modern yazılım geliştirme yöntemlerini neden FPGA projelerine uyarlamayalım?</li><li><span class="post-meta">2025-06-25</span>
+        <h3>
+          <a class="post-link" href="/ortaya-karisik-3.html">
+            🔴 cocotb: Python verification framework | FPGA, Gömülü Sistemler Muhabbet | Ortaya Karışık - 3
+          </a>
+        </h3>Bu bölümde ilk olarak Python dilinde sayısal tasarım doğrulama yapma imkanı sağlayan cocotb'ye bakıp, serbest format muhabbet edeceğiz.</li><li><span class="post-meta">2025-02-19</span>
+        <h3>
+          <a class="post-link" href="/ortaya-karisik-2.html">
+            🔴 Gömülü Sistemler, FPGA, Elektronik, Yazılım, Linux... | Ortaya Karışık - 2
+          </a>
+        </h3>Arkadaşlarımla beraber ağırlıklı gömülü sistemler, FPGA, elektronik, yazılım, Linux gibi konularda konuşacağımız, SORU SORABİLECEĞİNİZ, serbest format muhabbet yayını.</li><li><span class="post-meta">2025-02-11</span>
+        <h3>
+          <a class="post-link" href="/gomulu-embedded-c.html">
+            Gömülü yani Embedded C var mıdır?
+          </a>
+        </h3>Birçok gömülü yani embedded sistemde C dili ile çalışmalar yapıyoruz. Peki bu durumda Gömülü yani Embedded C var diyebilir miyiz?</li><li><span class="post-meta">2025-01-26</span>
+        <h3>
+          <a class="post-link" href="/sistem-muhendisligi-taritmasi.html">
+            &quot;Yeni Mezun Sistem Mühendisi Olur mu?&quot;
+          </a>
+        </h3>LinkedIn'de dönen sistem mühendisliği tartışmasına ben de fikir beyan ediyorum.</li><li><span class="post-meta">2025-01-18</span>
+        <h3>
+          <a class="post-link" href="/asciinema.html">
+            Linux Terminalinizi Kaydedin ve Paylaşın! asciinema ile Tanışın!
+          </a>
+        </h3>Linux terminalinde yaptığınız işlemleri kaydetmek ve paylaşmak mı istiyorsunuz? asciinema ile bu artık çok kolay!</li><li><span class="post-meta">2024-11-09</span>
+        <h3>
+          <a class="post-link" href="/yapay-zeka-hizlandiricilari-sezgin-baloglu.html">
+            Yapay Zeka Hızlandırıcıları, NPU | M. Sezgin Baloğlu, ML Compiler Engineer
+          </a>
+        </h3>Yapay zeka ve benzeri problemler yoğun hesaplama gücü gerektiriyor. Bu tarz problemlerin günümüzde verimli bir şekilde çözülebilmesi için donanım seviyesinde ciddi destekler gerekiyor.</li><li><span class="post-meta">2024-10-27</span>
+        <h3>
+          <a class="post-link" href="/hard-soft-islemci.html">
+            Hard ve Soft Processor (İşlemci) ve IP Kavramı, FPGA ve SoC&#39;ler
+          </a>
+        </h3>FPGA ve SoClerle çalışan sayısal tasarımcı ve gömülü yazılımcıların karşılaştığı bir terim olan Hard Processor ve Soft Processor kavramına bakıyoruz.</li><li><span class="post-meta">2024-10-16</span>
+        <h3>
+          <a class="post-link" href="/capraz-derleme.html">
+            GÖMÜLÜ YAZILIMIN olmazsa olmazı CROSS COMPILATION nedir?
+          </a>
+        </h3>Cross Compilation yani Çapraz Derleme özellikle gömülü yazılım alanının olmazsa olmaz kavramlarından biri, gelin öğrenelim!</li><li><span class="post-meta">2024-05-31</span>
+        <h3>
+          <a class="post-link" href="/self-hosted-5-2.html">
+            Ekip Veriminizi Arttıracak, OFFLINE Çalışabilen 5 Araç - 2
+          </a>
+        </h3>Bu yazıda offline da çalışabilen ve çalışma veriminizi arttıracağını düşündüğüm 5 araçtan bahsediyorum.</li><li><span class="post-meta">2024-05-24</span>
+        <h3>
+          <a class="post-link" href="/self-hosted-5.html">
+            Ekip Veriminizi Arttıracak, OFFLINE Çalışabilen 5 Araç
+          </a>
+        </h3>Bu yazıda offline da çalışabilen ve çalışma veriminizi arttıracağını düşündüğüm 5 araçtan bahsediyorum.</li><li><span class="post-meta">2024-03-27</span>
+        <h3>
+          <a class="post-link" href="/why-programming-languages-part-1.html">
+            Why do we have programming languages in the first place? Part 1
+          </a>
+        </h3>There are hundreds of computer programming languages. But why? Why do we keep inventing them?</li><li><span class="post-meta">2024-02-10</span>
+        <h3>
+          <a class="post-link" href="/eski-laptop-linux-bakim.html">
+            12 Yaşındaki Laptop&#39;uma Hafta Sonu Linux Bakımı
+          </a>
+        </h3>Debian, Linux Mint, XFCE, Ventoy, ZSH...</li><li><span class="post-meta">2024-02-07</span>
+        <h3>
+          <a class="post-link" href="/buildroot-ogreniyoruz-04.html">
+            Buildroot ile ilk derleme! Buildroot Öğreniyoruz - 4
+          </a>
+        </h3>Buildroot ile ilk derlememizi yapıyoruz. Elbette tahmin ettiğim gibi ilk seferde olmuyor, uğraşıyoruz..</li><li><span class="post-meta">2024-02-04</span>
+        <h3>
+          <a class="post-link" href="/buildroot-ogreniyoruz-03.html">
+            Buildroot ile Tanışıyoruz Buildroot Öğreniyoruz - 3
+          </a>
+        </h3>Bu bölümde Buildroot ile artık tanışıyoruz. Nedir? Kimler kullanır? Nasıl kullanılır? Nereden indirilir? ...</li><li><span class="post-meta">2024-01-31</span>
+        <h3>
+          <a class="post-link" href="/chatgpt-exporter.html">
+            Sadece İki Tıklama ile ChatGPT Konuşmalarını Dışa Aktarın! Markdown, HTML, txt, png...
+          </a>
+        </h3>Bu kısa videoda ChatGPT'te yaptığımız bir konuşmanın tamamını nasıl Markdown formatında (veya HTML, text, PNG gibi diğer formatlarda) dışarıya çıkartabileceğimizi yani export alabileceğimizi öğreniyoruz.</li><li><span class="post-meta">2024-01-27</span>
+        <h3>
+          <a class="post-link" href="/my-zsh-setup-2024.html">
+            My Zsh Setup
+          </a>
+        </h3>Zsh is modern, very customizable shell alternative</li><li><span class="post-meta">2024-01-20</span>
+        <h3>
+          <a class="post-link" href="/buildroot-ogreniyoruz-02.html">
+            Gömülü (Embedded) Linux nedir? Buildroot ve Yocto ne işe yarar? Buildroot Öğreniyoruz - 2
+          </a>
+        </h3>Bu videoda, temel olarak Gömülü Linux kavramını irdeleyip, Buildroot ve Yocto gibi araçların hangi problemimizi çözdüğünü, ne işe yaradığını kavrayacağız.</li><li><span class="post-meta">2024-01-14</span>
+        <h3>
+          <a class="post-link" href="/buildroot-ogreniyoruz-01.html">
+            Buildroot İle Gömülü Linux: Başlıyoruz! Buildroot Öğreniyoruz - 1
+          </a>
+        </h3>'Buildroot Öğreniyoruz' serisine hoş geldiniz. Bu seride, Buildroot kullanarak nasıl gömülü Linux sistemleri oluşturabileceğimizi adım adım, hep beraber öğreneceğiz.</li><li><span class="post-meta">2023-12-29</span>
+        <h3>
+          <a class="post-link" href="/220-saatlik-c-kursu-alinir-mi.html">
+            220 saatlik C kursu alınır mı?
+          </a>
+        </h3>Necati Ergin Bey'den aldığım kurs sonrasında kendisinin ve Kaan Aslan Bey'in (CSD) verdiği uzun C kursu hakkında görüşlerimi aktarıyorum.</li><li><span class="post-meta">2023-12-22</span>
+        <h3>
+          <a class="post-link" href="/xilinx-remote-debugging-tr.html">
+            Xilinx (AMD) Remote Debugging Neden Kullanışlı ve Nasıl Yapılır?
+          </a>
+        </h3>Karta yapılan JTAG bağlantısına ağ üzerinden başka bilgisayardan erişip, kod atma, hata ayıklama gibi tüm işleri karta bağlıymış gibi yapabilirsiniz.</li><li><span class="post-meta">2023-12-20</span>
+        <h3>
+          <a class="post-link" href="/properties-of-c.html">
+            15 Features of The C Programming Language
+          </a>
+        </h3>What kind of language is C? What are the properties? Which paradigms does it belong to? How can we categorize it?</li><li><span class="post-meta">2023-12-16</span>
+        <h3>
+          <a class="post-link" href="/tiobe-index-nedir-guvenebilir-miyiz.html">
+            TIOBE Index nedir? Güvenebilir miyiz?
+          </a>
+        </h3>Programlama dillerini öğrenirken ve onları kıyaslarken bu endeks karşımıza çıkmaktadır. Peki nedir? Güvenilir midir?</li><li><span class="post-meta">2023-12-16</span>
+        <h3>
+          <a class="post-link" href="/a-brief-history-of-c-programming-language.html">
+            A Brief History of C Programming Language 📜
+          </a>
+        </h3>Since 1972</li><li><span class="post-meta">2023-11-04</span>
+        <h3>
+          <a class="post-link" href="/c-struct-padding-packed.html">
+            💡 Tip 0: Do not let the structure padding or __attribute__((__packed__)) ruin your day
+          </a>
+        </h3>a True 🇨 story</li><li><span class="post-meta">2023-09-17</span>
+        <h3>
+          <a class="post-link" href="/muhendislik-yapabilirim.html">
+            Mühendislik Yapabilirim
+          </a>
+        </h3>Mühendislik yapmak veya okumak bazen zor. Böyle durumlarda işinize yarayabilecek motivasyon hileleri ve taktikler bu yazıda.</li><li><span class="post-meta">2023-09-09</span>
+        <h3>
+          <a class="post-link" href="/full-stack-elektronik.html">
+            Full Stack Elektronik Mühendisi?
+          </a>
+        </h3>Full Stack Developer var. Peki Full Stack Elektronik Mühendisi neden olmasın? Belki siz de full stack'sinizdir?</li><li><span class="post-meta">2023-08-15</span>
+        <h3>
+          <a class="post-link" href="/ctf.html">
+            İlk CTF Deneyimim
+          </a>
+        </h3>Çalıştığım kurumda düzenlenen CTF (Capture the Flag) yarışmasına katılıp ikinci oldum. Bu bahaneyle kısaca CTF'ten bahsediyorum.</li><li><span class="post-meta">2023-07-28</span>
+        <h3>
+          <a class="post-link" href="/lychee.html">
+            lychee: Kırık Link Kalmasın
+          </a>
+        </h3>CI entegrasyonu yapabileceğiniz, Markdown ve HTML'de link kontrolü yapan bir araç</li><li><span class="post-meta">2023-05-31</span>
+        <h3>
+          <a class="post-link" href="/yoda-notation.html">
+            Yoda Notation
+          </a>
+        </h3>May the Force be with you</li><li><span class="post-meta">2023-05-29</span>
+        <h3>
+          <a class="post-link" href="/statik-dinamik-tur-kavrami.html">
+            Programlama dillerinde Statik ve Dinamik Tür kavramı
+          </a>
+        </h3>C ve Python örnekleri ile statik ve dinamik tür kavramına bakıyoruz</li><li><span class="post-meta">2023-05-06</span>
+        <h3>
+          <a class="post-link" href="/c-is-imperative.html">
+            C is an imperative language
+          </a>
+        </h3>Programming in C is similar to giving "orders" to a computer</li><li><span class="post-meta">2023-05-05</span>
+        <h3>
+          <a class="post-link" href="/c-is-procedural.html">
+            C is a procedural language
+          </a>
+        </h3>C has a member of procedural programming languages. "Divide and conquer" is the heart of this paradigm.</li><li><span class="post-meta">2023-02-23</span>
+        <h3>
+          <a class="post-link" href="/ubuntu-2004-petalinux-20222-kurulumu.html">
+            Ubuntu 20.04 üzerine PetaLinux 2022.2 kurulumu
+          </a>
+        </h3>Bir iki nokta dışında problemsiz 👍</li><li><span class="post-meta">2022-10-04</span>
+        <h3>
+          <a class="post-link" href="/3-goals-of-tcl.html">
+            3 Goals of Tcl
+          </a>
+        </h3>simple, yet effective</li><li><span class="post-meta">2022-10-02</span>
+        <h3>
+          <a class="post-link" href="/what-is-tcl.html">
+            What is Tcl?
+          </a>
+        </h3>Tool Command Language, since 1988</li><li><span class="post-meta">2022-09-17</span>
+        <h3>
+          <a class="post-link" href="/kod-ile-vscode-eklentisi-onerme-podcast.html">
+            Kod ile beraber Visual Studio Code eklentileri öneriyoruz
+          </a>
+        </h3>VS Code' kullanan geliştiricilere kodlarımız ile beraber eklentiler de önerebileceğimizi biliyor musunuz?</li><li><span class="post-meta">2022-09-03</span>
+        <h3>
+          <a class="post-link" href="/vscode-extension-recommendation.html">
+            Recommend Visual Studio Code extensions along with your code
+          </a>
+        </h3>VS Code allows us to recommend extensions to developers along with code.</li><li><span class="post-meta">2022-06-18</span>
+        <h3>
+          <a class="post-link" href="/radar-22-6.html">
+            RADAR 22-6. FPGA okulda mı öğreniliyor?
+          </a>
+        </h3>10 Haziran - 17 Haziran arasında RADARıma takılanlar.</li><li><span class="post-meta">2022-06-10</span>
+        <h3>
+          <a class="post-link" href="/radar-22-5.html">
+            RADAR 22-5
+          </a>
+        </h3>28 Mayıs - 9 Haziran arasında RADARıma takılanlar.</li><li><span class="post-meta">2022-06-05</span>
+        <h3>
+          <a class="post-link" href="/c-programlamada-en-cok-yapilan-hata.html">
+            C programlamada gördüğüm en sık yapılan hata
+          </a>
+        </h3>Gözden kaçabilen, masum görünen fakat canınızı sıkabilecek bir C hatası</li><li><span class="post-meta">2022-05-29</span>
+        <h3>
+          <a class="post-link" href="/radar-22-4.html">
+            RADAR 22-4
+          </a>
+        </h3>30 Nisan - 27 Mayıs arasında RADARıma takılanlar.</li><li><span class="post-meta">2022-05-01</span>
+        <h3>
+          <a class="post-link" href="/radar-22-3.html">
+            RADAR 22-3
+          </a>
+        </h3>23 Nisan - 29 Nisan arasında RADARıma takılanlar.</li><li><span class="post-meta">2022-04-23</span>
+        <h3>
+          <a class="post-link" href="/radar-22-2.html">
+            RADAR 22-2
+          </a>
+        </h3>Radarıma takılanlar [2022-04-16, 2022-04-22]</li><li><span class="post-meta">2022-04-16</span>
+        <h3>
+          <a class="post-link" href="/xradar-22-1.html">
+            Xradar 22-1
+          </a>
+        </h3>Radarıma takılanlar (-∞, 2022-04-15]</li><li><span class="post-meta">2022-02-28</span>
+        <h3>
+          <a class="post-link" href="/petalinux-offline.html">
+            Running PetaLinux on an offline machine
+          </a>
+        </h3>PetaLinux can be run an offline machine with proper configuration</li><li><span class="post-meta">2022-02-18</span>
+        <h3>
+          <a class="post-link" href="/merhaba-hugo.html">
+            Merhaba (go)Hugo!
+          </a>
+        </h3>Blog yazmaya Hugo ile devam ediyorum.</li><li><span class="post-meta">2022-01-29</span>
+        <h3>
+          <a class="post-link" href="/windirstat.html">
+            WinDirStat
+          </a>
+        </h3>'Diskimde en çok hangi klasörler yer kaplıyor?' sorusuna cevap bulun!</li><li><span class="post-meta">2021-10-30</span>
+        <h3>
+          <a class="post-link" href="/sumatrapdf-texstudio-synctex-search-link.html">
+            Create search link between SumatraPDF and TeXstudio with SyncTeX
+          </a>
+        </h3>SyncTeX enables us to create a bidirectional search relation between these two software.</li><li><span class="post-meta">2021-10-29</span>
+        <h3>
+          <a class="post-link" href="/sumatrapdf.html">
+            Sumatra PDF
+          </a>
+        </h3>Sumatra PDF, Windows için tasarlanmış, hafif, hızlı bir PDF okuyucusu.</li><li><span class="post-meta">2021-03-28</span>
+        <h3>
+          <a class="post-link" href="/rpi-sd-kart-buyutme.html">
+            Raspberry Pi SD kart taşıma ve büyütme
+          </a>
+        </h3>Kullandığınız SD kartı aynı boy ya da daha büyük bir karta nasıl taşıyabileceğinizi anlatıyorum.</li><li><span class="post-meta">2021-03-21</span>
+        <h3>
+          <a class="post-link" href="/tekrar-merhaba-jekyll.html">
+            Tekrar Merhaba Jekyll!
+          </a>
+        </h3>Döndüm dolaştım yine Jekyll'ye geçtim.</li><li><span class="post-meta">2021-03-16</span>
+        <h3>
+          <a class="post-link" href="/wsl-offline.html">
+            Using WSL on an offline Windows machine
+          </a>
+        </h3>How to install WSL on a Windows machine not connected to the Internet</li><li><span class="post-meta">2020-11-26</span>
+        <h3>
+          <a class="post-link" href="/using-vscode-with-self-signed-certificates-behind-proxy.html">
+            Using VS Code with self signed SSL certificates behind proxy
+          </a>
+        </h3>How to work with VS Code behind proxy with self signed SSL certificates</li><li><span class="post-meta">2020-11-20</span>
+        <h3>
+          <a class="post-link" href="/using-pip-and-pipenv-with-self-signed-certificates.html">
+            Use pip and pipenv with self signed SSL certificates
+          </a>
+        </h3>Use pip and pipenv with self signed SSL certificates</li><li><span class="post-meta">2020-09-27</span>
+        <h3>
+          <a class="post-link" href="/tekrar-merhaba-mkdocs.html">
+            Tekrar Merhaba MkDocs!
+          </a>
+        </h3>Dokuwiki'den MkDocs'a geçiş</li><li><span class="post-meta">2020-04-11</span>
+        <h3>
+          <a class="post-link" href="/tekrar-merhaba-dokuwiki.html">
+            Tekrar Merhaba DokuWiki!
+          </a>
+        </h3>MkDocs'tan Dokuwiki'ye geçiş</li><li><span class="post-meta">2020-03-15</span>
+        <h3>
+          <a class="post-link" href="/guncel-dogrulama-yontemleri.html">
+            Güncel (Sayısal Tasarım) Doğrulama Yöntemleri ve Araçları
+          </a>
+        </h3>FPGA (veya ASIC) doğrulamasındaki güncel yöntemler</li><li><span class="post-meta">2020-03-06</span>
+        <h3>
+          <a class="post-link" href="/microsoft-word-selection-is-locked.html">
+            Microsoft Word: &#39;You can&#39;t make this change because this selection is locked.&#39;
+          </a>
+        </h3>Try this solution if you get that error.</li><li><span class="post-meta">2020-01-23</span>
+        <h3>
+          <a class="post-link" href="/ubuntu-1604-petalinux-20183-kurulumu.html">
+            Ubuntu 16.04.5 Üzerinde Petalinux 2018.3 Kurulumu
+          </a>
+        </h3>Ubuntu 16.04'e Petalinux 2018.3'ü kurarken çıkan sorunları çözüyoruz.</li><li><span class="post-meta">2020-01-19</span>
+        <h3>
+          <a class="post-link" href="/merhaba-mkdocs.html">
+            Merhaba MkDocs!
+          </a>
+        </h3>Dokuwiki'den MkDocs'a geçiş</li><li><span class="post-meta">2019-11-19</span>
+        <h3>
+          <a class="post-link" href="/dokuwiki-blog-deneme.html">
+            Dokuwiki ile Blog Deneme
+          </a>
+        </h3>Sphinx'ten Dokuwiki'ye geçiş</li><li><span class="post-meta">2019-10-04</span>
+        <h3>
+          <a class="post-link" href="/vivado-20164-node-locked-license-ubuntu.html">
+            Vivado 2016.4 Node Locked License Not Working on Ubuntu 16.04
+          </a>
+        </h3>Vivado 2016.4 is obsessed with NIC naming</li><li><span class="post-meta">2019-10-04</span>
+        <h3>
+          <a class="post-link" href="/awk-undefined-symbol-mpfrzsub.html">
+            awk: symbol lookup error: awk: undefined symbol: mpfr_z_sub
+          </a>
+        </h3>A problem running Vivado 2016.4 on Ubuntu 16.04</li><li><span class="post-meta">2019-09-05</span>
+        <h3>
+          <a class="post-link" href="/yazamayanlara.html">
+            Yazamayanlara
+          </a>
+        </h3>Bir şeyler yazmak isteyenlere öneriler</li><li><span class="post-meta">2019-09-03</span>
+        <h3>
+          <a class="post-link" href="/crash-course-computer-science.html">
+            Crash Course Computer Science
+          </a>
+        </h3>Bilgisayarlar hakkında kısa videolar</li><li><span class="post-meta">2019-08-17</span>
+        <h3>
+          <a class="post-link" href="/windows-10-grub-bozulmasi.html">
+            Windows 10 1803-&gt;1903 Yükseltmesi Sırasında GRUB&#39;un Bozulması
+          </a>
+        </h3>Dual boot çalışan bilgisayarın Windows güncellemesi ile bozulan disk düzenini tamir ediyoruz.</li><li><span class="post-meta">2019-04-28</span>
+        <h3>
+          <a class="post-link" href="/merhaba-sphinx.html">
+            Merhaba Sphinx!
+          </a>
+        </h3>Jekyll'den Sphinx'e geçtim.</li><li><span class="post-meta">2018-02-10</span>
+        <h3>
+          <a class="post-link" href="/tensorflow-nvidia-keras-kurulumu.html">
+            Tensorflow (NVIDIA GPU Desteği ile) ve Keras Kurulumu
+          </a>
+        </h3>GPU desteği ile Tensorflow ve Keras'ın Windows'a nasıl kurulabileceğini ve olası problem ve çözümleri anlatıyorum.</li><li><span class="post-meta">2017-06-28</span>
+        <h3>
+          <a class="post-link" href="/photorec.html">
+            Camcorder DVD Video Recovery on Ubuntu with photorec
+          </a>
+        </h3>Recover damaged camcorder DVD with photorec on Ubuntu</li><li><span class="post-meta">2014-12-31</span>
+        <h3>
+          <a class="post-link" href="/dokuwiki-without-mail-support.html">
+            Install DokuWiki without Mail Support
+          </a>
+        </h3>Installing DokuWiki on a mail disabled server requires a little modification</li><li><span class="post-meta">2014-12-21</span>
+        <h3>
+          <a class="post-link" href="/zofzpcb.html">
+            ZofzPCB
+          </a>
+        </h3>Free, 3D Gerber constructor and viewer for PCBs</li><li><span class="post-meta">2014-12-20</span>
+        <h3>
+          <a class="post-link" href="/hababam-sinifi-bolme.html">
+            235.000&#39;in 9.000&#39;e Tam Olarak Bölünmemesi
+          </a>
+        </h3>Hababam Sınıfı</li><li><span class="post-meta">2014-08-20</span>
+        <h3>
+          <a class="post-link" href="/windows-hazirda-beklet-uyku.html">
+            Windows&#39;un Sunduğu &#39;Hazırda Beklet&#39; ve &#39;Uyku&#39; Seçeneklerini Sürekli Ters Algılamam
+          </a>
+        </h3>Uyku dediğin derin olur!</li><li><span class="post-meta">2013-08-11</span>
+        <h3>
+          <a class="post-link" href="/yeni-enstruman-elektro-gitar-amfi.html">
+            Yeni Enstrüman: Elektro Gitar + Amfi
+          </a>
+        </h3>Elektro gitar ve amfi aldım!</li><li><span class="post-meta">2012-07-28</span>
+        <h3>
+          <a class="post-link" href="/ubuntu-disket-surucusu-kullanma.html">
+            Ubuntu Üzerinde Disket Sürücüsünü Kullanma
+          </a>
+        </h3>udisks komutu ile bağlanmayan disketlere çözüm</li><li><span class="post-meta">2012-06-03</span>
+        <h3>
+          <a class="post-link" href="/latex-otomatik-hecelemeyi-kapatma.html">
+            LaTeX&#39;te Otomatik Hecelemeyi Kapatma
+          </a>
+        </h3>LaTeX'in sunduğu otomatik hecelemeyi her zaman istemeyebiliriz.</li><li><span class="post-meta">2012-05-24</span>
+        <h3>
+          <a class="post-link" href="/ankara-bitirme-projeleri-sergisi.html">
+            Ankara Bitirme Projeleri Sergisi 29 Haziran - 1 Temmuz 2012
+          </a>
+        </h3>EMO ve ODTÜ'nün düzenlediği Bitirme Projeleri Sergisi'ne katılıyoruz.</li><li><span class="post-meta">2011-09-25</span>
+        <h3>
+          <a class="post-link" href="/atari-kolu-nes-controller.html">
+            Atari Kolu (NES Controller) Arayüzü
+          </a>
+        </h3>Atari kolunu kendi projelerimizde nasıl kullanır, tuşları nasıl okuruz?</li><li><span class="post-meta">2011-07-24</span>
+        <h3>
+          <a class="post-link" href="/altera-de0-fpga-gelistirme-kiti.html">
+            Altera DE0 FPGA Geliştirme Kiti
+          </a>
+        </h3>Yeni aldığım Altera DE0 FPGA kartının kutu açılışını yapıyorum.</li><li><span class="post-meta">2011-04-02</span>
+        <h3>
+          <a class="post-link" href="/ninite.html">
+            Ninite
+          </a>
+        </h3>Bilgisayarınıza Toplu Program Yüklemek İçin Güzel Bir Araç</li><li><span class="post-meta">2011-03-20</span>
+        <h3>
+          <a class="post-link" href="/turkce-ubuntu-uzerinde-matlab-calistirma.html">
+            Türkçe Ubuntu Üzerinde MATLAB Çalıştırma Problemi ve Çözümü
+          </a>
+        </h3>Dili Türkçe olan Ubuntu'da MATLAB'ı çalıştırmak için ufak bir destek gerekebilir.</li><li><span class="post-meta">2011-02-16</span>
+        <h3>
+          <a class="post-link" href="/airties-rt-205-acma-kapama-dugmesi-arizasi.html">
+            AirTies RT-205 Açma - Kapama Düğmesi Arızası
+          </a>
+        </h3>AirTies modemimde oluşan güç düğmesi arızasını çözüyorum.</li></ul>
+
+    <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p></div>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Alper Yazar</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Alper Yazar</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/alperyazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">alperyazar</span></a></li><li><a href="https://www.linkedin.com/in/alperyazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">alperyazar</span></a></li><li><a href="https://mastodon.social/@ayazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#mastodon"></use></svg> <span class="username">ayazar</span></a></li><li><a href="https://youtube.com/%40ayazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">@ayazar</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>&quot;Full Stack Electronics&quot; Engineer<br/>© 2011 - 2025<br/><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a></p>
+        <p><a href="/disclaimer.html" />Disclaimer</a> <a href="/specimen.html" />Specimen</a> <a href="/" />Contact</a><br><a href='/support.html' />❤️ Destek / Support</a></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer><!-- Default Statcounter code for Home
+https://www.alperyazar.com -->
+<script type="text/javascript">
+  var sc_project=12712694;
+  var sc_invisible=1;
+  var sc_security="1c071fc4";
+  </script>
+  <script type="text/javascript"
+  src="https://www.statcounter.com/counter/counter.js"
+  async></script>
+  <noscript><div class="statcounter"><a title="web statistics"
+  href="https://statcounter.com/" target="_blank"><img
+  class="statcounter"
+  src="https://c.statcounter.com/12712694/0/1c071fc4/1/"
+  alt="web statistics"
+  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+  <!-- End of Statcounter Code --></body>
+
+</html>

@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Programlama dillerinde Statik ve Dinamik Tür kavramı | Alper Yazar</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Programlama dillerinde Statik ve Dinamik Tür kavramı" />
+<meta name="author" content="Alper Yazar" />
+<meta property="og:locale" content="tr_TR" />
+<meta name="description" content="C ve Python örnekleri ile statik ve dinamik tür kavramına bakıyoruz" />
+<meta property="og:description" content="C ve Python örnekleri ile statik ve dinamik tür kavramına bakıyoruz" />
+<link rel="canonical" href="https://www.alperyazar.com/statik-dinamik-tur-kavrami.html" />
+<meta property="og:url" content="https://www.alperyazar.com/statik-dinamik-tur-kavrami.html" />
+<meta property="og:site_name" content="Alper Yazar" />
+<meta property="og:image" content="https://www.alperyazar.com/assets/img/23/4.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-05-29T00:00:00+03:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://www.alperyazar.com/assets/img/23/4.jpg" />
+<meta property="twitter:title" content="Programlama dillerinde Statik ve Dinamik Tür kavramı" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alper Yazar"},"dateModified":"2025-05-09T19:32:32+03:00","datePublished":"2023-05-29T00:00:00+03:00","description":"C ve Python örnekleri ile statik ve dinamik tür kavramına bakıyoruz","headline":"Programlama dillerinde Statik ve Dinamik Tür kavramı","image":"https://www.alperyazar.com/assets/img/23/4.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.alperyazar.com/statik-dinamik-tur-kavrami.html"},"url":"https://www.alperyazar.com/statik-dinamik-tur-kavrami.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css">
+    <script src="/assets/js/lazysizes.min.js" async=""></script><link type="application/atom+xml" rel="alternate" href="https://www.alperyazar.com/feed.xml" title="Alper Yazar" /><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"><!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S3B80PC7FC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-S3B80PC7FC');
+    </script>
+
+    
+
+    
+    <!-- Adsense -->
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4580059638713287"
+    crossorigin="anonymous"></script> -->
+    <link rel="me" href="https://mastodon.social/@ayazar">
+  </head>
+<body><header class="site-header" role="banner">
+
+    <div class="wrapper"><a class="site-title" rel="author" href="/">Alper Yazar</a><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewBox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger"><a class="page-link" href="/blog/">📝 Blog</a><a class="page-link" href="/search.html">🔍 Search</a><!-- <a class="page-link" href="https://ayazar.dev" target="_blank">🗂️ Notes</a> -->
+            <a rel="me" class="page-link" href="https://www.linkedin.com/in/alperyazar" target="_blank">💼 LinkedIn</a>
+            <a rel="me" class="page-link" href="https://www.youtube.com/@ayazar" target="_blank">🎬 YouTube</a>
+          </div>
+        </nav></div>
+  </header>
+
+  
+
+<div id="son_yazi_banner" style="
+background: linear-gradient(to right, rgba(250, 191, 200, 0.3), rgba(23, 86, 169, 0.2));
+color: rgb(52, 55, 67);
+text-align: center;
+padding: 15px;
+border-radius: 10px;
+border: 0px dashed rgba(250, 191, 200, 0.5);
+box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+margin: 10px 0px 10px 0px;">🚀 Son blog yazısı:&nbsp;<a href="/fpga-git-cicd-devops.html" style="font-weight: bold;"><span style="font-weight: bold;">FPGA, Git, DevOps, CI/CD</span></a>&nbsp;🇹🇷</div>
+
+  <div id="progressBar" class="progress-bar"></div>
+
+  <script>
+    // Listen for scroll events on the window
+window.onscroll = function() {
+    // Call the function to update the progress bar
+    updateProgressBar();
+};
+
+function updateProgressBar() {
+    // Get the total height of the page
+    var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    // Get the current scroll position
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    // Calculate the scroll percentage
+    var scrollPercentage = (scrollTop / scrollHeight) * 100;
+    // Update the width of the progress bar
+    document.getElementById("progressBar").style.width = scrollPercentage + "%";
+}
+  </script>
+
+<a href='/support.html' class="floating-icon-heart" width="48" target="_blank"><img src='/assets/img/icons8-heart-64.png' alt="❤️ Support/Destek" title="❤️ Support/Destek"></a>
+
+<div id="special-flag">
+  <a id="special-flag-link" href="#" target="_blank" title="">
+    <img src='/assets/img/bayrak.png' alt="Türk Bayrağı">
+  </a>
+</div>
+
+<script>
+  /*
+   * Ref: https://www.pau.edu.tr/tks/tr/sayfa/milli-ve-dini-bayramlar
+   * Ref: https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=859034&MevzuatTur=2&MevzuatTertip=5
+   * Ref: https://www.eserotomatikbayrak.com/bayrak-asilacak-tarihler.pdf
+   * Net bir şey bulmak zor :(
+  */
+  const specialDays = [
+    ["03-18", "https://tr.wikipedia.org/wiki/18_Mart_%C3%87anakkale_Zaferi_ve_%C5%9Eehitleri_Anma_G%C3%BCn%C3%BC", "Çanakkale Zaferi ve Şehitleri Anma Günü"],
+    ["04-23", "https://tr.wikipedia.org/wiki/23_Nisan_Ulusal_Egemenlik_ve_%C3%87ocuk_Bayram%C4%B1", "Ulusal Egemenlik ve Çocuk Bayramı"],
+    ["05-01", "https://tr.wikipedia.org/wiki/1_May%C4%B1s_%C4%B0%C5%9F%C3%A7i_Bayram%C4%B1", "Emek ve Dayanışma Günü"],
+    ["05-19", "https://tr.wikipedia.org/wiki/19_May%C4%B1s_Atat%C3%BCrk%27%C3%BC_Anma,_Gen%C3%A7lik_ve_Spor_Bayram%C4%B1", "Atatürk'ü Anma, Gençlik ve Spor Bayramı"],
+    ["07-15", "https://tr.wikipedia.org/wiki/Demokrasi_ve_Mill%C3%AE_Birlik_G%C3%BCn%C3%BC", "Demokrasi ve Millî Birlik Günü"],
+    ["08-30", "https://tr.wikipedia.org/wiki/30_A%C4%9Fustos_Zafer_Bayram%C4%B1", "Zafer Bayramı"],
+    ["10-29", "https://tr.wikipedia.org/wiki/29_Ekim_Cumhuriyet_Bayram%C4%B1", "Cumhuriyet Bayramı"],
+    ["11-10", "https://tr.wikipedia.org/wiki/10_Kas%C4%B1m_Atat%C3%BCrk%27%C3%BC_anma_g%C3%BCn%C3%BC_ve_Atat%C3%BCrk_haftas%C4%B1", "Atatürk'ü Anma Günü"]
+  ];
+
+  const today = new Date();
+  const todayKey = `${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+
+  const match = specialDays.find(([key]) => key === todayKey);
+  if (match) {
+    const [_, url, tooltip] = match;
+    const flagDiv = document.getElementById("special-flag");
+    const flagLink = document.getElementById("special-flag-link");
+    flagLink.href = url;
+    flagLink.title = tooltip;
+    flagDiv.style.display = "block";
+  }
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Programlama dillerinde Statik ve Dinamik Tür kavramı</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2023-05-29T00:00:00+03:00" itemprop="datePublished">
+        2023-05-29
+      </time>~<time class="dt-modified" datetime="2025-05-09T19:32:32+03:00" itemprop="dateModified">
+        2025-05-09
+      </time>• 🇹🇷<span> • 23-4</span>
+      </p>
+  </header><div style="background: #eeeeff; border-radius: 2px; margin: 2px;"><center><p><span data-nosnippet>🔤 <small><a rel=”nofollow” href="https://www-alperyazar-com.translate.goog/statik-dinamik-tur-kavrami.html?_x_tr_sl=auto&_x_tr_tl=en">Translate with Google</a></small> 🔤</span></p></center></div><div class="post-content e-content" itemprop="articleBody"><center>
+    <p>
+    <a class="post-link" href="/statik-dinamik-tur-kavrami.html"><img alt="Teaser" data-srcset="/assets/img/23/4.jpg" srcset="/assets/lazyload.png" src="/assets/img/23/4.jpg" data-srcset="/assets/img/23/4.jpg"  srcset="/assets/lazyload.png" style="border-radius: 10px;" class="lazyload"></a>
+    </p>
+    </center><p><i>C ve Python örnekleri ile statik ve dinamik tür kavramına bakıyoruz</i></p>
+    <hr><div style="background: #ffec99; border-radius: 2px; margin: 2px;"><center><p><span data-nosnippet>ℹ️ <small><a href="/disclaimer.html">Feragatname / Sorumluluk Reddi</a></small> ℹ️</span></p></center></div><hr>
+    <p>Programlama dillerinin (neredeyse ?) tamamında bir tür kavramından
+bahsedebiliriz. <strong>Tür</strong>, İngilizce <strong>type</strong> kelimesinin karşılığıdır. Genelde
+tüm programlama dillerinde, yazılan kodda tanımlanan değişkenlerin, sabitlerin,
+oluşturulan ifadelerin birer türleri vardır. Dillerdeki tür ile ilgili
+kavramları kapsayan çatı terim ise <strong>Tür Sistemi</strong> yani <a href="https://en.wikipedia.org/wiki/Type_system">Type
+System</a>‘dir.</p>
+
+<p>Dilde türe sahip olan değişken (nesne), ifade gibi kavramların türleri, eğer
+derleme sırasında belirleniyorsa o diller <strong>statically typed</strong> yani statik türlü
+ya da statik türe sahip olan dil, eğer çalışma sırasında (run time)
+belirleniyorsa da dil <strong>dynamically typed</strong> yani dinamik türlü ya da dinamik
+türe sahip olan dil olarak adlandırılır. İlk paragrafta da belirttiğim gibi
+<em>type</em> kelimesinin buradaki Türkçe karşılığı <em>yazmak</em> değil <em>tür</em> dür. Statik ve
+dinamik kelimeleri de <em>değişmeyen/sabit</em> ve <em>değişen/sabit olmayan</em>
+anlamlarından ziyade (yazının ilerleyen kısımlarında aslında bunu da ima
+ettiklerini göreceğiz) <em>derleme zamanında</em> ve <em>çalışma zamanında</em> anlamındadır.
+Nasıl derleme zamanında bağlanan kütüphanelere <em>statically linked library</em>,
+çalışma zamanında bağlanan kütüphanelere de <em>dynamically linked library</em>
+diyorsak buradaki kelimeler de bu anlamdadır.</p>
+
+<hr />
+
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable MD013 MD033 -->
+<center>
+<iframe src="https://giphy.com/embed/ule4vhcY1xEKQ" width="360" height="360" frameborder="0" class="giphy-embed" allowfullscreen=""></iframe><p><a href="https://giphy.com/gifs/reactionseditor-cat-typing-ule4vhcY1xEKQ">via GIPHY</a></p>
+
+<mark>Type derken bunu kastetmiyoruz…</mark> catly typed languages 🐈
+</center>
+<!-- markdownlint-restore -->
+
+<hr />
+
+<p>Biraz daha <strong>genelleştirelim…</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Özellik</th>
+      <th style="text-align: center">Statik</th>
+      <th style="text-align: center">Dinamik</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><strong>Türlerin belirlenme zamanı</strong></td>
+      <td style="text-align: center">derleme zamanı (compilation time)</td>
+      <td style="text-align: center">çalışma zamanı (run time)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Tür ile ilgili kontroller</td>
+      <td style="text-align: center">derleme zamanı (compilation time)</td>
+      <td style="text-align: center">çalışma zamanı (run time)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Tür ihlali bildirimleri</td>
+      <td style="text-align: center">derleme hataları ve uyarıları</td>
+      <td style="text-align: center">istisna üretilmesi (exception throwing)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Derlenen / Yorumlanan</td>
+      <td style="text-align: center">derlenen (compiled) diller</td>
+      <td style="text-align: center">yorumlanan (interpreted) diller</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Değişkenlerin tür bildirimleri</td>
+      <td style="text-align: center">açıkça (explicit)</td>
+      <td style="text-align: center">örtülü (implicit), çıkarımlı (inferred)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Değişken türleri</td>
+      <td style="text-align: center">sabittir, değişmez</td>
+      <td style="text-align: center">sabit değildir, değişebilir</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Bu konudaki temel tanım, türlerin ne zaman belirlendiğidir, yani tablodaki ilk
+satır. Diğer satırlar ise ilgili dillerin sahip oldukları genel geçer, tipik
+özellikleridir. Yüzlerce programlama dili olduğunu düşünürsek tüm satırların tüm
+diller için geçerli olduğunu söylemem fazla iddialı olabilir ama pratikte bu
+şekilde olduğunu düşünmek de sizi fazla yanıltmayacaktır.</p>
+
+<p><strong>C, C++, Java</strong> gibi diller <strong>statik</strong> tür kavramına sahip iken, <strong>JavaScript,
+Python, PHP</strong> gibi diller ise <strong>dinamik</strong> tür kavramına sahiptir <sup id="fnref:1f"><a href="#fn:1f" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> <sup id="fnref:2f"><a href="#fn:2f" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>.
+Şimdi gelin, C ve Python dillerinden örneklerle konuyu biraz daha anlayalım.</p>
+
+<h2 id="python-dinamik-tür-kavramına-örnek">Python, Dinamik Tür Kavramına Örnek</h2>
+
+<p>Python dilinde <code class="language-plaintext highlighter-rouge">type()</code> isimli fonksiyon ile bir nesnenin türünü öğrenebilmek
+mümkündür. Aşağıdaki koda bir bakalım:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="nf">print </span><span class="p">(</span><span class="nf">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">x</span> <span class="o">=</span> <span class="sh">"</span><span class="s">alper</span><span class="sh">"</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="sh">"</span><span class="s"> yazar</span><span class="sh">"</span>
+<span class="nf">print </span><span class="p">(</span><span class="nf">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mf">3.5</span>
+<span class="nf">print </span><span class="p">(</span><span class="nf">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="sh">"</span><span class="s"> yazar</span><span class="sh">"</span>
+</code></pre></div></div>
+
+<p>Çıktı da şu şekilde olmaktadır:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;class 'int'&gt;
+&lt;class 'str'&gt;
+&lt;class 'float'&gt;
+Traceback (most recent call last):
+  File "&lt;string&gt;", line 8, in &lt;module&gt;
+TypeError: unsupported operand type(s) for +: 'float' and 'str'
+</code></pre></div></div>
+
+<p>Durumu bir değerlendirelim:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">x</code> değişkenin türü farklı türden değerler atayarak örtülü olarak belirlenmiş
+ve değişmiştir. <code class="language-plaintext highlighter-rouge">x</code> değişkenini tanımlarken açıkça türünü belirtmedik, ona
+atanan değere göre türü otomatik olarak belirlendi.</li>
+  <li><code class="language-plaintext highlighter-rouge">y = x + " yazar"</code> ifadesi hem satır 4 hem de satır 8 de vardır. İlk ifadede
+bir problem yoktur çünkü ilgili satırda <code class="language-plaintext highlighter-rouge">x</code> in türü <code class="language-plaintext highlighter-rouge">str</code> dir ve dilin
+kuralları gereğince  iki string toplanabilir. Fakat, ikinci ifadede hata
+vardır çünkü o noktada <code class="language-plaintext highlighter-rouge">x</code> in türü <code class="language-plaintext highlighter-rouge">float</code> tır ve yine dil kuralları gereği
+<code class="language-plaintext highlighter-rouge">str</code> ile <code class="language-plaintext highlighter-rouge">float</code> toplanamamaktadır. Çalışma sırasında bir değişkenin türü
+değiştirilebilmiştir.</li>
+  <li>Son satırdaki hata ise ancak çalışma sırasında <code class="language-plaintext highlighter-rouge">TypeError</code> olarak
+yakalanabilmiştir. Peki niye programın çalışmasının başında yakalanamamıştır?
+Çünkü Python dilinde kodlar tipik olarak satır satır çalıştırılır ve hata
+ilgili satır çalıştırıldığı zaman ortaya çıkmıştır.</li>
+</ul>
+
+<h2 id="c-statik-tür-kavramına-örnek">C, Statik Tür Kavramına Örnek</h2>
+
+<p>Benzer bir örneği C ile yapalım. C dilinde, Python’daki gibi dahili (built-in)
+bir <code class="language-plaintext highlighter-rouge">type()</code> fonksiyonu yoktur. Fakat dile C11 ile gelen <em>generic selection
+expression</em> <sup id="fnref:5f"><a href="#fn:5f" class="footnote" rel="footnote" role="doc-noteref">3</a></sup> desteğini bir makro ile kullanarak benzer bir kod oluşturabiliriz
+<sup id="fnref:3f"><a href="#fn:3f" class="footnote" rel="footnote" role="doc-noteref">4</a></sup> <sup id="fnref:4f"><a href="#fn:4f" class="footnote" rel="footnote" role="doc-noteref">5</a></sup>.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// See: https://stackoverflow.com/a/17290414/1766391</span>
+<span class="c1">// Tested with x86-64 gcc 12.2 with default flags on https://godbolt.org/</span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;stddef.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;stdint.h&gt;</span><span class="cp">
+</span>
+<span class="cp">#define typename(x) _Generic((x),        </span><span class="cm">/* Get the name of a type */</span><span class="cp">             \
+                                                                                  \
+        _Bool: "_Bool",                  unsigned char: "unsigned char",          \
+         char: "char",                     signed char: "signed char",            \
+    short int: "short int",         unsigned short int: "unsigned short int",     \
+          int: "int",                     unsigned int: "unsigned int",           \
+     long int: "long int",           unsigned long int: "unsigned long int",      \
+long long int: "long long int", unsigned long long int: "unsigned long long int", \
+        float: "float",                         double: "double",                 \
+  long double: "long double",                   char *: "pointer to char",        \
+       void *: "pointer to void",                int *: "pointer to int",         \
+      default: "other")
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
+    <span class="kt">int</span> <span class="n">x</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">3</span><span class="p">.</span><span class="mi">4</span><span class="p">;</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"x bir %s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="kr">typename</span><span class="p">(</span><span class="n">x</span><span class="p">));</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"y bir %s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="kr">typename</span><span class="p">(</span><span class="n">y</span><span class="p">));</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">y</span><span class="p">;</span> <span class="c1">//Neden hata değil?</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"x hala %s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="kr">typename</span><span class="p">(</span><span class="n">x</span><span class="p">));</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"x = %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">x</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Çıktı da şu şekilde olmaktadır:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>x bir int
+y bir double
+x hala int
+x = 3
+</code></pre></div></div>
+
+<p>Duruma bir bakalım:</p>
+
+<ul>
+  <li>Yukarıda iki farkı değişken tanımladık: <code class="language-plaintext highlighter-rouge">x</code> ve <code class="language-plaintext highlighter-rouge">y</code>. Tanımlama sırasında ise
+türleri açıkça belirttik, <code class="language-plaintext highlighter-rouge">x</code> bir <code class="language-plaintext highlighter-rouge">int</code> türünden nesne, <code class="language-plaintext highlighter-rouge">y</code> ise <code class="language-plaintext highlighter-rouge">float</code>
+türünden bir nesne oldu. Artık bu değişkenlerin türleri programın ömrü boyunca
+sabit kalacaktır.</li>
+  <li>Akışın ortalarında bir yerde 3.4 değerini tutan ve <code class="language-plaintext highlighter-rouge">float</code> türünden olan <code class="language-plaintext highlighter-rouge">y</code>
+nin değerini bir <code class="language-plaintext highlighter-rouge">int</code> türden değişken olan <code class="language-plaintext highlighter-rouge">x</code> e atadık. Peki bu niye problem
+olmadı? Hani türler değişimiyordu? Aslında yine değişmedi, <code class="language-plaintext highlighter-rouge">x</code> hep <code class="language-plaintext highlighter-rouge">int</code>. C
+dilinin kuralları gereğince aslında 3.4 bir <em>implicit type conversion</em> a yani
+<em>örtülü tür dönüşümüne</em> maruz kaldı. Bu atamada sanki değeri 3 olan gizli ve
+geçici bir <code class="language-plaintext highlighter-rouge">int</code> nesne yaratıldı ve bu nesnenin değeri <code class="language-plaintext highlighter-rouge">x</code> e atandı. Bu
+otomatik çevrim, dilin statik/dinamik türe sahip olması ile ilgili değildir.
+Otomatik çevrim konusu dilin <em>weakly/strongly typed</em> bir dil olması ile
+ilgilidir.</li>
+  <li><code class="language-plaintext highlighter-rouge">x</code> e ne yaparsak yapalım türünü değiştiremedik.</li>
+</ul>
+
+<p>Hadi bir örneğe daha bakalım:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Tested with x86-64 gcc 12.2 with default flags on https://godbolt.org/</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
+    <span class="kt">int</span> <span class="o">*</span><span class="n">p1</span><span class="p">,</span> <span class="o">*</span><span class="n">p2</span><span class="p">,</span> <span class="o">*</span><span class="n">p3</span><span class="p">;</span>
+    <span class="n">p3</span> <span class="o">=</span> <span class="n">p1</span> <span class="o">+</span> <span class="n">p2</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Derleyici çıktısı</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;source&gt;: In function 'main':
+&lt;source&gt;:3:13: error: invalid operands to binary + (have 'int *' and 'int *')
+    3 |     p3 = p1 + p2;
+      |             ^
+ASM generation compiler returned: 1
+</code></pre></div></div>
+
+<p>Peki buradaki sorun nedir? C kuralları gereği pointer türden iki değişken
+toplanamaz. Bu davranış konumuz ile ilgili değil. Burada vurgulamak istedğim,
+Python’dakinin aksine bir kural ihlalinin derleme sırasında yakalanması. Çünkü
+türler derleme sırasında belirlenir ve kurallar hemen kontrol edilebilir. Dikkat
+ederseniz derleyici hatasından dolayı daha çalıştırılabilir dosya bile
+oluşturamadık. Yani çalışma zamanına dahi gelemedik.</p>
+
+<h2 id="i̇lgili">İlgili</h2>
+
+<ul>
+  <li><a href="https://www.baeldung.com/cs/statically-vs-dynamically-typed-languages">https://www.baeldung.com/cs/statically-vs-dynamically-typed-languages</a></li>
+  <li><a href="https://medium.com/android-news/magic-lies-here-statically-typed-vs-dynamically-typed-languages-d151c7f95e2b">https://medium.com/android-news/magic-lies-here-statically-typed-vs-dynamically-typed-languages-d151c7f95e2b</a></li>
+  <li><a href="https://towardsdatascience.com/the-type-system-every-programmer-should-know-c3134a1b9bde">https://towardsdatascience.com/the-type-system-every-programmer-should-know-c3134a1b9bde</a></li>
+</ul>
+
+<blockquote>
+  <p>⚠️ Bu yazının konusu değil ama yukarıdaki kaynakların ikisinde, C++ dili C’den
+daha <em>weakly typed</em> gösterilmiş. Buna çok emin değilim.</p>
+</blockquote>
+
+<p>Aşağıdaki video JavaScript ile ilgili ama konsepti güzel açıklıyor.</p>
+
+<!-- https://github.com/nathancy/jekyll-embed-video -->
+<!-- https://yoast.com/how-to-make-youtube-videos-responsive/ -->
+<div class="embed-container" style="text-align: center;">
+<iframe class="youtube-video lazyload" src="https://www.youtube.com/embed/C5fr0LZLMAs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+</div>
+
+<center><a target="_blank" href="https://www.youtube.com/watch?v=C5fr0LZLMAs" rel="nofollow">Video</a></center>
+
+<h2 id="kaynaklar">Kaynaklar</h2>
+
+<ul>
+  <li><a href="https://github.com/necatiergin/">Necati Ergin</a>, C Kursu notlarım</li>
+  <li><a href="https://github.com/CSD-1993">Kaan Aslan</a>, C Kursu notlarım</li>
+</ul>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1f">
+      <p><a href="https://stackoverflow.com/a/1517670/1766391">https://stackoverflow.com/a/1517670/1766391</a> <a href="#fnref:1f" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2f">
+      <p><a href="https://developer.mozilla.org/en-US/docs/Glossary/Static_typing">https://developer.mozilla.org/en-US/docs/Glossary/Static_typing</a> <a href="#fnref:2f" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:5f">
+      <p><a href="https://en.cppreference.com/w/c/language/generic">https://en.cppreference.com/w/c/language/generic</a> <a href="#fnref:5f" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3f">
+      <p><a href="http://www.robertgamble.net/2012/01/c11-generic-selections.html">http://www.robertgamble.net/2012/01/c11-generic-selections.html</a> <a href="#fnref:3f" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:4f">
+      <p><a href="https://stackoverflow.com/a/17290414/1766391">https://stackoverflow.com/a/17290414/1766391</a> <a href="#fnref:4f" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+    
+    <hr>
+    
+
+
+
+
+
+
+    
+    
+    
+<!--0-->
+        
+        
+            
+                
+                
+
+
+
+
+
+
+
+<ul class="post-list">
+<li style="background: #DDEEEE; padding: 10px; border-radius: 10px;">
+<h4>🤓 Bir içerik daha?</h4>
+
+<center>
+<p>
+<a class="post-link" href="/self-hosted-5.html"><img alt="Teaser" data-srcset="/assets/img/24/12.jpg" srcset="/assets/lazyload.png" src="/assets/img/24/12.jpg" data-srcset="/assets/img/24/12.jpg"  srcset="/assets/lazyload.png" style="border-radius: 10px; height: auto; width: 95%; max-width: 700px;" class="lazyload"></a>
+</p>
+</center><h3>
+<a class="post-link" href="/self-hosted-5.html">
+Ekip Veriminizi Arttıracak, OFFLINE Çalışabilen 5 Araç
+
+</a>
+</h3><h4>Bu yazıda offline da çalışabilen ve çalışma veriminizi arttıracağını düşündüğüm 5 araçtan bahsediyorum.</h4></li>
+</ul>
+
+
+  </div>
+
+  
+  <div class="revisions" style="border-top: 2px dashed; margin-top: 10px;"><h2 style="padding-top: 10px;">🔄 Değişiklikler (Son 10) </h2><ul style="list-style-type: none;">
+    
+      <li>
+        <div class="post-meta"><code>2025-05-09</code> Revert "to ayazar.dev"
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2025-04-02</code> to ayazar.dev
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2025-03-30</code> Revert "to ayazar.dev"
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2025-03-16</code> to ayazar.dev
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-10-19</code> revert ayazar.dev
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-10-06</code> ayazar.dev
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-10-05</code> here
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-09-28</code> to ayazar.dev
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-09-14</code> revertx3
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-08-30</code> Revert "Revert "ayazar.dev""</div>
+      </li>
+    
+    </ul>
+  </div>
+  <div class="gicus_comments" style="border-top: 2px dashed; margin-top: 10px;"><h2 style="padding-top: 10px;">💭 Yorumlar</h2>
+  <p><small>Yorum altyapısı <a href="https://giscus.app/">giscus</a> tarafından (evet tarafından!) sağlanmaktadır.
+    Yorum yazabilmek için <a href="https://github.com/">GitHub</a> hesabınız üzerinden giriş yapmanız gerekmektedir.
+    Yazılan yorumlar <a href="https://github.com/alperyazar/home/discussions/categories/comments">Github Discussions</a> üzerinde saklanmaktadır.</small></p><script src="https://giscus.app/client.js"
+        data-repo="alperyazar/home"
+        data-repo-id="R_kgDOJoQiqA"
+        data-category="Comments"
+        data-category-id="DIC_kwDOJoQiqM4Cne4h"
+        data-mapping="specific"
+        data-term='23-4''
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"data-lang="tr"data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+<p>🫆 <code>23-4</code></p>
+</div><a class="u-url" href="/statik-dinamik-tur-kavrami.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Alper Yazar</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Alper Yazar</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/alperyazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">alperyazar</span></a></li><li><a href="https://www.linkedin.com/in/alperyazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">alperyazar</span></a></li><li><a href="https://mastodon.social/@ayazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#mastodon"></use></svg> <span class="username">ayazar</span></a></li><li><a href="https://youtube.com/%40ayazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">@ayazar</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>&quot;Full Stack Electronics&quot; Engineer<br/>© 2011 - 2025<br/><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a></p>
+        <p><a href="/disclaimer.html" />Disclaimer</a> <a href="/specimen.html" />Specimen</a> <a href="/" />Contact</a><br><a href='/support.html' />❤️ Destek / Support</a></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer><!-- Default Statcounter code for Home
+https://www.alperyazar.com -->
+<script type="text/javascript">
+  var sc_project=12712694;
+  var sc_invisible=1;
+  var sc_security="1c071fc4";
+  </script>
+  <script type="text/javascript"
+  src="https://www.statcounter.com/counter/counter.js"
+  async></script>
+  <noscript><div class="statcounter"><a title="web statistics"
+  href="https://statcounter.com/" target="_blank"><img
+  class="statcounter"
+  src="https://c.statcounter.com/12712694/0/1c071fc4/1/"
+  alt="web statistics"
+  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+  <!-- End of Statcounter Code --></body>
+
+</html>

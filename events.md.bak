@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>🗓️ Events | Alper Yazar</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="🗓️ Events" />
+<meta name="author" content="Alper Yazar" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Upcoming free events on embedded software, electronic design, FPGA, etc." />
+<meta property="og:description" content="Upcoming free events on embedded software, electronic design, FPGA, etc." />
+<link rel="canonical" href="https://www.alperyazar.com/events.md.bak" />
+<meta property="og:url" content="https://www.alperyazar.com/events.md.bak" />
+<meta property="og:site_name" content="Alper Yazar" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="🗓️ Events" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Alper Yazar"},"dateModified":"2023-11-08T17:49:56+03:00","description":"Upcoming free events on embedded software, electronic design, FPGA, etc.","headline":"🗓️ Events","url":"https://www.alperyazar.com/events.md.bak"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css">
+    <script src="/assets/js/lazysizes.min.js" async=""></script><link type="application/atom+xml" rel="alternate" href="https://www.alperyazar.com/feed.xml" title="Alper Yazar" /><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"><!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S3B80PC7FC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-S3B80PC7FC');
+    </script>
+
+    
+
+    
+    <!-- Adsense -->
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4580059638713287"
+    crossorigin="anonymous"></script> -->
+    <link rel="me" href="https://mastodon.social/@ayazar">
+  </head>
+<body><header class="site-header" role="banner">
+
+    <div class="wrapper"><a class="site-title" rel="author" href="/">Alper Yazar</a><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewBox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger"><a class="page-link" href="/blog/">📝 Blog</a><a class="page-link" href="/search.html">🔍 Search</a><!-- <a class="page-link" href="https://ayazar.dev" target="_blank">🗂️ Notes</a> -->
+            <a rel="me" class="page-link" href="https://www.linkedin.com/in/alperyazar" target="_blank">💼 LinkedIn</a>
+            <a rel="me" class="page-link" href="https://www.youtube.com/@ayazar" target="_blank">🎬 YouTube</a>
+          </div>
+        </nav></div>
+  </header>
+
+  
+
+<div id="son_yazi_banner" style="
+background: linear-gradient(to right, rgba(250, 191, 200, 0.3), rgba(23, 86, 169, 0.2));
+color: rgb(52, 55, 67);
+text-align: center;
+padding: 15px;
+border-radius: 10px;
+border: 0px dashed rgba(250, 191, 200, 0.5);
+box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+margin: 10px 0px 10px 0px;">🚀 The latest blog post:&nbsp;<a href="/fpga-git-cicd-devops.html" style="font-weight: bold;"><span style="font-weight: bold;">FPGA, Git, DevOps, CI/CD</span></a>&nbsp;🇹🇷</div>
+
+  <div id="progressBar" class="progress-bar"></div>
+
+  <script>
+    // Listen for scroll events on the window
+window.onscroll = function() {
+    // Call the function to update the progress bar
+    updateProgressBar();
+};
+
+function updateProgressBar() {
+    // Get the total height of the page
+    var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    // Get the current scroll position
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    // Calculate the scroll percentage
+    var scrollPercentage = (scrollTop / scrollHeight) * 100;
+    // Update the width of the progress bar
+    document.getElementById("progressBar").style.width = scrollPercentage + "%";
+}
+  </script>
+
+<a href='/support.html' class="floating-icon-heart" width="48" target="_blank"><img src='/assets/img/icons8-heart-64.png' alt="❤️ Support/Destek" title="❤️ Support/Destek"></a>
+
+<div id="special-flag">
+  <a id="special-flag-link" href="#" target="_blank" title="">
+    <img src='/assets/img/bayrak.png' alt="Türk Bayrağı">
+  </a>
+</div>
+
+<script>
+  /*
+   * Ref: https://www.pau.edu.tr/tks/tr/sayfa/milli-ve-dini-bayramlar
+   * Ref: https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=859034&MevzuatTur=2&MevzuatTertip=5
+   * Ref: https://www.eserotomatikbayrak.com/bayrak-asilacak-tarihler.pdf
+   * Net bir şey bulmak zor :(
+  */
+  const specialDays = [
+    ["03-18", "https://tr.wikipedia.org/wiki/18_Mart_%C3%87anakkale_Zaferi_ve_%C5%9Eehitleri_Anma_G%C3%BCn%C3%BC", "Çanakkale Zaferi ve Şehitleri Anma Günü"],
+    ["04-23", "https://tr.wikipedia.org/wiki/23_Nisan_Ulusal_Egemenlik_ve_%C3%87ocuk_Bayram%C4%B1", "Ulusal Egemenlik ve Çocuk Bayramı"],
+    ["05-01", "https://tr.wikipedia.org/wiki/1_May%C4%B1s_%C4%B0%C5%9F%C3%A7i_Bayram%C4%B1", "Emek ve Dayanışma Günü"],
+    ["05-19", "https://tr.wikipedia.org/wiki/19_May%C4%B1s_Atat%C3%BCrk%27%C3%BC_Anma,_Gen%C3%A7lik_ve_Spor_Bayram%C4%B1", "Atatürk'ü Anma, Gençlik ve Spor Bayramı"],
+    ["07-15", "https://tr.wikipedia.org/wiki/Demokrasi_ve_Mill%C3%AE_Birlik_G%C3%BCn%C3%BC", "Demokrasi ve Millî Birlik Günü"],
+    ["08-30", "https://tr.wikipedia.org/wiki/30_A%C4%9Fustos_Zafer_Bayram%C4%B1", "Zafer Bayramı"],
+    ["10-29", "https://tr.wikipedia.org/wiki/29_Ekim_Cumhuriyet_Bayram%C4%B1", "Cumhuriyet Bayramı"],
+    ["11-10", "https://tr.wikipedia.org/wiki/10_Kas%C4%B1m_Atat%C3%BCrk%27%C3%BC_anma_g%C3%BCn%C3%BC_ve_Atat%C3%BCrk_haftas%C4%B1", "Atatürk'ü Anma Günü"]
+  ];
+
+  const today = new Date();
+  const todayKey = `${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+
+  const match = specialDays.find(([key]) => key === todayKey);
+  if (match) {
+    const [_, url, tooltip] = match;
+    const flagDiv = document.getElementById("special-flag");
+    const flagLink = document.getElementById("special-flag-link");
+    flagLink.href = url;
+    flagLink.title = tooltip;
+    flagDiv.style.display = "block";
+  }
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">🗓️ Events</h1>
+    <p class="post-meta">~<time class="dt-modified" datetime="2023-10-21T00:00:00+03:00" itemprop="dateModified">
+          2023-10-21
+        </time></p>
+  </header>
+
+  <div class="post-content">
+    In this page, I was listing upcoming **free** events related to hardware design,
+electronic design, embedded software, FPGA, etc. Now, this page is kept for
+**historical purposes.** I left compiling events due to lack of interest.
+
+## Some Past Events
+
+| Date | Field | Event | Type | Organizer |
+| ----- | ----- | ----- | ---- | --------- |
+| 2023-09-20 | Hardware | [Fundamentals of Signal Integrity Tutorial: Don’t Be Confused by Ground](https://go.teledynelecroy.com/l/48392/2023-08-07/8nvtv3?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Teledyne LeCroy](https://www.teledynelecroy.com/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
+| 2023-09-20 | FPGA | [Maximize Design Productivity using Vivado ML with SystemVerilog](https://www.doulos.com/webinars/maximize-design-productivity-using-vivado-ml-with-systemverilog/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Doulos](https://www.doulos.com?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
+| 2023-09-20 | Digital Design, Verification | [Understanding Verification for Digital Design](https://us02web.zoom.us/webinar/register/3016945255647/WN_hGbOxp55Qki07fhJROO3Ag?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [BLT](https://bltinc.com?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
+| 2023-09-20 | Hardware | [Probing in Power Electronics – What to Use and Why Part 2: High Voltage Probe Real-world Examples and Comparisons](https://go.teledynelecroy.com/l/48392/2023-08-22/8nwryy?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Teledyne LeCroy](https://www.teledynelecroy.com/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
+| 2023-09-21 | Hardware | [Fundamentals of 10 Mb/s In-vehicle Networks Webinar](https://go.teledynelecroy.com/l/48392/2023-08-23/8nww78?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Teledyne LeCroy](https://www.teledynelecroy.com/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
+| 2023-09-21 | Hardware | [EMC / ESD Pulse Measurements using Oscilloscopes](https://go.teledynelecroy.com/l/48392/2023-08-23/8nww7n?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Teledyne LeCroy](https://www.teledynelecroy.com/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
+| 2023-09-21 | Embedded | [Using Remote Access to Identify and Solve Customer Issues in Field Devices](https://www.toradex.com/webinars/remote-access-identify-solve-field-devices-issues?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Toradex](https://www.toradex.com/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
+| 2023-09-22 | Software | [What is an SBOM and why should I care?](https://www.doulos.com/webinars/what-is-an-sbom/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Doulos](https://www.doulos.com?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
+| 2023-09-26 | Hardware | [DDR Technology How to Probe and Debug DDR Signals](https://go.teledynelecroy.com/l/48392/2023-09-07/8nxz7v?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Teledyne LeCroy](https://www.teledynelecroy.com/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
+| 2023-09-27 | Hardware | [How Can I Reduce Noise on Signals Measured With an Oscilloscope?](https://go.teledynelecroy.com/l/48392/2023-09-04/8nxmpc?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Teledyne LeCroy](https://www.teledynelecroy.com/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
+| 2023-09-27 | FPGA, Embedded | [Starting AI Engine Development with the Vitis Software Platform](https://webinar.amd.com/2023-Vitis-Developer-Series/en/registration?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [AMD](https://www.amd.com?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
+| 2023-09-27 | Management | [Outsourcing Design Solutions for Defense Primes](https://us02web.zoom.us/webinar/register/8016945257563/WN_X1g09p2bTYO7bVWj8G0aIQ?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [BLT](https://bltinc.com?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
+| 2023-09-28 29 | FPGA | [Maximizing the Potential of Versal AI Engines ONLINE WORKSHOP](https://www.doulos.com/training/fpga-and-hardware-design/xilinx/maximizing-the-potential-of-versal-ai-engines-online-workshop/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) ⭐ | Online Workshop, 8 hours | [Doulos](https://www.doulos.com?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
+| 2023-09-28 | Hardware | [How Do I Make a Differential Measurement on an Oscilloscope Using Passive Probes?](https://go.teledynelecroy.com/l/48392/2023-06-26/8ns28q?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Teledyne LeCroy](https://www.teledynelecroy.com/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
+| 2023-09-28 | FPGA, Embedded | [Multimedia Accelerators for Kria SOM with HLS & Vitis Libraries](https://plc2.com/training/multimedia-accelerators-for-kria-som-with-hls-vitis-libraries_we/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [PLC2](https://plc2.com?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
+| 2023-09-28 | FPGA | [Eliminating Memory Bottlenecks with Versal™ HBM Series - From Architecture to Implementation](https://pages.xilinx.com/EN-WB-2023-09-27-VersalHBM_LP-Registration.html?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [AMD](https://www.amd.com?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
+| 2023-10-03 | Linux, Embedded | [Demystifying the Linux Kernel Security Process](https://www.linuxfoundation.org/webinars/demystifying-the-linux-kernel-security-process?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [The Linux Foundation](https://www.linuxfoundation.org/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
+| 2023-10-04 | FPGA, Embedded| [Signal Processing on AI Engine Using Vitis DSP Libraries and Vitis Model Composer](https://webinar.amd.com/2023-Vitis-Developer-Series/en/registration?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [AMD](https://www.amd.com?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
+| 2023-10-04 | FPGA, Embedded | [AMD Day](https://empa.com/amd-day/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) ⭐ | Ankara, Türkiye 📍 | [Empa](https://empa.com/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
+| 2023-10-04 | Hardware | [Oscilloscopes Best Practice - Part 2 How to Improve the Use of your Oscilloscope](https://go.teledynelecroy.com/l/48392/2023-08-31/8nxgsv?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Teledyne LeCroy](https://www.teledynelecroy.com/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
+| 2023-10-04 | Hardware | [How to Debug PCIe® Link Equalization (LEQ) Training and Other Dynamic Link Behaviors](https://go.teledynelecroy.com/l/48392/2023-08-08/8nvxy6?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Teledyne LeCroy](https://www.teledynelecroy.com/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
+| 2023-10-05 | Hardware | [Jitter Basics - Part 1](https://go.teledynelecroy.com/l/48392/2023-08-29/8nx6yv?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Teledyne LeCroy](https://www.teledynelecroy.com/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
+| 2023-10-05 | Hardware | [Fundamentals of Power Integrity Tutorial: Measuring Power Sources](https://go.teledynelecroy.com/l/48392/2023-08-22/8nwrv2?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Teledyne LeCroy](https://www.teledynelecroy.com/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
+| 2023-10-25 | Embedded | [Modernizing Embedded Software Development Practices](https://www.beningo.com/webinars/webinar-registration/?webinarKey=3695052195634483800&utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Beningo Embedded Group](https://www.beningo.com/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
+| 2023-10-27 | Embedded | [Modern C++ for Safe and Efficient Embedded Systems](https://www.doulos.com/webinars/modern-cplusplus-for-safe-and-efficient-embedded-systems/?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) | Webinar | [Doulos](https://www.doulos.com?utm_source=alperyazarcom&utm_medium=web&utm_campaign=events) |
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Alper Yazar</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Alper Yazar</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/alperyazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">alperyazar</span></a></li><li><a href="https://www.linkedin.com/in/alperyazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">alperyazar</span></a></li><li><a href="https://mastodon.social/@ayazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#mastodon"></use></svg> <span class="username">ayazar</span></a></li><li><a href="https://youtube.com/%40ayazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">@ayazar</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>&quot;Full Stack Electronics&quot; Engineer<br/>© 2011 - 2025<br/><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a></p>
+        <p><a href="/disclaimer.html" />Disclaimer</a> <a href="/specimen.html" />Specimen</a> <a href="/" />Contact</a><br><a href='/support.html' />❤️ Destek / Support</a></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer><!-- Default Statcounter code for Home
+https://www.alperyazar.com -->
+<script type="text/javascript">
+  var sc_project=12712694;
+  var sc_invisible=1;
+  var sc_security="1c071fc4";
+  </script>
+  <script type="text/javascript"
+  src="https://www.statcounter.com/counter/counter.js"
+  async></script>
+  <noscript><div class="statcounter"><a title="web statistics"
+  href="https://statcounter.com/" target="_blank"><img
+  class="statcounter"
+  src="https://c.statcounter.com/12712694/0/1c071fc4/1/"
+  alt="web statistics"
+  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+  <!-- End of Statcounter Code --></body>
+
+</html>

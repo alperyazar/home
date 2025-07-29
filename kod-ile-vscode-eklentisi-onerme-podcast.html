@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Kod ile beraber Visual Studio Code eklentileri öneriyoruz | Alper Yazar</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Kod ile beraber Visual Studio Code eklentileri öneriyoruz" />
+<meta name="author" content="Alper Yazar" />
+<meta property="og:locale" content="tr_TR" />
+<meta name="description" content="VS Code’ kullanan geliştiricilere kodlarımız ile beraber eklentiler de önerebileceğimizi biliyor musunuz?" />
+<meta property="og:description" content="VS Code’ kullanan geliştiricilere kodlarımız ile beraber eklentiler de önerebileceğimizi biliyor musunuz?" />
+<link rel="canonical" href="https://www.alperyazar.com/kod-ile-vscode-eklentisi-onerme-podcast.html" />
+<meta property="og:url" content="https://www.alperyazar.com/kod-ile-vscode-eklentisi-onerme-podcast.html" />
+<meta property="og:site_name" content="Alper Yazar" />
+<meta property="og:image" content="https://www.alperyazar.com/assets/img/22/12.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-09-17T00:00:00+03:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://www.alperyazar.com/assets/img/22/12.jpg" />
+<meta property="twitter:title" content="Kod ile beraber Visual Studio Code eklentileri öneriyoruz" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alper Yazar"},"dateModified":"2025-05-09T19:32:32+03:00","datePublished":"2022-09-17T00:00:00+03:00","description":"VS Code’ kullanan geliştiricilere kodlarımız ile beraber eklentiler de önerebileceğimizi biliyor musunuz?","headline":"Kod ile beraber Visual Studio Code eklentileri öneriyoruz","image":"https://www.alperyazar.com/assets/img/22/12.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.alperyazar.com/kod-ile-vscode-eklentisi-onerme-podcast.html"},"url":"https://www.alperyazar.com/kod-ile-vscode-eklentisi-onerme-podcast.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css">
+    <script src="/assets/js/lazysizes.min.js" async=""></script><link type="application/atom+xml" rel="alternate" href="https://www.alperyazar.com/feed.xml" title="Alper Yazar" /><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"><!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S3B80PC7FC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-S3B80PC7FC');
+    </script>
+
+    
+
+    
+    <!-- Adsense -->
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4580059638713287"
+    crossorigin="anonymous"></script> -->
+    <link rel="me" href="https://mastodon.social/@ayazar">
+  </head>
+<body><header class="site-header" role="banner">
+
+    <div class="wrapper"><a class="site-title" rel="author" href="/">Alper Yazar</a><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewBox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger"><a class="page-link" href="/blog/">📝 Blog</a><a class="page-link" href="/search.html">🔍 Search</a><!-- <a class="page-link" href="https://ayazar.dev" target="_blank">🗂️ Notes</a> -->
+            <a rel="me" class="page-link" href="https://www.linkedin.com/in/alperyazar" target="_blank">💼 LinkedIn</a>
+            <a rel="me" class="page-link" href="https://www.youtube.com/@ayazar" target="_blank">🎬 YouTube</a>
+          </div>
+        </nav></div>
+  </header>
+
+  
+
+<div id="son_yazi_banner" style="
+background: linear-gradient(to right, rgba(250, 191, 200, 0.3), rgba(23, 86, 169, 0.2));
+color: rgb(52, 55, 67);
+text-align: center;
+padding: 15px;
+border-radius: 10px;
+border: 0px dashed rgba(250, 191, 200, 0.5);
+box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+margin: 10px 0px 10px 0px;">🚀 Son blog yazısı:&nbsp;<a href="/fpga-git-cicd-devops.html" style="font-weight: bold;"><span style="font-weight: bold;">FPGA, Git, DevOps, CI/CD</span></a>&nbsp;🇹🇷</div>
+
+  <div id="progressBar" class="progress-bar"></div>
+
+  <script>
+    // Listen for scroll events on the window
+window.onscroll = function() {
+    // Call the function to update the progress bar
+    updateProgressBar();
+};
+
+function updateProgressBar() {
+    // Get the total height of the page
+    var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    // Get the current scroll position
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    // Calculate the scroll percentage
+    var scrollPercentage = (scrollTop / scrollHeight) * 100;
+    // Update the width of the progress bar
+    document.getElementById("progressBar").style.width = scrollPercentage + "%";
+}
+  </script>
+
+<a href='/support.html' class="floating-icon-heart" width="48" target="_blank"><img src='/assets/img/icons8-heart-64.png' alt="❤️ Support/Destek" title="❤️ Support/Destek"></a>
+
+<div id="special-flag">
+  <a id="special-flag-link" href="#" target="_blank" title="">
+    <img src='/assets/img/bayrak.png' alt="Türk Bayrağı">
+  </a>
+</div>
+
+<script>
+  /*
+   * Ref: https://www.pau.edu.tr/tks/tr/sayfa/milli-ve-dini-bayramlar
+   * Ref: https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=859034&MevzuatTur=2&MevzuatTertip=5
+   * Ref: https://www.eserotomatikbayrak.com/bayrak-asilacak-tarihler.pdf
+   * Net bir şey bulmak zor :(
+  */
+  const specialDays = [
+    ["03-18", "https://tr.wikipedia.org/wiki/18_Mart_%C3%87anakkale_Zaferi_ve_%C5%9Eehitleri_Anma_G%C3%BCn%C3%BC", "Çanakkale Zaferi ve Şehitleri Anma Günü"],
+    ["04-23", "https://tr.wikipedia.org/wiki/23_Nisan_Ulusal_Egemenlik_ve_%C3%87ocuk_Bayram%C4%B1", "Ulusal Egemenlik ve Çocuk Bayramı"],
+    ["05-01", "https://tr.wikipedia.org/wiki/1_May%C4%B1s_%C4%B0%C5%9F%C3%A7i_Bayram%C4%B1", "Emek ve Dayanışma Günü"],
+    ["05-19", "https://tr.wikipedia.org/wiki/19_May%C4%B1s_Atat%C3%BCrk%27%C3%BC_Anma,_Gen%C3%A7lik_ve_Spor_Bayram%C4%B1", "Atatürk'ü Anma, Gençlik ve Spor Bayramı"],
+    ["07-15", "https://tr.wikipedia.org/wiki/Demokrasi_ve_Mill%C3%AE_Birlik_G%C3%BCn%C3%BC", "Demokrasi ve Millî Birlik Günü"],
+    ["08-30", "https://tr.wikipedia.org/wiki/30_A%C4%9Fustos_Zafer_Bayram%C4%B1", "Zafer Bayramı"],
+    ["10-29", "https://tr.wikipedia.org/wiki/29_Ekim_Cumhuriyet_Bayram%C4%B1", "Cumhuriyet Bayramı"],
+    ["11-10", "https://tr.wikipedia.org/wiki/10_Kas%C4%B1m_Atat%C3%BCrk%27%C3%BC_anma_g%C3%BCn%C3%BC_ve_Atat%C3%BCrk_haftas%C4%B1", "Atatürk'ü Anma Günü"]
+  ];
+
+  const today = new Date();
+  const todayKey = `${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+
+  const match = specialDays.find(([key]) => key === todayKey);
+  if (match) {
+    const [_, url, tooltip] = match;
+    const flagDiv = document.getElementById("special-flag");
+    const flagLink = document.getElementById("special-flag-link");
+    flagLink.href = url;
+    flagLink.title = tooltip;
+    flagDiv.style.display = "block";
+  }
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Kod ile beraber Visual Studio Code eklentileri öneriyoruz</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2022-09-17T00:00:00+03:00" itemprop="datePublished">
+        2022-09-17
+      </time>~<time class="dt-modified" datetime="2025-05-09T19:32:32+03:00" itemprop="dateModified">
+        2025-05-09
+      </time>• 🇹🇷<span> • 22-12</span>
+      </p>
+  </header><div style="background: #eeeeff; border-radius: 2px; margin: 2px;"><center><p><span data-nosnippet>🔤 <small><a rel=”nofollow” href="https://www-alperyazar-com.translate.goog/kod-ile-vscode-eklentisi-onerme-podcast.html?_x_tr_sl=auto&_x_tr_tl=en">Translate with Google</a></small> 🔤</span></p></center></div><div class="post-content e-content" itemprop="articleBody"><center>
+    <p>
+    <a class="post-link" href="/kod-ile-vscode-eklentisi-onerme-podcast.html"><img alt="Teaser" data-srcset="/assets/img/22/12.jpg" srcset="/assets/lazyload.png" src="/assets/img/22/12.jpg" data-srcset="/assets/img/22/12.jpg"  srcset="/assets/lazyload.png" style="border-radius: 10px;" class="lazyload"></a>
+    </p>
+    </center><p><i>VS Code' kullanan geliştiricilere kodlarımız ile beraber eklentiler de önerebileceğimizi biliyor musunuz?</i></p>
+    <hr><div style="background: #ffec99; border-radius: 2px; margin: 2px;"><center><p><span data-nosnippet>ℹ️ <small><a href="/disclaimer.html">Feragatname / Sorumluluk Reddi</a></small> ℹ️</span></p></center></div><hr>
+    <blockquote>
+  <p>🎤 Bu sesli bir içeriktir. Yazı devamındaki içerikler sesli olarak iletilemeyen
+içerikler ve referanslardır. Aşağıdaki videodan içeriği dinleyebilirsiniz.</p>
+</blockquote>
+
+<!-- https://github.com/nathancy/jekyll-embed-video -->
+<!-- https://yoast.com/how-to-make-youtube-videos-responsive/ -->
+<div class="embed-container" style="text-align: center;">
+<iframe class="youtube-video lazyload" src="https://www.youtube.com/embed/pWFg0wpOgqA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+</div>
+
+<center><a target="_blank" href="https://www.youtube.com/watch?v=pWFg0wpOgqA" rel="nofollow">Video</a></center>
+
+<ul>
+  <li>Bahsettiğim Markdown linter eklentisi: <a href="https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint">markdownlint</a></li>
+  <li>Oluşturacağımız dosya: <code class="language-plaintext highlighter-rouge">.vscode/extensions.json</code>. <a href="https://github.com/alperyazar/home/blob/master/.vscode/extensions.json">Örnek</a></li>
+  <li>Kodu açan kişide eksik eklentiler varsa çıkan öneri penceresi:</li>
+</ul>
+
+<p class="text-align-center"><img src="/assets/img/22/12-a.png" alt="Recommended Extensions Warning" /></p>
+
+<ul>
+  <li>Github tarafından önerilen <code class="language-plaintext highlighter-rouge">.gitignore</code> dosyası: <a href="https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore">Link</a></li>
+  <li><a href="https://code.visualstudio.com/docs/languages/json#_json-with-comments">jsonc</a></li>
+  <li><a href="https://marketplace.visualstudio.com/">Marketplace</a></li>
+  <li>Eklenti önerme mekanizması resmi dokümanı: <a href="https://code.visualstudio.com/docs/editor/extension-marketplace">Link</a></li>
+</ul>
+
+<h2 id="referanslar">Referanslar</h2>
+
+<ul>
+  <li><a href="https://code.visualstudio.com/docs/editor/extension-marketplace">https://code.visualstudio.com/docs/editor/extension-marketplace</a></li>
+  <li><a href="https://survey.stackoverflow.co/2022/#most-loved-dreaded-and-wanted-new-collab-tools-love-dread">https://survey.stackoverflow.co/2022/#most-loved-dreaded-and-wanted-new-collab-tools-love-dread</a></li>
+  <li><a href="https://stackoverflow.com/questions/32964920/should-i-commit-the-vscode-folder-to-source-control">https://stackoverflow.com/questions/32964920/should-i-commit-the-vscode-folder-to-source-control</a></li>
+  <li><a href="https://stackoverflow.com/questions/244777/can-comments-be-used-in-json">https://stackoverflow.com/questions/244777/can-comments-be-used-in-json</a></li>
+  <li><a href="https://code.visualstudio.com/docs/languages/json#_json-with-comments">https://code.visualstudio.com/docs/languages/json#_json-with-comments</a></li>
+</ul>
+
+    
+    <hr>
+    
+
+
+
+
+
+
+    
+    
+    
+<!--0-->
+        
+        
+            
+                
+                
+
+
+
+
+
+
+
+<ul class="post-list">
+<li style="background: #DDEEEE; padding: 10px; border-radius: 10px;">
+<h4>🤓 Bir içerik daha?</h4>
+
+<center>
+<p>
+<a class="post-link" href="/ortaya-karisik-3.html"><img alt="Teaser" data-sizes="auto" data-srcset="https://i.ytimg.com/vi/_-tSBsm21Bs/hq720.jpg" srcset="/assets/lazyload.png" src="https://i.ytimg.com/vi/_-tSBsm21Bs/hq720.jpg" data-srcset="https://i.ytimg.com/vi/_-tSBsm21Bs/hq720.jpg 1280w" srcset="/assets/lazyload.png" style="border-radius: 10px; height: auto; width: 95%; max-width: 700px;" class="lazyload"></a>
+</p>
+</center><h3>
+<a class="post-link" href="/ortaya-karisik-3.html">
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;🔴 cocotb: Python verification framework&lt;/td&gt;
+      &lt;td&gt;FPGA, Gömülü Sistemler Muhabbet&lt;/td&gt;
+      &lt;td&gt;Ortaya Karışık - 3&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+</a>
+</h3><h4>Bu bölümde ilk olarak Python dilinde sayısal tasarım doğrulama yapma imkanı sağlayan cocotb'ye bakıp, serbest format muhabbet edeceğiz.</h4></li>
+</ul>
+
+
+  </div>
+
+  
+  <div class="revisions" style="border-top: 2px dashed; margin-top: 10px;"><h2 style="padding-top: 10px;">🔄 Değişiklikler (Son 10) </h2><ul style="list-style-type: none;">
+    
+      <li>
+        <div class="post-meta"><code>2025-05-09</code> Revert "to ayazar.dev"
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2025-04-02</code> to ayazar.dev
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2025-03-30</code> Revert "to ayazar.dev"
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2025-03-16</code> to ayazar.dev
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-10-19</code> revert ayazar.dev
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-10-06</code> ayazar.dev
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-10-05</code> here
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-09-28</code> to ayazar.dev
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-09-14</code> revertx3
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-08-30</code> Revert "Revert "ayazar.dev""</div>
+      </li>
+    
+    </ul>
+  </div>
+  <div class="gicus_comments" style="border-top: 2px dashed; margin-top: 10px;"><h2 style="padding-top: 10px;">💭 Yorumlar</h2>
+  <p><small>Yorum altyapısı <a href="https://giscus.app/">giscus</a> tarafından (evet tarafından!) sağlanmaktadır.
+    Yorum yazabilmek için <a href="https://github.com/">GitHub</a> hesabınız üzerinden giriş yapmanız gerekmektedir.
+    Yazılan yorumlar <a href="https://github.com/alperyazar/home/discussions/categories/comments">Github Discussions</a> üzerinde saklanmaktadır.</small></p><script src="https://giscus.app/client.js"
+        data-repo="alperyazar/home"
+        data-repo-id="R_kgDOJoQiqA"
+        data-category="Comments"
+        data-category-id="DIC_kwDOJoQiqM4Cne4h"
+        data-mapping="specific"
+        data-term='22-12''
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"data-lang="tr"data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+<p>🫆 <code>22-12</code></p>
+</div><a class="u-url" href="/kod-ile-vscode-eklentisi-onerme-podcast.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Alper Yazar</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Alper Yazar</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/alperyazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">alperyazar</span></a></li><li><a href="https://www.linkedin.com/in/alperyazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">alperyazar</span></a></li><li><a href="https://mastodon.social/@ayazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#mastodon"></use></svg> <span class="username">ayazar</span></a></li><li><a href="https://youtube.com/%40ayazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">@ayazar</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>&quot;Full Stack Electronics&quot; Engineer<br/>© 2011 - 2025<br/><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a></p>
+        <p><a href="/disclaimer.html" />Disclaimer</a> <a href="/specimen.html" />Specimen</a> <a href="/" />Contact</a><br><a href='/support.html' />❤️ Destek / Support</a></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer><!-- Default Statcounter code for Home
+https://www.alperyazar.com -->
+<script type="text/javascript">
+  var sc_project=12712694;
+  var sc_invisible=1;
+  var sc_security="1c071fc4";
+  </script>
+  <script type="text/javascript"
+  src="https://www.statcounter.com/counter/counter.js"
+  async></script>
+  <noscript><div class="statcounter"><a title="web statistics"
+  href="https://statcounter.com/" target="_blank"><img
+  class="statcounter"
+  src="https://c.statcounter.com/12712694/0/1c071fc4/1/"
+  alt="web statistics"
+  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+  <!-- End of Statcounter Code --></body>
+
+</html>

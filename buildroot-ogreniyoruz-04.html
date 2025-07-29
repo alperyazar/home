@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Buildroot ile ilk derleme! Buildroot Öğreniyoruz - 4 | Alper Yazar</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Buildroot ile ilk derleme! Buildroot Öğreniyoruz - 4" />
+<meta name="author" content="Alper Yazar" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Buildroot ile ilk derlememizi yapıyoruz. Elbette tahmin ettiğim gibi ilk seferde olmuyor, uğraşıyoruz.." />
+<meta property="og:description" content="Buildroot ile ilk derlememizi yapıyoruz. Elbette tahmin ettiğim gibi ilk seferde olmuyor, uğraşıyoruz.." />
+<link rel="canonical" href="https://www.alperyazar.com/buildroot-ogreniyoruz-04.html" />
+<meta property="og:url" content="https://www.alperyazar.com/buildroot-ogreniyoruz-04.html" />
+<meta property="og:site_name" content="Alper Yazar" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-02-07T00:00:00+03:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Buildroot ile ilk derleme! Buildroot Öğreniyoruz - 4" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alper Yazar"},"dateModified":"2025-05-09T19:32:32+03:00","datePublished":"2024-02-07T00:00:00+03:00","description":"Buildroot ile ilk derlememizi yapıyoruz. Elbette tahmin ettiğim gibi ilk seferde olmuyor, uğraşıyoruz..","headline":"Buildroot ile ilk derleme! Buildroot Öğreniyoruz - 4","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.alperyazar.com/buildroot-ogreniyoruz-04.html"},"url":"https://www.alperyazar.com/buildroot-ogreniyoruz-04.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css">
+    <script src="/assets/js/lazysizes.min.js" async=""></script><link type="application/atom+xml" rel="alternate" href="https://www.alperyazar.com/feed.xml" title="Alper Yazar" /><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"><!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S3B80PC7FC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-S3B80PC7FC');
+    </script>
+
+    
+
+    
+    <!-- Adsense -->
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4580059638713287"
+    crossorigin="anonymous"></script> -->
+    <link rel="me" href="https://mastodon.social/@ayazar">
+  </head>
+<body><header class="site-header" role="banner">
+
+    <div class="wrapper"><a class="site-title" rel="author" href="/">Alper Yazar</a><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewBox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger"><a class="page-link" href="/blog/">📝 Blog</a><a class="page-link" href="/search.html">🔍 Search</a><!-- <a class="page-link" href="https://ayazar.dev" target="_blank">🗂️ Notes</a> -->
+            <a rel="me" class="page-link" href="https://www.linkedin.com/in/alperyazar" target="_blank">💼 LinkedIn</a>
+            <a rel="me" class="page-link" href="https://www.youtube.com/@ayazar" target="_blank">🎬 YouTube</a>
+          </div>
+        </nav></div>
+  </header>
+
+  
+
+<div id="son_yazi_banner" style="
+background: linear-gradient(to right, rgba(250, 191, 200, 0.3), rgba(23, 86, 169, 0.2));
+color: rgb(52, 55, 67);
+text-align: center;
+padding: 15px;
+border-radius: 10px;
+border: 0px dashed rgba(250, 191, 200, 0.5);
+box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+margin: 10px 0px 10px 0px;">🚀 Son blog yazısı:&nbsp;<a href="/fpga-git-cicd-devops.html" style="font-weight: bold;"><span style="font-weight: bold;">FPGA, Git, DevOps, CI/CD</span></a>&nbsp;🇹🇷</div>
+
+  <div id="progressBar" class="progress-bar"></div>
+
+  <script>
+    // Listen for scroll events on the window
+window.onscroll = function() {
+    // Call the function to update the progress bar
+    updateProgressBar();
+};
+
+function updateProgressBar() {
+    // Get the total height of the page
+    var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    // Get the current scroll position
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    // Calculate the scroll percentage
+    var scrollPercentage = (scrollTop / scrollHeight) * 100;
+    // Update the width of the progress bar
+    document.getElementById("progressBar").style.width = scrollPercentage + "%";
+}
+  </script>
+
+<a href='/support.html' class="floating-icon-heart" width="48" target="_blank"><img src='/assets/img/icons8-heart-64.png' alt="❤️ Support/Destek" title="❤️ Support/Destek"></a>
+
+<div id="special-flag">
+  <a id="special-flag-link" href="#" target="_blank" title="">
+    <img src='/assets/img/bayrak.png' alt="Türk Bayrağı">
+  </a>
+</div>
+
+<script>
+  /*
+   * Ref: https://www.pau.edu.tr/tks/tr/sayfa/milli-ve-dini-bayramlar
+   * Ref: https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=859034&MevzuatTur=2&MevzuatTertip=5
+   * Ref: https://www.eserotomatikbayrak.com/bayrak-asilacak-tarihler.pdf
+   * Net bir şey bulmak zor :(
+  */
+  const specialDays = [
+    ["03-18", "https://tr.wikipedia.org/wiki/18_Mart_%C3%87anakkale_Zaferi_ve_%C5%9Eehitleri_Anma_G%C3%BCn%C3%BC", "Çanakkale Zaferi ve Şehitleri Anma Günü"],
+    ["04-23", "https://tr.wikipedia.org/wiki/23_Nisan_Ulusal_Egemenlik_ve_%C3%87ocuk_Bayram%C4%B1", "Ulusal Egemenlik ve Çocuk Bayramı"],
+    ["05-01", "https://tr.wikipedia.org/wiki/1_May%C4%B1s_%C4%B0%C5%9F%C3%A7i_Bayram%C4%B1", "Emek ve Dayanışma Günü"],
+    ["05-19", "https://tr.wikipedia.org/wiki/19_May%C4%B1s_Atat%C3%BCrk%27%C3%BC_Anma,_Gen%C3%A7lik_ve_Spor_Bayram%C4%B1", "Atatürk'ü Anma, Gençlik ve Spor Bayramı"],
+    ["07-15", "https://tr.wikipedia.org/wiki/Demokrasi_ve_Mill%C3%AE_Birlik_G%C3%BCn%C3%BC", "Demokrasi ve Millî Birlik Günü"],
+    ["08-30", "https://tr.wikipedia.org/wiki/30_A%C4%9Fustos_Zafer_Bayram%C4%B1", "Zafer Bayramı"],
+    ["10-29", "https://tr.wikipedia.org/wiki/29_Ekim_Cumhuriyet_Bayram%C4%B1", "Cumhuriyet Bayramı"],
+    ["11-10", "https://tr.wikipedia.org/wiki/10_Kas%C4%B1m_Atat%C3%BCrk%27%C3%BC_anma_g%C3%BCn%C3%BC_ve_Atat%C3%BCrk_haftas%C4%B1", "Atatürk'ü Anma Günü"]
+  ];
+
+  const today = new Date();
+  const todayKey = `${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+
+  const match = specialDays.find(([key]) => key === todayKey);
+  if (match) {
+    const [_, url, tooltip] = match;
+    const flagDiv = document.getElementById("special-flag");
+    const flagLink = document.getElementById("special-flag-link");
+    flagLink.href = url;
+    flagLink.title = tooltip;
+    flagDiv.style.display = "block";
+  }
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Buildroot ile ilk derleme! Buildroot Öğreniyoruz - 4</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2024-02-07T00:00:00+03:00" itemprop="datePublished">
+        2024-02-07
+      </time>~<time class="dt-modified" datetime="2025-05-09T19:32:32+03:00" itemprop="dateModified">
+        2025-05-09
+      </time>• 🇹🇷<span> • 24-5</span>
+      </p>
+  </header><div style="background: #eeeeff; border-radius: 2px; margin: 2px;"><center><p><span data-nosnippet>🔤 <small><a rel=”nofollow” href="https://www-alperyazar-com.translate.goog/buildroot-ogreniyoruz-04.html?_x_tr_sl=auto&_x_tr_tl=en">Translate with Google</a></small> 🔤</span></p></center></div><div class="post-content e-content" itemprop="articleBody"><center>
+    <p>
+    <a class="post-link" href="/buildroot-ogreniyoruz-04.html"><img alt="Teaser" data-sizes="auto" data-srcset="https://i.ytimg.com/vi/sO_Sdf09DiY/hq720.jpg" srcset="/assets/lazyload.png" src="https://i.ytimg.com/vi/sO_Sdf09DiY/hq720.jpg" data-srcset="https://i.ytimg.com/vi/sO_Sdf09DiY/hq720.jpg 1280w" srcset="/assets/lazyload.png" style="border-radius: 10px; max-height: 405px;" class="lazyload" width="720"></a>
+    </p>
+    </center><p><i>Buildroot ile ilk derlememizi yapıyoruz. Elbette tahmin ettiğim gibi ilk seferde olmuyor, uğraşıyoruz..</i></p>
+    <hr><div style="background: #ffec99; border-radius: 2px; margin: 2px;"><center><p><span data-nosnippet>ℹ️ <small><a href="/disclaimer.html">Feragatname / Sorumluluk Reddi</a></small> ℹ️</span></p></center></div><hr>
+    <blockquote>
+  <p>İçerik, bu sayfadaki yazıların üzerine anlatım yapılarak video olarak
+sunulmuştur. Her ne kadar yazı ile video içerik benzese de vaktiniz var ise
+videoyu izlemenizi tavsiye ederim, çünkü bazı noktalarda yazıda olmayan
+yorumlar yapıyorum.</p>
+</blockquote>
+
+<!-- https://github.com/nathancy/jekyll-embed-video -->
+<!-- https://yoast.com/how-to-make-youtube-videos-responsive/ -->
+<div class="embed-container" style="text-align: center;">
+<iframe class="youtube-video lazyload" src="https://www.youtube.com/embed/sO_Sdf09DiY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+</div>
+
+<center><a target="_blank" href="https://www.youtube.com/watch?v=sO_Sdf09DiY" rel="nofollow">Video</a></center>
+
+<p>Buildroot yolculuğumuza, <em>Buildroot Öğreniyoruz</em> serisinin 4. bölümü ile devam
+ediyoruz. Bu bölümde, Buildroot ile ilk derlememizi yapacağız. Bir <a href="/buildroot-ogreniyoruz-03.html">önceki
+bölümde</a>, Buildroot ile
+tanışmış, tasarım felsefesine, kimler tarafından kullanıldığına ve nasıl
+kullanıldığına bakmıştık. Bu bölümde ise, bir önceki bölümde öğrendiklerimizin
+adeta pratiğini yapacağız. Eğer bir önceki bölümü izlemediyseniz konu bütünlüğü
+açısından önceki bölüme bakmanızı öneririm. 👇</p>
+
+<ul class="post-list">
+<li style="background: #DDEEEE; padding: 10px; border-radius: 10px;">
+<h4>🔗 İlgili bir içerik</h4>
+
+<center>
+<p>
+<a class="post-link" href="/buildroot-ogreniyoruz-03.html"><img alt="Teaser" data-sizes="auto" data-srcset="https://i.ytimg.com/vi/meLZZuCS4gI/hq720.jpg" srcset="/assets/lazyload.png" src="https://i.ytimg.com/vi/meLZZuCS4gI/hq720.jpg" data-srcset="https://i.ytimg.com/vi/meLZZuCS4gI/hq720.jpg 1280w" srcset="/assets/lazyload.png" style="border-radius: 10px; height: auto; width: 95%; max-width: 700px;" class="lazyload" /></a>
+</p>
+</center><h3>
+<a class="post-link" href="/buildroot-ogreniyoruz-03.html">
+Buildroot ile Tanışıyoruz Buildroot Öğreniyoruz - 3
+
+</a>
+</h3><h4>Bu bölümde Buildroot ile artık tanışıyoruz. Nedir? Kimler kullanır? Nasıl kullanılır? Nereden indirilir? ...</h4></li>
+</ul>
+
+<h2 id="geliştirme-ortamının-oluşturulması-">Geliştirme Ortamının Oluşturulması 💻</h2>
+
+<p>Önceki bölümde, Buildroot’un bir Linux dağıtımı üzerinde çalıştığından
+bahsetmiştik.</p>
+
+<p><strong>Buildroot bir Linux dağıtımı oluşturma aracı fakat kendisi de Linux üzerinde
+çalışıyor.</strong> 🐧</p>
+
+<p>Günlük yaşantısında zaten Linux ile çalışan arkadaşlar, kendi işletim
+sistemlerinde çalışmaya devam edebilirler. Birazdan değineceğiz ama Buildroot’un
+çalışmak için talep ettiği bileşenler (paketler) oldukça genel, herhangi bir
+dağıtıma bağımlılığı bulmuyor. O yüzden zaten bir Linux dağıtımı (Ubuntu, Linux
+Mint, Pardus, Fedora, Arch (BTW)) üzerinde çalışıyorsanız devam edebilirsiniz.</p>
+
+<h3 id="windows-">Windows 🪟</h3>
+
+<p><strong>Windows</strong> üzerinde çalışan arkadaşlar için ise durum biraz farklı. Önceki
+bölümde, <a href="https://learn.microsoft.com/en-us/windows/wsl/install">WSL</a> yani
+Windows Subsystem for Linux ile tek bir deneme yaptığımdan ve bu denememde
+<code class="language-plaintext highlighter-rouge">/dev/pts</code> kaynaklı çeşitli uyarı mesajları aldığımdan bahsetmiştim. Windows
+üzerinde çalışacak arkadaşlara (ben de kullanıyorum),
+<a href="https://www.virtualbox.org/">Virtualbox</a> yazılımını önermiştim.</p>
+
+<p>Buildroot’un, WSL üzerinde çalıştırılması ile ilgili çeşitli
+<a href="https://www.reddit.com/r/embedded/comments/fgnw1u/is_buildroot_or_yocto_or_alternatives_available/">tartışmalar</a>
+ve
+<a href="https://blog.mjjames.co.uk/2019/06/can-you-use-buildroot-with-windows.html">blog</a>
+yazıları internette mevcut. Son sürümlerinin WSL ile çalıştığını okusam da ben
+WSL üzerinden devam etmeyeceğim. Bu seri boyunca duruma göre ya bir Linux
+dağıtımı ya da Windows üzerinde Virtualbox üzerinde çalışacağım. Sizlere de
+Virtualbox kullanmanızı öneririm.</p>
+
+<p><img data-srcset="/assets/img/24/5-reddit.png" srcset="/assets/lazyload.png" src="/assets/img/24/5-reddit.png" alt="Reddit Yorumu" class="centered lazyload" /></p>
+
+<p class="text-align-center">Bağlantısı verdiğim
+<a href="https://www.reddit.com/r/embedded/comments/fgnw1u/is_buildroot_or_yocto_or_alternatives_available/">Reddit</a>
+tartışmasından bir yorum. Ben de aynı fikirdeyim ama size karışamam. 😝</p>
+
+<h3 id="virtualbox">Virtualbox</h3>
+
+<p><img data-srcset="/assets/img/24/5-virtualbox.png" srcset="/assets/lazyload.png" src="/assets/img/24/5-virtualbox.png" alt="VirtualBox" class="centered lazyload" /></p>
+
+<p><a href="https://www.virtualbox.org/">VirtualBox</a>, bilgisayarınızda sanal bilgisayarlar
+oluşturmanızı sağlayan bir yazılım. Windows ve Linux üzerinde çalışabiliyor.
+Buildroot serisi özelinde, zaten Linux bir makineniz varsa üzerine tekrar
+Virtualbox ile bir sanal makine daha oluşturmanıza gerek yok.</p>
+
+<p>Önceki bölümde, Virtualbox kurulumunu göstereceğimi söylemiştim. Sonra tekrar
+düşündüm de, her yerde bulabileceğiniz bu bilgiyi (içeriği kısa tutmak adına da
+)benim tekrar anlatmama gerek yok. Buildroot için herhangi bir Linux dağıtımı
+kullanabilirsiniz. Tipik olarak <a href="https://ubuntu.com/download/desktop">Ubuntu 22.04
+LTS</a> veya en güncel sürüm olan <a href="https://ubuntu.com/download/desktop">Ubuntu
+23.10</a> tercih edebilirsiniz. <strong>Ben Ubuntu
+22.04 kullanacağım.</strong></p>
+
+<p>Virtualbox üzerinde Ubuntu 22.04 kurulumu ile ilgili YouTube üzerinde de birçok
+<a href="https://www.youtube.com/results?search_query=virtualbox+ubuntu+22.04">anlatım
+mevcut.</a>
+Hangi dağıtımı kurarsanız kurun, zaten süreç benzer olacaktır.</p>
+
+<p>Bilgisayarınızın gücüne bağlı olarak istediğiniz kaynakları verebilirsiniz ama
+ben 50-100 GB arası bir disk tahsis etmenizi öneriyorum.</p>
+
+<p>Ben ise 8 çekirdek, 6 GB RAM ve 100 GB disk verdim. Virtualbox’ta <code class="language-plaintext highlighter-rouge">preallocate</code>
+demediğiniz sürece disk 100 GB (ya da ne seçtiyseniz) gözükse de diskinizde
+fiziksel olarak bu kadar yer kaplamayacak, kurduğunuz sanal makine diski
+kullandıkça diskinizdeki sanal disk dosyası büyüyecektir. Tahmin ediyorum ki
+Buildroot derlenirken birden fazla çekirdek kullanabiliyordur. Bu yüzden CPU ve
+RAM’i ne kadar fazla verirseniz derleme süreleri muhtemelen kısalır.</p>
+
+<p><img data-srcset="/assets/img/24/5-ubuntu-kurulum.png" srcset="/assets/lazyload.png" src="/assets/img/24/5-ubuntu-kurulum.png" alt="Ubuntu Kurulum" class="centered lazyload" /></p>
+
+<p class="text-align-center">Ubuntu’yu <code class="language-plaintext highlighter-rouge">Minimal Installation</code> ve güncellemeleri kurulum
+sırasında yükleyecek şekilde kurdum. Siz diğer seçenekleri de tercih edebilirsiniz.</p>
+
+<p>Bilgisayarınıza (temelde SSD vs HDD) göre değişkenlik gösterecek olmasına rağmen
+kurulum yaklaşık 10-20 dakika sürmektedir. Kurduktan sonra,</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">sudo apt update
+sudo apt upgrade
+</span></code></pre></div></div>
+
+<p>ile sisteminizi güncelleştirmenizi öneririm.</p>
+
+<p>Sanal makine deneyiminizi iyileştirmek için (ekran çözünürlüğünü dinamik olarak
+büyütme, dosya ve pano (clipboard) paylaşımı gibi) <strong>VirtualBox Guest
+Additions</strong> kurmanızı öneriyorum. Yine YouTube üzerinden
+<a href="https://www.youtube.com/results?search_query=virtualbox+ubuntu+guest+additions">izleyebilirsiniz.</a></p>
+
+<hr />
+
+<p><strong>Bu noktadan sonra sanal veya gerçek bir Linux makine üzerinde
+çalışabildiğinizi varsayıyorum.</strong></p>
+
+<hr />
+
+<h2 id="buildrootun-edinilmesi-️">Buildroot’un Edinilmesi ⬇️</h2>
+
+<p>Ben de yeni kurulmuş bir Ubuntu 22.04 üzerinden anlatımıma devam edeceğim.</p>
+
+<blockquote>
+  <p>ℹ️ Yazının devamında bulacağını ekran kayıtları ve görüntüler farklı farklı
+olabilir. İçeriği uygunluk durumuma göre başka bilgisayarlar üzerinde
+hazırlıyorum. Sizin açınızdan değişen bir şey olmayacaktır, sadece görsel
+değişiklikler (terminal teması gibi) var gibi düşünebilirsiniz.</p>
+</blockquote>
+
+<hr />
+
+<blockquote>
+  <p>💡 İlerleyen kısımlarda <a href="https://asciinema.org/">asciinema</a> ile alınmış
+kayıtlar görecekseniz. Video gibi dursa da aslında bu kayıtlar metin yani text
+tabanlıdır. İzlerken durdurup, izleme ekranından metinleri seçebilir,
+kopyalayabilirsiniz. Bu kayıtları alırken bir şey olmadığı zaman (kullanıcı
+girdisi ya da ekrana yazı basılması) kayıt uzamasın diye <code class="language-plaintext highlighter-rouge">asciinema</code> ya
+otomatik “jump cut” yaptırtıyorum. O yüzden bazı işlemler olduğundan biraz
+kısa gözüküyor olabilir. Bundan bağımsız olarak bilgisayarınızın özelliklerine
+göre (ve internet hızınız) sizde farklı süreler çıkabilir.</p>
+</blockquote>
+
+<p>İlk olarak kendimize bir çalışma dizini seçelim ve altında <code class="language-plaintext highlighter-rouge">git clone
+https://git.buildroot.net/buildroot</code> komutunu çalıştıralım. Eğer minimal bir
+kurulum yaptıysanız <code class="language-plaintext highlighter-rouge">git</code> kurulmamış olabilir, bu durumda hata alıyorsanız
+öncesinde <code class="language-plaintext highlighter-rouge">sudo apt install git</code> ile <code class="language-plaintext highlighter-rouge">git</code> kurulumu yapınız.</p>
+
+<script async="" id="asciicast-9ULE3zYW4U4s7tpuWkRgls2RZ" src="https://asciinema.org/a/9ULE3zYW4U4s7tpuWkRgls2RZ.js"></script>
+
+<p>clone işleminin süresi bağlantı hızınıza ve bir miktar bilgisayarınızın gücüne
+göre değişecektir. 20-25 Mbps bir internet bağlantısı ve görece zayıf bir
+bilgisayarda benim işlemim yaklaşık 1 dakika sürdü. Görebileceğiniz üzere daha
+sonra <code class="language-plaintext highlighter-rouge">git tag -l --sort=-v:refname</code> komutu ile git’te verilmiş etiketlere
+sıralı bir şekilde bakabiliyoruz. Önceki bölümde her bir sürüm için bir etiket
+var demiştik, hatırlıyor musunuz? İşte onlar bunlar.</p>
+
+<p><code class="language-plaintext highlighter-rouge">git clone</code> ile projenin tüm geçmişini çeksek bile benim diskimde 180 MB yer
+kaplıyor ve bu boyut günümüz disk kapasiteleri ve diğer projeler düşünülünce
+oldukça düşük kalıyor.</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ du -sh buildroot
+180M    buildroot
+</code></pre></div></div>
+
+<p>O yüzden <code class="language-plaintext highlighter-rouge">git clone</code> yapabiliyorsanız <code class="language-plaintext highlighter-rouge">tar.xz</code> ile hiç uğraşmayın, <code class="language-plaintext highlighter-rouge">git</code> ile
+çekin gitsin. Bundan önceki bölümde de bahsetmiştik.</p>
+
+<h2 id="paketlerin-kurulması-">Paketlerin Kurulması 📦</h2>
+
+<p>Buildroot’un çalışabilmesi için derleme yapacağımız sistemde olması gereken
+<strong>zorunlu</strong> ve <strong>opsyionel</strong> yazılımlar vardır. <sup id="fnref:1f"><a href="#fn:1f" class="footnote" rel="footnote" role="doc-noteref">1</a></sup></p>
+
+<p>Zorunlu paketler:</p>
+
+<p><code class="language-plaintext highlighter-rouge">which sed make bintuilt build-essential diffutils gcc g++ bash patch gzip bzip2
+perl tar cpio unzip rsync file bc findutils wget</code></p>
+
+<p>araçlardır. Bunlardan</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">make</code> versiyonu 3.81’den büyük</li>
+  <li><code class="language-plaintext highlighter-rouge">build-essential</code> sadece Debian tabanlı sistemlerde (Ubuntu ve Linux Mint gibi)</li>
+  <li><code class="language-plaintext highlighter-rouge">gcc</code> versiyonu 4.8’den büyük</li>
+  <li><code class="language-plaintext highlighter-rouge">g++</code> versiyonu 4.8’den büyük</li>
+  <li><code class="language-plaintext highlighter-rouge">perl</code> versiyonu 5.8.7’den büyük</li>
+  <li><code class="language-plaintext highlighter-rouge">file</code> ise <code class="language-plaintext highlighter-rouge">/usr/bin/file</code> da olmalıdır (buna neden gerek duyuyor anlamadım).</li>
+</ul>
+
+<p>Yine bunlar dışında çeşitli yardımcı araçların çalışması için önerilen araçlar
+vardır, isimlerini tek tek yazmıyorum burada, Buildroot’un sitesinde varlar.
+<sup id="fnref:1f:1"><a href="#fn:1f" class="footnote" rel="footnote" role="doc-noteref">1</a></sup></p>
+
+<p>Bootlin firması aşağıdaki komut ile Debian tabanlı sistemlerde doğru geliştirme
+ortamını sağlayacağımız söylüyor:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">sudo apt install sed make binutils gcc g++ bash patch \
+gzip bzip2 perl tar cpio python unzip rsync wget libncurses-dev
+</span></code></pre></div></div>
+
+<p>Burada şöyle bir problem var. Ubuntu’da <code class="language-plaintext highlighter-rouge">python</code> paketini kurmak istediğiniz
+zaman bu başarısız oluyor, ya <code class="language-plaintext highlighter-rouge">python2</code> ya da <code class="language-plaintext highlighter-rouge">python3</code> seçmek gerekiyor.
+Buildroot’un sayfasında opsiyonel olarak belirtilen Python yazılımının hangi
+versiyonunun istendiği yazmıyor. Ama tahmin ediyorum ki Python 2 değildir çünkü
+Python 2’ye, 1 Ocak 2020’de “çivi çakılmama” kararı alındı <sup id="fnref:4f"><a href="#fn:4f" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> ve yazılımlar
+zaten çok daha önceden Python 2’den Python 3’e geçmeye başlamıştı. Bu yüzden
+Buildroot’un Python 2’ye bağımlı bir bileşen içerdiğini düşünmüyorum. O yüzden
+üstteki komuttaki <code class="language-plaintext highlighter-rouge">python</code> paketini <code class="language-plaintext highlighter-rouge">python3</code> paketi ile değiştirince bende
+eksik bir paket olmadığını görüyorum.</p>
+
+<p><code class="language-plaintext highlighter-rouge">python3</code> düzeltilmiş komut:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">sudo apt install sed make binutils gcc g++ bash patch \
+gzip bzip2 perl tar cpio python3 unzip rsync wget libncurses-dev
+</span></code></pre></div></div>
+
+<script async="" id="asciicast-G0whSD1KFQsBVKzxG43w7sLRt" src="https://asciinema.org/a/G0whSD1KFQsBVKzxG43w7sLRt.js"></script>
+
+<p>Son olarak yukarıda belirtilen versiyon ve <code class="language-plaintext highlighter-rouge">file</code> programının
+konum koşullarını sağlayıp sağlamadığımıza bakalım:</p>
+
+<script async="" id="asciicast-CAQRLpALjCLWGieTejOeTBcUY" src="https://asciinema.org/a/CAQRLpALjCLWGieTejOeTBcUY.js"></script>
+
+<p><strong>Evet görüldüğü üzere artık hazırız!</strong> 🥳</p>
+
+<h2 id="buildrootu-kullanmaya-başlama-">Buildroot’u Kullanmaya Başlama 🚀</h2>
+
+<p>Serinin önceki bölümünde, Buildroot’un kullandığı <code class="language-plaintext highlighter-rouge">make</code>, <code class="language-plaintext highlighter-rouge">Kconfig</code>, <code class="language-plaintext highlighter-rouge">Kbuild</code> gibi
+araçlardan bahsetmiştim. Bu konulara tekrar girmeyeceğim.</p>
+
+<p>Konfigürasyon tarafında Buildroot tarafından <code class="language-plaintext highlighter-rouge">menuconfig</code>, <code class="language-plaintext highlighter-rouge">nconfig</code>, <code class="language-plaintext highlighter-rouge">xconfig</code>,
+<code class="language-plaintext highlighter-rouge">gconfig</code> araçları destekliyor. Bu 4 aracın da ortak özelliği bizlerin görsel
+yani kolay ve doğru şekilde bir derleme konfigürasyonu oluşturmamızı sağlamak.
+İşte Buildroot’u bu araçlar ile konfigüre edeceğiz. Bu araçlardan <code class="language-plaintext highlighter-rouge">menuconfig</code>
+ve <code class="language-plaintext highlighter-rouge">nconfig</code> terminal tabanlı araçlar. Yani konsol içerisinde çalışıyorlar.
+Bunlara <strong>Text-based User Interface (TUI)</strong> tarzı araçlar diyebiliriz. <sup id="fnref:5f"><a href="#fn:5f" class="footnote" rel="footnote" role="doc-noteref">3</a></sup>
+<code class="language-plaintext highlighter-rouge">xconfig</code> QT kütüphanesi, <code class="language-plaintext highlighter-rouge">gconfig</code> ise GTK kütüphanesini kullanan <strong>Graphical
+User Interface (GUI)</strong> araçlardır. <sup id="fnref:6f"><a href="#fn:6f" class="footnote" rel="footnote" role="doc-noteref">4</a></sup> Terminal tabanlı olması sebebiyle
+pratikliğinden, GUI kütüphaneleri gerektirmemesinden (<code class="language-plaintext highlighter-rouge">libncurses-dev</code>
+yeterlidir) dolayı SSH gibi bağlantılar üzerinden de sorunsuz çalışabilmesinden
+(uzak bir geliştirme bilgisayarına SSH ile bağlısınız ve Buildroot orada
+çalışıyor diyelim) dolayı <code class="language-plaintext highlighter-rouge">menuconfig</code> ve <code class="language-plaintext highlighter-rouge">nconfig</code> araçları gözlemlerime göre
+daha sık kullanılmaktadır.</p>
+
+<script async="" id="asciicast-ePL2Br7BDggFHRDB4cx5fdiky" src="https://asciinema.org/a/ePL2Br7BDggFHRDB4cx5fdiky.js"></script>
+
+<p>Burada ilk olarak <code class="language-plaintext highlighter-rouge">git checkout -b bootlin 2022.02</code> komutu ile <code class="language-plaintext highlighter-rouge">2022.02</code>
+versiyonundan (tag) <code class="language-plaintext highlighter-rouge">bootlin</code> isimli bir branch oluşturuyoruz. <code class="language-plaintext highlighter-rouge">make help</code> ile
+Buildroot’un desteklediği işlemlere bakıyoruz. <code class="language-plaintext highlighter-rouge">make clean</code> eğer varsa kalmış
+ara dosyaların temizlenmesini sağlıyor. Biz zaten ilk defa çalışmaya
+başladığımız için bu işlem aslında gerekli değil bu aşamada. <code class="language-plaintext highlighter-rouge">make menuconfig</code>
+ile, <code class="language-plaintext highlighter-rouge">menuconfig</code> aracını çalıştırıp Buildroot ile beraber gelen <code class="language-plaintext highlighter-rouge">Kconfig</code>
+dosyalarına göre konfigürasyonu görüyoruz. Burada ok, <code class="language-plaintext highlighter-rouge">Enter</code>, <code class="language-plaintext highlighter-rouge">ESC</code> ve <code class="language-plaintext highlighter-rouge">TAB</code>
+tuşları ile gezinebiliyoruz. Benzer şekilde <code class="language-plaintext highlighter-rouge">make nconfig</code> ile <code class="language-plaintext highlighter-rouge">nconfig</code> aracını
+gösteriyorum. Dikkat ederseniz ikinci <code class="language-plaintext highlighter-rouge">make menuconfig</code> komutu hemen çalışıyor
+ama <code class="language-plaintext highlighter-rouge">make clean</code> dersek, <code class="language-plaintext highlighter-rouge">make menuconfig</code> tarafından kullanılan dosyalar da
+silineceği için tekrar <code class="language-plaintext highlighter-rouge">make menuconfig</code> dediğim zaman menünün açılması zaman
+alıyor.</p>
+
+<p>Şimdi gelin, <code class="language-plaintext highlighter-rouge">gconfig</code> ve <code class="language-plaintext highlighter-rouge">xconfig</code> araçlarına bakalım.</p>
+
+<script async="" id="asciicast-tsN4RuKhng57Ww7xaztQN3Icv" src="https://asciinema.org/a/tsN4RuKhng57Ww7xaztQN3Icv.js"></script>
+
+<p>Kayıttan da görebileceğiniz üzere <code class="language-plaintext highlighter-rouge">gconfig</code> ve <code class="language-plaintext highlighter-rouge">xconfig</code> araçlarını hemen
+kullanamadık. Önceki bölümde de belirttiğim gibi, <code class="language-plaintext highlighter-rouge">gconfig</code> aracı GTK kütüphanelerine,
+<code class="language-plaintext highlighter-rouge">xconfig</code> aracı ise QT kütüphanelerine bağımlı.</p>
+
+<p><code class="language-plaintext highlighter-rouge">gconfig</code> i çalıştırabilmek için:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">sudo apt install libgtk2.0-dev libglib2.0-dev libglade2-dev
+</span></code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">xconfig</code> için:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">sudo apt install qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools
+</span></code></pre></div></div>
+
+<p>paketlerini kurmak gerekti. Bu kurulumlardan sonra <code class="language-plaintext highlighter-rouge">make gconfig</code> ve
+<code class="language-plaintext highlighter-rouge">make xconfig</code> komutlarını çalıştırabildim. <code class="language-plaintext highlighter-rouge">menuconfig</code> ve <code class="language-plaintext highlighter-rouge">nconfig</code> komutlarının
+aksine bu iki konfigürasyon aracının görüntülerini yukarıdaki terminal
+kaydında göremiyorsunuz çünkü bu araçlar ayrı bir pencerede açılıyor. Belirttiğim
+gibi, GUI araçları. Örnek olması açısından, birer adet görüntüyü ekliyorum.</p>
+
+<p><strong>İlerleyen bölümlerde sadece <code class="language-plaintext highlighter-rouge">menuconfig</code> veya <code class="language-plaintext highlighter-rouge">nconfig</code> kullanacağız.</strong></p>
+
+<p><img data-srcset="/assets/img/24/5-gconfig.png" srcset="/assets/lazyload.png" src="/assets/img/24/5-gconfig.png" alt="gconfig" class="centered lazyload" /></p>
+
+<p class="text-align-center">gconfig</p>
+
+<p><img data-srcset="/assets/img/24/5-xconfig.png" srcset="/assets/lazyload.png" src="/assets/img/24/5-xconfig.png" alt="xconfig" class="centered lazyload" /></p>
+
+<p class="text-align-center">xconfig</p>
+
+<h2 id="derleyelim-️">Derleyelim 🛠️</h2>
+
+<p>Geliştirme ortamımız hazır, ilk derlememizi yapalım.</p>
+
+<p>Burada Bootlin’in, Beaglebone için hazırladığı <a href="https://bootlin.com/doc/training/buildroot/buildroot-labs.pdf">lab
+materyallerini</a>
+takip edeceğim (Sayfa 5, <code class="language-plaintext highlighter-rouge">Configuring Buildroot</code> kısmı). Amacımız her
+aşamayı anlamak değil, kurduğumuz araçları test etmek olacak. Aşamaları tek tek
+buraya yazmıyorum, Bootlin’in dokümanlarından bakarak yapacağım. Aşağıdaki
+kayıta ve lab dokümanlarına bakarak siz de kendinizde deneyebilirsiniz.</p>
+
+<p>Bakalım karta yüklenmeye hazır bir şeyler çıkartabilecek miyiz?</p>
+
+<script async="" id="asciicast-eBguOqKc7hwk8kudfMJSl8rZ5" src="https://asciinema.org/a/eBguOqKc7hwk8kudfMJSl8rZ5.js"></script>
+
+<p>Belirttiğim gibi şimdilik sadece “Derleyebiliyor muyuz?” diye baktığımız için
+seçenekleri Bootlin’in tariflediği gibi yapıp, geçiyorum. İlerleyen bölümlerde
+detaylara gireceğiz (muhtemelen).</p>
+
+<h3 id="openssl-">OpenSSL? 🔒</h3>
+
+<p>Burada bana ilginç olan, kernel seçeneklerinde OpenSSL ile ilgili bir ayar
+yapmamız oldu. İlk başta “Acaba Secure Boot gibi bir mekanizma için bir şeylerin
+imzalanması mı gerekiyor?” diye düşündüm, sonra bu düşünceden uzaklaştım.</p>
+
+<p>Bootlin’in dokümanlarında şöyle bir ifade geçiyor:</p>
+
+<blockquote>
+  <p>The kernel configuration for this platform requires having OpenSSL available on
+the host machine. To avoid depending on the OpenSSL development files installed
+by your host machine Linux distribution, Buildroot can build its own version:
+just enable the Needs host OpenSSL option.</p>
+</blockquote>
+
+<p>Bunun tam neden olduğunu henüz anlayamasam da platformun kablosuz özelliğinden
+dolayı olabileceğini düşünüyorum <sup id="fnref:7f"><a href="#fn:7f" class="footnote" rel="footnote" role="doc-noteref">5</a></sup>. Karşılaştırma yapmak adına, Bootlin’in
+eğitim için önerdiği ikinci platformun, <a href="https://www.st.com/en/evaluation-tools/stm32mp157a-dk1.html">STM32MP1 Discovery Kit
+1</a>, <a href="https://bootlin.com/doc/training/buildroot-stm32/buildroot-stm32-labs.pdf">lab
+dokümanlarına</a>
+da baktım. Burada da aynı ifade geçiyor fakat bu platfomun da Bluetooth ve Wi-Fi
+özellikleri var. O yüzden hala bununla ilgili olabileceğini düşünüyorum, ilerleyen
+zamanlarda burayı kurcalarız.</p>
+
+<hr />
+
+<p>Bootlin’in dokümanlarında önerdiği şekilde,</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">make 2&gt;</span>&amp;1 | <span class="nb">tee </span>build.log
+</code></pre></div></div>
+
+<p>derlemeyi başlatalım. Burada sadece <code class="language-plaintext highlighter-rouge">make</code> deseniz de yeterli. Önceki bölümde
+anlattığım gibi burada <code class="language-plaintext highlighter-rouge">tee</code> komutu, <code class="language-plaintext highlighter-rouge">make</code> in oluşturduğu yazıların, yani logların,
+hem ekrana gösterilmesini hem de <code class="language-plaintext highlighter-rouge">build.log</code> isimli bir dosyaya kaydedilmesini
+sağlıyor. <code class="language-plaintext highlighter-rouge">2&gt;&amp;1</code> ifadesi ise <code class="language-plaintext highlighter-rouge">make</code> in <code class="language-plaintext highlighter-rouge">stderr</code> çıkışının da <code class="language-plaintext highlighter-rouge">stdout</code> çıkışına
+yönlendirilmesini sağlıyor, ama şu aşamada konumuzun dışında bu kavram.</p>
+
+<p>İlk derleme girişimimizin kaydına bir bakalım:</p>
+
+<script async="" id="asciicast-YgRAdbY9SlloLd0xQQ5YFq10B" src="https://asciinema.org/a/YgRAdbY9SlloLd0xQQ5YFq10B.js"></script>
+
+<p>Loglar akarken şunlar dikkatimi çekti:</p>
+
+<ul>
+  <li>Burada Buildroot’un arka planda birçok işlem yaptığını görebiliyoruz. İşte
+böyle bir araç kullanmasaydık, her şeyi elle yapsaydık, buralarda muhtemelen
+hatalar yapacaktık ve saatler sürecekti. Bu kavrama serinin
+<a href="/buildroot-ogreniyoruz-02.html">ikinci bölümünde</a>
+detaylıca değinmiştik.</li>
+  <li>Beklendiği üzere internetten bir şeyler çekiyor. İleriye soru: Offline ortamda
+derleme yapabilir miyiz eğer geliştirme ortamımızın internet bağlantısı yoksa?</li>
+  <li>Toolchain de (derleyici vs) internetten hazır olarak çekildi, bunun ayarını
+yapmıştık.</li>
+  <li>Busybox çekildi.</li>
+</ul>
+
+<p><strong>Fakat patladık!</strong> 🤦</p>
+
+<p>İlk girişimimiz hata ile sonuçlandı, ben dedim demek istemiyorum ama bir
+önceki bölümde muhtemelen problemsiz olmayacak demiştim. Dikkat ederseniz
+<code class="language-plaintext highlighter-rouge">openssl/evp.h</code> dosyasının bulunamadığı bize söyleniyor. OpenSSL dedim dedim,
+başımıza dert açtı. 😅</p>
+
+<p>Normalde bu tarz header dosyaları, ilgili bileşenin “geliştirme paketleri”
+kurulu değilse sistemde bulunmuyor. Fakat Bootlin’in dokümanlarında şöyle
+bir açıklama vardı, yukarıda vermiştim:</p>
+
+<blockquote>
+  <p>…
+To avoid depending on the OpenSSL development files installed
+by your host machine Linux distribution, Buildroot can build its own version:
+…</p>
+</blockquote>
+
+<p>Benim beklentim, benim sistemimde OpenSSL’in geliştirme dosyaları olmasa da
+bir problem yaşamamamdı. Yanlış anlamış olabilirim, ama <code class="language-plaintext highlighter-rouge">Needs host OpenSSL</code>
+seçeneğini açtığımız için benim sistemimde OpenSSL’in geliştirme dosyaları
+olmasa da Buildroot’un temin etmesini bekliyordum.</p>
+
+<p>İnternette de tahmin ettiğim şekilde bir çözüm sunulmuş <sup id="fnref:8f"><a href="#fn:8f" class="footnote" rel="footnote" role="doc-noteref">6</a></sup>: Derleme yaptığımız
+sisteme OpenSSL’in geliştirme paketini kuralım ve derlemeyi tekrar deneyelim.</p>
+
+<script async="" id="asciicast-jEdZORfgObR4rYvAbM5In3Jee" src="https://asciinema.org/a/jEdZORfgObR4rYvAbM5In3Jee.js"></script>
+
+<p>Bu sayede hatayı düzeltmiş olduk. Tekrar <code class="language-plaintext highlighter-rouge">make</code> dediğim zaman derleme işlemi
+kaldığı yerden devam etti. <strong>Bu da <code class="language-plaintext highlighter-rouge">make</code> gibi sistemlerin bizlere sunduğu en
+büyük avantajlardan biri:</strong> Sadece değişen veya yarım kalan kısımlar derleniyor,
+bu da büyük bir zaman avantajı oluşturuyor. Gerçi bizim durumda kernel derlendiği
+için zaman avantajını görememiş gibi olduk ama tüm işler bittikten sonra tekrar
+<code class="language-plaintext highlighter-rouge">make</code> derseniz aslında hiçbir işlem yapılmadığını görebilirsiniz. Çünkü hiç
+bir ayar değiştirmedik, o yüzden var olan bir çıktıyı tekrar oluşturmaya gerek
+yok diye düşünüyor <code class="language-plaintext highlighter-rouge">make</code>.</p>
+
+<p>Bu sırada bir hatamı daha düzeltmiş oldum. Bootlin dokümanlarına göre, Kernel
+ayarlarına <code class="language-plaintext highlighter-rouge">defconfig</code> olarak <code class="language-plaintext highlighter-rouge">omap2plus_defconfig</code> yazmamız gerekiyordu, ben de
+o şekilde yazdım. Fakat loglardan anladığım kadarıyla “birileri” bunun sonuna
+otomatik olarak <code class="language-plaintext highlighter-rouge">_defconfig</code> ekliyor ve <code class="language-plaintext highlighter-rouge">omap2plus_defconfig_defconfig</code> oluyor,
+bu da hataya sebep oluyor. O yüzden tekrar ayarlara girip, bu sefer
+değişiklik olsun diye <code class="language-plaintext highlighter-rouge">menu nconfig</code> kullandım, <code class="language-plaintext highlighter-rouge">omap2plus_defconfig</code> yerine
+<code class="language-plaintext highlighter-rouge">omap2plus</code> yazdım ve devam edebildim.</p>
+
+<blockquote>
+  <p>Yukarıdaki paragraftaki hatamı videoyu çekerken fark ettim. Bootlin dokümanları
+aslında doğruymuş, ben yanlış yazmışım en başta.</p>
+</blockquote>
+
+<p>Gözlemler:</p>
+
+<ul>
+  <li>Kernel kaynak kodudan baştan derleniyor ve derleme sırasında çoklu çekirdek
+kullanımı oluyor. Çok fazla RAM tüketimi yok, fakat çekirdek sayınız ne kadar
+çok olursa belli oranda derleme süreniz azalacaktır.</li>
+  <li>Her ne kadar bir önceki aşamada OpenSSL ile ilgili bir şeyler kurmamız gerekse
+de yine OpenSSL ile ilgili bir şeylerin indirildiğini gördüm. Yani seçtiğimiz
+<code class="language-plaintext highlighter-rouge">Needs host OpenSSL</code> ayarı bir etki gösteriyor bence ama niye header dosyalarını
+kurmamız gerekti tam çözemedim. Onu niye temin etmiyor?</li>
+  <li>Loglar arasında <code class="language-plaintext highlighter-rouge">TI</code> ve <code class="language-plaintext highlighter-rouge">Wireless</code> kelimeleri geçiyor. BeagleBone Black, bir
+Texas Instruments üretimi SoC barındırdığı ve Wi-Fi bağlantısı olduğunu düşününce
+bunlar sürpriz değil.</li>
+</ul>
+
+<p>Derleme sonrasında çıktılar <code class="language-plaintext highlighter-rouge">output/images</code> altında oluşuyor:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">am335x-boneblack-wireless.dtb</code>: Bizim devicetree’miz.</li>
+  <li><code class="language-plaintext highlighter-rouge">MLO</code>: U-Boot SPL (Secondary Program Loader)’in adı, config ile biz seçmiştik.</li>
+  <li><code class="language-plaintext highlighter-rouge">rootfs.tar</code>: RootFS dosya sistemimiz. Yani oluşturduğumuz Linux dağıtımı asılnda
+Karta koyacağımız Linux’ta buradaki dosyalar olacak.</li>
+  <li><code class="language-plaintext highlighter-rouge">u-boot.bin</code>: U-Boot yani bootloader</li>
+  <li><code class="language-plaintext highlighter-rouge">zImage</code>: Sıkıştırılmış Linux yani kernel dosyası. Kart ayağa kalkarken
+Bootloader tarafından açılıp, RAM’e konulacak.</li>
+</ul>
+
+<p>Hatırlarsanız önceki bölümde Buildroot’un derleme süresi ve RootFS dosya boyutu
+açısından iddalı olduğunu görmüştük. 2 MB’a kadar düşebildiğini söylüyordu, biz
+şu an 31 MB’tayız (<code class="language-plaintext highlighter-rouge">rootfs.tar</code>). Belki ilerleyen bölümlerde bunu küçültmeye
+yönelik lablarımız da olur, bilemiyorum. Derleme süresi olarak baktığımızda da
+RootFS kısmının (bu durumda Busybox) görece hızlı olduğunu düşünüyorum. En
+çok süreyi kernelin derlenmesi aldı.</p>
+
+<h2 id="kapanış">Kapanış</h2>
+
+<p>Bir sonraki bölümde oluşturduğumuz imajı (RootFS + Bootloader + Kernel) karta
+atıp, deneyeceğiz. Fakat şöyle bir sorun var, ilk bölümde bahsetmiştim:</p>
+
+<p><strong>Bende BeagleBone Black yok, diğer STM32 kiti de yok!</strong></p>
+
+<p>BeagleBone Black temin etmeye çalıştım ama bulamadım. Bende ilk BeagleBone var,
+beyaz olan ve birkaç farklı model RaspberryPi var. Artık bir sonraki bölüme
+kadar birini seçip devam edeceğim. Bootlin’in eğitiminde olmayan bir kartı
+kullanmak daha da öğretici olabilir belki 😇.</p>
+
+<p>Kendinize iyi bakın 🤒 🙋.</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1f">
+      <p><a href="https://buildroot.org/downloads/manual/manual.html#requirement">https://buildroot.org/downloads/manual/manual.html#requirement</a> <a href="#fnref:1f" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:1f:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:4f">
+      <p><a href="https://www.python.org/doc/sunset-python-2/">https://www.python.org/doc/sunset-python-2/</a> <a href="#fnref:4f" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:5f">
+      <p><a href="https://en.wikipedia.org/wiki/Text-based_user_interface">https://en.wikipedia.org/wiki/Text-based_user_interface</a> <a href="#fnref:5f" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:6f">
+      <p><a href="https://en.wikipedia.org/wiki/Graphical_user_interface">https://en.wikipedia.org/wiki/Graphical_user_interface</a> <a href="#fnref:6f" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:7f">
+      <p><a href="https://buildroot.uclibc.narkive.com/BX6jn0vO/patch-04-23-configs-qemu-x86-64-defconfig-remove-kernel-options-that-need-openssl-libelf#post9">https://buildroot.uclibc.narkive.com/BX6jn0vO/patch-04-23-configs-qemu-x86-64-defconfig-remove-kernel-options-that-need-openssl-libelf#post9</a> <a href="#fnref:7f" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:8f">
+      <p><a href="https://elinux.org/Building_BBB_Kernel">https://elinux.org/Building_BBB_Kernel</a> <a href="#fnref:8f" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+    
+    <hr>
+    
+
+
+
+
+
+
+    
+    
+    
+<!--0-->
+        
+        
+            
+                
+                
+
+
+
+
+
+
+
+<ul class="post-list">
+<li style="background: #DDEEEE; padding: 10px; border-radius: 10px;">
+<h4>🤓 Bir içerik daha?</h4>
+
+<center>
+<p>
+<a class="post-link" href="/self-hosted-5-2.html"><img alt="Teaser" data-srcset="/assets/img/24/13.jpg" srcset="/assets/lazyload.png" src="/assets/img/24/13.jpg" data-srcset="/assets/img/24/13.jpg"  srcset="/assets/lazyload.png" style="border-radius: 10px; height: auto; width: 95%; max-width: 700px;" class="lazyload"></a>
+</p>
+</center><h3>
+<a class="post-link" href="/self-hosted-5-2.html">
+Ekip Veriminizi Arttıracak, OFFLINE Çalışabilen 5 Araç - 2
+
+</a>
+</h3><h4>Bu yazıda offline da çalışabilen ve çalışma veriminizi arttıracağını düşündüğüm 5 araçtan bahsediyorum.</h4></li>
+</ul>
+
+
+  </div>
+
+  
+  <div class="revisions" style="border-top: 2px dashed; margin-top: 10px;"><h2 style="padding-top: 10px;">🔄 Değişiklikler (Son 10) </h2><ul style="list-style-type: none;">
+    
+      <li>
+        <div class="post-meta"><code>2025-05-09</code> Revert "to ayazar.dev"
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2025-04-02</code> to ayazar.dev
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2025-03-30</code> Revert "to ayazar.dev"
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2025-03-16</code> to ayazar.dev
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-10-19</code> live ve yeni yazı, capraz derleme
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-10-19</code> revert ayazar.dev
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-10-06</code> ayazar.dev
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-10-05</code> here
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-09-28</code> to ayazar.dev
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-09-14</code> to FSElektronik</div>
+      </li>
+    
+    </ul>
+  </div>
+  <div class="gicus_comments" style="border-top: 2px dashed; margin-top: 10px;"><h2 style="padding-top: 10px;">💭 Yorumlar</h2>
+  <p><small>Yorum altyapısı <a href="https://giscus.app/">giscus</a> tarafından (evet tarafından!) sağlanmaktadır.
+    Yorum yazabilmek için <a href="https://github.com/">GitHub</a> hesabınız üzerinden giriş yapmanız gerekmektedir.
+    Yazılan yorumlar <a href="https://github.com/alperyazar/home/discussions/categories/comments">Github Discussions</a> üzerinde saklanmaktadır.</small></p><script src="https://giscus.app/client.js"
+        data-repo="alperyazar/home"
+        data-repo-id="R_kgDOJoQiqA"
+        data-category="Comments"
+        data-category-id="DIC_kwDOJoQiqM4Cne4h"
+        data-mapping="specific"
+        data-term='24-5''
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"data-lang="tr"data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+<p>🫆 <code>24-5</code></p>
+</div><a class="u-url" href="/buildroot-ogreniyoruz-04.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Alper Yazar</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Alper Yazar</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/alperyazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">alperyazar</span></a></li><li><a href="https://www.linkedin.com/in/alperyazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">alperyazar</span></a></li><li><a href="https://mastodon.social/@ayazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#mastodon"></use></svg> <span class="username">ayazar</span></a></li><li><a href="https://youtube.com/%40ayazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">@ayazar</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>&quot;Full Stack Electronics&quot; Engineer<br/>© 2011 - 2025<br/><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a></p>
+        <p><a href="/disclaimer.html" />Disclaimer</a> <a href="/specimen.html" />Specimen</a> <a href="/" />Contact</a><br><a href='/support.html' />❤️ Destek / Support</a></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer><!-- Default Statcounter code for Home
+https://www.alperyazar.com -->
+<script type="text/javascript">
+  var sc_project=12712694;
+  var sc_invisible=1;
+  var sc_security="1c071fc4";
+  </script>
+  <script type="text/javascript"
+  src="https://www.statcounter.com/counter/counter.js"
+  async></script>
+  <noscript><div class="statcounter"><a title="web statistics"
+  href="https://statcounter.com/" target="_blank"><img
+  class="statcounter"
+  src="https://c.statcounter.com/12712694/0/1c071fc4/1/"
+  alt="web statistics"
+  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+  <!-- End of Statcounter Code --></body>
+
+</html>

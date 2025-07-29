@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>FPGA, Git, DevOps, CI/CD | Alper Yazar</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="FPGA, Git, DevOps, CI/CD" />
+<meta name="author" content="Alper Yazar" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Modern yazılım geliştirme yöntemlerini neden FPGA projelerine uyarlamayalım?" />
+<meta property="og:description" content="Modern yazılım geliştirme yöntemlerini neden FPGA projelerine uyarlamayalım?" />
+<link rel="canonical" href="https://www.alperyazar.com/fpga-git-cicd-devops.html" />
+<meta property="og:url" content="https://www.alperyazar.com/fpga-git-cicd-devops.html" />
+<meta property="og:site_name" content="Alper Yazar" />
+<meta property="og:image" content="https://www.alperyazar.com/assets/img/25/7.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-07-29T00:00:00+03:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://www.alperyazar.com/assets/img/25/7.png" />
+<meta property="twitter:title" content="FPGA, Git, DevOps, CI/CD" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alper Yazar"},"dateModified":"2025-07-29T22:36:36+03:00","datePublished":"2025-07-29T00:00:00+03:00","description":"Modern yazılım geliştirme yöntemlerini neden FPGA projelerine uyarlamayalım?","headline":"FPGA, Git, DevOps, CI/CD","image":"https://www.alperyazar.com/assets/img/25/7.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.alperyazar.com/fpga-git-cicd-devops.html"},"url":"https://www.alperyazar.com/fpga-git-cicd-devops.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css">
+    <script src="/assets/js/lazysizes.min.js" async=""></script><link type="application/atom+xml" rel="alternate" href="https://www.alperyazar.com/feed.xml" title="Alper Yazar" /><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"><!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S3B80PC7FC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-S3B80PC7FC');
+    </script>
+
+    
+
+    
+    <!-- Adsense -->
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4580059638713287"
+    crossorigin="anonymous"></script> -->
+    <link rel="me" href="https://mastodon.social/@ayazar">
+  </head>
+<body><header class="site-header" role="banner">
+
+    <div class="wrapper"><a class="site-title" rel="author" href="/">Alper Yazar</a><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewBox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger"><a class="page-link" href="/blog/">📝 Blog</a><a class="page-link" href="/search.html">🔍 Search</a><!-- <a class="page-link" href="https://ayazar.dev" target="_blank">🗂️ Notes</a> -->
+            <a rel="me" class="page-link" href="https://www.linkedin.com/in/alperyazar" target="_blank">💼 LinkedIn</a>
+            <a rel="me" class="page-link" href="https://www.youtube.com/@ayazar" target="_blank">🎬 YouTube</a>
+          </div>
+        </nav></div>
+  </header>
+
+  
+
+<div id="son_yazi_banner" style="
+background: linear-gradient(to right, rgba(250, 191, 200, 0.3), rgba(23, 86, 169, 0.2));
+color: rgb(52, 55, 67);
+text-align: center;
+padding: 15px;
+border-radius: 10px;
+border: 0px dashed rgba(250, 191, 200, 0.5);
+box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+margin: 10px 0px 10px 0px;">🚀 Son blog yazısı:&nbsp;<a href="/fpga-git-cicd-devops.html" style="font-weight: bold;"><span style="font-weight: bold;">FPGA, Git, DevOps, CI/CD</span></a>&nbsp;🇹🇷</div>
+
+  <div id="progressBar" class="progress-bar"></div>
+
+  <script>
+    // Listen for scroll events on the window
+window.onscroll = function() {
+    // Call the function to update the progress bar
+    updateProgressBar();
+};
+
+function updateProgressBar() {
+    // Get the total height of the page
+    var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    // Get the current scroll position
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    // Calculate the scroll percentage
+    var scrollPercentage = (scrollTop / scrollHeight) * 100;
+    // Update the width of the progress bar
+    document.getElementById("progressBar").style.width = scrollPercentage + "%";
+}
+  </script>
+
+<a href='/support.html' class="floating-icon-heart" width="48" target="_blank"><img src='/assets/img/icons8-heart-64.png' alt="❤️ Support/Destek" title="❤️ Support/Destek"></a>
+
+<div id="special-flag">
+  <a id="special-flag-link" href="#" target="_blank" title="">
+    <img src='/assets/img/bayrak.png' alt="Türk Bayrağı">
+  </a>
+</div>
+
+<script>
+  /*
+   * Ref: https://www.pau.edu.tr/tks/tr/sayfa/milli-ve-dini-bayramlar
+   * Ref: https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=859034&MevzuatTur=2&MevzuatTertip=5
+   * Ref: https://www.eserotomatikbayrak.com/bayrak-asilacak-tarihler.pdf
+   * Net bir şey bulmak zor :(
+  */
+  const specialDays = [
+    ["03-18", "https://tr.wikipedia.org/wiki/18_Mart_%C3%87anakkale_Zaferi_ve_%C5%9Eehitleri_Anma_G%C3%BCn%C3%BC", "Çanakkale Zaferi ve Şehitleri Anma Günü"],
+    ["04-23", "https://tr.wikipedia.org/wiki/23_Nisan_Ulusal_Egemenlik_ve_%C3%87ocuk_Bayram%C4%B1", "Ulusal Egemenlik ve Çocuk Bayramı"],
+    ["05-01", "https://tr.wikipedia.org/wiki/1_May%C4%B1s_%C4%B0%C5%9F%C3%A7i_Bayram%C4%B1", "Emek ve Dayanışma Günü"],
+    ["05-19", "https://tr.wikipedia.org/wiki/19_May%C4%B1s_Atat%C3%BCrk%27%C3%BC_Anma,_Gen%C3%A7lik_ve_Spor_Bayram%C4%B1", "Atatürk'ü Anma, Gençlik ve Spor Bayramı"],
+    ["07-15", "https://tr.wikipedia.org/wiki/Demokrasi_ve_Mill%C3%AE_Birlik_G%C3%BCn%C3%BC", "Demokrasi ve Millî Birlik Günü"],
+    ["08-30", "https://tr.wikipedia.org/wiki/30_A%C4%9Fustos_Zafer_Bayram%C4%B1", "Zafer Bayramı"],
+    ["10-29", "https://tr.wikipedia.org/wiki/29_Ekim_Cumhuriyet_Bayram%C4%B1", "Cumhuriyet Bayramı"],
+    ["11-10", "https://tr.wikipedia.org/wiki/10_Kas%C4%B1m_Atat%C3%BCrk%27%C3%BC_anma_g%C3%BCn%C3%BC_ve_Atat%C3%BCrk_haftas%C4%B1", "Atatürk'ü Anma Günü"]
+  ];
+
+  const today = new Date();
+  const todayKey = `${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+
+  const match = specialDays.find(([key]) => key === todayKey);
+  if (match) {
+    const [_, url, tooltip] = match;
+    const flagDiv = document.getElementById("special-flag");
+    const flagLink = document.getElementById("special-flag-link");
+    flagLink.href = url;
+    flagLink.title = tooltip;
+    flagDiv.style.display = "block";
+  }
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">FPGA, Git, DevOps, CI/CD</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2025-07-29T00:00:00+03:00" itemprop="datePublished">
+        2025-07-29
+      </time>• 🇹🇷<span> • 25-7</span>
+      </p>
+  </header><div style="background: #eeeeff; border-radius: 2px; margin: 2px;"><center><p><span data-nosnippet>🔤 <small><a rel=”nofollow” href="https://www-alperyazar-com.translate.goog/fpga-git-cicd-devops.html?_x_tr_sl=auto&_x_tr_tl=en">Translate with Google</a></small> 🔤</span></p></center></div><div class="post-content e-content" itemprop="articleBody"><center>
+    <p>
+    <a class="post-link" href="/fpga-git-cicd-devops.html"><img alt="Teaser" data-srcset="/assets/img/25/7.png" srcset="/assets/lazyload.png" src="/assets/img/25/7.png" data-srcset="/assets/img/25/7.png"  srcset="/assets/lazyload.png" style="border-radius: 10px;" class="lazyload"></a>
+    </p>
+    </center><p><i>Modern yazılım geliştirme yöntemlerini neden FPGA projelerine uyarlamayalım?</i></p>
+    <hr><div style="background: #ffec99; border-radius: 2px; margin: 2px;"><center><p><span data-nosnippet>ℹ️ <small><a href="/disclaimer.html">Feragatname / Sorumluluk Reddi</a></small> ℹ️</span></p></center></div><hr>
+    <p>Bu yazımda,</p>
+
+<ul>
+  <li>FPGA projelerini Git gibi bir versiyon kontrolü ile neden takip etmemiz
+gerektiğinden</li>
+  <li>Bu süreçte dikkat etmemiz gereken temel noktalardan</li>
+  <li>Yazılım dünyasındaki DevOps, CI/CD gibi kavramlardan nasıl
+faydalanabileceğimizden</li>
+</ul>
+
+<p>bahsedeceğim.</p>
+
+<p>Bu konulardaki fikirlerimi serbest, biraz da karışık, formatta anlattığım bir
+blog yazısı olacak.</p>
+
+<p>Hadi başlayalım!</p>
+
+<h2 id="fpga-projeleri-ve-git">FPGA Projeleri ve Git</h2>
+
+<p>2018 yılının başlarında <a href="http://accloud.eee.metu.edu.tr/about.html">ACCLOUD</a>,
+Accelerated Cloud, isimli bir AR-GE projesini başlatmıştık. Yaklaşık 3 yıl süren
+bu projenin birçok aşamasında baştan sona görev aldım. Bu projede yoğun bir FPGA
+kullanımı vardı ve bugüne kadar çalıştığım takım yapısından farklı olarak
+fiziksel olarak bir arada olmayan, aynı FPGA tasarımına farklı lokasyonlardan
+katkı sunan kişilerden oluşan bir takım oluştu. Bu durum, bana o güne kadar
+biraz daha deneysel takıldığım <strong>Acaba FPGA projelerini bir yazılım projesi gibi
+düzgün bir şekilde Github/Gitlab gibi platformlarda nasıl tutabiliriz?</strong>
+başlıklı araştırmalarımı ve denemelerimi hayata geçirmek için bir fırsat
+oluşturdu. FPGA projelerimizi, Gitlab üzerinde tutmaya başladık. Bu çalışmada
+Xilinx, şimdiki AMD, firmasının ürünleri ve araçları kullanıldı. Fakat önemli
+bir engeller vardı: <strong>Xilinx gibi FPGA firmalarının araçlarının çoğu, Vivado
+gibi, Git ile konfigürasyon takibi yapmaya ve CI/CD süreçleri ile otomatik
+derleme yapmaya çok da uygun değildi. Hangi dosyalar versiyon kontrolünde
+olmalıydı? CI/CD süreçlerinde otomatik derleme en kolay nasıl yapılabilirdi? Hem
+Windows, hem Linux üzerinde çalışan kişiler için uyumlu bir sistem nasıl
+olabilirdi?</strong></p>
+
+<p>Bu yazıda bahsettiklerim o yıllardan beri biriken çalışmalara dayanmaktadır.</p>
+
+<hr />
+
+<p>Kağıt üstünde baktığınız zaman, Vivado’nun 2010’lu yılların ilk versiyonlarından
+itibaren Git ile uyumlu olduğunu söylediğini görebilirsiniz. <strong>Fakat bunun ayağı
+ne kadar yere basıyor?</strong> Bugün bir yazılım projesini, bir framework ya da araç
+ile oluşturduğunuz zaman size birçoğu bir <code class="language-plaintext highlighter-rouge">.gitignore</code> dosyası sunuyor. Örneğin
+bilgisayarınızdaki Word dosyalarını, <code class="language-plaintext highlighter-rouge">.docx</code>, alıp bodoslama <code class="language-plaintext highlighter-rouge">git init</code>, <code class="language-plaintext highlighter-rouge">git
+add .</code> ve <code class="language-plaintext highlighter-rouge">git commit</code> ile Git versiyon kontrolü altına aldığınızda Word, Git
+uyumlu bir program mı oluyor?</p>
+
+<p>Vivado gibi EDA araçları, sentez/derleme sırasında birçok ara dosya üretmekte.
+Günün sonunda sizin amacınız belki 5-6 adet VHDL/Verilog/Block Design
+dosyasından bir bitstream’e gitmek. Ama araçlar bu hedef bitstream dosyasını
+üretirken onlarca, belki yüzlerce ara dosyalar üretebiliyor.</p>
+
+<p>Bir projenin sağlıklı bir şekilde versiyon kontrolünün yapılabilmesi için
+Git gibi bir sistemde hangi dosyaların gerçekten bir kaynak dosya olduğu
+hangilerinin ise göz ardı edilebileceğini bilmek gerekiyor. Örneğin sentez
+ya da derleme sırasında üretilen ara dosyaların prensip olarak versiyon kontrol
+altında olmaması gerekiyor. Olmasının getireceği en önemli problemlerden biri
+<code class="language-plaintext highlighter-rouge">git diff</code> gibi bir komut ile iki <em>commit</em> arası farka baktığınız zaman aslında
+anlamlı olmayan dosyaların size bir <strong>diff noise</strong> yaratacak olmasıdır.
+Bunun dışında başka durumlar da var elbette ama yazıyı çok uzatmak istemiyorum.</p>
+
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable MD013 MD033 -->
+<p><img data-srcset="https://media1.tenor.com/m/3V2uRx-itS8AAAAC/musicbyblanks-blanks.gif" srcset="/assets/lazyload.png" src="https://media1.tenor.com/m/3V2uRx-itS8AAAAC/musicbyblanks-blanks.gif" alt="GIF" class="centered lazyload" />
+<!-- markdownlint-restore --></p>
+
+<p class="text-align-center">Saçma <code class="language-plaintext highlighter-rouge">git diff</code> çıktıları arasında önemli farkları ararken ben…
+<a href="https://tenor.com/view/musicbyblanks-blanks-simon-de-wit-dutch-musician-gif-21817617">GIF</a></p>
+
+<hr />
+
+<p><img data-srcset="/assets/img/25/7-vivado-git.png" srcset="/assets/lazyload.png" src="/assets/img/25/7-vivado-git.png" alt="Vivado ve Git" class="centered lazyload" /></p>
+
+<p class="text-align-center">Vivado’dan örnek verecek olursak ara çıktı dosyaları ve bitstream dosyası da,
+şaşırtıcı gelebilir belki, versiyon kontrol altında olmamalı. Kaynak kodlarınız
+ile beraber projenizin ayarları ise (<code class="language-plaintext highlighter-rouge">.xise</code> ya da <code class="language-plaintext highlighter-rouge">.xpr</code> olmak zorunda değil,
+başka alternatif yollar da olabilir) versiyon kontrolü altında olmalı.</p>
+
+<blockquote>
+  <p>💡 Bir projenin çalışma dizinin en azından düzgün bir <code class="language-plaintext highlighter-rouge">.gitignore</code> ile
+konfigüre edilmeden olduğu gibi Github/Gitlab gibi platformlara <em>push
+edilmesi</em> o projenin Git ile sağlıklı bir şekilde takip edildiği anlamına
+gelmemektedir.</p>
+</blockquote>
+
+<h2 id="clean-build-alabilmenin-verdiği-huzur-">“Clean Build” Alabilmenin Verdiği Huzur 💤</h2>
+
+<p>Bir proje için gerekli olan minimum set dosyayı kullanarak hedef çıktıya yani
+FPGA projeleri için bitstream dosyasına sorunsuzca gidebiliyorsak burada aslında
+<em>clean build</em> almış oluyoruz. Tahmin edeceğiniz gibi bu terim FPGA projelerine
+özgü bir terim değil. <strong>Fakat bu kavram bence FPGA projeleri için oldukça
+önemli.</strong></p>
+
+<p>FPGA içeren projeler genelde uzun soluklu projeler oluyor. Örneğin savunma
+sanayinde FPGA sık kullanılan bir platform. Burada bir ürünün tasarımı bitmiş,
+teslim edilmiş olsa da uzun yıllar ürüne yeni özellik ekleme, hata düzeltme gibi
+işler için destek vermek gerekiyor. Durum böyle olunca, FPGA projesinin doğru
+saklanması, versiyon kontrolünün yapılması, gerektiğinde geriye dönük analiz
+yapılabilmesi ve yıllar sonra bile derlenebileceğinden mümkün mertebe emin
+olunması gerekiyor.</p>
+
+<p>Bunun iki ayağı var: <strong>Projenin düzgün saklanması, ilerletilmesi</strong> ve
+<strong>geliştirme ortamının saklanması</strong> Geliştirme ortamı konusuna başka bir yazıda
+değinebiliriz, bu yazının konusu ağırlıklı projenin düzgün saklanması ile ilgili
+ama yine de merak ettiyseniz belki <a href="https://github.com/alperyazar/ebox">EBox, Embedded
+Box</a> projeme bakabilirsiniz.</p>
+
+<p>Kendimize şu soruyu sorup cevabını vermemiz gerekiyor: <strong>Ben bu projeyi 10 yıl
+sonra da açtığımda ve bir değişiklik yapmam gerektiğinde bunu sorunsuz bir
+şekilde yapabilecek miyim?</strong> İşte bu soruya “evet” diyebilmek için projemizin
+ara çıktı dosyalarını silsek de temel kaynak kodlardan tekrar derlenebildiğinden
+yani <em>clean build</em> alabildiğimizden emin olmamız gerekiyor.</p>
+
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable MD013 MD033 -->
+<p><img data-srcset="https://media1.tenor.com/m/lKIVd-wT9dAAAAAC/sleep-sleep-well.gif" srcset="/assets/lazyload.png" src="https://media1.tenor.com/m/lKIVd-wT9dAAAAAC/sleep-sleep-well.gif" alt="GIF" class="centered lazyload" />
+<!-- markdownlint-restore --></p>
+
+<p class="text-align-center">FPGA projelerinizde <em>clean build</em> alabiliyorsanız böyle huzurlu yatabilirsiniz 💤
+<a href="https://tenor.com/view/sleep-sleep-well-self-care-self-love-winnie-the-pooh-gif-10710146468646483408">GIF</a></p>
+
+<hr />
+
+<p>Bundan emin olmak için ise projemizin sürekli temel kaynak kodlarından
+sorunsuzca derleyebiliyor olmamız gerekiyor, elbette elle yapmak zorunda değiliz
+otomasyon kurabiliriz. Git (veya SVN fark etmez) gibi bir versiyon kontrol
+sisteminde de ara dosyaların olmaması gerekiyor.</p>
+
+<p>Konuyu örnekler vererek derinleştirelim.</p>
+
+<h2 id="hikaye---1-">Hikaye - 1 😯</h2>
+
+<p>Xilinx (AMD) Vivado’dan örnek verecek olursak, bir IP core OOC, out-of-context,
+gibi yöntemle sentezlendiğinde Design Check Point, <code class="language-plaintext highlighter-rouge">.dcp</code>, uzantılı dosyalar
+oluşuyor. Bunları Vivado’nun kullanıdığı ara çıktılar ve bir nevi cache
+dosyaları gibi düşünebiliriz. Bu ve buna benzer dosyalar oldukça fazla sayıda
+olabiliyor ve yer kaplıyorlar.</p>
+
+<p>Aşağıda iki adet ekran görüntüsü vereceğim.
+<strong>Bu görüntüler 20-30 adet IP Core + HDL kodları içeren bir projeden alındı.</strong></p>
+
+<p><img data-srcset="/assets/img/25/7-buyuk-proje.png" srcset="/assets/lazyload.png" src="/assets/img/25/7-buyuk-proje.png" alt="Büyük Proje" class="centered lazyload" /></p>
+
+<p>Bu şekilde saklandığı zaman projemiz 600 MB üzerinde yer kaplıyor, içerisinde
+1000 adet klasör ve 3308 adet dosya barındırıyor. Peki bu projeyi saklamak
+için bu kadar dosyaya ihtiyaç var mı? Sizce ne kadar dosyayı atabiliriz?
+Gelin aşağıdaki ekran görüntüsüne bakalım.</p>
+
+<p><img data-srcset="/assets/img/25/7-kucuk-proje.png" srcset="/assets/lazyload.png" src="/assets/img/25/7-kucuk-proje.png" alt="Küçük Proje" class="centered lazyload" /></p>
+
+<p>Biz bu projeyi aslında 4 MB’ın altında bir alanda ve yaklaşık 120 adet dosya
+ile aslında saklayabiliriz! Geri kalanların hepsi derleme/sentez sırasında
+çıkan ara dosyalar ve bunları versiyon kontrolüne koymamız uygun değil.</p>
+
+<hr />
+
+<p>Elbette şunu diyebilirsiniz: <em>Yahu üç beş megabyte’ın hesabını mı yapacağız?</em>
+Temel motivasyonumuz bu değil. Temel motivasyonumuz versiyon kontrolünü düzgün
+yapmak ve yukarıda da bahsettiğim <em><code class="language-plaintext highlighter-rouge">git diff</code> noise</em> gibi problemlerden
+kaçınmak.</p>
+
+<h2 id="hikaye---2-">Hikaye - 2 😲</h2>
+
+<p>Şimdi daha “ibretlik” bir hikayeden bahsedeceğim, anlatacaklarımı yaşadığınızı
+hayal edin. Bir projenin yukarıda gösterdiğim gibi tüm ara çıktıları ile, ne var
+ne yoksa tüm dosyaları ile saklandığını hayal edin. Bu dosyaların içerisinde
+çeşitli lisanslı IP core’ların çıktıları da var. Yıllar boyunca projede IP
+core’ların ayarları değiştirilmediği için sentez sırasında aslında IP core’lar
+tekrar sentezlenmiyor, araç tarafından lisansları kontrol edilmiyor ve var olan
+ara dosyalar, adeta cache dosyaları, kullanılıyor. Bir gün IP core’ların birinin
+ayarı değiştirilmek istenince de aslında <strong>IP core’un lisansının yıllar önce
+bittiği ve aslında değişiklik yapılamadığı</strong> anlaşılıyor. Neden? Çünkü proje
+<em>clean build</em> alınarak derlenmediği için bu tarz problemler gözden kaçıyor. Tam
+da yumurta kapıya dayandığı zaman bunu fark ediyorsunuz. Böyle bir durumda
+kalmak istemezsiniz değil mi?</p>
+
+<hr />
+
+<p>Sanıyorum ki <strong>tekralanabilir</strong> bir şekilde bir projenin <strong>clean build</strong> alarak
+derlenebilmesinin neden önemli olduğunu ve bunun için temelde nelere dikkat
+etmemiz gerektiğini biraz anlatabilmişimdir.</p>
+
+<p>Gelin devam edelim.</p>
+
+<h2 id="headless-build-scriptable-build-gibi-kavramlar">“Headless Build”, “Scriptable Build” Gibi Kavramlar</h2>
+
+<p>Sıfırdan, tekrarlanabilir derleme konularındaki <strong>en önemli aracımız
+otomasyon.</strong> Bu konuda <em>Github Actions</em>, <em>Gitlab Runner</em>, <em>Jenkins</em> gibi
+sistemler yardımımıza koşuyor. Bu sayede, Git üzerinde takip edilen kodumuzda
+bir değişiklik olduğu zaman ya da periyodik olarak istediğimiz sıklıkta FPGA
+projemizi otomatik olarak hem de <em>clean build</em> şeklinde derleyebiliyoruz.
+FPGA’den bağımsız olarak bu konuları <strong>DevOps</strong>, <strong>CI/CD</strong> gibi anahtar
+kelimelerle aratabilirsiniz.</p>
+
+<p>Fakat bu sistemlerin sağlıklı çalışabiliyor olması için bizim FPGA projesi
+sentezleme/derleme işlemini düzgün bir şekilde komut satırından yani Linux’ta
+BASH, Window’ta Power Shell ya da CMD üzerinden yapabilmemiz gerekiyor. GUI
+üzerinden sağa sola tıklanarak yapılan işlemleri hem otomatize etmek hem de bir
+kullanıcının düzgün <em>tekralanabilir</em> şekilde projeyi bilgisayarında oluşturması
+ve derlemesi çok zor. O yüzden burada da önümüze <strong>headless build</strong> ya da
+<strong>scriptable build</strong> gibi kavramlar ortaya çıkıyor. <em>Headless</em> kelimesi bir
+monitör ya da GUI olmadan yapılan anlamında kullanılıyor.</p>
+
+<p>Özetle sizin tüm derleme sürecinizi, bitstream oluşturma, soft/hard işlemci
+varsa onun kodunu derleyip ELF dosyası oluşturma, bitstream ile ELF’i
+birleştirme, MCS gibi diğer formatlı çıktıları üretme gibi scriptlenebilir hale
+getirmek gerekiyor. <strong>Yani adeta komut satırından tek bir komut yazacaksınız,
+mesela <code class="language-plaintext highlighter-rouge">make</code>, ve Enter’a basıp çayınızı 🍵 içeceksiniz.</strong> Tüm işlemler otomatik
+olacak.</p>
+
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable MD013 MD033 -->
+<p><img data-srcset="https://media1.tenor.com/m/NCRUevhz9jkAAAAd/tea-good.gif" srcset="/assets/lazyload.png" src="https://media1.tenor.com/m/NCRUevhz9jkAAAAd/tea-good.gif" alt="GIF" class="centered lazyload" />
+<!-- markdownlint-restore --></p>
+
+<p class="text-align-center">Oh mis! Yaz sıcağında da amma gider ha!
+<a href="https://tenor.com/view/tea-good-morning-love-messages-gif-25662378">GIF</a></p>
+
+<h2 id="e-peki-nasıl-olacak-">E peki nasıl olacak? 🤔</h2>
+
+<p>Peki bunları yapmak için ne yapmamız gerekiyor?</p>
+
+<p>1️⃣ İlk olarak FPGA projesinin “düzgün” bir şekilde versiyon kontrolünde olması
+gerekiyor. Eğer var olan sisteminiz yoksa gitmeniz gereken yol Git, kesinlikle
+SVN ya da buna benzer eski sistemler değil. Halihazırda bir sisteminiz varsa
+Git’e geçiş yapmak için artı ve eksileri değerlendirmek gerekir. Burada
+defalarca vurguladığım gibi neyin versiyon kontrolünde olup olmayacağını iyi
+belirlemek gerekiyor, yani <code class="language-plaintext highlighter-rouge">.gitignore</code> içeriği gibi düşünebilirsiniz. Bu da
+araç ve proje bazında araştırma yaparak ve tecrübe ederek mümkün olabilir.
+Burada projelerimizde 4️⃣ numaralı maddede bahsedeceğim araçları kullanmak da
+fayda sağlayacaktır.</p>
+
+<p>2️⃣ Otomasyon en büyük yardımcımız. Github, Gitlab gibi sistemlerin “otomatik
+olarak bir şey yaptırtma” ve bunların çıktılarını kullanma (örneğin bitstream
+😉) altyapıları oldukça iyi, bizim de bunları kullanmamız gerekiyor. Burada da
+kullanacağımız anahtar kelimelerin başında <code class="language-plaintext highlighter-rouge">DevOps</code>, <code class="language-plaintext highlighter-rouge">CI/CD</code> geliyor. Gitlab
+kullanıyorsanız Gitlab’ın, Github Actions kullanıyorsanız Github’ın otomasyon
+kısmını iyi anlamak gerekiyor. Bundan bağımsız olarak <em>Bu DevOps gibi çözümler
+neyi çözmeye çalışıyor ve ben bunu FPGA işlerine nasıl uyarlayabilirim?</em> diye
+düşünmek gerekiyor.</p>
+
+<p>3️⃣ Geliştirme ortamımızı koruma altına almak gerekiyor. Örneğin kullandığımız
+Vivado versiyonunu yıllar sonra da düzgün çalıştırabilecek miyiz? Bu, otomasyon
+kapsamında Github Actions, Gitlab Runner, Jenkins gibi ortamlarda Docker/Podman
+gibi altyapılarda Vivado gibi araçları çalıştırmak için de çok anlamlı. Aynı
+zamanda ileriye dönük ortamı korumak için de önemli. Buna bu yazıda pek
+değinmedik ama container teknolojilerinin iyi bir çözüm olabileceğini
+düşünüyorum. Kendi repomun reklamını da yapayım:</p>
+
+<p><a href="https://github.com/alperyazar/ebox">https://github.com/alperyazar/ebox</a></p>
+
+<p>Elbette başka çözümler de mevcut.</p>
+
+<p>4️⃣ Script ya da komut satırı tabanlı derleme sistemlerinin öneminden bahsettik.
+<strong>Burada kendinizin sıfırdan bir şey geliştirmenizi, “in-house” bir build
+sistemi kullanmanızı önermiyorum.</strong> Özel bir sebebiniz vardır, ekbiniz çok
+geniştir ve bunu yıllar boyunca idame ederim diyorsanız o başka. <strong>Eklediğiniz
+her bir bileşenin technical debt oluşturduğunu unutmayın.</strong> Bir gazla kendi TCL
+scriptleri ile bir şeyler yapmaya çalışıp, 1-2 senede patatese 🥔 dönenleri
+gördüğüm için (mesela ben) anlık gazla build sistemi yazmaya çalışmayın.
+Öğrenmek için kendi kendinize takılın, ona bir şey demem.
+<a href="https://github.com/olofk/fusesoc">FuseSoC ❤️</a>,
+<a href="https://hog.readthedocs.io/en/latest/">HoG</a> gibi çözümlere bakın. Eksik
+buluyorsanız onlara katkıda bulunun, <em>bu işimi görmüyor ya</em> deyip kestirip
+atmayın.</p>
+
+<hr />
+
+<p>Bu maddeleri tek tek detaylandırmak yazıyı çok uzatacağı için genel hatları
+ile bahsetmek istedim.</p>
+
+<p>Faydalı olması dileği ile…</p>
+
+    
+    <hr>
+    
+
+
+
+
+
+
+    
+    
+    
+<!--0-->
+        
+        
+            
+                
+                
+
+
+
+
+
+
+
+<ul class="post-list">
+<li style="background: #DDEEEE; padding: 10px; border-radius: 10px;">
+<h4>🤓 Bir içerik daha?</h4>
+
+<center>
+<p>
+<a class="post-link" href="/c-programlamada-en-cok-yapilan-hata.html"><img alt="Teaser" data-srcset="/assets/img/22/8.png" srcset="/assets/lazyload.png" src="/assets/img/22/8.png" data-srcset="/assets/img/22/8.png"  srcset="/assets/lazyload.png" style="border-radius: 10px; height: auto; width: 95%; max-width: 700px;" class="lazyload"></a>
+</p>
+</center><h3>
+<a class="post-link" href="/c-programlamada-en-cok-yapilan-hata.html">
+C programlamada gördüğüm en sık yapılan hata
+
+</a>
+</h3><h4>Gözden kaçabilen, masum görünen fakat canınızı sıkabilecek bir C hatası</h4></li>
+</ul>
+
+
+  </div>
+
+  
+  <div class="revisions" style="border-top: 2px dashed; margin-top: 10px;"><h2 style="padding-top: 10px;">🔄 Değişiklikler (Son 10) </h2><ul style="list-style-type: none;">
+    
+      <li>
+        <div class="post-meta"><code>2025-07-29</code> 25-7 FPGA Git CICD Devops (#71)</div>
+      </li>
+    
+    </ul>
+  </div>
+  <div class="gicus_comments" style="border-top: 2px dashed; margin-top: 10px;"><h2 style="padding-top: 10px;">💭 Yorumlar</h2>
+  <p><small>Yorum altyapısı <a href="https://giscus.app/">giscus</a> tarafından (evet tarafından!) sağlanmaktadır.
+    Yorum yazabilmek için <a href="https://github.com/">GitHub</a> hesabınız üzerinden giriş yapmanız gerekmektedir.
+    Yazılan yorumlar <a href="https://github.com/alperyazar/home/discussions/categories/comments">Github Discussions</a> üzerinde saklanmaktadır.</small></p><script src="https://giscus.app/client.js"
+        data-repo="alperyazar/home"
+        data-repo-id="R_kgDOJoQiqA"
+        data-category="Comments"
+        data-category-id="DIC_kwDOJoQiqM4Cne4h"
+        data-mapping="specific"
+        data-term='25-7''
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"data-lang="tr"data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+<p>🫆 <code>25-7</code></p>
+</div><a class="u-url" href="/fpga-git-cicd-devops.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Alper Yazar</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Alper Yazar</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/alperyazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">alperyazar</span></a></li><li><a href="https://www.linkedin.com/in/alperyazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">alperyazar</span></a></li><li><a href="https://mastodon.social/@ayazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#mastodon"></use></svg> <span class="username">ayazar</span></a></li><li><a href="https://youtube.com/%40ayazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">@ayazar</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>&quot;Full Stack Electronics&quot; Engineer<br/>© 2011 - 2025<br/><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a></p>
+        <p><a href="/disclaimer.html" />Disclaimer</a> <a href="/specimen.html" />Specimen</a> <a href="/" />Contact</a><br><a href='/support.html' />❤️ Destek / Support</a></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer><!-- Default Statcounter code for Home
+https://www.alperyazar.com -->
+<script type="text/javascript">
+  var sc_project=12712694;
+  var sc_invisible=1;
+  var sc_security="1c071fc4";
+  </script>
+  <script type="text/javascript"
+  src="https://www.statcounter.com/counter/counter.js"
+  async></script>
+  <noscript><div class="statcounter"><a title="web statistics"
+  href="https://statcounter.com/" target="_blank"><img
+  class="statcounter"
+  src="https://c.statcounter.com/12712694/0/1c071fc4/1/"
+  alt="web statistics"
+  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+  <!-- End of Statcounter Code --></body>
+
+</html>

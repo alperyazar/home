@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>lychee: Kırık Link Kalmasın | Alper Yazar</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="lychee: Kırık Link Kalmasın" />
+<meta name="author" content="Alper Yazar" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="CI entegrasyonu yapabileceğiniz, Markdown ve HTML’de link kontrolü yapan bir araç" />
+<meta property="og:description" content="CI entegrasyonu yapabileceğiniz, Markdown ve HTML’de link kontrolü yapan bir araç" />
+<link rel="canonical" href="https://www.alperyazar.com/lychee.html" />
+<meta property="og:url" content="https://www.alperyazar.com/lychee.html" />
+<meta property="og:site_name" content="Alper Yazar" />
+<meta property="og:image" content="https://www.alperyazar.com/assets/img/23/6.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-07-28T00:00:00+03:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://www.alperyazar.com/assets/img/23/6.png" />
+<meta property="twitter:title" content="lychee: Kırık Link Kalmasın" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alper Yazar"},"dateModified":"2025-05-09T19:32:32+03:00","datePublished":"2023-07-28T00:00:00+03:00","description":"CI entegrasyonu yapabileceğiniz, Markdown ve HTML’de link kontrolü yapan bir araç","headline":"lychee: Kırık Link Kalmasın","image":"https://www.alperyazar.com/assets/img/23/6.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.alperyazar.com/lychee.html"},"url":"https://www.alperyazar.com/lychee.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css">
+    <script src="/assets/js/lazysizes.min.js" async=""></script><link type="application/atom+xml" rel="alternate" href="https://www.alperyazar.com/feed.xml" title="Alper Yazar" /><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"><!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S3B80PC7FC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-S3B80PC7FC');
+    </script>
+
+    
+
+    
+    <!-- Adsense -->
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4580059638713287"
+    crossorigin="anonymous"></script> -->
+    <link rel="me" href="https://mastodon.social/@ayazar">
+  </head>
+<body><header class="site-header" role="banner">
+
+    <div class="wrapper"><a class="site-title" rel="author" href="/">Alper Yazar</a><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewBox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger"><a class="page-link" href="/blog/">📝 Blog</a><a class="page-link" href="/search.html">🔍 Search</a><!-- <a class="page-link" href="https://ayazar.dev" target="_blank">🗂️ Notes</a> -->
+            <a rel="me" class="page-link" href="https://www.linkedin.com/in/alperyazar" target="_blank">💼 LinkedIn</a>
+            <a rel="me" class="page-link" href="https://www.youtube.com/@ayazar" target="_blank">🎬 YouTube</a>
+          </div>
+        </nav></div>
+  </header>
+
+  
+
+<div id="son_yazi_banner" style="
+background: linear-gradient(to right, rgba(250, 191, 200, 0.3), rgba(23, 86, 169, 0.2));
+color: rgb(52, 55, 67);
+text-align: center;
+padding: 15px;
+border-radius: 10px;
+border: 0px dashed rgba(250, 191, 200, 0.5);
+box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+margin: 10px 0px 10px 0px;">🚀 Son blog yazısı:&nbsp;<a href="/fpga-git-cicd-devops.html" style="font-weight: bold;"><span style="font-weight: bold;">FPGA, Git, DevOps, CI/CD</span></a>&nbsp;🇹🇷</div>
+
+  <div id="progressBar" class="progress-bar"></div>
+
+  <script>
+    // Listen for scroll events on the window
+window.onscroll = function() {
+    // Call the function to update the progress bar
+    updateProgressBar();
+};
+
+function updateProgressBar() {
+    // Get the total height of the page
+    var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    // Get the current scroll position
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    // Calculate the scroll percentage
+    var scrollPercentage = (scrollTop / scrollHeight) * 100;
+    // Update the width of the progress bar
+    document.getElementById("progressBar").style.width = scrollPercentage + "%";
+}
+  </script>
+
+<a href='/support.html' class="floating-icon-heart" width="48" target="_blank"><img src='/assets/img/icons8-heart-64.png' alt="❤️ Support/Destek" title="❤️ Support/Destek"></a>
+
+<div id="special-flag">
+  <a id="special-flag-link" href="#" target="_blank" title="">
+    <img src='/assets/img/bayrak.png' alt="Türk Bayrağı">
+  </a>
+</div>
+
+<script>
+  /*
+   * Ref: https://www.pau.edu.tr/tks/tr/sayfa/milli-ve-dini-bayramlar
+   * Ref: https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=859034&MevzuatTur=2&MevzuatTertip=5
+   * Ref: https://www.eserotomatikbayrak.com/bayrak-asilacak-tarihler.pdf
+   * Net bir şey bulmak zor :(
+  */
+  const specialDays = [
+    ["03-18", "https://tr.wikipedia.org/wiki/18_Mart_%C3%87anakkale_Zaferi_ve_%C5%9Eehitleri_Anma_G%C3%BCn%C3%BC", "Çanakkale Zaferi ve Şehitleri Anma Günü"],
+    ["04-23", "https://tr.wikipedia.org/wiki/23_Nisan_Ulusal_Egemenlik_ve_%C3%87ocuk_Bayram%C4%B1", "Ulusal Egemenlik ve Çocuk Bayramı"],
+    ["05-01", "https://tr.wikipedia.org/wiki/1_May%C4%B1s_%C4%B0%C5%9F%C3%A7i_Bayram%C4%B1", "Emek ve Dayanışma Günü"],
+    ["05-19", "https://tr.wikipedia.org/wiki/19_May%C4%B1s_Atat%C3%BCrk%27%C3%BC_Anma,_Gen%C3%A7lik_ve_Spor_Bayram%C4%B1", "Atatürk'ü Anma, Gençlik ve Spor Bayramı"],
+    ["07-15", "https://tr.wikipedia.org/wiki/Demokrasi_ve_Mill%C3%AE_Birlik_G%C3%BCn%C3%BC", "Demokrasi ve Millî Birlik Günü"],
+    ["08-30", "https://tr.wikipedia.org/wiki/30_A%C4%9Fustos_Zafer_Bayram%C4%B1", "Zafer Bayramı"],
+    ["10-29", "https://tr.wikipedia.org/wiki/29_Ekim_Cumhuriyet_Bayram%C4%B1", "Cumhuriyet Bayramı"],
+    ["11-10", "https://tr.wikipedia.org/wiki/10_Kas%C4%B1m_Atat%C3%BCrk%27%C3%BC_anma_g%C3%BCn%C3%BC_ve_Atat%C3%BCrk_haftas%C4%B1", "Atatürk'ü Anma Günü"]
+  ];
+
+  const today = new Date();
+  const todayKey = `${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+
+  const match = specialDays.find(([key]) => key === todayKey);
+  if (match) {
+    const [_, url, tooltip] = match;
+    const flagDiv = document.getElementById("special-flag");
+    const flagLink = document.getElementById("special-flag-link");
+    flagLink.href = url;
+    flagLink.title = tooltip;
+    flagDiv.style.display = "block";
+  }
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">lychee: Kırık Link Kalmasın</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2023-07-28T00:00:00+03:00" itemprop="datePublished">
+        2023-07-28
+      </time>~<time class="dt-modified" datetime="2025-05-09T19:32:32+03:00" itemprop="dateModified">
+        2025-05-09
+      </time>• 🇹🇷<span> • 23-6</span>
+      </p>
+  </header><div style="background: #eeeeff; border-radius: 2px; margin: 2px;"><center><p><span data-nosnippet>🔤 <small><a rel=”nofollow” href="https://www-alperyazar-com.translate.goog/lychee.html?_x_tr_sl=auto&_x_tr_tl=en">Translate with Google</a></small> 🔤</span></p></center></div><div class="post-content e-content" itemprop="articleBody"><center>
+    <p>
+    <a class="post-link" href="/lychee.html"><img alt="Teaser" data-srcset="/assets/img/23/6.png" srcset="/assets/lazyload.png" src="/assets/img/23/6.png" data-srcset="/assets/img/23/6.png"  srcset="/assets/lazyload.png" style="border-radius: 10px;" class="lazyload"></a>
+    </p>
+    </center><p><i>CI entegrasyonu yapabileceğiniz, Markdown ve HTML'de link kontrolü yapan bir araç</i></p>
+    <hr><div style="background: #ffec99; border-radius: 2px; margin: 2px;"><center><p><span data-nosnippet>ℹ️ <small><a href="/disclaimer.html">Feragatname / Sorumluluk Reddi</a></small> ℹ️</span></p></center></div><hr>
+    <p>Bu yazımda kısaca şu an görmekte olduğunuz kişisel web sitemde de kullandığım
+bir araçtan bahsetmek istiyorum:
+<a href="https://github.com/lycheeverse/lychee">lychee</a>. (Ayrıca bakınız:
+<a href="https://tr.wikipedia.org/wiki/Li%C3%A7i">Liçi</a> meyvesi)</p>
+
+<p>lychee, Rust dilinde yazılmış bir araç. Temel işlevi Markdown, HTML gibi dosyaları
+tarayarak, olası “kırılmış” ya da “ölmüş” linkleri yani bağlantıları bulmak.</p>
+
+<blockquote>
+  <p>⚠️ <a href="https://github.com/LycheeOrg/Lychee">Lychee</a> isminde bir de bir fotoğraf
+yönetim yazılımı bulunuyor, bunun ile karıştırmayın. Şu an incelediğimiz
+aracın adının tüm harfleri küçük.</p>
+</blockquote>
+
+<h2 id="neden-kullanıyorum">Neden kullanıyorum?</h2>
+
+<p>Seyrek de olsa 2011 yılından beri yazdığım yazılar var. Bu yazıların içerisinde
+başka sitelere bağlantılar oluyor. Bir okuyucu olarak gezindiğim sitelerdeki
+linklerin olmayan sayfalara gitmesi benim için hoş bir deneyim olmuyor. Kendi
+yazılarımdaki kırık linkleri de otomatik bir şekilde bulabilmek adına Github
+Actions ile bu aracı kullanıyorum.</p>
+
+<p>lychee’yi bilgisayarınıza çeşitli yollarla kurabilirsiniz, sitesinde
+<a href="https://github.com/lycheeverse/lychee#installation">anlatılıyor.</a> En pratik
+kullanım ise bence Docker kullanmak, hele bir de Windows üzerinde çalışıyorsanız.
+Komut satırından çalışan bu araç, bir komut satırı uygulamasına göre renkli ve
+hoş görünüşlü çıktılar da üretiyor.</p>
+
+<p><img src="/assets/img/23/6-a.png" alt="Tatlı lychee" class="centered" /></p>
+
+<p class="text-align-center"><em>Şunun tatlılığına bir bak abisi!</em></p>
+
+<p><a href="https://github.com/lycheeverse/lychee">Kendi sayfasındaki</a> dokümantasyonu oldukça
+iyi, o yüzden ben biraz kendi kullanımımdan bahsedeceğim.</p>
+
+<p>Yazılımı çağırırken komut satırı argümanları ile veya bir TOML formatındaki
+konfigürasyon dosyası ile (oldukça fazla) çeşitli ayarlar geçirmek mümkün.
+Varsayılan olarak <code class="language-plaintext highlighter-rouge">lychee.toml</code> isimli bir dosyayı okuyor. Bu web sitesinde
+kullandığım TOML dosyasına
+<a href="https://github.com/alperyazar/home/blob/master/lychee.toml">buradan</a>
+erişebilirsiniz.</p>
+
+<p>Ben Markdown dosyaları üzerinde bu aracı çalıştırıyorum. Benim gibi statik bir
+web sitesi üreteci kullanıyorsanız (bu site <a href="https://jekyllrb.com/">Jekyll</a> ile
+üretiliyor, en azından bu yazının yazıldığı zaman) oluşturulan HTML dosyaları
+üzerinde de lychee’yi çalıştırabilirsiniz. Bu sayede hem Markdown’dan verdiğiniz
+linkleri hem de üretecin ürettiği ve ağırlıklı site içi navigasyon linklerini de
+test edebiliriz. Kendi durumumda Markdown dosyalarında kontrol ettirmeyi yeterli
+gördüm. Markdown içerisinde verilmiş göreceli (relative) bağlantı ve görsel
+gösterme kısımlarını da kontrol ettiğini gözlemledim.</p>
+
+<p>Konfigürasyon dosyasında veya komut satırı argümanlarında çeşitli seçenekler
+geçirirken <a href="https://en.wikipedia.org/wiki/Glob_(programming)">glob</a> kullanabiliyoruz,
+<code class="language-plaintext highlighter-rouge">**</code> gibi karakterler, ama alışkın olduğumuz Bash stilinden sanıyorum biraz farklı
+davranıyor. Bu yüzden aracın dokümantasyonuna bakmakta fayda var.</p>
+
+<p>lychee, elbette bu işi yapan tek araç değil. Kendi sitesinde de diğer araçlarla
+yapılmış detaylı bir karşılaştırma tablosu
+<a href="https://github.com/lycheeverse/lychee#features">var.</a> Mesela zamanında Jekyll
+ile beraber kullandığım
+<a href="https://github.com/gjtorikian/html-proofer">html-proofer</a> diye bir araç daha
+var. Bu araç Ruby temelli ve HTML üzerinde çalışıyordu. Hatırladığım kadarıyla
+lychee’den daha yavaştı. Böyle birçok araç bulabilirsiniz.</p>
+
+<h2 id="docker">Docker</h2>
+
+<p>lychee Docker ile çok pratik bir şekilde çalıştırılabilir. Kendi sitem için:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">--init</span> <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-v</span> <span class="k">${</span><span class="nv">PWD</span><span class="k">}</span>:/input lycheeverse/lychee <span class="nt">-c</span> /input/lychee.toml <span class="nt">--exclude-path</span> /input/vendor <span class="s2">"/input/**/*.md"</span>
+</code></pre></div></div>
+
+<p>ifadesi yeterli oluyor örneğin. Bu kullanımda Windows üzerinde de rahatlıkla
+çalıştırılabiliyor.</p>
+
+<h2 id="ci">CI</h2>
+
+<p>lychee kolaylıkla CI pipeline’larına entegre olabiliyor. İlk olarak Gitlab ile
+başlayalım</p>
+
+<h3 id="gitlab-ci">Gitlab CI</h3>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">lychee</span><span class="pi">:</span>
+  <span class="na">image</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">lycheeverse/lychee</span>
+    <span class="na">entrypoint</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">"</span><span class="pi">]</span>
+  <span class="na">needs</span><span class="pi">:</span> <span class="pi">[]</span>
+  <span class="na">before_script</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">lychee --version</span>
+  <span class="na">script</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">lychee -c lychee.toml "./docs/**/*.md"</span>
+</code></pre></div></div>
+
+<p>Gitlab CI ile tipik olarak bu şekilde kullanılabilir. Dikkat ederseniz burada
+<code class="language-plaintext highlighter-rouge">ENTRYPOINT</code> i override ediyorum ve sanki terminal üzerinden kullanıyorum gibi
+bir script hazırlıyorum. Bu bana daha kolay geldi, varsayılan olarak <code class="language-plaintext highlighter-rouge">ENTRYPOINT
+["/usr/local/bin/lychee"]</code>
+<a href="https://hub.docker.com/layers/lycheeverse/lychee/latest/images/sha256-0ee1779a9102c57d6bd4e3133e557d26d4fe6ca9fe9c05382d5eb2cd8a091cf8?context=explore">tanımlanmış</a>
+durumda.</p>
+
+<h2 id="github-actions">Github Actions</h2>
+
+<p>Bu web sitesinde Github Actions ile kullanıyorum. İlgili workflow’ların çıktılarına
+<a href="https://github.com/alperyazar/home/actions/workflows/md-link-check.yml">buradan</a>
+bakabilirsiniz.</p>
+
+<p>Kullandığım konfigürasyon da şu şekilde (şimdilik):</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Ref: https://github.com/lycheeverse/lychee-action</span>
+<span class="c1"># Ref: https://github.com/selfhostedshow/wiki/blob/master/.github/workflows/brokenLinks.yml</span>
+<span class="na">name</span><span class="pi">:</span> <span class="s">Check markdown links</span>
+
+<span class="na">on</span><span class="pi">:</span>
+  <span class="na">schedule</span><span class="pi">:</span>
+    <span class="c1"># UTC Time, At 15:00 on day-of-month 1.</span>
+    <span class="pi">-</span> <span class="na">cron</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0</span><span class="nv"> </span><span class="s">15</span><span class="nv"> </span><span class="s">1</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*"</span>
+  <span class="na">workflow_dispatch</span><span class="pi">:</span>
+  <span class="na">repository_dispatch</span><span class="pi">:</span>
+
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">linkChecker</span><span class="pi">:</span>
+    <span class="na">permissions</span><span class="pi">:</span>
+      <span class="na">issues</span><span class="pi">:</span> <span class="s">write</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v3</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Link Checker</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">lycheeverse/lychee-action@v1.8.0</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">args</span><span class="pi">:</span> <span class="s">--verbose './**/*.md'</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Create Issue From File</span>
+        <span class="na">if</span><span class="pi">:</span> <span class="s">env.lychee_exit_code != </span><span class="m">0</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">peter-evans/create-issue-from-file@v4</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">title</span><span class="pi">:</span> <span class="s">Link Checker Report</span>
+          <span class="na">content-filepath</span><span class="pi">:</span> <span class="s">./lychee/out.md</span>
+          <span class="na">labels</span><span class="pi">:</span> <span class="s">report, automated issue, broken-link</span>
+          <span class="na">assignees</span><span class="pi">:</span> <span class="s">alperyazar</span>
+</code></pre></div></div>
+
+<p>Güncelini <a href="https://github.com/alperyazar/home/blob/master/.github/workflows/md-link-check.yml">buradan</a>
+kontrol etmekte fayda var. Burada <a href="https://github.com/lycheeverse/lychee-action">lychee-action</a>
+ile beraber <a href="https://github.com/peter-evans/create-issue-from-file">create-issue-from-file</a>
+ı da kullanıyorum. Böylece lychee kırık linkler bulduğu zaman bana bir issue da
+açmış oluyor. Uygun bir zamanda ben de bunları düzeltiyorum.</p>
+
+<p>Tüm linklerin her merge öncesi kontrol edilmesi hem gereksiz hem de uzun süren
+bir iş olduğu için (alternatif olarak o merge ile eklenen yeni linklerin
+kontrol edilmesi yapılabilir ama o da ayrı bir iş) ben periyodik bir kontrol
+yapıyorum. Güncel durumda ayda 1 link kontrolü Github Actions tarafından yapılıyor
+ve bir sorun olursa bana issue açılıyor. Kendi sitem için bu sıklık ve otomasyon
+yeterli.</p>
+
+<p><img src="/assets/img/23/6-1.png" alt="Örnek bir issue" class="centered" /></p>
+
+<p class="text-align-center"><em>Bu websitesinin reposunda otomatik olarak açılmış bir issue:</em>
+<a href="https://github.com/alperyazar/home/issues/4">Link</a></p>
+
+<h2 id="son-sözler">Son Sözler</h2>
+
+<p>Rust dilinde olduğundan mıdır nedir bilmem 😝 lychee oldukça hızlı çalışıyor
+ve birçok değiştirilebilir ayara da sahip. Docker imajı sayesinde de lokalde
+ya da CI’da kolaylıkla kullanılabiliyor. Ek olarak doğrudan Github Actions’ta
+da yer alması işimizi kolaylaştırıyor. Komut satırına da renkli ve tatlı çıktılar
+üretiyor. Şimdilik severek kullanıyorum.</p>
+
+<p>lychee belirttiğim gibi Markdown dosyaları içerisinde verilmiş göreceli (relative)
+sayfa (diğer Markdown dosyalarına) bağlantılarını ve görselleri
+(<code class="language-plaintext highlighter-rouge">![]()</code> formundakiler) kontrol ediyor. Bu kısım, Markdown dosyalarını “sade”
+bir şekilde kullanıyorsanız yani bir başka araç ile HTML çıktılar üretmiyorsanız
+da faydalı olabilir, mesela Markdown dosyalarını doğrudan Github, Gitlab ya da
+VS Code ile görüntülüyorsanız. Bu gibi durumlardaki iç bağlantı hatalarını da
+bulmanıza yardımcı olacaktır. Ama Markdown dosyalarınızı, bir derleme işlemine
+sokuyorsanız kullandığınız araç bu tarz iç bağlantılardaki hataları yakalayabilir,
+örneğin <a href="https://www.sphinx-doc.org">Sphinx</a> bunu yapabiliyor.</p>
+
+<p><strong>Sizce nasıl?</strong> Görüşlerinizi yorum yaparak iletebilirsiniz…</p>
+
+    
+    <hr>
+    
+
+
+
+
+
+
+    
+    
+    
+<!--0-->
+        
+        
+            
+                
+                
+
+
+
+
+
+
+
+<ul class="post-list">
+<li style="background: #DDEEEE; padding: 10px; border-radius: 10px;">
+<h4>🤓 Bir içerik daha?</h4>
+
+<center>
+<p>
+<a class="post-link" href="/ctf.html"><img alt="Teaser" data-srcset="/assets/img/23/7.jpg" srcset="/assets/lazyload.png" src="/assets/img/23/7.jpg" data-srcset="/assets/img/23/7.jpg"  srcset="/assets/lazyload.png" style="border-radius: 10px; height: auto; width: 95%; max-width: 700px;" class="lazyload"></a>
+</p>
+</center><h3>
+<a class="post-link" href="/ctf.html">
+İlk CTF Deneyimim
+
+</a>
+</h3><h4>Çalıştığım kurumda düzenlenen CTF (Capture the Flag) yarışmasına katılıp ikinci oldum. Bu bahaneyle kısaca CTF'ten bahsediyorum.</h4></li>
+</ul>
+
+
+  </div>
+
+  
+  <div class="revisions" style="border-top: 2px dashed; margin-top: 10px;"><h2 style="padding-top: 10px;">🔄 Değişiklikler (Son 10) </h2><ul style="list-style-type: none;">
+    
+      <li>
+        <div class="post-meta"><code>2025-05-09</code> Revert "to ayazar.dev"
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2025-04-02</code> to ayazar.dev
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2025-03-30</code> Revert "to ayazar.dev"
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2025-03-16</code> to ayazar.dev
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-10-19</code> revert ayazar.dev
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-10-06</code> ayazar.dev
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-10-05</code> here
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-09-28</code> to ayazar.dev
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-09-14</code> revertx3
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-08-30</code> Revert "Revert "ayazar.dev""</div>
+      </li>
+    
+    </ul>
+  </div>
+  <div class="gicus_comments" style="border-top: 2px dashed; margin-top: 10px;"><h2 style="padding-top: 10px;">💭 Yorumlar</h2>
+  <p><small>Yorum altyapısı <a href="https://giscus.app/">giscus</a> tarafından (evet tarafından!) sağlanmaktadır.
+    Yorum yazabilmek için <a href="https://github.com/">GitHub</a> hesabınız üzerinden giriş yapmanız gerekmektedir.
+    Yazılan yorumlar <a href="https://github.com/alperyazar/home/discussions/categories/comments">Github Discussions</a> üzerinde saklanmaktadır.</small></p><script src="https://giscus.app/client.js"
+        data-repo="alperyazar/home"
+        data-repo-id="R_kgDOJoQiqA"
+        data-category="Comments"
+        data-category-id="DIC_kwDOJoQiqM4Cne4h"
+        data-mapping="specific"
+        data-term='23-6''
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"data-lang="tr"data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+<p>🫆 <code>23-6</code></p>
+</div><a class="u-url" href="/lychee.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Alper Yazar</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Alper Yazar</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/alperyazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">alperyazar</span></a></li><li><a href="https://www.linkedin.com/in/alperyazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">alperyazar</span></a></li><li><a href="https://mastodon.social/@ayazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#mastodon"></use></svg> <span class="username">ayazar</span></a></li><li><a href="https://youtube.com/%40ayazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">@ayazar</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>&quot;Full Stack Electronics&quot; Engineer<br/>© 2011 - 2025<br/><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a></p>
+        <p><a href="/disclaimer.html" />Disclaimer</a> <a href="/specimen.html" />Specimen</a> <a href="/" />Contact</a><br><a href='/support.html' />❤️ Destek / Support</a></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer><!-- Default Statcounter code for Home
+https://www.alperyazar.com -->
+<script type="text/javascript">
+  var sc_project=12712694;
+  var sc_invisible=1;
+  var sc_security="1c071fc4";
+  </script>
+  <script type="text/javascript"
+  src="https://www.statcounter.com/counter/counter.js"
+  async></script>
+  <noscript><div class="statcounter"><a title="web statistics"
+  href="https://statcounter.com/" target="_blank"><img
+  class="statcounter"
+  src="https://c.statcounter.com/12712694/0/1c071fc4/1/"
+  alt="web statistics"
+  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+  <!-- End of Statcounter Code --></body>
+
+</html>

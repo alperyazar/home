@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Atari Kolu (NES Controller) Arayüzü | Alper Yazar</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Atari Kolu (NES Controller) Arayüzü" />
+<meta name="author" content="Alper Yazar" />
+<meta property="og:locale" content="tr_TR" />
+<meta name="description" content="Atari kolunu kendi projelerimizde nasıl kullanır, tuşları nasıl okuruz?" />
+<meta property="og:description" content="Atari kolunu kendi projelerimizde nasıl kullanır, tuşları nasıl okuruz?" />
+<link rel="canonical" href="https://www.alperyazar.com/atari-kolu-nes-controller.html" />
+<meta property="og:url" content="https://www.alperyazar.com/atari-kolu-nes-controller.html" />
+<meta property="og:site_name" content="Alper Yazar" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2011-09-25T00:00:00+03:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Atari Kolu (NES Controller) Arayüzü" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alper Yazar"},"dateModified":"2025-05-09T19:32:32+03:00","datePublished":"2011-09-25T00:00:00+03:00","description":"Atari kolunu kendi projelerimizde nasıl kullanır, tuşları nasıl okuruz?","headline":"Atari Kolu (NES Controller) Arayüzü","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.alperyazar.com/atari-kolu-nes-controller.html"},"url":"https://www.alperyazar.com/atari-kolu-nes-controller.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css">
+    <script src="/assets/js/lazysizes.min.js" async=""></script><link type="application/atom+xml" rel="alternate" href="https://www.alperyazar.com/feed.xml" title="Alper Yazar" /><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"><!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S3B80PC7FC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-S3B80PC7FC');
+    </script>
+
+    
+
+    
+    <!-- Adsense -->
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4580059638713287"
+    crossorigin="anonymous"></script> -->
+    <link rel="me" href="https://mastodon.social/@ayazar">
+  </head>
+<body><header class="site-header" role="banner">
+
+    <div class="wrapper"><a class="site-title" rel="author" href="/">Alper Yazar</a><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewBox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger"><a class="page-link" href="/blog/">📝 Blog</a><a class="page-link" href="/search.html">🔍 Search</a><!-- <a class="page-link" href="https://ayazar.dev" target="_blank">🗂️ Notes</a> -->
+            <a rel="me" class="page-link" href="https://www.linkedin.com/in/alperyazar" target="_blank">💼 LinkedIn</a>
+            <a rel="me" class="page-link" href="https://www.youtube.com/@ayazar" target="_blank">🎬 YouTube</a>
+          </div>
+        </nav></div>
+  </header>
+
+  
+
+<div id="son_yazi_banner" style="
+background: linear-gradient(to right, rgba(250, 191, 200, 0.3), rgba(23, 86, 169, 0.2));
+color: rgb(52, 55, 67);
+text-align: center;
+padding: 15px;
+border-radius: 10px;
+border: 0px dashed rgba(250, 191, 200, 0.5);
+box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+margin: 10px 0px 10px 0px;">🚀 Son blog yazısı:&nbsp;<a href="/fpga-git-cicd-devops.html" style="font-weight: bold;"><span style="font-weight: bold;">FPGA, Git, DevOps, CI/CD</span></a>&nbsp;🇹🇷</div>
+
+  <div id="progressBar" class="progress-bar"></div>
+
+  <script>
+    // Listen for scroll events on the window
+window.onscroll = function() {
+    // Call the function to update the progress bar
+    updateProgressBar();
+};
+
+function updateProgressBar() {
+    // Get the total height of the page
+    var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    // Get the current scroll position
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    // Calculate the scroll percentage
+    var scrollPercentage = (scrollTop / scrollHeight) * 100;
+    // Update the width of the progress bar
+    document.getElementById("progressBar").style.width = scrollPercentage + "%";
+}
+  </script>
+
+<a href='/support.html' class="floating-icon-heart" width="48" target="_blank"><img src='/assets/img/icons8-heart-64.png' alt="❤️ Support/Destek" title="❤️ Support/Destek"></a>
+
+<div id="special-flag">
+  <a id="special-flag-link" href="#" target="_blank" title="">
+    <img src='/assets/img/bayrak.png' alt="Türk Bayrağı">
+  </a>
+</div>
+
+<script>
+  /*
+   * Ref: https://www.pau.edu.tr/tks/tr/sayfa/milli-ve-dini-bayramlar
+   * Ref: https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=859034&MevzuatTur=2&MevzuatTertip=5
+   * Ref: https://www.eserotomatikbayrak.com/bayrak-asilacak-tarihler.pdf
+   * Net bir şey bulmak zor :(
+  */
+  const specialDays = [
+    ["03-18", "https://tr.wikipedia.org/wiki/18_Mart_%C3%87anakkale_Zaferi_ve_%C5%9Eehitleri_Anma_G%C3%BCn%C3%BC", "Çanakkale Zaferi ve Şehitleri Anma Günü"],
+    ["04-23", "https://tr.wikipedia.org/wiki/23_Nisan_Ulusal_Egemenlik_ve_%C3%87ocuk_Bayram%C4%B1", "Ulusal Egemenlik ve Çocuk Bayramı"],
+    ["05-01", "https://tr.wikipedia.org/wiki/1_May%C4%B1s_%C4%B0%C5%9F%C3%A7i_Bayram%C4%B1", "Emek ve Dayanışma Günü"],
+    ["05-19", "https://tr.wikipedia.org/wiki/19_May%C4%B1s_Atat%C3%BCrk%27%C3%BC_Anma,_Gen%C3%A7lik_ve_Spor_Bayram%C4%B1", "Atatürk'ü Anma, Gençlik ve Spor Bayramı"],
+    ["07-15", "https://tr.wikipedia.org/wiki/Demokrasi_ve_Mill%C3%AE_Birlik_G%C3%BCn%C3%BC", "Demokrasi ve Millî Birlik Günü"],
+    ["08-30", "https://tr.wikipedia.org/wiki/30_A%C4%9Fustos_Zafer_Bayram%C4%B1", "Zafer Bayramı"],
+    ["10-29", "https://tr.wikipedia.org/wiki/29_Ekim_Cumhuriyet_Bayram%C4%B1", "Cumhuriyet Bayramı"],
+    ["11-10", "https://tr.wikipedia.org/wiki/10_Kas%C4%B1m_Atat%C3%BCrk%27%C3%BC_anma_g%C3%BCn%C3%BC_ve_Atat%C3%BCrk_haftas%C4%B1", "Atatürk'ü Anma Günü"]
+  ];
+
+  const today = new Date();
+  const todayKey = `${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+
+  const match = specialDays.find(([key]) => key === todayKey);
+  if (match) {
+    const [_, url, tooltip] = match;
+    const flagDiv = document.getElementById("special-flag");
+    const flagLink = document.getElementById("special-flag-link");
+    flagLink.href = url;
+    flagLink.title = tooltip;
+    flagDiv.style.display = "block";
+  }
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Atari Kolu (NES Controller) Arayüzü</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2011-09-25T00:00:00+03:00" itemprop="datePublished">
+        2011-09-25
+      </time>~<time class="dt-modified" datetime="2025-05-09T19:32:32+03:00" itemprop="dateModified">
+        2025-05-09
+      </time>• 🇹🇷<span> • 11-5</span>
+      </p>
+  </header><div style="background: #eeeeff; border-radius: 2px; margin: 2px;"><center><p><span data-nosnippet>🔤 <small><a rel=”nofollow” href="https://www-alperyazar-com.translate.goog/atari-kolu-nes-controller.html?_x_tr_sl=auto&_x_tr_tl=en">Translate with Google</a></small> 🔤</span></p></center></div><div class="post-content e-content" itemprop="articleBody"><p><i>Atari kolunu kendi projelerimizde nasıl kullanır, tuşları nasıl okuruz?</i></p>
+    <hr><div style="background: #ffec99; border-radius: 2px; margin: 2px;"><center><p><span data-nosnippet>ℹ️ <small><a href="/disclaimer.html">Feragatname / Sorumluluk Reddi</a></small> ℹ️</span></p></center></div><hr>
+    <p>Benim yaşımdakiler için herhalde çocukluğunda atari ile karşılaşmamış kişi pek
+yoktur. Atari ismi bildiğim kadarı ile Atari firmasının ürettiği bir “oyun
+makinası” ile genelleşmiş bir isim olmuştur. Benim gibi hala vakit bulduğu zaman
+atari oynayan var mıdır bilmiyorum. Fakat bana tüm bilgisayar oyunlarından daha
+zevkli gelmektedir. Özellikle babamla beraber oynadığım meşhur <strong>Tank 90</strong>
+oyununun yeri başkadır. Rekor skorumuz olan <strong>253800</strong>‘ü Eylül 2011 ayında
+yapmış bulunmaktayız. Elbet ki daha yüksek yapanlar vardır fakat biz bayağı emek
+verdik bu skora çıkmak için. :) Rekorumuzun fotoğrafı da aşağıda:</p>
+
+<p><img src="/assets/img/11/5-a.jpg" alt="Tank oyununda babam ile yaptığımız rekor." class="centered" /></p>
+
+<p class="text-align-center"><em>Tank oyununda babam ile yaptığımız rekor.</em></p>
+
+<p>Bendeki atari şu şekilde:</p>
+
+<p><img src="/assets/img/11/5-b.jpg" alt="Emektar Atarim" class="centered" /></p>
+
+<p class="text-align-center"><em>Emektar Atarim</em></p>
+
+<p>Alttaki gri kol, atarinin içerisinden çıkan kol. Üstteki kırmızı, Micro Genius
+kolu orijinal kolların kabloları bir süre sonra temassızlık yapıp, çalışmayınca
+almıştım. Atarimin orijinal adı internetten bulduğum kadarı ile Famicom
+firmasının ürettiği Family Computer. Galiba çoğu kişideki atariden farkı kaset
+olmadan da kendi içinde Tank 90 gibi oyunlar barındırması. Bu yüzden zamanında
+sadece 2 adet atari kasetim olmuştu. Birini de küçükken bir arkadaş alıp, geri
+vermeyince elimde bir tane kaldı. :D</p>
+
+<p>Atari anılarımızı tazeledikten sonra gelelim yazının asıl konusuna. Bu yazıda
+elimden geldiğince bir atari kolunun, daha doğru adı ile “NES (Nintendo
+Entertainment System) Controller”ın nasıl çalıştığını ve bu aleti atari dışında,
+kendi yaptığımız devreler gibi yerlerde nasıl kullanabileceğimizi anlatmaya
+çalışacağım.</p>
+
+<p>Atari kolunda toplamda 8 adet düğme bulunmaktadır: Yukarı, Aşağı, Sağa, Sola, A,
+B, Start ve Select. Yukarıdaki fotoğrafta da görebileceğiniz gibi iki adet de
+Turbo tuşu bulunmaktadır. Yani toplamda kol üzerinde 10 adet düğme vardır. Peki
+neden 8 düğme var diyorsun derseniz nedeni de şudur: Turbo A, A tuşu ile Turbo B
+ise B tuşu ile atariye aynı sinyali göndermektedir. Yani atari tarafında Turbo A
+ile A’nın ve Turbo B ile B’nin bir farkı yok. Fakat, örneğin nasıl oluyor da A
+ile bir kez ateş edip, Turbo A ile sürekli ateş ediyoruz derseniz o da anladığım
+kadarı ile şöyle oluyor: Burada sürekli ateş etmeyi sağlayan şey aslında
+kumanda. Biz A’ya basıp, basılı tuttuğumuzda atari sürekli A’ya basılıyor diyor
+ve elimizi çekip, tekrar basana kadar yeni bir atış yaptırtmıyor. Tabi bu
+oyundan oyuna değişebilir. Fakat Turbo tuşlarına bastığımız zaman her ne kadar
+biz tuşa basılı tutsak da, atari kolu içerisindeki devre bizim yerimize A tuşuna
+sürekli basıp, çekiyor. Böylece Turbo A’yı basılı tutmak, A tuşuna elimizle
+sürekli basıp çekmeye eşdeğer oluyor. Kumanda ile uğraşırken ilk başta hep 10
+ayrı tuş var diye düşünüyordum ve internetteki kaynaklarda bu kolların 8 tuşlu
+ve 16 tuşlu versiyonların bulunduğunu okuduğumdan, ben 16 tuşlu kumanda devresi
+olduğunu sanıyordum ve buna başlarda zaman kaybettirdi. Çünkü iki tip kumandanın
+sinyal zamanlamaları birbirlerinden farklı.</p>
+
+<p>Karşılaştığım diğer bir zorluk da hangi kablonun ne işe yaradığını bulmak oldu.
+İnternette verilen pin diyagramı ve kablo renk bilgilerinin neredeyse hepsi 7
+pinli soketi olan kollar için. Benim elimdeki tüm kollar DB-9 (seri port soketi)
+dişi sokete sahip. Ayrıca kolları söktüğüm zaman kablo renklerinin, internette
+verilenler renklerle uyuşmadığını gördüm. Bundan dolayı atariyi de söküp,
+çeşitli ölçümler yaparak hangi kablonun ne işe yaradığını bulabildim. Gerçi
+işimi bitirdikten sonra bir sitede elimdeki kollar için de bilgi olduğunu
+görünce iyi bir araştırma yapmadan direkt işe giriştiğime üzülmedim değil. En
+azından internetteki kaynaktan, çıkardığım pin bağlantı tablosunun doğru
+olduğunu görünce biraz sevindim. :) Atari kolunun ucundaki soket (bildiğimiz
+dişi seri port soketi) şu şekilde bir şey:</p>
+
+<p><img src="/assets/img/11/5-c.jpg" alt="Bendeki Atari Kolunun Soketi" class="centered" /></p>
+
+<p class="text-align-center"><em>Bendeki Atari Kolunun Soketi</em></p>
+
+<p>Her ne kadar 9 adet pin olsa da toplamda 5 adeti kullanılıyor. Kola giden
+kabloların isimleri de şu şekilde: <strong>VCC, GND, Clk, Latch, Data</strong>. Hatların
+işlevlerine bakmadan önce bu tarz bir soketi olan atari kolunda hangi pine,
+hangi kablonun bağlı olduğunu gösteren ve daha rahat geldiği için elle yazdığım
+pin bağlantı diyagramını göstermek istiyorum:</p>
+
+<p><img src="/assets/img/11/5-d.jpg" alt="Atari Kolunun Pin Bağlantıları" class="centered" /></p>
+
+<p class="text-align-center"><em>Atari Kolunun Pin Bağlantıları</em></p>
+
+<p>Atari kolunun soketini kendinize doğru, çizimde gösterdiğim gibi tuttuğunuz
+zaman pin isimleri bu şekilde olmaktadır. <strong>Yani benim üsteki fotoğraftaki
+tuttuğum şekil ile değil, onun 180 derece çevrilmiş şekli ile tutmalısınız.</strong> NC
+olarak belirtilen pinlere herhangi bir kablo bağlı değil. Kol, 5 V ile
+çalışıyor. Data, Latch ve Clock sinyalleri için lojik 1 5 V’ye ve lojik 0 0 V’ye
+karşılık geliyor.</p>
+
+<p>Kumandayı bağlamak için bir elektronikçiden erkek seri port soketi alıp,
+kullanabilirsiniz. Bilmeyenler için kendisi şöyle bir şey oluyor: (Net fotoğraf
+çekemedim maalesef.)</p>
+
+<p><img src="/assets/img/11/5-e.jpg" alt="Atari kolunu takabileceğiniz erkek seri port soketi" class="centered" /></p>
+
+<p class="text-align-center"><em>Atari kolunu takabileceğiniz erkek seri port soketi</em></p>
+
+<h2 id="atari-kolunun-sinyalleri">Atari Kolunun Sinyalleri</h2>
+
+<p>Atari kolunu devremizde kullanmak için belirttiğim 5 hattı kullanmamız
+gerekiyor. Bunlardan ikisi zaten besleme. Atari kolumuzu 5 V ile çalıştırıyoruz.
+Latch sinyalinin yükselen kenarında kol, tüm düğmelerin durumlarını içerisindeki
+flip-floplar yardımıyla kaydediyor. Daha sonra biz Clock hattının yükselen
+kenarında kayıt ettiği durumları Data hattı üzerinden tek tek bize gönderiyor.
+Bu kadar basit. :) İnternetteki kaynaklara göre, atari kolunun içerisinde bu işi
+yapan temel eleman 4021 adında 8 bit bir shift register entegresi. Tabi bendeki
+kollar gibi Turbo tuşları bulunan kolların içerisinde yüksek ihtimalle, bu
+tuşlara bastığımız zaman kumandanın bizim yerimize tuşa basıp çekmesini sağlayan
+ek devreler bulunuyor. Elle çizmiş olduğum aşağıdaki örnek sinyal diyagramı
+kumandayı kullanmak için kullanılabilir:</p>
+
+<p><img src="/assets/img/11/5-f.jpg" alt="Atari kolunu kullanmak için örnek bir sinyalizasyon" class="centered" /></p>
+
+<p class="text-align-center"><em>Atari kolunu kullanmak için örnek bir sinyalizasyon</em></p>
+
+<p>Latch sinyalinin yükselen kenarlarında yazmış olduğum “Tüm düğmeler “sample”
+lanır.” adlı tarzanca notum için özür dilerim. :) Buradaki Latch ve Clock
+sinyalinin frekansı size kalmış. Alt limit yok fakat tahmin edebileceğiniz gibi
+bir üst limit yok. Üst limiti tam olarak bilmiyorsam da sanki bir kaynakta 10
+MHz civarı bir hız yazıyordu. Daha net bilgi için başka kaynaklara
+bakabilirsiniz. Fakat bir atari kolunu bu kadar hızlı okumak gerekir mi,
+tartışılır. İnternetteki çoğu kaynakta atarilerin saniyede 60 okuma yaptığı
+yazıyor. Bir kolu okumak için yetip de artacak bir hız. Burada dikkat edilmesi
+gereken nokta düğmelerin okunuş sırası. Sıra ile şu düğmelerin bilgisi geliyor:</p>
+
+<p><strong>A, B, Select, Start, Yukarı, Aşağı, Sola, Sağa</strong></p>
+
+<p><strong>Eğer düğme basılı ise 0, değilse 1 okuyoruz.</strong></p>
+
+<p>Yukarıda da belirttiğim gibi tüm düğmeler Latch sinyalinin yükselen kenarında
+okunup, kaydediliyor. Clock sinyalini kullanıp, tek tek düğmeleri okurkenki
+değerler Latch sinyalinin yükseldiği ana ait.</p>
+
+<h2 id="pic-ile-atari-kolunun-kullanılması">PIC ile Atari Kolunun Kullanılması</h2>
+
+<p>Denemek için Pic Basic Pro dilinde aşağıdaki basit programı yazmıştım.
+Çalışmasını aşağıdaki videodan görebilirsiniz. Burada kod yazarak yaptığım şey,
+yukarıdaki sinyalizasyonu PIC ile gerçekleştirmek ve düğmelerin durumuna göre 8
+adet LED’i yakıp söndürmek. Kodun incelenerek anlaşılabileceğini düşünüyorum.</p>
+
+<p>Devre şemasını vermeye gerek görmüyorum çünkü devrede neredeyse hiç bir eleman
+yok. PIC 16F628’in dahili osilatörünü kullandığımdan, PIC’in çalışması için 5 V
+vermemiz yeterli. Kumandadan aldığımız hatları direkt PIC pinlerine girebiliriz.
+Biraz daha önlem almak isterseniz Latch ve Clock sinyalleri için akım
+limitlemeye yönelik eklemeler yapabilirsiniz. Özellikle kumandanın sökük olduğu
+durumlar için yanlış veri okumamak adına Data hattına 10 K gibi bir pull up
+direnci bağlanabilir. Çektiğim videoda pull up direnci takılı durumda.</p>
+
+<pre><code class="language-BASIC">@ DEVICE pic16f628, WDT_OFF
+@ DEVICE pic16f628, PWRT_OFF
+@ DEVICE pic16f628, BOD_OFF
+@ DEVICE pic16f628, LVP_OFF
+@ DEVICE pic16F628, PROTECT_OFF
+@ DEVICE pic16f628, MCLR_OFF
+@ DEVICE pic16f628, INTRC_OSC_NOCLKOUT
+DEFINE OSC 4
+'''
+latch var portb.0
+clk var portb.1
+data_out var portb.2
+led_geri var portb.3
+led_yukari var portb.4
+led_sola var portb.5
+led_saga var portb.6
+led_a var portb.7
+led_b var porta.0
+led_start var porta.1
+led_select var porta.2
+
+CMCON=7
+TRISA = %11111000
+TRISB = 000100
+
+latch=0
+clk=0
+led_geri = 1
+led_yukari = 1
+led_sola = 1
+led_saga = 1
+led_a = 1
+led_b = 1
+led_start = 1
+led_select = 1
+pause 1000
+led_geri = 0
+led_yukari = 0
+led_sola = 0
+led_saga = 0
+led_a = 0
+led_b = 0
+led_start = 0
+led_select = 0
+
+tara:
+
+latch=1
+pause 1
+latch=0
+pause 5
+if data_out = 0 then 'A
+led_a = 1
+else
+led_a = 0
+endif
+
+clk=1
+pause 5
+if data_out = 0 then 'b
+led_b = 1
+else
+led_b = 0
+endif
+clk=0
+pause 5
+
+clk=1
+pause 5
+if data_out = 0 then 'select
+led_select = 1
+else
+led_select = 0
+endif
+clk=0
+pause 5
+
+clk=1
+pause 5
+if data_out = 0 then 'start
+led_start = 1
+else
+led_start = 0
+endif
+clk=0
+pause 5
+
+clk=1
+pause 5
+if data_out = 0 then 'yukarı
+led_yukari = 1
+else
+led_yukari = 0
+endif
+clk=0
+pause 5
+
+clk=1
+pause 5
+if data_out = 0 then 'aşağı
+led_geri = 1
+else
+led_geri = 0
+endif
+clk=0
+pause 5
+
+clk=1
+pause 5
+if data_out = 0 then 'sol
+led_sola = 1
+else
+led_sola = 0
+endif
+clk=0
+pause 5
+
+clk=1
+pause 5
+if data_out = 0 then 'sag
+led_saga = 1
+else
+led_saga = 0
+endif
+clk=0
+pause 5
+
+goto tara
+</code></pre>
+
+<p>Bu kodun çalışması şu videodaki gibi olmaktadır:</p>
+
+<!-- https://github.com/nathancy/jekyll-embed-video -->
+<!-- https://yoast.com/how-to-make-youtube-videos-responsive/ -->
+<div class="embed-container" style="text-align: center;">
+<iframe class="youtube-video lazyload" src="https://www.youtube.com/embed/JlvE-LjGIOQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+</div>
+
+<center><a target="_blank" href="https://www.youtube.com/watch?v=JlvE-LjGIOQ" rel="nofollow">Video</a></center>
+
+<h2 id="kaynaklar">Kaynaklar</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">http://www.mit.edu/~tarvizo/nes-controller.html</code> <code class="language-plaintext highlighter-rouge">404 🔗</code></li>
+  <li><a href="http://www.gamesx.com/controldata/nessnes.htm">http://www.gamesx.com/controldata/nessnes.htm</a></li>
+  <li><a href="http://davr.org/snes/joystick.txt">http://davr.org/snes/joystick.txt</a></li>
+</ul>
+
+    
+    <hr>
+    
+
+
+
+
+
+
+    
+    
+    
+<!--0-->
+        
+        
+            
+                
+                
+
+
+
+
+
+
+
+<ul class="post-list">
+<li style="background: #DDEEEE; padding: 10px; border-radius: 10px;">
+<h4>🤓 Bir içerik daha?</h4>
+<h3>
+<a class="post-link" href="/xradar-22-1.html">
+Xradar 22-1
+
+</a>
+</h3><h4>Radarıma takılanlar (-∞, 2022-04-15]</h4></li>
+</ul>
+
+
+  </div>
+
+  
+  <div class="revisions" style="border-top: 2px dashed; margin-top: 10px;"><h2 style="padding-top: 10px;">🔄 Değişiklikler (Son 10) </h2><ul style="list-style-type: none;">
+    
+      <li>
+        <div class="post-meta"><code>2025-05-09</code> Revert "to ayazar.dev"
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2025-04-02</code> to ayazar.dev
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2025-03-30</code> Revert "to ayazar.dev"
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2025-03-16</code> to ayazar.dev
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-10-19</code> revert ayazar.dev
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-10-06</code> ayazar.dev
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-10-05</code> here
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-09-28</code> to ayazar.dev
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-09-14</code> revertx3
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-08-30</code> Revert "Revert "ayazar.dev""</div>
+      </li>
+    
+    </ul>
+  </div>
+  <div class="gicus_comments" style="border-top: 2px dashed; margin-top: 10px;"><h2 style="padding-top: 10px;">💭 Yorumlar</h2>
+  <p><small>Yorum altyapısı <a href="https://giscus.app/">giscus</a> tarafından (evet tarafından!) sağlanmaktadır.
+    Yorum yazabilmek için <a href="https://github.com/">GitHub</a> hesabınız üzerinden giriş yapmanız gerekmektedir.
+    Yazılan yorumlar <a href="https://github.com/alperyazar/home/discussions/categories/comments">Github Discussions</a> üzerinde saklanmaktadır.</small></p><script src="https://giscus.app/client.js"
+        data-repo="alperyazar/home"
+        data-repo-id="R_kgDOJoQiqA"
+        data-category="Comments"
+        data-category-id="DIC_kwDOJoQiqM4Cne4h"
+        data-mapping="specific"
+        data-term='11-5''
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"data-lang="tr"data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+<p>🫆 <code>11-5</code></p>
+</div><a class="u-url" href="/atari-kolu-nes-controller.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Alper Yazar</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Alper Yazar</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/alperyazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">alperyazar</span></a></li><li><a href="https://www.linkedin.com/in/alperyazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">alperyazar</span></a></li><li><a href="https://mastodon.social/@ayazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#mastodon"></use></svg> <span class="username">ayazar</span></a></li><li><a href="https://youtube.com/%40ayazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">@ayazar</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>&quot;Full Stack Electronics&quot; Engineer<br/>© 2011 - 2025<br/><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a></p>
+        <p><a href="/disclaimer.html" />Disclaimer</a> <a href="/specimen.html" />Specimen</a> <a href="/" />Contact</a><br><a href='/support.html' />❤️ Destek / Support</a></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer><!-- Default Statcounter code for Home
+https://www.alperyazar.com -->
+<script type="text/javascript">
+  var sc_project=12712694;
+  var sc_invisible=1;
+  var sc_security="1c071fc4";
+  </script>
+  <script type="text/javascript"
+  src="https://www.statcounter.com/counter/counter.js"
+  async></script>
+  <noscript><div class="statcounter"><a title="web statistics"
+  href="https://statcounter.com/" target="_blank"><img
+  class="statcounter"
+  src="https://c.statcounter.com/12712694/0/1c071fc4/1/"
+  alt="web statistics"
+  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+  <!-- End of Statcounter Code --></body>
+
+</html>

@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Xilinx (AMD) Remote Debugging Neden Kullanışlı ve Nasıl Yapılır? | Alper Yazar</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Xilinx (AMD) Remote Debugging Neden Kullanışlı ve Nasıl Yapılır?" />
+<meta name="author" content="Alper Yazar" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Karta yapılan JTAG bağlantısına ağ üzerinden başka bilgisayardan erişip, kod atma, hata ayıklama gibi tüm işleri karta bağlıymış gibi yapabilirsiniz." />
+<meta property="og:description" content="Karta yapılan JTAG bağlantısına ağ üzerinden başka bilgisayardan erişip, kod atma, hata ayıklama gibi tüm işleri karta bağlıymış gibi yapabilirsiniz." />
+<link rel="canonical" href="https://www.alperyazar.com/xilinx-remote-debugging-tr.html" />
+<meta property="og:url" content="https://www.alperyazar.com/xilinx-remote-debugging-tr.html" />
+<meta property="og:site_name" content="Alper Yazar" />
+<meta property="og:image" content="https://www.alperyazar.com/assets/img/23/14.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-12-22T00:00:00+03:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://www.alperyazar.com/assets/img/23/14.jpg" />
+<meta property="twitter:title" content="Xilinx (AMD) Remote Debugging Neden Kullanışlı ve Nasıl Yapılır?" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alper Yazar"},"dateModified":"2025-05-09T19:32:32+03:00","datePublished":"2023-12-22T00:00:00+03:00","description":"Karta yapılan JTAG bağlantısına ağ üzerinden başka bilgisayardan erişip, kod atma, hata ayıklama gibi tüm işleri karta bağlıymış gibi yapabilirsiniz.","headline":"Xilinx (AMD) Remote Debugging Neden Kullanışlı ve Nasıl Yapılır?","image":"https://www.alperyazar.com/assets/img/23/14.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.alperyazar.com/xilinx-remote-debugging-tr.html"},"url":"https://www.alperyazar.com/xilinx-remote-debugging-tr.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css">
+    <script src="/assets/js/lazysizes.min.js" async=""></script><link type="application/atom+xml" rel="alternate" href="https://www.alperyazar.com/feed.xml" title="Alper Yazar" /><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"><!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S3B80PC7FC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-S3B80PC7FC');
+    </script>
+
+    
+
+    
+    <!-- Adsense -->
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4580059638713287"
+    crossorigin="anonymous"></script> -->
+    <link rel="me" href="https://mastodon.social/@ayazar">
+  </head>
+<body><header class="site-header" role="banner">
+
+    <div class="wrapper"><a class="site-title" rel="author" href="/">Alper Yazar</a><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewBox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger"><a class="page-link" href="/blog/">📝 Blog</a><a class="page-link" href="/search.html">🔍 Search</a><!-- <a class="page-link" href="https://ayazar.dev" target="_blank">🗂️ Notes</a> -->
+            <a rel="me" class="page-link" href="https://www.linkedin.com/in/alperyazar" target="_blank">💼 LinkedIn</a>
+            <a rel="me" class="page-link" href="https://www.youtube.com/@ayazar" target="_blank">🎬 YouTube</a>
+          </div>
+        </nav></div>
+  </header>
+
+  
+
+<div id="son_yazi_banner" style="
+background: linear-gradient(to right, rgba(250, 191, 200, 0.3), rgba(23, 86, 169, 0.2));
+color: rgb(52, 55, 67);
+text-align: center;
+padding: 15px;
+border-radius: 10px;
+border: 0px dashed rgba(250, 191, 200, 0.5);
+box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+margin: 10px 0px 10px 0px;">🚀 Son blog yazısı:&nbsp;<a href="/fpga-git-cicd-devops.html" style="font-weight: bold;"><span style="font-weight: bold;">FPGA, Git, DevOps, CI/CD</span></a>&nbsp;🇹🇷</div>
+
+  <div id="progressBar" class="progress-bar"></div>
+
+  <script>
+    // Listen for scroll events on the window
+window.onscroll = function() {
+    // Call the function to update the progress bar
+    updateProgressBar();
+};
+
+function updateProgressBar() {
+    // Get the total height of the page
+    var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    // Get the current scroll position
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    // Calculate the scroll percentage
+    var scrollPercentage = (scrollTop / scrollHeight) * 100;
+    // Update the width of the progress bar
+    document.getElementById("progressBar").style.width = scrollPercentage + "%";
+}
+  </script>
+
+<a href='/support.html' class="floating-icon-heart" width="48" target="_blank"><img src='/assets/img/icons8-heart-64.png' alt="❤️ Support/Destek" title="❤️ Support/Destek"></a>
+
+<div id="special-flag">
+  <a id="special-flag-link" href="#" target="_blank" title="">
+    <img src='/assets/img/bayrak.png' alt="Türk Bayrağı">
+  </a>
+</div>
+
+<script>
+  /*
+   * Ref: https://www.pau.edu.tr/tks/tr/sayfa/milli-ve-dini-bayramlar
+   * Ref: https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=859034&MevzuatTur=2&MevzuatTertip=5
+   * Ref: https://www.eserotomatikbayrak.com/bayrak-asilacak-tarihler.pdf
+   * Net bir şey bulmak zor :(
+  */
+  const specialDays = [
+    ["03-18", "https://tr.wikipedia.org/wiki/18_Mart_%C3%87anakkale_Zaferi_ve_%C5%9Eehitleri_Anma_G%C3%BCn%C3%BC", "Çanakkale Zaferi ve Şehitleri Anma Günü"],
+    ["04-23", "https://tr.wikipedia.org/wiki/23_Nisan_Ulusal_Egemenlik_ve_%C3%87ocuk_Bayram%C4%B1", "Ulusal Egemenlik ve Çocuk Bayramı"],
+    ["05-01", "https://tr.wikipedia.org/wiki/1_May%C4%B1s_%C4%B0%C5%9F%C3%A7i_Bayram%C4%B1", "Emek ve Dayanışma Günü"],
+    ["05-19", "https://tr.wikipedia.org/wiki/19_May%C4%B1s_Atat%C3%BCrk%27%C3%BC_Anma,_Gen%C3%A7lik_ve_Spor_Bayram%C4%B1", "Atatürk'ü Anma, Gençlik ve Spor Bayramı"],
+    ["07-15", "https://tr.wikipedia.org/wiki/Demokrasi_ve_Mill%C3%AE_Birlik_G%C3%BCn%C3%BC", "Demokrasi ve Millî Birlik Günü"],
+    ["08-30", "https://tr.wikipedia.org/wiki/30_A%C4%9Fustos_Zafer_Bayram%C4%B1", "Zafer Bayramı"],
+    ["10-29", "https://tr.wikipedia.org/wiki/29_Ekim_Cumhuriyet_Bayram%C4%B1", "Cumhuriyet Bayramı"],
+    ["11-10", "https://tr.wikipedia.org/wiki/10_Kas%C4%B1m_Atat%C3%BCrk%27%C3%BC_anma_g%C3%BCn%C3%BC_ve_Atat%C3%BCrk_haftas%C4%B1", "Atatürk'ü Anma Günü"]
+  ];
+
+  const today = new Date();
+  const todayKey = `${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+
+  const match = specialDays.find(([key]) => key === todayKey);
+  if (match) {
+    const [_, url, tooltip] = match;
+    const flagDiv = document.getElementById("special-flag");
+    const flagLink = document.getElementById("special-flag-link");
+    flagLink.href = url;
+    flagLink.title = tooltip;
+    flagDiv.style.display = "block";
+  }
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Xilinx (AMD) Remote Debugging Neden Kullanışlı ve Nasıl Yapılır?</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2023-12-22T00:00:00+03:00" itemprop="datePublished">
+        2023-12-22
+      </time>~<time class="dt-modified" datetime="2025-05-09T19:32:32+03:00" itemprop="dateModified">
+        2025-05-09
+      </time>• 🇹🇷<span> • 23-14</span>
+      </p>
+  </header><div style="background: #eeeeff; border-radius: 2px; margin: 2px;"><center><p><span data-nosnippet>🔤 <small><a rel=”nofollow” href="https://www-alperyazar-com.translate.goog/xilinx-remote-debugging-tr.html?_x_tr_sl=auto&_x_tr_tl=en">Translate with Google</a></small> 🔤</span></p></center></div><div class="post-content e-content" itemprop="articleBody"><center>
+    <p>
+    <a class="post-link" href="/xilinx-remote-debugging-tr.html"><img alt="Teaser" data-srcset="/assets/img/23/14.jpg" srcset="/assets/lazyload.png" src="/assets/img/23/14.jpg" data-srcset="/assets/img/23/14.jpg"  srcset="/assets/lazyload.png" style="border-radius: 10px;" class="lazyload"></a>
+    </p>
+    </center><p><i>Karta yapılan JTAG bağlantısına ağ üzerinden başka bilgisayardan erişip, kod atma, hata ayıklama gibi tüm işleri karta bağlıymış gibi yapabilirsiniz.</i></p>
+    <hr><div style="background: #ffec99; border-radius: 2px; margin: 2px;"><center><p><span data-nosnippet>ℹ️ <small><a href="/disclaimer.html">Feragatname / Sorumluluk Reddi</a></small> ℹ️</span></p></center></div><hr>
+    <p>Xilinx ürünleri (FPGA ve SoC) ile çalışırken tipik olarak karta fiziksel bir
+JTAG bağlantımız oluyor. <a href="https://www.xilinx.com/products/boards-and-kits/hw-usb-ii-g.html">Platform
+Cable</a>
+(“kırmızı şey”) veya benzeri bir ürünü, çalıştığımız bilgisayara USB veya
+Ethernet gibi bir arayüzden bağlıyoruz. Genelde de geliştirme ve hata ayıklama
+yaptığımız bir adet bilgisayar bulunuyor ve kartın JTAG arayüzünü de bu
+bilgisayara bağlamış oluyoruz. Bu çoğu durumda kullanışlı olsa da <strong>böyle yapmak
+zorunda değiliz.</strong></p>
+
+<p>Xilinx’in <em>Remote Debugging</em> başlığı altında sunduğu iki adet çözüm var:
+Bunlardan ilki (bu yazıda üzerine konuşacağımız), karta fiziksel bir JTAG
+bağlantısı içeriyor. Fakat bu çözümde alışkın olduğumuz kurgunun aksine <strong>bir
+değil, iki adet bilgisayar var</strong> ve bu bilgisayarlar ağ üzerinden bağlı,
+detaylara geleceğiz. Diğer çözüm ise, karta fiziksel bir JTAG bağlantısı
+istemeyen, adeta karta doğrudan yapılan bir Ethernet bağlantısı üzerinden “sanal
+bir JTAG” bağlantısı oluşturulan Xilinx Virtual Cable (XVC) çözümü. <strong>Bu yazıda
+XVC’ye değinmeyeceğim.</strong></p>
+
+<p>Gelin aşağıdaki duruma bir bakalım:</p>
+
+<p><img data-srcset="/assets/img/23/14-remote-debugging-1.png" srcset="/assets/lazyload.png" src="/assets/img/23/14-remote-debugging-1.png" alt="1" class="centered lazyload" /></p>
+
+<p>Yukarıdaki yapıda ağ üzerinden “bir şekilde” bağlı iki adet bilgisayar
+görüyoruz. Bu bilgisayarların bir tanesine Platform Cable (demo kartlar
+üzerindeki dahili JTAG gibi benzer bir donanım olabilir) ile kartın JTAG arayüzü
+bağlı. Bu bağlantıda kartın bağlı olduğu bilgisayara <strong>lab bilgisayarı</strong>,
+diğerine ise <strong>geliştirme bilgisayarı</strong> diyeceğiz.</p>
+
+<h2 id="peki-ama-neden">Peki Ama Neden?</h2>
+
+<p><img data-srcset="https://c.tenor.com/ou8FHfIO7EAAAAAd/tenor.gif" srcset="/assets/lazyload.png" src="https://c.tenor.com/ou8FHfIO7EAAAAAd/tenor.gif" alt="GIF" class="centered lazyload" /></p>
+
+<p class="text-align-center"><a href="https://tenor.com/view/nacho-libre-why-but-gif-23595404">GIF</a></p>
+
+<p>İlk bakışta bu bağlantı çok da mantıklı gelmiyor değil mi?</p>
+
+<p><strong>Tek bir bilgisayar üzerinden bunu yapabilirken niye iki adet bilgisayar
+kullanalım?</strong></p>
+
+<p>Evet, haklısınız. Çoğu durum için tek bilgisayar yeterli. Ama
+iki bilgisayarlı setup’ın da kullanışlı olduğu durumlar var, gelin bir bakalım.</p>
+
+<h3 id="taşınabilirlik-gerçek-anlamda">Taşınabilirlik (Gerçek Anlamda)</h3>
+
+<p><img data-srcset="/assets/img/23/14-remote-debugging-2.png" srcset="/assets/lazyload.png" src="/assets/img/23/14-remote-debugging-2.png" alt="2" class="centered lazyload" /></p>
+
+<p>Vivado ve Vitis’in yeni sürümleri çıktıkça ve entegreler de büyüdükçe bu
+yazılımların talep ettiği disk ve RAM boyutları hızla artıyor. <strong>Örneğin AMD
+Vitis 2023.2, 64 GB RAM öneriyor.</strong> Elbette tüm Vitis projeleri için bu kadar
+belleğe ihtiyaç yok ama basit projelerde bile 8-16 GB belleğin yetersiz
+kalabildiğini hemen görebiliyorsunuz. Bazı mühendisler, çalıştıkları kartı
+bilgisayarlarının yanında tutabilecek kadar şanslı ama birçok mühendis de bir
+sistem üzerindeki bir kartta çalışmak durumunda kalıyor. Örneğin bir sisteme
+entegre edilmiş bir kart, masanızdan veya labınızdan uzak bir yerde oluyor ve o
+sistemin yanına bir laptop ile gitmek gerekiyor. Görece güçlü laptoplar,
+masaüstü sistemler kadar yaygın değil. Bir seçenek Vitis’i doğrudan
+çalıştırabilecek güçlü laptoplar almak (maliyet açısından uygun olmayabilir,
+ağır olabilir, başkasının bilgisayarında çalışmanız gerekiyor olabilir). <strong>Diğer
+bir seçenek de basit bir laptop alıp, bunu hedef karta sadece JTAG bağlantısını
+almak için takmak ve ağ üzerinden daha güçlü bir bilgisayara bu JTAG
+bağlantısını Xilinx’in sağladığı Remote Debugging altyapısı ile açmak.</strong> Bu
+sayede uzaktaki güçlü masaüstü bilgisayar <strong>sanki USB’den Platform Cable
+takılıymış gibi</strong> kart üzerindeki entegreye erişebilecektir.</p>
+
+<h3 id="güçlü-uzak-bilgisayarlar">Güçlü Uzak Bilgisayarlar</h3>
+
+<p>Senaryomuzu biraz değiştirelim ve aşağıdaki duruma bakalım. Bu çizim üzerinden
+birden fazla olası durumu anlatacağım.</p>
+
+<p><img data-srcset="/assets/img/23/14-remote-debugging-3.png" srcset="/assets/lazyload.png" src="/assets/img/23/14-remote-debugging-3.png" alt="3" class="centered lazyload" /></p>
+
+<p>Diyelim ki sağda solda duran kartlarla uğraşmamıza gerek yok, masamızda
+çalışabiliyoruz. Eğer 10 kişilik bir takımsak herkese güçlü masaüstü
+bilgisayarlar almamız gerekecektir. Bunun yerine, uzaktan bağlantı ile (Windows
+Remote Desktop, VNC, X2Go vs.) geliştirme yapacağımız güçlü, workstation veya
+sunucu sınıfında bilgisayarlar kullanabilir, 10 adet giriş seviyesi masaüstü
+veya laptop bilgisayarı takıma dağıtabiliriz. Herkese güçlü bilgisayarlar
+verseydik, 10 x 64 GB = 640 GB’lık bir hafıza maliyetimiz olacaktı. Elbette
+uzaktaki ortak geliştirme bilgisayarının biraz güçlü olması gerekiyor, özellikle
+aynı anda birden fazla kişi çalışacaksa. Ama burada tepe kullanıma göre değil de
+ortalamaya göre bir kaynak ataması yapacak olursak, örneğin 256 GB’lık bir
+makina muhtemelen iş görecektir ve takıma da 16 GB’lık makinalar dağıtırsak
+256 + 10 x 16 = 416 GB ile işi hallettik, takımdaki bilgisayarlar adeta bir <em>thin
+client</em> oldu.</p>
+
+<blockquote>
+  <p><em>💲 Fun fact:</em> Tepe kullanıma göre değil, istatistiksel bir kullanıma göre yatırım
+yaptığımız için adeta bulut bilişim sağlayıcıları (cloud provider) ve Internet
+servis sağlayıcıları (ISP) gibi “para kazandık.”</p>
+</blockquote>
+
+<h3 id="windows-ve-linux-beraber-çalışma-cross-platform---">Windows ve Linux Beraber Çalışma (Cross-Platform) 🐧 🥳 🪟</h3>
+
+<p>Vitis’in yanında PetaLinux ve Yocto gibi araçlar kullanıyor olabilirsiniz. Bu
+araçlar zaten Linux dağıtımları üzerinde çalışmaktadır. Üstteki senaryodan devam
+edecek olursak, takımın masasındaki bilgisayarlar Windows olabilir. Linux bir
+ortamda Windows üzerinde çalışmak için WSL ya da sanallaştırma gibi çözümler
+var. Fakat PetaLinux ve Yocto’nun görece güçlü geliştirme ve derleme ortamları
+istediğini düşünürsek yine uzaktan erişilebilen güçlü bir Linux bilgisayar
+mantıklı duruyor. Remote Debugging, farklı işletim sistemleri arasında da
+yapılabiliyor. Yani lab bilgisayarı ve geliştirme bilgisayarı dediğimiz
+bilgisayar Windows veya Linux olabilir biraz üstteki çizimde gösterdiğim gibi, 4
+kombinasyon da mümkün.</p>
+
+<h3 id="birden-fazla-vitisvivado">Birden Fazla Vitis/Vivado</h3>
+
+<p>Çalışılan proje sayısı arttıkça bilgisayarda birden fazla Vitis veya Vivado
+bulundurmak gerekiyor. Fakat ne yazık ki bu yazılımların istediği disk alanları
+az değil. <strong>Örneğin Vitis 2023.2, en az 200 GB’lık bir disk alanı istiyor.</strong>
+Sadece kurduğumuz programların kapladığı alanın, yaptığımız proje sayısı
+arttıkça terabyte mertebesine ulaşması çok zor değil. Onun yerine yine uzaktan
+erişilebilen ve kullanılan tüm araçların kurulu olduğu güçlü geliştirme
+bilgisayarları kullanılabilir. Bu durumda kendi bilgisayarımıza sadece <strong>Vivado
+Lab Solutions</strong> kurmamız yeterli oluyor. Bunun Vivado’nun sadece Hardware
+Manager’i içeren bir hali olarak düşünebiliriz. <strong>Örneğin Vivado Lab Solutions
+2022.1’in kurulmuş hali diskte sadece 6.1 GB yer kaplıyor.</strong> Böyle kısıtlı iş
+yapan bir yazılım için bence hala büyük ama Vivado’nun kendisine kıyasla oldukça
+az. Eğer uzaktan erişebileceğimiz güçlü bir bilgisayarımız var ise buna
+Vivado’ları kurabilir, kartı takacağımız bilgisayarlara ise sadece Lab
+Solutions’ları kurup ciddi bir disk tasarrufu elde edebiliriz.</p>
+
+<blockquote>
+  <p>💡 Eğer birden fazla Vivado/Vitis versiyonu ile çalışıyorsanız her birinin
+ayrı Lab Solutions uygulamasını kurmanızı öneririm. Görece az yer kaplayan bu
+uygulamalar için disk cimriliği yapıp, tasarruf yapmaya bence çalışmayın.
+Yakın sürümde olanlar çalışabilse de (örn. lab bilgisayarında Vivado Lab
+Solutions 2022.1, geliştirme bilgisayarında ise Vivado 2022.2 durumu iş
+görebilir) risk almamak adına geliştirme ve lab bilgisayarındaki yazılım
+sürümlerinin aynı olmasını sağlayın. Çoğu durumda zaten çeşitli hata ve
+uyarılar alacaksınız.</p>
+</blockquote>
+
+<h2 id="nasıl-yapılır-">Nasıl yapılır? 🤓</h2>
+
+<p>Bu sistemin çalışması için iki bilgisayarın ağ üzerinden birbirini (bir şekilde)
+görebilmesi gerekiyor. Önemli olan bu imkanın ne işe yarayabileceğini
+kavrayabilmek. Nasıl yapılacağı ile ilgili AMD’nin dokümanlarında veya başka
+internet sitelerinde bilgiler mevcut. Ben yine de tipik bir sistemi anlatacağım,
+ihtiyaçlarınıza göre değişiklikler yaparsınız.</p>
+
+<p>Lab bilgisayarında Hardware Server, <code class="language-plaintext highlighter-rouge">hw_server</code>, çalışıyor olması gerekiyor. Bu
+yazılımın yaptığı temel iş, bir TCP portunu (varsayılan 3121) dinlemek
+(server’lar bunu yapar, client’lar bağlantıyı başlatır) ve buraya bağlanan
+client’ların yaptırmak istediği işleri JTAG üzerinden yapmak. Bu yazılımı <em>JTAG
+↔ TCP converter</em> gibi hayal edebiliriz. <strong>Laf aramızda, tek bir
+bilgisayarda çalışırken de aslında olan şey bu.</strong> Yani arka planda <code class="language-plaintext highlighter-rouge">hw_server</code>
+ayağa kalkıyor, 3121 nolu portu dinliyor. Vivado, Vitis, SDK, XSCT gibi
+client’lar bu sunucuya 3121 portundan bağlanıyor. Tek bilgisayar durumunda bu
+bağlantı ağ üzerinden değil, doğrudan o bilgisayar üzerinde yapılıyor
+(<code class="language-plaintext highlighter-rouge">localhost</code>). Remote Debugging’te ise client ve server farklı bilgisayarlarda
+oluyor ve bağlantı <code class="language-plaintext highlighter-rouge">localhost</code> üzerinden değil de gerçekten de ağ üzerinden
+yapılıyor, işin özü bu. Eğer iki bilgisayar aynı LAN üzerinde ise ve firewall
+kaynaklı bir port kısıtlaması yok ise işimiz daha kolay olacak.</p>
+
+<h3 id="lab-bilgisayarı">Lab Bilgisayarı</h3>
+
+<p>İlk olarak lab bilgisayarında Hardware Server çalıştırmamız gerekiyor. Masaüstü
+ortamında yapmanın en kolay yolu o bilgisayardaki Vivado’yu (Lab Solutions veya
+full Vivado olabilir) açmak ve Hardware Manager ile “bildiğimiz yoldan” JTAG
+bağlantısını yapmak (<code class="language-plaintext highlighter-rouge">Open Target</code> ➔ <code class="language-plaintext highlighter-rouge">Auto Connect</code>). Ama elbette doğrudan komut
+satırından da <code class="language-plaintext highlighter-rouge">hw_server</code> çalıştırabilirsiniz.</p>
+
+<p><img data-srcset="/assets/img/23/14-remote-debugging-4.png" srcset="/assets/lazyload.png" src="/assets/img/23/14-remote-debugging-4.png" alt="4" class="centered lazyload" /></p>
+
+<p>Burada <code class="language-plaintext highlighter-rouge">Tcl Console</code>‘a bastırılan logları okursanız zaten arka planda otomatik
+olarak 3121 nolu TCP portunu dinleyen bir <code class="language-plaintext highlighter-rouge">hw_server</code> başlatıldığını
+görebilirsiniz.</p>
+
+<p><img data-srcset="/assets/img/23/14-remote-debugging-5.png" srcset="/assets/lazyload.png" src="/assets/img/23/14-remote-debugging-5.png" alt="5" class="centered lazyload" /></p>
+
+<p>Dilerseniz Windows’un görev yöneticisinden <code class="language-plaintext highlighter-rouge">hw_server</code>‘ın çalıştığını
+doğrulayabilirsiniz. Linux üzerinde çalışıyorsanız <code class="language-plaintext highlighter-rouge">ps -aux | grep hw_server</code>
+gibi bir komutla kontrol edebilirsiniz.</p>
+
+<p><img data-srcset="/assets/img/23/14-remote-debugging-6.png" srcset="/assets/lazyload.png" src="/assets/img/23/14-remote-debugging-6.png" alt="6" class="centered lazyload" /></p>
+
+<p>“Yok kardeşim benim içim rahat etmedi” diyorsanız 3121 nolu portu dinleyen bu
+programı PowerShell üzerinden de bulabilirsiniz (Linux’çu aslanlar da bir yolunu
+bulup listeleyebilirler).</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Get-NetTCPConnection</span><span class="w"> </span><span class="nt">-LocalPort</span><span class="w"> </span><span class="nx">3121</span><span class="w"> </span><span class="nt">-State</span><span class="w"> </span><span class="nx">Listen</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Select-Object</span><span class="w"> </span><span class="nx">OwningProcess</span><span class="p">,</span><span class="w"> </span><span class="nx">LocalAddress</span><span class="p">,</span><span class="w"> </span><span class="nx">LocalPort</span><span class="p">,</span><span class="w"> </span><span class="p">@{</span><span class="nx">n</span><span class="o">=</span><span class="s1">'ProcessName'</span><span class="p">;</span><span class="nx">e</span><span class="o">=</span><span class="p">{(</span><span class="n">Get-Process</span><span class="w"> </span><span class="nt">-Id</span><span class="w"> </span><span class="bp">$_</span><span class="o">.</span><span class="nf">OwningProcess</span><span class="p">)</span><span class="o">.</span><span class="nf">ProcessName</span><span class="p">}}</span><span class="w">
+</span></code></pre></div></div>
+
+<p><img data-srcset="/assets/img/23/14-remote-debugging-7.png" srcset="/assets/lazyload.png" src="/assets/img/23/14-remote-debugging-7.png" alt="7" class="centered lazyload" /></p>
+
+<p>Yani artık lab bilgisayarı üzerinde <code class="language-plaintext highlighter-rouge">hw_server</code>‘ın çalıştığından eminiz. Şimdi
+yapmamız gereken şey, geliştirme bilgisayarından buradaki sunucu yazılıma
+(<code class="language-plaintext highlighter-rouge">hw_server</code>) bağlantı yapmak.</p>
+
+<h2 id="geliştirme-bilgisayarı">Geliştirme Bilgisayarı</h2>
+
+<p>Geliştirme bilgisayarında ise donanıma Remote Debugging ile bağlanmak
+istediğimiz zaman <code class="language-plaintext highlighter-rouge">Open Target</code> ➔ <code class="language-plaintext highlighter-rouge">Open New Target</code> diyoruz, <code class="language-plaintext highlighter-rouge">Auto Connect</code>
+<strong>demiyoruz:</strong></p>
+
+<p><img data-srcset="/assets/img/23/14-remote-debugging-8.png" srcset="/assets/lazyload.png" src="/assets/img/23/14-remote-debugging-8.png" alt="8" class="centered lazyload" /></p>
+
+<p>Daha sonra <code class="language-plaintext highlighter-rouge">Remote server</code> seçeneğini seçiyoruz:</p>
+
+<p><img data-srcset="/assets/img/23/14-remote-debugging-9.png" srcset="/assets/lazyload.png" src="/assets/img/23/14-remote-debugging-9.png" alt="9" class="centered lazyload" /></p>
+
+<p>Sonraki pencere <code class="language-plaintext highlighter-rouge">Hostname</code> kısmına lab bilgisayarının IP’sini ya da tam adını,
+<code class="language-plaintext highlighter-rouge">Port</code> kısmına da lab bilgisayarında koşan <code class="language-plaintext highlighter-rouge">hw_server</code> ın dinlediği port
+numarasını yazıyoruz. Varsayılan olarak <code class="language-plaintext highlighter-rouge">hw_server</code> 3121 nolu portu dinlediği
+için lab bilgisayarında <code class="language-plaintext highlighter-rouge">hw_server</code>‘ı ayağa kaldırırken başka bir port numarası
+vermediyseniz bu değeri bu şekilde bırakın. Eğer bu noktada hata alıyorsanız
+yazının sonundaki <strong>Hata Ayıklama</strong> kısmına bakabilirsiniz.</p>
+
+<p><img data-srcset="/assets/img/23/14-remote-debugging-10.png" srcset="/assets/lazyload.png" src="/assets/img/23/14-remote-debugging-10.png" alt="10" class="centered lazyload" /></p>
+
+<blockquote>
+  <p>Ben denemek için burada aynı bilgisayarda koşan <code class="language-plaintext highlighter-rouge">hw_server</code> a bağlandım
+(<code class="language-plaintext highlighter-rouge">localhost</code>). Eğer ilerleyen ekran görüntülerinde bir yerlerde
+<code class="language-plaintext highlighter-rouge">localhost</code>görürseniz kafanız karışmasın lütfen. Sizde lab bilgisayarının adı
+veya IP adresi yazacaktır.</p>
+</blockquote>
+
+<p>Sonraki pencerede lab bilgisayarında takılı olan JTAG cihazını ve konuştuğu
+FPGA’i görmemiz gerekiyor. <code class="language-plaintext highlighter-rouge">Hardware server</code> kısmında lab bilgisayarının
+bilgileri olmalı.</p>
+
+<p><img data-srcset="/assets/img/23/14-remote-debugging-11.png" srcset="/assets/lazyload.png" src="/assets/img/23/14-remote-debugging-11.png" alt="11" class="centered lazyload" /></p>
+
+<p>Sonraki pencerede özet bilgileri gördükten sonra bağlantıyı kurulacaktır. Bundan
+sonra Vivado’da kart sanki o bilgisayara bağlıymış gibi çalışabiliriz:</p>
+
+<p><img data-srcset="/assets/img/23/14-remote-debugging-12.png" srcset="/assets/lazyload.png" src="/assets/img/23/14-remote-debugging-12.png" alt="12" class="centered lazyload" /></p>
+
+<p><img data-srcset="/assets/img/23/14-remote-debugging-13.png" srcset="/assets/lazyload.png" src="/assets/img/23/14-remote-debugging-13.png" alt="13" class="centered lazyload" /></p>
+
+<h2 id="ssh-tünel-">SSH Tünel 🚇</h2>
+
+<p><img data-srcset="https://c.tenor.com/zPTX9b_cfD0AAAAC/tenor.gif" srcset="/assets/lazyload.png" src="https://c.tenor.com/zPTX9b_cfD0AAAAC/tenor.gif" alt="GIF" class="centered lazyload" /></p>
+
+<p class="text-align-center"><a href="https://tenor.com/view/cat-cute-fat-chonky-lawd-he-coming-gif-16205308">GIF</a></p>
+
+<p>İki bilgisayar arasında port kısıtlamaları olabilir, 3121 nolu (veya benzer)
+portu açamıyor, fakat <a href="https://tr.wikipedia.org/wiki/G%C3%BCvenli_kabuk">SSH</a>
+gibi çeşitli amaçlar ile iki bilgisayar arasında çeşitli portlardan (22 gibi)
+bağlantı kurabiliyor olabilirsiniz. <strong>Diyelim ki SSH bağlantısı kurabiliyorsunuz
+fakat 3121 gibi portları açamıyorsunuz. İşte bu durumda SSH Tünel kullanarak</strong>
+<code class="language-plaintext highlighter-rouge">hw_server</code> <strong>bağlantısını SSH üzerinden yapabiliriz.</strong> Bu durumu kısaca
+anlatayım.</p>
+
+<p><img data-srcset="/assets/img/23/14-remote-debugging-14.png" srcset="/assets/lazyload.png" src="/assets/img/23/14-remote-debugging-14.png" alt="14" class="centered lazyload" /></p>
+
+<p>Yukarıdaki çizimde lab bilgisayarından, geliştirme bilgisayarına SSH bağlantısı
+yapıyoruz. Fakat SSH bağlantısını açarken, geliştirme bilgisayarının 3122 nolu
+portuna gelecek istekleri lab bilgisayarının 3121 nolu portuna “tünelleyecek”
+şekilde açıyoruz. Bunun için <strong>SSH Reverse Tunneling</strong> yapmalıyız. Elbette bu
+senaryoda geliştirme bilgisayarında bir SSH server çalıştığını varsaydık. Bu
+bilgisayar bir Linux bilgisayar ise SSH server kurmak zaten zor olmayacaktır. Bu
+arada 3122 değerinin özel bir değer olmadığını de belirtmekte fayda var, başka
+sayılar seçebilirsiniz. SSH bağlantısını, geliştirme bilgisayarından lab
+bilgisayarına doğru yapacaksanız “klasik” <strong>SSH Forward Tunneling</strong>
+yapmalısınız.</p>
+
+<p>Lab bilgisayarınız Windows ise <a href="https://www.putty.org/">Putty</a> ile tünel işlemi
+yapabilirsiniz. Putty’de bunu yapmak için <code class="language-plaintext highlighter-rouge">Connection</code> ➔ <code class="language-plaintext highlighter-rouge">SSH</code> ➔ <code class="language-plaintext highlighter-rouge">Tunnels</code>
+kısmına girip aşağıdaki ekran görüntüsündeki gibi ayarları yapıyoruz. SSH
+bağlantısı kurulduktan sonra artık <strong>geliştirme bilgisayarından 3122 nolu
+porta yapılacak bir bağlantı, lab bilgisayarının 3121 portuna
+yönlendirilecektir.</strong></p>
+
+<p><img data-srcset="/assets/img/23/14-remote-debugging-15.png" srcset="/assets/lazyload.png" src="/assets/img/23/14-remote-debugging-15.png" alt="15" class="centered lazyload" /></p>
+
+<p>Bağlantıyı yaptıktan sonra geliştirme bilgisayarında <code class="language-plaintext highlighter-rouge">telnet localhost 3122</code>
+yazarak bağlantıyı doğrulayabiliriz. Eğer her şey yolunda ise geliştirme
+bilgisayarında çalıştırdığımız bu komut ile, SSH tünel üzerinden lab
+bilgisayarında 3121 portunda çalışan <code class="language-plaintext highlighter-rouge">hw_server</code> a bağlanabilmemiz gerekir.
+Örnek bir çıktı:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alper@gelistirme-bilgisayari:~$ telnet localhost 3122
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+ELocatorHello["ZeroCopy","MicroPython","JtagFpga","DebugCore","XicomEverest",...
+</code></pre></div></div>
+
+<p>Gelen cevap, <code class="language-plaintext highlighter-rouge">hw_server</code> ile iletişim kurabildiğimizi göstermektedir. Geliştirme
+bilgisayarınız Linux ise ve Türkçe klavye kullanıyorsanız <code class="language-plaintext highlighter-rouge">telnet</code> ten <code class="language-plaintext highlighter-rouge">CTRL-ü</code>
+yaparak çıkabilirsiniz. Daha sonra <code class="language-plaintext highlighter-rouge">telnet&gt;</code> e düştüğünüz zaman <code class="language-plaintext highlighter-rouge">quit</code> yazıp
+Enter’a basabilirsiniz.</p>
+
+<p>Bu noktadan sonra her şey aynı aslında aynı. Sadece geliştirme bilgisayarında
+<code class="language-plaintext highlighter-rouge">Remote server</code> bağlantısı yaparken, <code class="language-plaintext highlighter-rouge">Host name</code> yerine <code class="language-plaintext highlighter-rouge">localhost</code>, <code class="language-plaintext highlighter-rouge">Port</code>
+yerine de <code class="language-plaintext highlighter-rouge">3122</code> yazacaksınız. SSH bağlantısı kopmadığı sürece bir problem
+yaşamamanız gerekir.</p>
+
+<p>Lab bilgisayarı olarak Linux kullanan <em>Linux’çu aslanlar</em> SSH bağlantısı
+yaparken <code class="language-plaintext highlighter-rouge">ssh -R</code> kullanabilirler, Linux’çulara komutu söyleyecek değilim, onlar
+bulurlar… 😉</p>
+
+<h2 id="vivado-vitis-sdk-xsct-program_flash">Vivado, Vitis, SDK, XSCT, <code class="language-plaintext highlighter-rouge">program_flash</code></h2>
+
+<p>Xilinx’in bildiğim kadarıyla tüm araçları, ister SSH tünel ile olsun ister
+doğrudan olsun, remote JTAG yani remote debugging bağlantısını destekliyor.</p>
+
+<p>Örneğin <code class="language-plaintext highlighter-rouge">program_flash</code> komutu ile kalıcı kod atarken <code class="language-plaintext highlighter-rouge">-url tcp:&lt;lab bilgisayarı
+IP&gt;:&lt;port&gt;</code> (normal bağlantıda <code class="language-plaintext highlighter-rouge">-url tcp:1.2.3.4:3121</code> SSH tünelde <code class="language-plaintext highlighter-rouge">-url
+tcp:localhost:3122</code> gibi) parametresini geçirebilirsiniz diğer parametrelerin
+yanına.</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>program_flash -f BOOT.bin -fsbl fsbl.elf -url tcp:1.2.3.4:3121
+</code></pre></div></div>
+
+<p>gibi</p>
+
+<p>Benzer şekilde Vitis ile hata ayıklama yaparken <code class="language-plaintext highlighter-rouge">New Target Connection</code> diyerek
+ilgili IP ve port bilgilerini girerek uzaktaki JTAG cihazına bağlanabilirsiniz:</p>
+
+<p><img data-srcset="/assets/img/23/14-remote-debugging-16.png" srcset="/assets/lazyload.png" src="/assets/img/23/14-remote-debugging-16.png" alt="16" class="centered lazyload" /></p>
+
+<p>Detaylar için Vitis dokümantasyonuna bakabilirsiniz.</p>
+
+<p>Benzer şekilde <code class="language-plaintext highlighter-rouge">xsct</code> ile çalışıyorsanız <code class="language-plaintext highlighter-rouge">connect</code> komutuna ilgili parametreleri
+geçerek de uzak bağlantı yapabilirsiniz. Aşağıdaki örnekte SSH tünel üzerinden
+bağlanıyorum:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xsct% connect -host localhost -port 3122
+tcfchan#0
+xsct% targets
+  1  xc7s25
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+xsct%
+</code></pre></div></div>
+
+<p>Diğer Xilinx araçları için de kendi dokümantasyonlarına bakabilirsiniz.</p>
+
+<h2 id="hata-ayıklama-">Hata Ayıklama 🐛</h2>
+
+<p>Karşılaşabileceğiniz hataların bir kısmından bahsetmeye çalışacağım. Yapmaya
+çalıştığımız iş temel olarak iki bilgisayar arasında ağ üzerinden bir TCP
+bağlantısı oluşturmak. Bu yüzden ağ erişim problemlerinde nasıl hata ayıklamalar
+yapıyorsanız o taktikleri burada da kullanabilirsiniz, burada hepsini listelemem
+zor. Benim tecrübeme göre çıkan hataların tamamına yakını Xilinx araçları
+kaynaklı değil, ağ kaynaklı oluyor. Ağ kaynaklı erişim problemlerinin çoğu
+portları kapatan güvenlik duvarlarından veya bilgisayardaki güvenlik
+yazılımlarından (Windows Firewall, Antivirüs gibi) kaynaklanıyor.</p>
+
+<ul>
+  <li>İlk olarak geliştirme bilgisayarından, lab bilgisayarına <code class="language-plaintext highlighter-rouge">ping</code> atmayı
+deneyin. Ağ erişimini kısıtlayan çoğu donanım/yazılım genelde <code class="language-plaintext highlighter-rouge">ping</code> e izin
+verecek şekilde konfigüre edilmektedir. <code class="language-plaintext highlighter-rouge">ping</code> atabiliyor olmanız iki
+bilgisayar arasında bir iletişim kurulabildiğini göstermektedir. Eğer lab
+bilgisayarının IP adresini değil de domaindeki adını yazıyorsanız, <code class="language-plaintext highlighter-rouge">ping</code>
+işleminin başarılı olması DNS çözümlemesinin de çalıştığını gösterecektir.</li>
+  <li>ping atabiliyorsanız ama 3121 portuna uzaktan bağlantı yapamıyorsanız lab
+bilgisayarına koşan bir güvenlik yazılımı bunu engelliyor olabilir. Kurumsal
+bir şirkette iseniz bilgi işlem, ağ üzerindeki trafiği port tabanlı engelliyor
+olabilir, kendileri ile durumu konuşun.</li>
+  <li>SSH bağlantısı var fakat 3121 gibi “garip” portlara bağlantı yapamıyorsanız
+anlattığım SSH Tünel yöntemini deneyebilirsiniz.</li>
+  <li>Günün sonunda temelde bu bir soket haberleşmesi olduğu için işin içinden
+çıkamıyorsanız kullandığınız işletim sisteminin ağ bağlantıları için sunduğu
+hata ayıklama araçlarını (çeşitli komutlar gibi) veya
+<a href="https://www.wireshark.org/">Wireshark</a> gibi yazılımları kullanabilirsiniz.</li>
+</ul>
+
+<h2 id="arkadaşlarınıza-şaka-yapın-">Arkadaşlarınıza Şaka Yapın! 😜</h2>
+
+<p>Ben bu özelliği zamanında çalışma arkadaşlarıma “tatlı” şakalar yapmak için
+kullanıyordum. Labta çalıştığını bildiğim bir arkadaşın bilgisayarının
+<code class="language-plaintext highlighter-rouge">hw_server</code> ına kendi bilgisayarımdaki Vivado’dan bağlanıp FPGA’e zamansız
+resetler atarak labtan gelen <em>Ya kart durup duruken reset atıyor, ne alaka
+ya???</em> serzenişlerini dinliyordum. 😈 Yine de siz kararını kaçırmayın. 😇</p>
+
+    
+    <hr>
+    
+
+
+
+
+
+
+    
+    
+    
+<!--0-->
+        
+        
+            
+                
+                
+
+
+
+
+
+
+
+<ul class="post-list">
+<li style="background: #DDEEEE; padding: 10px; border-radius: 10px;">
+<h4>🤓 Bir içerik daha?</h4>
+
+<center>
+<p>
+<a class="post-link" href="/self-hosted-5-2.html"><img alt="Teaser" data-srcset="/assets/img/24/13.jpg" srcset="/assets/lazyload.png" src="/assets/img/24/13.jpg" data-srcset="/assets/img/24/13.jpg"  srcset="/assets/lazyload.png" style="border-radius: 10px; height: auto; width: 95%; max-width: 700px;" class="lazyload"></a>
+</p>
+</center><h3>
+<a class="post-link" href="/self-hosted-5-2.html">
+Ekip Veriminizi Arttıracak, OFFLINE Çalışabilen 5 Araç - 2
+
+</a>
+</h3><h4>Bu yazıda offline da çalışabilen ve çalışma veriminizi arttıracağını düşündüğüm 5 araçtan bahsediyorum.</h4></li>
+</ul>
+
+
+  </div>
+
+  
+  <div class="revisions" style="border-top: 2px dashed; margin-top: 10px;"><h2 style="padding-top: 10px;">🔄 Değişiklikler (Son 10) </h2><ul style="list-style-type: none;">
+    
+      <li>
+        <div class="post-meta"><code>2025-05-09</code> Revert "to ayazar.dev"
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2025-04-02</code> to ayazar.dev
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2025-03-30</code> Revert "to ayazar.dev"
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2025-03-16</code> to ayazar.dev
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-10-19</code> revert ayazar.dev
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-10-06</code> ayazar.dev
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-10-05</code> here
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-09-28</code> to ayazar.dev
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-09-14</code> revertx3
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-08-30</code> Revert "Revert "ayazar.dev""</div>
+      </li>
+    
+    </ul>
+  </div>
+  <div class="gicus_comments" style="border-top: 2px dashed; margin-top: 10px;"><h2 style="padding-top: 10px;">💭 Yorumlar</h2>
+  <p><small>Yorum altyapısı <a href="https://giscus.app/">giscus</a> tarafından (evet tarafından!) sağlanmaktadır.
+    Yorum yazabilmek için <a href="https://github.com/">GitHub</a> hesabınız üzerinden giriş yapmanız gerekmektedir.
+    Yazılan yorumlar <a href="https://github.com/alperyazar/home/discussions/categories/comments">Github Discussions</a> üzerinde saklanmaktadır.</small></p><script src="https://giscus.app/client.js"
+        data-repo="alperyazar/home"
+        data-repo-id="R_kgDOJoQiqA"
+        data-category="Comments"
+        data-category-id="DIC_kwDOJoQiqM4Cne4h"
+        data-mapping="specific"
+        data-term='23-14''
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"data-lang="tr"data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+<p>🫆 <code>23-14</code></p>
+</div><a class="u-url" href="/xilinx-remote-debugging-tr.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Alper Yazar</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Alper Yazar</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/alperyazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">alperyazar</span></a></li><li><a href="https://www.linkedin.com/in/alperyazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">alperyazar</span></a></li><li><a href="https://mastodon.social/@ayazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#mastodon"></use></svg> <span class="username">ayazar</span></a></li><li><a href="https://youtube.com/%40ayazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">@ayazar</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>&quot;Full Stack Electronics&quot; Engineer<br/>© 2011 - 2025<br/><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a></p>
+        <p><a href="/disclaimer.html" />Disclaimer</a> <a href="/specimen.html" />Specimen</a> <a href="/" />Contact</a><br><a href='/support.html' />❤️ Destek / Support</a></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer><!-- Default Statcounter code for Home
+https://www.alperyazar.com -->
+<script type="text/javascript">
+  var sc_project=12712694;
+  var sc_invisible=1;
+  var sc_security="1c071fc4";
+  </script>
+  <script type="text/javascript"
+  src="https://www.statcounter.com/counter/counter.js"
+  async></script>
+  <noscript><div class="statcounter"><a title="web statistics"
+  href="https://statcounter.com/" target="_blank"><img
+  class="statcounter"
+  src="https://c.statcounter.com/12712694/0/1c071fc4/1/"
+  alt="web statistics"
+  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+  <!-- End of Statcounter Code --></body>
+
+</html>

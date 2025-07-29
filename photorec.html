@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Camcorder DVD Video Recovery on Ubuntu with photorec | Alper Yazar</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Camcorder DVD Video Recovery on Ubuntu with photorec" />
+<meta name="author" content="Alper Yazar" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Recover damaged camcorder DVD with photorec on Ubuntu" />
+<meta property="og:description" content="Recover damaged camcorder DVD with photorec on Ubuntu" />
+<link rel="canonical" href="https://www.alperyazar.com/photorec.html" />
+<meta property="og:url" content="https://www.alperyazar.com/photorec.html" />
+<meta property="og:site_name" content="Alper Yazar" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-06-28T00:00:00+03:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Camcorder DVD Video Recovery on Ubuntu with photorec" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alper Yazar"},"dateModified":"2025-05-09T19:32:32+03:00","datePublished":"2017-06-28T00:00:00+03:00","description":"Recover damaged camcorder DVD with photorec on Ubuntu","headline":"Camcorder DVD Video Recovery on Ubuntu with photorec","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.alperyazar.com/photorec.html"},"url":"https://www.alperyazar.com/photorec.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css">
+    <script src="/assets/js/lazysizes.min.js" async=""></script><link type="application/atom+xml" rel="alternate" href="https://www.alperyazar.com/feed.xml" title="Alper Yazar" /><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"><!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S3B80PC7FC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-S3B80PC7FC');
+    </script>
+
+    
+
+    
+    <!-- Adsense -->
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4580059638713287"
+    crossorigin="anonymous"></script> -->
+    <link rel="me" href="https://mastodon.social/@ayazar">
+  </head>
+<body><header class="site-header" role="banner">
+
+    <div class="wrapper"><a class="site-title" rel="author" href="/">Alper Yazar</a><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewBox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger"><a class="page-link" href="/blog/">📝 Blog</a><a class="page-link" href="/search.html">🔍 Search</a><!-- <a class="page-link" href="https://ayazar.dev" target="_blank">🗂️ Notes</a> -->
+            <a rel="me" class="page-link" href="https://www.linkedin.com/in/alperyazar" target="_blank">💼 LinkedIn</a>
+            <a rel="me" class="page-link" href="https://www.youtube.com/@ayazar" target="_blank">🎬 YouTube</a>
+          </div>
+        </nav></div>
+  </header>
+
+  
+
+<div id="son_yazi_banner" style="
+background: linear-gradient(to right, rgba(250, 191, 200, 0.3), rgba(23, 86, 169, 0.2));
+color: rgb(52, 55, 67);
+text-align: center;
+padding: 15px;
+border-radius: 10px;
+border: 0px dashed rgba(250, 191, 200, 0.5);
+box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+margin: 10px 0px 10px 0px;">🚀 The latest blog post:&nbsp;<a href="/fpga-git-cicd-devops.html" style="font-weight: bold;"><span style="font-weight: bold;">FPGA, Git, DevOps, CI/CD</span></a>&nbsp;🇹🇷</div>
+
+  <div id="progressBar" class="progress-bar"></div>
+
+  <script>
+    // Listen for scroll events on the window
+window.onscroll = function() {
+    // Call the function to update the progress bar
+    updateProgressBar();
+};
+
+function updateProgressBar() {
+    // Get the total height of the page
+    var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    // Get the current scroll position
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    // Calculate the scroll percentage
+    var scrollPercentage = (scrollTop / scrollHeight) * 100;
+    // Update the width of the progress bar
+    document.getElementById("progressBar").style.width = scrollPercentage + "%";
+}
+  </script>
+
+<a href='/support.html' class="floating-icon-heart" width="48" target="_blank"><img src='/assets/img/icons8-heart-64.png' alt="❤️ Support/Destek" title="❤️ Support/Destek"></a>
+
+<div id="special-flag">
+  <a id="special-flag-link" href="#" target="_blank" title="">
+    <img src='/assets/img/bayrak.png' alt="Türk Bayrağı">
+  </a>
+</div>
+
+<script>
+  /*
+   * Ref: https://www.pau.edu.tr/tks/tr/sayfa/milli-ve-dini-bayramlar
+   * Ref: https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=859034&MevzuatTur=2&MevzuatTertip=5
+   * Ref: https://www.eserotomatikbayrak.com/bayrak-asilacak-tarihler.pdf
+   * Net bir şey bulmak zor :(
+  */
+  const specialDays = [
+    ["03-18", "https://tr.wikipedia.org/wiki/18_Mart_%C3%87anakkale_Zaferi_ve_%C5%9Eehitleri_Anma_G%C3%BCn%C3%BC", "Çanakkale Zaferi ve Şehitleri Anma Günü"],
+    ["04-23", "https://tr.wikipedia.org/wiki/23_Nisan_Ulusal_Egemenlik_ve_%C3%87ocuk_Bayram%C4%B1", "Ulusal Egemenlik ve Çocuk Bayramı"],
+    ["05-01", "https://tr.wikipedia.org/wiki/1_May%C4%B1s_%C4%B0%C5%9F%C3%A7i_Bayram%C4%B1", "Emek ve Dayanışma Günü"],
+    ["05-19", "https://tr.wikipedia.org/wiki/19_May%C4%B1s_Atat%C3%BCrk%27%C3%BC_Anma,_Gen%C3%A7lik_ve_Spor_Bayram%C4%B1", "Atatürk'ü Anma, Gençlik ve Spor Bayramı"],
+    ["07-15", "https://tr.wikipedia.org/wiki/Demokrasi_ve_Mill%C3%AE_Birlik_G%C3%BCn%C3%BC", "Demokrasi ve Millî Birlik Günü"],
+    ["08-30", "https://tr.wikipedia.org/wiki/30_A%C4%9Fustos_Zafer_Bayram%C4%B1", "Zafer Bayramı"],
+    ["10-29", "https://tr.wikipedia.org/wiki/29_Ekim_Cumhuriyet_Bayram%C4%B1", "Cumhuriyet Bayramı"],
+    ["11-10", "https://tr.wikipedia.org/wiki/10_Kas%C4%B1m_Atat%C3%BCrk%27%C3%BC_anma_g%C3%BCn%C3%BC_ve_Atat%C3%BCrk_haftas%C4%B1", "Atatürk'ü Anma Günü"]
+  ];
+
+  const today = new Date();
+  const todayKey = `${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+
+  const match = specialDays.find(([key]) => key === todayKey);
+  if (match) {
+    const [_, url, tooltip] = match;
+    const flagDiv = document.getElementById("special-flag");
+    const flagLink = document.getElementById("special-flag-link");
+    flagLink.href = url;
+    flagLink.title = tooltip;
+    flagDiv.style.display = "block";
+  }
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Camcorder DVD Video Recovery on Ubuntu with photorec</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2017-06-28T00:00:00+03:00" itemprop="datePublished">
+        2017-06-28
+      </time>~<time class="dt-modified" datetime="2025-05-09T19:32:32+03:00" itemprop="dateModified">
+        2025-05-09
+      </time>• 🇬🇧<span> • 17-1</span>
+      </p>
+  </header><div style="background: #eeeeff; border-radius: 2px; margin: 2px;"><center><p><span data-nosnippet>🔤 <small><a rel=”nofollow” href="https://www-alperyazar-com.translate.goog/photorec.html?_x_tr_sl=auto&_x_tr_tl=tr">Google Translate ile çevir</a></small>  🔤</span></p></center></div><div class="post-content e-content" itemprop="articleBody"><p><i>Recover damaged camcorder DVD with photorec on Ubuntu</i></p>
+    <hr><div style="background: #ffec99; border-radius: 2px; margin: 2px;"><center><p><span data-nosnippet>ℹ️ <small><a href="/disclaimer.html">Disclaimer</a></small> ℹ️</span></p></center></div><hr>
+    <h2 id="tldr">TL;DR</h2>
+
+<p>I used a software called <a href="https://www.cgsecurity.org/wiki/PhotoRec">photorec</a> to
+recover video records from a mini DVD. I tried it on a machine running Ubuntu
+14.04 LTS and it worked without any problem. You can install it from Ubuntu
+repository. I didn’t check the current version and the version found on the
+Ubuntu repository. In general, Ubuntu repository doesn’t have the latest
+versions. Anyway, you can see the my version number below.</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ photorec /version
+
+PhotoRec 6.14, Data Recovery Utility, July 2013
+Christophe GRENIER &lt;grenier@cgsecurity.org&gt;
+http://www.cgsecurity.org
+
+Version: 6.14
+Compiler: GCC 4.8
+Compilation date: 2013-10-29T01:29:29
+ext2fs lib: 1.42.9, ntfs lib: libntfs-3g, ewf lib: none, libjpeg: libjpeg-turbo-1.3.0
+OS: Linux, kernel 3.19.0-80-generic (#88~14.04.1-Ubuntu SMP Fri Jan 13 14:54:07 UTC 2017) x86_64
+</code></pre></div></div>
+
+<p>In order to install it from the Ubuntu repository, the following command should
+be executed.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>apt <span class="nb">install </span>testdisk
+</code></pre></div></div>
+
+<p>Then you can execute the program using the following command.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>photorec
+</code></pre></div></div>
+
+<p>You should see a text based user interface. I managed to recover my videos by
+following the instructions given by the program. In short, this is it!</p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p><img src="/assets/img/17/1-a.jpg" alt="Image from sony.com" class="centered" /></p>
+
+<p class="text-align-center"><em>Image from sony.com</em></p>
+
+<p>I have an old <strong>Sony Handycam</strong> camcorder. Its full name is <strong>DCR-DVD306E</strong>. I
+bought in 2007 and it is now 10 years old. Nevertheless it still works pretty
+well. Its main disadvantage is storage. It uses mini DVD for storage instead of
+memory card or internal HDD as in contemporary ones. As far as I remember, a
+single DVD can store video records with total time less than 30 minutes which is
+not very good. If you are planning to record long videos, you should prepare a
+bunch of blank DVDs. Of course, you can use rewritable DVDs. Battery usage time
+is dependent on the record quality. The highest resolution is HQ not HD and and
+it can record up to ~90 minutes on a single charge.</p>
+
+<p><img src="/assets/img/17/1-b.jpg" alt="Diameter of mini DVD is 8 cm. It is 12 cm for standard DVD. Image from sony.com" class="centered" /></p>
+
+<p class="text-align-center"><em>Diameter of mini DVD is 8 cm. It is 12 cm for standard DVD. Image from sony.com</em></p>
+
+<p>The camcorder has a mini USB port and it is possible to transfer records to a PC
+using that cable while mini DVD is inserted into the camcorder. I have a DVD
+recorded 5 years ago. I can play videos on the camcorder. When I tried to
+transfer videos from the camcorder to PC using the USB connection, I got a DVD
+driver with a blank DVD on both Windows 7 and Ubuntu 14.04 LTS. Then I put DVD
+into my PC directly and got the same result, oops!</p>
+
+<p>I suspected a corrupted file system. Although the camcorder is able to play
+videos without any problem and didn’t complain about the corruption, both
+Windows and Ubuntu didn’t read it correctly. I searched for data recovery
+programs and tried several of them.</p>
+
+<h2 id="data-recovery-tools">Data Recovery Tools</h2>
+
+<h3 id="windows">Windows</h3>
+
+<h4 id="cd-recovery-toolbox">CD Recovery Toolbox</h4>
+
+<p>First I tried <a href="https://www.oemailrecovery.com/cd_recovery.html">CD Recovery
+Toolbox</a>. A couple of years
+ago, I recovered videos from a standard CDs with scratches with help of the
+tool. Unfortunately for this case, it didn’t work as I expected. Since Windows
+detected the camcorder as a blank DVD, the tool also found a blank DVD.</p>
+
+<h4 id="isobuster">IsoBuster</h4>
+
+<p>The second candidate was <a href="https://www.isobuster.com/">IsoBuster</a>. I realized
+that I had installed it when I was trying to recover CDs with CD Recovery
+Toolbox and trial period was over. It scanned the DVD and listed some videos but
+it requested a license in order to recover them. Also list wasn’t complete.</p>
+
+<p>After trying couple of tools on Windows, I switched to look tools for Linux.</p>
+
+<h3 id="linux">Linux</h3>
+
+<h4 id="lsdvd">lsdvd</h4>
+
+<p>I found suggestions for file recovery on forums and tried some of them.</p>
+
+<p>First, I installed <strong>lsdvd</strong>.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>apt-get <span class="nb">install </span>lsdvd
+</code></pre></div></div>
+
+<p>and executed</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>lsdvd /dev/cdrom
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>libdvdread: Encrypted DVD support unavailable.
+************************************************
+**                                            **
+**  No css library available. See             **
+**  /usr/share/doc/libdvdread4/README.css     **
+**  for more information.                     **
+**                                            **
+************************************************
+libdvdnav:DVDOpenFileUDF:UDFFindFile /VIDEO_TS/VIDEO_TS.IFO failed
+libdvdnav:DVDOpenFileUDF:UDFFindFile /VIDEO_TS/VIDEO_TS.BUP failed
+libdvdread: Can't open file VIDEO_TS.BU.
+Can't open main ifo!
+</code></pre></div></div>
+
+<p>Then I tried to save raw content of DVD as image and mount it locally. Note that
+in my case, surface of the DVD is very clean and there is no reading error at
+I/O level.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">dd </span><span class="k">if</span><span class="o">=</span>/dev/sr0 <span class="nv">of</span><span class="o">=</span>image.iso <span class="nv">bs</span><span class="o">=</span>2048 <span class="nv">conv</span><span class="o">=</span>notrunc <span class="nv">iflag</span><span class="o">=</span>nonblock
+<span class="nv">$ </span><span class="nb">mkdir</span> /mnt/dvd
+<span class="nv">$ </span><span class="nb">sudo </span>mount <span class="nt">-o</span> ro,loop image.iso /mnt/dvd/
+</code></pre></div></div>
+
+<p>The output was:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mount: you must specify the file system type
+</code></pre></div></div>
+
+<p>Then I tried the following</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>mount <span class="nt">-o</span> ro,loop <span class="nt">-t</span> iso9660 image.iso /mnt/dvd/
+</code></pre></div></div>
+
+<p>but this was also an unsuccessful attempt.</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mount: wrong fs type, bad option, bad superblock on /dev/loop0,
+       missing codepage or helper program, or other error
+       In some cases useful info is found in syslog - try
+       dmesg | tail  or so
+</code></pre></div></div>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>isoinfo <span class="nt">-d</span> <span class="nt">-i</span> image.iso
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CD-ROM is NOT in ISO 9660 format
+</code></pre></div></div>
+
+<h4 id="dvdisaster">dvdisaster</h4>
+
+<p>I gave up working on the image and searched for further alternatives. First I
+tried dvdisaster (broken link: <code class="language-plaintext highlighter-rouge">http://www.dvdisaster.com/en/index.html</code> <code class="language-plaintext highlighter-rouge">🔗404</code>)
+but it gave a similar output to CD Recovery Toolbox. It detected a blank
+DVD as shown below.</p>
+
+<p><img src="/assets/img/17/1-c.png" alt="Disaster with dvdisaster" class="centered" /></p>
+
+<p class="text-align-center"><em>Disaster with dvdisaster</em></p>
+
+<h4 id="photorec">photorec</h4>
+
+<p>Later, I found a tool called <a href="http://www.cgsecurity.org/wiki/PhotoRec">photorec</a>.</p>
+
+<p>Photorec is published under GPLV v2+ license by cgsecurity.org. As I stated at
+the beginning, it is easy to install it from Ubuntu repository. Here is the
+command for installation.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>apt <span class="nb">install </span>testdisk
+</code></pre></div></div>
+
+<p>Prior to open the tool, you should insert the DVD. Run the tool using the
+following command.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>photorec
+</code></pre></div></div>
+
+<p>The tool is self explanatory but I add step-by-step screenshots just for
+clarification.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">mkdir </span>sony_dvd
+<span class="nv">$ </span>photorec
+</code></pre></div></div>
+
+<p><img src="/assets/img/17/1-d.png" alt="photorec Step 1" class="centered" /></p>
+
+<p class="text-align-center"><em>photorec Step 1</em></p>
+
+<p>Press <code class="language-plaintext highlighter-rouge">Enter</code>.</p>
+
+<p><img src="/assets/img/17/1-e.png" alt="photorec Step 2" class="centered" /></p>
+
+<p class="text-align-center"><em>photorec Step 2</em></p>
+
+<p>Press <code class="language-plaintext highlighter-rouge">Enter</code>.</p>
+
+<p>Select <code class="language-plaintext highlighter-rouge">Other</code> press <code class="language-plaintext highlighter-rouge">Enter</code>.</p>
+
+<p><img src="/assets/img/17/1-f.png" alt="photorec Step 3" class="centered" /></p>
+
+<p class="text-align-center"><em>photorec Step 3</em></p>
+
+<p>Select the output directory by pressing <code class="language-plaintext highlighter-rouge">Enter</code> then press <code class="language-plaintext highlighter-rouge">C</code>.</p>
+
+<p><img src="/assets/img/17/1-g.png" alt="photorec Step 4" class="centered" /></p>
+
+<p class="text-align-center"><em>photorec Step 4</em></p>
+
+<p><img src="/assets/img/17/1-h.png" alt="photorec Step 5" class="centered" /></p>
+
+<p class="text-align-center"><em>photorec Step 5</em></p>
+
+<p>Then select <code class="language-plaintext highlighter-rouge">Quit</code> and press <code class="language-plaintext highlighter-rouge">Enter</code> couple of times.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>I hope this post helps you. If you like
+<a href="http://www.cgsecurity.org/wiki/PhotoRec">photorec</a>, you may consider <a href="http://www.cgsecurity.org/wiki/Donation">making a
+donation to the author of the tool!</a></p>
+
+    
+    <hr>
+    
+
+
+
+
+
+
+    
+    
+    
+<!--0-->
+        
+        
+            
+                
+            
+        
+    
+<!--1-->
+        
+        
+            
+                
+            
+        
+    
+<!--2-->
+        
+        
+            
+                
+            
+        
+    
+<!--3-->
+        
+        
+            
+                
+                    
+                    
+
+
+
+
+
+
+
+<ul class="post-list">
+<li style="background: #DDEEEE; padding: 10px; border-radius: 10px;">
+<h4>🤓 One more?</h4>
+
+<center>
+<p>
+<a class="post-link" href="/petalinux-offline.html"><img alt="Teaser" data-srcset="/assets/img/22/3.png" srcset="/assets/lazyload.png" src="/assets/img/22/3.png" data-srcset="/assets/img/22/3.png"  srcset="/assets/lazyload.png" style="border-radius: 10px; height: auto; width: 95%; max-width: 700px;" class="lazyload"></a>
+</p>
+</center><h3>
+<a class="post-link" href="/petalinux-offline.html">
+Running PetaLinux on an offline machine
+
+</a>
+</h3><h4>PetaLinux can be run an offline machine with proper configuration</h4></li>
+</ul>
+
+
+  </div>
+
+  
+  <div class="revisions" style="border-top: 2px dashed; margin-top: 10px;"><h2 style="padding-top: 10px;">🔄 Updates (Last 10)</h2><ul style="list-style-type: none;">
+    
+      <li>
+        <div class="post-meta"><code>2025-05-09</code> Revert "to ayazar.dev"
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2025-04-02</code> to ayazar.dev
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2025-03-30</code> Revert "to ayazar.dev"
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2025-03-16</code> to ayazar.dev
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-10-19</code> revert ayazar.dev
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-10-06</code> ayazar.dev
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-10-05</code> here
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-09-28</code> to ayazar.dev
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-09-14</code> revertx3
+</div>
+      </li>
+    
+      <li>
+        <div class="post-meta"><code>2024-08-30</code> Revert "Revert "ayazar.dev""</div>
+      </li>
+    
+    </ul>
+  </div>
+  <div class="gicus_comments" style="border-top: 2px dashed; margin-top: 10px;"><h2 style="padding-top: 10px;">💭 Comments</h2>
+  <p><small>Comments are provided by <a href="https://giscus.app/">giscus.</a>
+    You need to use and authenticate your <a href="https://github.com/">GitHub</a> account to post a comment.
+    Comments are stored on the <a href="https://github.com/alperyazar/home/discussions/categories/comments">Github Discussions.</a></small></p><script src="https://giscus.app/client.js"
+        data-repo="alperyazar/home"
+        data-repo-id="R_kgDOJoQiqA"
+        data-category="Comments"
+        data-category-id="DIC_kwDOJoQiqM4Cne4h"
+        data-mapping="specific"
+        data-term='17-1''
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"data-lang="en"data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+<p>🫆 <code>17-1</code></p>
+</div><a class="u-url" href="/photorec.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Alper Yazar</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Alper Yazar</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/alperyazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">alperyazar</span></a></li><li><a href="https://www.linkedin.com/in/alperyazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">alperyazar</span></a></li><li><a href="https://mastodon.social/@ayazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#mastodon"></use></svg> <span class="username">ayazar</span></a></li><li><a href="https://youtube.com/%40ayazar"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#youtube"></use></svg> <span class="username">@ayazar</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>&quot;Full Stack Electronics&quot; Engineer<br/>© 2011 - 2025<br/><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a></p>
+        <p><a href="/disclaimer.html" />Disclaimer</a> <a href="/specimen.html" />Specimen</a> <a href="/" />Contact</a><br><a href='/support.html' />❤️ Destek / Support</a></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer><!-- Default Statcounter code for Home
+https://www.alperyazar.com -->
+<script type="text/javascript">
+  var sc_project=12712694;
+  var sc_invisible=1;
+  var sc_security="1c071fc4";
+  </script>
+  <script type="text/javascript"
+  src="https://www.statcounter.com/counter/counter.js"
+  async></script>
+  <noscript><div class="statcounter"><a title="web statistics"
+  href="https://statcounter.com/" target="_blank"><img
+  class="statcounter"
+  src="https://c.statcounter.com/12712694/0/1c071fc4/1/"
+  alt="web statistics"
+  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+  <!-- End of Statcounter Code --></body>
+
+</html>
